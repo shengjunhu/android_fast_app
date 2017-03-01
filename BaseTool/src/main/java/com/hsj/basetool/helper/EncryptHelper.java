@@ -15,6 +15,15 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
+/**
+ * @Company     :  北京****科技有限公司
+ * @Author      :  HSJ
+ * @Version     :  Framework V1.0
+ * @Date        :  2017/2/21 12:54
+ * @E-mail      :  mr.ajun@foxmail.com
+ * @Class       :  EncryptHelper
+ * @Description :  数据加密帮助者
+ */
 public class EncryptHelper {
 
     /**

@@ -12,6 +12,15 @@ import android.util.TypedValue;
 import android.view.WindowManager;
 import com.hsj.basetool.base.BaseToolContext;
 
+/**
+ * @Company     :  北京****科技有限公司
+ * @Author      :  HSJ
+ * @Version     :  Framework V1.0
+ * @Date        :  2017/2/21 12:54
+ * @E-mail      :  mr.ajun@foxmail.com
+ * @Class       :  PhoneManager
+ * @Description :  设备信息帮助者
+ */
 public class PhoneManager {
 
     public static Context mContext = BaseToolContext.mContext;
@@ -215,17 +224,6 @@ public class PhoneManager {
     }
 
     /**
-     * TelephonyManager
-     *
-     * @return
-     */
-    public static TelephonyManager getTelephonyManager() {
-        TelephonyManager telephonyManager = null;
-        telephonyManager = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
-        return telephonyManager;
-    }
-
-    /**
      * 判断网络连接状态
      * @param context
      * @return
@@ -277,24 +275,6 @@ public class PhoneManager {
             }
         }
         return false;
-    }
-
-    /**
-     * 获取连接类型
-     * @param context
-     * @return
-     */
-    public static int getConnectedType(Context context) {
-        if (context != null) {
-            ConnectivityManager mConnectivityManager = (ConnectivityManager) context
-                    .getSystemService(Context.CONNECTIVITY_SERVICE);
-            NetworkInfo mNetworkInfo = mConnectivityManager
-                    .getActiveNetworkInfo();
-            if (mNetworkInfo != null && mNetworkInfo.isAvailable()) {
-                return mNetworkInfo.getType();
-            }
-        }
-        return -1;
     }
 
     /**

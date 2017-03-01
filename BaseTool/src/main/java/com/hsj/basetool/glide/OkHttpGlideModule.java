@@ -12,6 +12,15 @@ import com.bumptech.glide.module.GlideModule;
 import com.hsj.basetool.helper.FileHelper;
 import java.io.InputStream;
 
+/**
+ * @Company     :  北京****科技有限公司
+ * @Author      :  HSJ
+ * @Version     :  Framework V1.0
+ * @Date        :  2017/2/21 12:54
+ * @E-mail      :  mr.ajun@foxmail.com
+ * @Class       :  OkHttpGlideModule
+ * @Description :  配置Glide加载图片做相关参数指定
+ */
 public class OkHttpGlideModule implements GlideModule {
 
     public OkHttpGlideModule() {

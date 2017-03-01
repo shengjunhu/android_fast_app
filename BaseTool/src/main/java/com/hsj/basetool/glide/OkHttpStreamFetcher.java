@@ -15,6 +15,15 @@ import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 
+/**
+ * @Company     :  北京****科技有限公司
+ * @Author      :  HSJ
+ * @Version     :  Framework V1.0
+ * @Date        :  2017/2/21 12:54
+ * @E-mail      :  mr.ajun@foxmail.com
+ * @Class       :  OkHttpGlideModule
+ * @Description :  配置Glide加载图片做相关参数指定
+ */
 public class OkHttpStreamFetcher implements DataFetcher<InputStream> {
     private final Call.Factory client;
     private final GlideUrl url;

@@ -22,28 +22,29 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Stack;
 
+/**
+ * @Company     :  北京****科技有限公司
+ * @Author      :  HSJ
+ * @Version     :  Framework V1.0
+ * @Date        :  2017/2/21 12:54
+ * @E-mail      :  mr.ajun@foxmail.com
+ * @Class       :  AppManager
+ * @Description :  Activity管理和崩溃信息上传
+ */
 public class AppManager {
 
-    private Context mContext;
+    private Context mContext = BaseToolContext.mContext;
 
     public static AppManager instance = new AppManager();
 
-    /**
-     * 实例化 AppManager
-     *
-     * @return
-     */
     public static AppManager getInstance() {
         return instance;
     }
 
     /**
      * 初始化、所有线程都捕获错误信息
-     *
-     * @param context
      */
-    public void init(Context context) {
-        mContext = context;
+    public void init() {
         // 是所有的线程
         Thread.currentThread().setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
             @Override
@@ -79,7 +80,6 @@ public class AppManager {
         File file = saveReport(ex);
         // 上传错误报告的服务器
         uploadReport(file);
-
     }
 
     /**

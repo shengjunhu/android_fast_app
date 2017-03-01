@@ -7,6 +7,15 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
+/**
+ * @Company     :  北京****科技有限公司
+ * @Author      :  HSJ
+ * @Version     :  Framework V1.0
+ * @Date        :  2017/2/21 12:54
+ * @E-mail      :  mr.ajun@foxmail.com
+ * @Class       :  ImageHelper
+ * @Description :  图片加载帮助者、建议直接使用Glide的方法
+ */
 public class ImageHelper {
 
     /**

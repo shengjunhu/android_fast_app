@@ -9,6 +9,15 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * @Company     :  北京****科技有限公司
+ * @Author      :  HSJ
+ * @Version     :  Framework V1.0
+ * @Date        :  2017/2/21 12:54
+ * @E-mail      :  mr.ajun@foxmail.com
+ * @Class       :  BaseHelper
+ * @Description :  基本帮助者
+ */
 public class BaseHelper {
 
     /**
@@ -36,9 +45,7 @@ public class BaseHelper {
      */
     public static String DateForm() {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-
         Date currentTime = new Date(System.currentTimeMillis());
-
         return formatter.format(currentTime);
     }
 
@@ -64,9 +71,9 @@ public class BaseHelper {
      * @return boolean--null或者""返回true
      */
     public static boolean isEmptyStr(String input) {
-        if (input == null || "".equals(input) || input.equals("null"))
+        if (input == null || "".equals(input) || input.equals("null")){
             return true;
-
+        }
         return false;
     }
 

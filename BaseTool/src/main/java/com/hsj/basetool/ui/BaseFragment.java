@@ -8,13 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * @Company: 南京荣之誉信息科技有限公司
- * @Author: HSJ
- * @E-mail: mr.ajun@foxmail.com
- * @Date: 2017/2/24 10:57
- * @Version: XBS V2.0
- * @Class: BaseFragment
- * @Description:
+ * @Company     :  北京****科技有限公司
+ * @Author      :  HSJ
+ * @Version     :  Framework V1.0
+ * @Date        :  2017/2/21 12:54
+ * @E-mail      :  mr.ajun@foxmail.com
+ * @Class       :  BaseFragment
+ * @Description :  项目Fragment基类
  */
 public class BaseFragment extends Fragment {
 
@@ -49,11 +49,6 @@ public class BaseFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
     }
 
 }

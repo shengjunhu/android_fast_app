@@ -5,8 +5,13 @@ import android.content.Context;
 import com.hsj.basetool.helper.Logger;
 
 /**
- * 模块在主APP下初始化、获取Context、deBug
- * 设置常信息：
+ * @Company     :  北京****科技有限公司
+ * @Author      :  HSJ
+ * @Version     :  Framework V1.0
+ * @Date        :  2017/2/21 12:54
+ * @E-mail      :  mr.ajun@foxmail.com
+ * @Class       :  BaseToolContext
+ * @Description :  模块部分初始化
  */
 public class BaseToolContext {
 
@@ -30,7 +35,7 @@ public class BaseToolContext {
         debugFlag = deBug;
 
         //App管理者初始化
-        AppManager.getInstance().init(mContext);
+        AppManager.getInstance().init();
 
         //初始化日志类
         Logger.init(mContext);

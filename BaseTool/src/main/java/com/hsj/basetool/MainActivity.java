@@ -1,7 +1,7 @@
 package com.hsj.basetool;
 
 import android.os.Bundle;
-import com.hsj.basetool.helper.Logger;
+
 import com.hsj.basetool.ui.BaseActivity;
 
 public class MainActivity extends BaseActivity {
@@ -14,8 +14,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
-        Logger.e("MainActivity1");
         super.onDestroy();
-        Logger.e("MainActivity2");
     }
 }

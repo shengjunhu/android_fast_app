@@ -1,46 +1,45 @@
 package com.hsj.basetool.base;
 
-import android.util.Log;
+import android.widget.Toast;
 import com.hsj.basetool.helper.Logger;
 
 /**
- * @Company: 南京荣之誉信息科技有限公司
- * @Author: HSJ
- * @E-mail: mr.ajun@foxmail.com
- * @Date: 2017/2/24 10:14
- * @Version: XBS V2.0
- * @Class: AppException
- * @Description: 最底部Module全局控制异常
+ * @Company     :  北京****科技有限公司
+ * @Author      :  HSJ
+ * @Version     :  Framework V1.0
+ * @Date        :  2017/2/21 12:54
+ * @E-mail      :  mr.ajun@foxmail.com
+ * @Class       :  AppException
+ * @Description :  全局抛异常
  */
-public class AppException extends RuntimeException{
+public class AppException extends RuntimeException {
 
     public static final int ERROR_CODE = 999;               //网络请求：失败码
     public static final int OFFLINE_CODE = 401;             //网络请求：账号被踢
     public static final int TOKEN_INVALID_CODE = 403;       //网络请求：token过期
-    public static final int  REFUSE_CODE_= 405;             //网络请求：请求没有授权
-    public static final int  DATA_UNREADABLE_CODE = 0;      //网络请求数据解析错误
-    public static final int  UNKNOWN_ERROR_CODE = -1;       //未知错误
+    public static final int REFUSE_CODE_ = 405;             //网络请求：请求没有授权
+    public static final int DATA_UNREADABLE_CODE = 0;       //网络请求数据解析错误
+    public static final int UNKNOWN_ERROR_CODE = -1;        //未知错误
 
-    public static AppException getInstance(int ExceptionCode,String msg){
-        return new AppException(ExceptionCode,msg);
+    public AppException(int exceptionCode) {
+        super(ExceptionMsg(exceptionCode, null));
     }
 
-    public AppException(int resultCode,String msg) {
-        super(ExceptionMsg(resultCode,msg));
+    public AppException(String exceptionMsg) {
+        super(ExceptionMsg(-1, exceptionMsg));
     }
 
     /**
      * 异常信息
      *
      * @param code -- 响应码
-     * @param msg -- 响应信息（msg不为null，code无效）
+     * @param msg  -- 响应信息（msg不为null，code无效）
      * @return
      */
-    public static String ExceptionMsg(int code,String msg) {
-        if(msg != null){
-
-            Log.d("XBSHttp", "全局异常信息: XBSException类："+msg);
-
+    public static String ExceptionMsg(int code, String msg) {
+        if (msg != null) {
+            Logger.w("AppException", "全局异常信息: AppException：" + msg);
+            Toast.makeText(BaseToolContext.mContext,msg,Toast.LENGTH_SHORT).show();
             return msg;
         }
 
@@ -66,7 +65,8 @@ public class AppException extends RuntimeException{
             default:
                 break;
         }
-        Logger.w("AppException", "全局异常信息: XBSException类："+msg);
+        Logger.w("AppException", "全局异常信息: AppException：" + msg);
+        Toast.makeText(BaseToolContext.mContext,msg,Toast.LENGTH_SHORT).show();
         return msg;
     }
 

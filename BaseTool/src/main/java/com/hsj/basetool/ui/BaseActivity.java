@@ -5,6 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 import com.hsj.basetool.base.AppManager;
 
+/**
+ * @Company     :  北京****科技有限公司
+ * @Author      :  HSJ
+ * @Version     :  Framework V1.0
+ * @Date        :  2017/2/21 12:54
+ * @E-mail      :  mr.ajun@foxmail.com
+ * @Class       :  BaseActivity
+ * @Description :  项目Activity基类
+ */
 public class BaseActivity extends AppCompatActivity {
 
     @Override
@@ -43,7 +52,5 @@ public class BaseActivity extends AppCompatActivity {
         super.onTrimMemory(level);
         System.gc();
     }
-
-
 
 }
