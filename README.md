@@ -6,20 +6,21 @@
 ### 编写阶段模块结构
 
             APP(启动页、欢迎页、登陆页、密码相关页、主页)
+    ================================================================================
 
+        业务模块：首页、工作、商城、社区、我的
 
+        子业务： 学校、知识库
 
+    ===============================================================================
 
+        数据模块：Server 、 Cache：DB
 
-
-
-
-
-
-
-                   |
-               BaseTool
-
-          |              |
+    ===============================================================================
+                  |                 |               |               |
+              BaseTool          FileProvider    ImageProvider  MapProvider
+                                QRCodeProvider  PayProvider    OAuthLoginProvider
+          |              |      PayProvider     CloudProvider  IMProvider
+                                VideoPlayerProvider            VideoRecodProvider
        Widget           Https
-
+    ===============================================================================
