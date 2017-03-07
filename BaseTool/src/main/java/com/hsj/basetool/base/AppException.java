@@ -1,7 +1,7 @@
 package com.hsj.basetool.base;
 
 import android.widget.Toast;
-import com.hsj.basetool.helper.Logger;
+import com.hsj.basetool.tool.Logger;
 
 /**
  * @Company     :  北京****科技有限公司

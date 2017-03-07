@@ -17,10 +17,15 @@
         数据模块：Server 、 Cache：DB
 
     ===============================================================================
-                  |                 |               |               |
-              BaseTool          FileProvider    ImageProvider  MapProvider
-                                QRCodeProvider  PayProvider    OAuthLoginProvider
-          |              |      PayProvider     CloudProvider  IMProvider
-                                VideoPlayerProvider            VideoRecodProvider
-       Widget           Https
+                                       |
+                                    BaseTool
+                 |                                  |
+               Widget(自定控件)                 OAuthProvider(登录、分享、支付)
+               Https(网络请求)                  IMProvider(及时通讯)
+               FileProvider(选文件)             MapProvider(高德地图)
+               QRCodeProvider(二维码)           CloudProvider(七牛云存储)
+               VideoPlayerProvider(播放视屏)    UMProvider(友盟统计)
+               VideoRecordProvider(录制视频)    FixProvider(修复)
+               ImageProvider(图片选择器)
+
     ===============================================================================
