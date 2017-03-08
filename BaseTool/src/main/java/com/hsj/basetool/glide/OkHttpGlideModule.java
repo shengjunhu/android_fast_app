@@ -9,7 +9,7 @@ import com.bumptech.glide.load.engine.cache.LruResourceCache;
 import com.bumptech.glide.load.engine.cache.MemorySizeCalculator;
 import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.module.GlideModule;
-import com.hsj.basetool.helper.FileHelper;
+import com.hsj.basetool.tool.FileHelper;
 import java.io.InputStream;
 
 /**

@@ -2,7 +2,7 @@ package com.hsj.basetool;
 
 import android.os.Bundle;
 
-import com.hsj.basetool.ui.BaseActivity;
+import com.hsj.basetool.base.BaseActivity;
 
 public class MainActivity extends BaseActivity {
 
