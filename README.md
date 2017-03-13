@@ -1,7 +1,7 @@
 # FastAndroid
 工作中Android开发用的项目框架：模块化、组件化开发，可快速集成
-##开发框架结构组成：
-##插件功能：
+## 开发框架结构组成：
+## 插件功能：
 
 ### 编写阶段模块结构
 
@@ -20,12 +20,12 @@
                                        |
                                     BaseTool
                  |                                  |
-               Widget(自定控件)                 OAuthProvider(登录、分享、支付)
-               Https(网络请求)                  IMProvider(及时通讯)
-               FileProvider(选文件)             MapProvider(高德地图)
-               QRCodeProvider(二维码)           CloudProvider(七牛云存储)
-               VideoPlayerProvider(播放视屏)    UMProvider(友盟统计)
-               VideoRecordProvider(录制视频)    FixProvider(修复)
-               ImageProvider(图片选择器)
+            Widget(自定控件)                   LSPProvider(登录、分享、支付)
+            Https(网络请求)                    IMProvider(及时通讯)
+            FileProvider(选文件)               MapProvider(高德地图)
+            QRCodeProvider(二维码)             CloudProvider(七牛云存储)
+            VideoPlayerProvider(播放视屏)      FixProvider(修复)
+            VideoRecordProvider(录制视频)      
+            ImageProvider(图片选择器)
 
     ===============================================================================
