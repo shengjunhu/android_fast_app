@@ -1,7 +1,6 @@
 package com.hsj.basetool;
 
 import android.os.Bundle;
-
 import com.hsj.basetool.base.BaseActivity;
 
 public class MainActivity extends BaseActivity {
@@ -12,8 +11,4 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
 }

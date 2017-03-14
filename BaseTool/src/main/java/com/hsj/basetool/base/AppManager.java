@@ -268,7 +268,6 @@ public class AppManager {
      */
     public void quitApp() {
         Process.killProcess(Process.myPid());
-
         //System.exit(1);
     }
 
