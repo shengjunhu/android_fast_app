@@ -10,7 +10,7 @@ import android.support.multidex.MultiDexApplication;
  * @Date: 2017/3/1 11:27
  * @Version: XBS V2.0
  * @Class: App
- * @Description:
+ * @Description: 主Module Application初始化
  */
 public class App extends MultiDexApplication {
 
@@ -19,13 +19,7 @@ public class App extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-
-        /**
-         * 全局上下文
-         */
         appContext = getApplicationContext();
-
-
     }
 
 
