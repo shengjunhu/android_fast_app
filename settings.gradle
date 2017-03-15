@@ -1,1 +1,1 @@
-include ':app', ':BaseTool', ':Test', ':Widget', ':Https'
+include ':app', ':BaseTool', ':Sample', ':Widget', ':Https'

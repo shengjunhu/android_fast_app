@@ -121,9 +121,7 @@ public static java.lang.String TABLENAME;
 #支付宝支付
 -keep class com.alipay.** {*;}
 
-#---------->百度地图混淆区
--keep class com.baidu.** {*;}
--keep class vi.com.** {*;}
--dontwarn com.baidu.**
+#---------->gaode地图混淆区
+
 
 

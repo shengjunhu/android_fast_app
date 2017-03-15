@@ -13,12 +13,6 @@ android {
         multiDexEnabled true
     }
 
-    /**
-     * key store password:  hushengjun
-     * key alias:           hushengjun
-     * key password:        hushengjun
-     */
-
     buildTypes {
         release {
             minifyEnabled true
@@ -29,7 +23,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            //minifyEnabled true
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -90,3 +84,9 @@ dependencies {
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.android.support:appcompat-v7:25.2.0'
 }
+
+/**
+ * key store password:  hushengjun
+ * key alias:           hushengjun
+ * key password:        hushengjun
+ */
