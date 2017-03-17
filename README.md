@@ -1,6 +1,8 @@
 # FastAndroid
 工作中Android开发用的项目框架：模块化、组件化开发，可快速集成
 ## 开发框架结构组成：
+- Sample Module 功能展示Demo
+
 ## 插件功能：
 
 ### 编写阶段模块结构
