@@ -1,10 +1,14 @@
 include ':app',
+
+        //功能测试Module
         ':Sample',
 
+        //基础核心库
         ':Base',
 
+        //第三方SDK
+
         //功能库
-        'Library:BaseLib',
         'Library:Https',
         'Library:Widget'
 
