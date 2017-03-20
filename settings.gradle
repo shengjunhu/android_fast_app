@@ -1,1 +1,10 @@
-include ':app', ':BaseTool', ':Sample', ':Widget', ':Https'
+include ':app',
+        ':Sample',
+
+        ':Base',
+
+        //功能库
+        'Library:BaseLib',
+        'Library:Https',
+        'Library:Widget'
+
