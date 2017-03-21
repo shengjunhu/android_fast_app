@@ -1,8 +1,9 @@
-package com.hsj.core.base;
+package com.hsj.core;
 
 import android.content.Context;
 
-import com.hsj.core.tool.Logger;
+import com.hsj.core.base.AppManager;
+import com.hsj.core.tool.LogTool;
 
 /**
  * @Company     :  北京****科技有限公司
@@ -10,10 +11,10 @@ import com.hsj.core.tool.Logger;
  * @Version     :  Framework V1.0
  * @Date        :  2017/2/21 12:54
  * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  BaseToolContext
+ * @Class       :  BaseContext
  * @Description :  模块部分初始化
  */
-public class BaseToolContext {
+public class BaseContext {
 
     //debugFlag - 默认为false ，true为调试
     public static boolean debugFlag;
@@ -38,7 +39,7 @@ public class BaseToolContext {
         AppManager.getInstance().init();
 
         //初始化日志类
-        Logger.init(mContext);
+        LogTool.init(mContext);
 
     }
 

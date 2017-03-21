@@ -10,6 +10,8 @@ import android.os.Looper;
 import android.os.Process;
 import android.util.Log;
 
+import com.hsj.core.BaseContext;
+
 import java.io.Closeable;
 import java.io.File;
 import java.io.FileInputStream;
@@ -33,7 +35,7 @@ import java.util.Stack;
  */
 public class AppManager {
 
-    private Context mContext = BaseToolContext.mContext;
+    private Context mContext = BaseContext.mContext;
 
     public static AppManager instance = new AppManager();
 

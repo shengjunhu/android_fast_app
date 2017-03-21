@@ -18,10 +18,10 @@ import com.hsj.core.base.BaseToolContext;
  * @Version     :  Framework V1.0
  * @Date        :  2017/2/21 12:54
  * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  PhoneManager
+ * @Class       :  PhoneTool
  * @Description :  设备信息帮助者
  */
-public class PhoneManager {
+public class PhoneTool {
 
     public static Context mContext = BaseToolContext.mContext;
 

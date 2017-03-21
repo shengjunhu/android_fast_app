@@ -3,7 +3,7 @@ package com.hsj.core.tool;
 import android.content.Context;
 import android.util.Log;
 
-import com.hsj.core.base.BaseToolContext;
+import com.hsj.core.BaseContext;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -19,14 +19,14 @@ import java.util.Date;
  * @Version     :  Framework V1.0
  * @Date        :  2017/2/21 12:54
  * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  Logger
+ * @Class       :  LogTool
  * @Description :  日志帮助者
  */
-public class Logger {
+public class LogTool {
 
     private static String TAG = "【♣Logger♣】";   // 默认的 TAG
 
-    private static Boolean LOG_SWITCH = BaseToolContext.debugFlag;   // 日志文件总开关
+    private static Boolean LOG_SWITCH = BaseContext.debugFlag;   // 日志文件总开关
 
     private static Boolean LOG_TO_FILE = false; // 日志写入文件开关，默认false
 
@@ -46,7 +46,7 @@ public class Logger {
      * @param context
      */
     public static void init(Context context) {
-        LOG_FILE_PATH = FileHelper.getCacheDir(context);
+        LOG_FILE_PATH = FileTool.getCacheDir(context);
         deleteLogFile();
     }
 

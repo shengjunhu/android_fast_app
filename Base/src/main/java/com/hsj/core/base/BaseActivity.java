@@ -13,7 +13,7 @@ import android.widget.Toast;
  * @Class       :  BaseActivity
  * @Description :  项目Activity基类
  */
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

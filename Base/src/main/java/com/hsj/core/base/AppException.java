@@ -1,7 +1,9 @@
 package com.hsj.core.base;
 
 import android.widget.Toast;
-import com.hsj.core.tool.Logger;
+
+import com.hsj.core.BaseContext;
+import com.hsj.core.tool.LogTool;
 
 /**
  * @Company     :  北京****科技有限公司
@@ -63,8 +65,8 @@ public class AppException extends RuntimeException {
             default:
                 break;
         }
-        Logger.w("AppException", "全局异常信息: AppException：" + msg);
-        Toast.makeText(BaseToolContext.mContext,msg,Toast.LENGTH_SHORT).show();
+        LogTool.w("AppException", "全局异常信息: AppException：" + msg);
+        Toast.makeText(BaseContext.mContext,msg,Toast.LENGTH_SHORT).show();
         return msg;
     }
 

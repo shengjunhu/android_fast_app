@@ -10,10 +10,10 @@ import com.hsj.core.base.BaseToolContext;
  * @Version     :  Framework V1.0
  * @Date        :  2017/2/21 12:54
  * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  SpHelper
+ * @Class       :  SpTool
  * @Description :  首选项帮助者
  */
-public class SpHelper {
+public class SpTool {
 
     private static String config = BaseToolContext.SpConfigName;
 

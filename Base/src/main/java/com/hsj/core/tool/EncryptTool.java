@@ -21,10 +21,10 @@ import javax.crypto.spec.SecretKeySpec;
  * @Version     :  Framework V1.0
  * @Date        :  2017/2/21 12:54
  * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  EncryptHelper
+ * @Class       :  EncryptTool
  * @Description :  数据加密帮助者
  */
-public class EncryptHelper {
+public class EncryptTool {
 
     /**
      * 字节数组转16进制字符串

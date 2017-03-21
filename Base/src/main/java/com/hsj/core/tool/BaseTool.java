@@ -16,10 +16,10 @@ import java.util.regex.Pattern;
  * @Version     :  Framework V1.0
  * @Date        :  2017/2/21 12:54
  * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  BaseHelper
- * @Description :  基本帮助者
+ * @Class       :  BaseTool
+ * @Description :  常用工具
  */
-public class BaseHelper {
+public class BaseTool {
 
     /**
      * Toast方法

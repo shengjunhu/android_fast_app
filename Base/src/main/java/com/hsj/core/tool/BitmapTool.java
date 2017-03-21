@@ -16,10 +16,10 @@ import java.io.FileOutputStream;
  * @Version     :  Framework V1.0
  * @Date        :  2017/2/21 12:54
  * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  BitmapHelper
- * @Description :  Bitmap帮助者
+ * @Class       :  BitmapTool
+ * @Description :  Bitmap工具类
  */
-public class BitmapHelper {
+public class BitmapTool {
 
     /**
      * 将图片转换成base64字符串

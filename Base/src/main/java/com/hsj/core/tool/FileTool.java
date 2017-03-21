@@ -33,10 +33,10 @@ import java.util.zip.GZIPInputStream;
  * @Version     :  Framework V1.0
  * @Date        :  2017/2/21 12:54
  * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  FileHelper
+ * @Class       :  FileTool
  * @Description :  文件帮助者
  */
-public class FileHelper {
+public class FileTool {
 
     /**
      * SD卡是否可用

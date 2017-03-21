@@ -16,7 +16,7 @@ import android.view.ViewGroup;
  * @Class       :  BaseFragment
  * @Description :  项目Fragment基类
  */
-public class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment {
 
     private final String TAG = "BaseFragment";
 

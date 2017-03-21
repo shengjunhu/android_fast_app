@@ -13,10 +13,10 @@ import com.bumptech.glide.Glide;
  * @Version     :  Framework V1.0
  * @Date        :  2017/2/21 12:54
  * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  ImageHelper
+ * @Class       :  ImageTool
  * @Description :  图片加载帮助者、建议直接使用Glide的方法
  */
-public class ImageHelper {
+public class ImageTool {
 
     /**
      * Glide加载图片
