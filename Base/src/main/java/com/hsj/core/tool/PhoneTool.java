@@ -10,7 +10,8 @@ import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.WindowManager;
-import com.hsj.core.base.BaseToolContext;
+
+import com.hsj.core.BaseContext;
 
 /**
  * @Company     :  北京****科技有限公司
@@ -23,7 +24,7 @@ import com.hsj.core.base.BaseToolContext;
  */
 public class PhoneTool {
 
-    public static Context mContext = BaseToolContext.mContext;
+    public static Context mContext = BaseContext.mContext;
 
     /**
      * 获取手机品牌

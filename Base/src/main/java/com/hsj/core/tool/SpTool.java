@@ -2,7 +2,8 @@ package com.hsj.core.tool;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import com.hsj.core.base.BaseToolContext;
+
+import com.hsj.core.BaseContext;
 
 /**
  * @Company     :  北京****科技有限公司
@@ -15,9 +16,9 @@ import com.hsj.core.base.BaseToolContext;
  */
 public class SpTool {
 
-    private static String config = BaseToolContext.SpConfigName;
+    private static String config = BaseContext.SpConfigName;
 
-    private static Context mContext = BaseToolContext.mContext;
+    private static Context mContext = BaseContext.mContext;
 
     /**
      * 可以put ：Int String Boolean类型数据

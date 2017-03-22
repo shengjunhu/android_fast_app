@@ -2,7 +2,8 @@ package com.hsj.core.tool;
 
 import android.os.Looper;
 import android.widget.Toast;
-import com.hsj.core.base.BaseToolContext;
+
+import com.hsj.core.BaseContext;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -27,7 +28,7 @@ public class BaseTool {
      * @param str
      */
     public static void showToast(String str) {
-        Toast.makeText(BaseToolContext.mContext, str + "", Toast.LENGTH_SHORT).show();
+        Toast.makeText(BaseContext.mContext, str + "", Toast.LENGTH_SHORT).show();
     }
 
     /**
