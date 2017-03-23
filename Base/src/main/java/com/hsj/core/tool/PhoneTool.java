@@ -10,16 +10,18 @@ import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 
 import com.hsj.core.BaseContext;
 
 /**
- * @Company     :  北京****科技有限公司
- * @Author      :  HSJ
- * @Version     :  Framework V1.0
- * @Date        :  2017/2/21 12:54
- * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  PhoneTool
+ * @Company :  北京****科技有限公司
+ * @Author :  HSJ
+ * @Version :  Framework V1.0
+ * @Date :  2017/2/21 12:54
+ * @E-mail :  mr.ajun@foxmail.com
+ * @Class :  PhoneTool
  * @Description :  设备信息帮助者
  */
 public class PhoneTool {
@@ -226,6 +228,7 @@ public class PhoneTool {
 
     /**
      * 判断网络连接状态
+     *
      * @param context
      * @return
      */
@@ -244,6 +247,7 @@ public class PhoneTool {
 
     /**
      * 判断wifi状态
+     *
      * @param context
      * @return
      */
@@ -262,6 +266,7 @@ public class PhoneTool {
 
     /**
      * 判断移动网络
+     *
      * @param context
      * @return
      */
@@ -296,6 +301,29 @@ public class PhoneTool {
             return;
         }
         paramContext.startActivity(new Intent("android.settings.WIRELESS_SETTINGS"));
+    }
+
+    /**
+     * 打卡软键盘
+     *
+     * @param mEditText 输入框
+     * @param mContext  上下文
+     */
+    public static void openKeybord(EditText mEditText, Context mContext) {
+        InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.showSoftInput(mEditText, InputMethodManager.RESULT_SHOWN);
+        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED,InputMethodManager.HIDE_IMPLICIT_ONLY);
+    }
+
+    /**
+     * 关闭软键盘
+     *
+     * @param mEditText 输入框
+     * @param mContext  上下文
+     */
+    public static void closeKeybord(EditText mEditText, Context mContext) {
+        InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(mEditText.getWindowToken(), 0);
     }
 
 }

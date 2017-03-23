@@ -36,7 +36,7 @@ public class SpTool {
         } else if (value instanceof Boolean) {
             edit.putBoolean(key, (boolean) value);
         }
-        edit.commit();
+        edit.apply();
     }
 
     /**
@@ -79,7 +79,7 @@ public class SpTool {
         SharedPreferences sp = mContext.getSharedPreferences(config, Context.MODE_PRIVATE);
         SharedPreferences.Editor ed = sp.edit();
         ed.clear();
-        ed.commit();
+        ed.apply();
     }
 
 }

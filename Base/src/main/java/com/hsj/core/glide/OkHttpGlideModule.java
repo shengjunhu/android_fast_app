@@ -1,6 +1,7 @@
 package com.hsj.core.glide;
 
 import android.content.Context;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.GlideBuilder;
 import com.bumptech.glide.load.engine.bitmap_recycle.LruBitmapPool;
@@ -9,7 +10,7 @@ import com.bumptech.glide.load.engine.cache.LruResourceCache;
 import com.bumptech.glide.load.engine.cache.MemorySizeCalculator;
 import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.module.GlideModule;
-import com.hsj.core.tool.FileHelper;
+import com.hsj.core.tool.FileTool;
 
 import java.io.InputStream;
 
@@ -37,8 +38,8 @@ public class OkHttpGlideModule implements GlideModule {
      */
     public void applyOptions(Context context, GlideBuilder builder) {
 
-        String cacheDir = FileHelper.getCacheDir(context);
-        int imageCacheSize = (int) (FileHelper.getStorageSize()/4);
+        String cacheDir = FileTool.getCacheDir(context);
+        int imageCacheSize = (int) (FileTool.getStorageSize()/4);
 
         builder.setDiskCache(new DiskLruCacheFactory(cacheDir, "image", imageCacheSize));
 

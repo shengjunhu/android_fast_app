@@ -13,7 +13,9 @@ import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
-import com.hsj.core.base.BaseToolContext;
+
+import com.hsj.core.BaseContext;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -405,8 +407,8 @@ public class FileTool {
     public static PackageInfo getPackageInfo() {
         PackageInfo info = null;
         try {
-            String packageName = BaseToolContext.mContext.getPackageName();
-            info = BaseToolContext.mContext.getPackageManager().getPackageInfo(packageName, 0);
+            String packageName = BaseContext.mContext.getPackageName();
+            info = BaseContext.mContext.getPackageManager().getPackageInfo(packageName, 0);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -17,7 +17,7 @@ import java.io.FileOutputStream;
  * @Date        :  2017/2/21 12:54
  * @E-mail      :  mr.ajun@foxmail.com
  * @Class       :  BitmapTool
- * @Description :  Bitmap工具类
+ * @Description :  Bitmap工具类：Bitmap转字符串、Bitmap压缩
  */
 public class BitmapTool {
 
