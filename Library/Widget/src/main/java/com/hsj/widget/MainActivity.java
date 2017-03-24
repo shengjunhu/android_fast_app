@@ -6,7 +6,7 @@ import android.os.Bundle;
 /**
  * @Company     :  北京****科技有限公司
  * @Author      :  HSJ
- * @Version     :  Framework V1.0
+ * @Version     :  FastAndroid V1.0
  * @Date        :  2017/3/14 19:33
  * @E-mail      :  mr.ajun@foxmail.com
  * @Class       :  MainActivity

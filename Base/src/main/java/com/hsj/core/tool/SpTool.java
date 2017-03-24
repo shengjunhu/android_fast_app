@@ -8,7 +8,7 @@ import com.hsj.core.BaseContext;
 /**
  * @Company     :  北京****科技有限公司
  * @Author      :  HSJ
- * @Version     :  Framework V1.0
+ * @Version     :  FastAndroid V1.0
  * @Date        :  2017/2/21 12:54
  * @E-mail      :  mr.ajun@foxmail.com
  * @Class       :  SpTool

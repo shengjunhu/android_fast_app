@@ -12,6 +12,15 @@ import java.io.InputStream;
 
 import okhttp3.OkHttpClient;
 
+/**
+ * @Company     :  北京****科技有限公司
+ * @Author      :  HSJ
+ * @Version     :  FastAndroid V1.0
+ * @Date        :  2017/3/24 11:08
+ * @E-mail      :  mr.ajun@foxmail.com
+ * @Class       :  OkHttpUrlLoader
+ * @Description :  Glide网络加载图片配置
+ */
 public class OkHttpUrlLoader implements ModelLoader<GlideUrl, InputStream> {
     private final okhttp3.Call.Factory client;
 
