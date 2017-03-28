@@ -25,13 +25,13 @@ import java.net.URL;
 import java.util.Stack;
 
 /**
- * @Company     :  北京****科技有限公司
- * @Author      :  HSJ
- * @Version     :  FastAndroid V1.0
- * @Date        :  2017/2/21 12:54
- * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  AppManager
- * @Description :  Activity管理和崩溃信息上传
+ * @Company:北京****科技有限公司
+ * @Author:HSJ
+ * @Version:FastAndroid V1.0
+ * @Date:2017/2/21 12:54
+ * @E-mail:mr.ajun@foxmail.com
+ * @Class:AppManager
+ * @Description:Activity管理和崩溃信息上传
  */
 public class AppManager {
 

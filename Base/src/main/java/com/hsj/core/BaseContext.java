@@ -6,13 +6,13 @@ import com.hsj.core.base.AppManager;
 import com.hsj.core.tool.LogTool;
 
 /**
- * @Company     :  北京****科技有限公司
- * @Author      :  HSJ
- * @Version     :  FastAndroid V1.0
- * @Date        :  2017/2/21 12:54
- * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  BaseContext
- * @Description :  模块部分初始化
+ * @Company:北京****科技有限公司
+ * @Author:HSJ
+ * @Version:FastAndroid V1.0
+ * @Date:2017/2/21 12:54
+ * @E-mail:mr.ajun@foxmail.com
+ * @Class:BaseContext
+ * @Description:模块部分初始化
  */
 public class BaseContext {
 
@@ -23,16 +23,16 @@ public class BaseContext {
     public static Context mContext;
 
     //首选项文件名
-    public static String  SpConfigName = "Config";
+    public static String SpConfigName = "Config";
 
     /**
      * 在app主Module中初始化BaseTool Module
      *
-     * @param context   - 引入上下文
-     * @param deBug     - 调试标志：true为调试
+     * @param context - 引入上下文
+     * @param deBug   - 调试标志：true为调试
      */
     public static void init(Context context, boolean deBug) {
-        mContext  = context;
+        mContext = context;
         debugFlag = deBug;
 
         //App管理者初始化

@@ -8,13 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * @Company     :  北京****科技有限公司
- * @Author      :  HSJ
- * @Version     :  FastAndroid V1.0
- * @Date        :  2017/2/21 12:54
- * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  BaseFragment
- * @Description :  项目Fragment基类
+ * @Company:北京****科技有限公司
+ * @Author:HSJ
+ * @Version:FastAndroid V1.0
+ * @Date:2017/2/21 12:54
+ * @E-mail:mr.ajun@foxmail.com
+ * @Class:BaseFragment
+ * @Description:项目Fragment基类
  */
 public abstract class BaseFragment extends Fragment {
 
