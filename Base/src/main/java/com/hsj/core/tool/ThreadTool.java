@@ -23,7 +23,7 @@ public abstract class ThreadTool {
     /**
      * 要执行的耗时操作
      */
-    public abstract void doTask();
+    protected abstract Object doTask();
 
     /**
      * 执行异步任务
