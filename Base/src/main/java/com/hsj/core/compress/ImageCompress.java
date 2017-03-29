@@ -25,7 +25,7 @@ import java.io.IOException;
  * @Description:图片压缩
  */
 public class ImageCompress {
-
+	
     private static final int FIRST_LEVEL = 1;
 
     public static final int THIRD_LEVEL = 3;

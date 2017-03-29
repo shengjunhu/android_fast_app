@@ -5,13 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 /**
- * @Company     :  北京****科技有限公司
- * @Author      :  HSJ
- * @Version     :  FastAndroid V1.0
- * @Date        :  2017/2/21 12:54
- * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  BaseActivity
- * @Description :  项目Activity基类
+ * @Company:北京****科技有限公司
+ * @Author:HSJ
+ * @Version:FastAndroid V1.0
+ * @Date:2017/2/21 12:54
+ * @E-mail:mr.ajun@foxmail.com
+ * @Class:BaseActivity
+ * @Description:项目Activity基类
  */
 public abstract class BaseActivity extends AppCompatActivity {
 
@@ -42,8 +42,8 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-    public void showToast(String msg){
-        Toast.makeText(this,msg+"",Toast.LENGTH_SHORT).show();
+    public void showToast(String msg) {
+        Toast.makeText(this, msg + "", Toast.LENGTH_SHORT).show();
     }
 
     @Override

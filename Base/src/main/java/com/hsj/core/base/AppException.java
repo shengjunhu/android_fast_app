@@ -6,22 +6,22 @@ import com.hsj.core.BaseContext;
 import com.hsj.core.tool.LogTool;
 
 /**
- * @Company     :  北京****科技有限公司
- * @Author      :  HSJ
- * @Version     :  FastAndroid V1.0
- * @Date        :  2017/2/21 12:54
- * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  AppException
- * @Description :  全局抛异常：具体异常类型根据业务设置
+ * @Company:北京****科技有限公司
+ * @Author:HSJ
+ * @Version:FastAndroid V1.0
+ * @Date:2017/2/21 12:54
+ * @E-mail:mr.ajun@foxmail.com
+ * @Class:AppException
+ * @Description:全局抛异常：具体异常类型根据业务设置
  */
 public class AppException extends RuntimeException {
 
-    public static final int ERROR_CODE              = 999;              //网络请求：失败码
-    public static final int OFFLINE_CODE            = 401;              //网络请求：账号被踢
-    public static final int TOKEN_INVALID_CODE      = 403;              //网络请求：token过期
-    public static final int REFUSE_CODE_            = 405;              //网络请求：请求没有授权
-    public static final int DATA_UNREADABLE_CODE    = 0;                //网络请求数据解析错误
-    public static final int UNKNOWN_ERROR_CODE      = -1;               //未知错误
+    public static final int ERROR_CODE = 999;              //网络请求：失败码
+    public static final int OFFLINE_CODE = 401;              //网络请求：账号被踢
+    public static final int TOKEN_INVALID_CODE = 403;              //网络请求：token过期
+    public static final int REFUSE_CODE_ = 405;              //网络请求：请求没有授权
+    public static final int DATA_UNREADABLE_CODE = 0;                //网络请求数据解析错误
+    public static final int UNKNOWN_ERROR_CODE = -1;               //未知错误
 
     public AppException(int exceptionCode) {
         super(ExceptionMsg(exceptionCode, null));
@@ -31,7 +31,7 @@ public class AppException extends RuntimeException {
         super(ExceptionMsg(-1, exceptionMsg));
     }
 
-    public AppException(int exceptionCode,String exceptionMsg) {
+    public AppException(int exceptionCode, String exceptionMsg) {
         super(ExceptionMsg(exceptionCode, exceptionMsg));
     }
 
@@ -66,7 +66,7 @@ public class AppException extends RuntimeException {
                 break;
         }
         LogTool.w("AppException", "全局异常信息: AppException：" + msg);
-        Toast.makeText(BaseContext.mContext,msg,Toast.LENGTH_SHORT).show();
+        Toast.makeText(BaseContext.mContext, msg, Toast.LENGTH_SHORT).show();
         return msg;
     }
 

@@ -1,17 +1,17 @@
 package com.hsj.core.base;
 
 /**
- * @Company     :  北京****科技有限公司
- * @Author      :  HSJ
- * @Version     :  FastAndroid V1.0
- * @Date        :  2017/3/21 14:03
- * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  ConfigInfo
- * @Description :  全局信息配置
+ * @Company:北京****科技有限公司
+ * @Author:HSJ
+ * @Version:FastAndroid V1.0
+ * @Date:2017/3/21 14:03
+ * @E-mail:mr.ajun@foxmail.com
+ * @Class:ConfigInfo
+ * @Description:全局信息配置
  */
 public class AppConfig {
 
-    interface Info{
+    interface Info {
         /**
          * 服务器IP
          */
