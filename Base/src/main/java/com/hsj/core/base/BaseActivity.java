@@ -1,7 +1,10 @@
 package com.hsj.core.base;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.widget.Toast;
 
 /**
@@ -42,8 +45,31 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-    public void showToast(String msg) {
-        Toast.makeText(this, msg + "", Toast.LENGTH_SHORT).show();
+    /**
+     * Toast
+     * @param msg
+     */
+    public void showToast(@NonNull String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
+
+    /**
+     * 判断字符串为空
+     *
+     * @param str
+     * @return false 为（null、""）
+     */
+    public boolean isEmpty(@Nullable String str){
+        return TextUtils.isEmpty(str);
+    }
+
+    /**
+     * 判断对象是否为null
+     * @param obj
+     * @return
+     */
+    public boolean isNull(@Nullable Object obj){
+        return null == obj ? true:false;
     }
 
     @Override

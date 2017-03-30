@@ -2,10 +2,13 @@ package com.hsj.core.base;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 /**
  * @Company:北京****科技有限公司
@@ -18,7 +21,7 @@ import android.view.ViewGroup;
  */
 public abstract class BaseFragment extends Fragment {
 
-    private final String TAG = "BaseFragment";
+    private String TAG = "BaseFragment";
 
     @Override
     public void onStart() {
@@ -41,9 +44,31 @@ public abstract class BaseFragment extends Fragment {
         super.onResume();
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
+    /**
+     * Toast
+     * @param msg
+     */
+    public void showToast(@NonNull String msg) {
+        Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
+    }
+
+    /**
+     * 判断字符串为空
+     *
+     * @param str
+     * @return false 为（null、""）
+     */
+    public boolean isEmpty(@Nullable String str){
+        return TextUtils.isEmpty(str);
+    }
+
+    /**
+     * 判断对象是否为null
+     * @param obj
+     * @return
+     */
+    public boolean isNull(@Nullable Object obj){
+        return null == obj ? true:false;
     }
 
     @Override
