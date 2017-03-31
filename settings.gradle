@@ -1,7 +1,7 @@
 include ':app',
 
         //功能测试Module
-        ':Sample',
+        ':Test',
 
         //及时通讯
         'IMSDK:Chat',
@@ -11,6 +11,7 @@ include ':app',
         'ThirdSDK:Cloud',
 
         //功能库
+        'Library:Tool',
         'Library:Https',
         'Library:Widget',
 

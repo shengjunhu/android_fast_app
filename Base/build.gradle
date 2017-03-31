@@ -28,7 +28,7 @@ android {
 }
 
 /**
- * 底层依赖库
+ * 为使得各模块高度解耦、且避免导包重复，全局基类导包统一使用
  */
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
