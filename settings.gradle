@@ -1,4 +1,4 @@
-include ':app',
+include ':app', ':Base',
 
         //功能测试Module
         ':Test',
@@ -13,8 +13,8 @@ include ':app',
         //功能库
         'Library:Tool',
         'Library:Https',
-        'Library:Widget',
+        'Library:Widget'
 
-        //基础核心库
-        ':Base'
+//基础核心库
+
 
