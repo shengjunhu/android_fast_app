@@ -56,6 +56,14 @@ dependencies {
      */
 
     /**
+     * ImageProvider Module依赖：
+     *
+     *   compile 'com.android.support:appcompat-v7:25.2.0'
+     *   compile 'com.android.support:recyclerview-v7:25.2.0'
+     *   compile 'com.github.bumptech.glide:glide:3.7.0'
+     */
+
+    /**
      * Tool Module依赖：
      *
      *
@@ -66,5 +74,6 @@ dependencies {
      *
      *
      */
+
 
 }
