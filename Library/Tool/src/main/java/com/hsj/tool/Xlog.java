@@ -1,4 +1,4 @@
-package com.hsj.tool.tool;
+package com.hsj.tool;
 
 import android.content.Context;
 import android.util.Log;
@@ -12,17 +12,17 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * @Company     :  北京****科技有限公司
- * @Author      :  HSJ
- * @Version     :  FastAndroid V1.0
- * @Date        :  2017/2/21 12:54
- * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  LogTool
- * @Description :  日志帮助者
+ * @Company:北京****科技有限公司
+ * @Author:HSJ
+ * @Version:FastAndroid V1.0
+ * @Date:2017/2/21 12:54
+ * @E-mail:mr.ajun@foxmail.com
+ * @Class:Xlog
+ * @Description:
  */
-public class LogTool {
+public class Xlog {
 
-    private static String TAG = "【♣Logger♣】";   // 默认的 TAG
+    private static String TAG = "【♣Xlog♣】";    // 默认的 TAG
 
     private static Boolean LOG_SWITCH = false;   // 日志文件总开关
 
@@ -41,6 +41,7 @@ public class LogTool {
 
     /**
      * 在项目中主模块中初始化
+     *
      * @param context
      */
     public static void init(Context context) {
@@ -134,7 +135,7 @@ public class LogTool {
                 Log.v(tag, msg, tr);                                            //v输出优先最低
             }
 
-            if (LOG_TO_FILE){//日志写入文件开关
+            if (LOG_TO_FILE) {//日志写入文件开关
                 log2File(String.valueOf(level), tag, msg + tr == null ? "" : "\n" + Log.getStackTraceString(tr));
             }
         }
@@ -155,7 +156,7 @@ public class LogTool {
         if (!destDir.exists()) {
             destDir.mkdirs();
         }
-        File file = new File(LOG_FILE_PATH+"/log", LOG_FILE_NAME + date);
+        File file = new File(LOG_FILE_PATH + "/log", LOG_FILE_NAME + date);
         try {
             FileWriter filerWriter = new FileWriter(file, true);
             BufferedWriter bufWriter = new BufferedWriter(filerWriter);

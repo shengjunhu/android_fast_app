@@ -1,4 +1,4 @@
-package com.hsj.tool.tool;
+package com.hsj.tool;
 
 import android.content.Context;
 import android.content.Intent;

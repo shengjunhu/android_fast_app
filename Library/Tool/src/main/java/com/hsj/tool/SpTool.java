@@ -1,16 +1,16 @@
-package com.hsj.tool.tool;
+package com.hsj.tool;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
 /**
- * @Company :  北京****科技有限公司
- * @Author :  HSJ
- * @Version :  FastAndroid V1.0
- * @Date :  2017/2/21 12:54
- * @E-mail :  mr.ajun@foxmail.com
- * @Class :  SpTool
- * @Description :  首选项帮助者
+ * @Company:北京****科技有限公司
+ * @Author:HSJ
+ * @Version:FastAndroid V1.0
+ * @Date:2017/2/21 12:54
+ * @E-mail:mr.ajun@foxmail.com
+ * @Class:SpTool
+ * @Description:首选项帮助者
  */
 public class SpTool {
 

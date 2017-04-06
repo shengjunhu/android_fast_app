@@ -1,4 +1,4 @@
-package com.hsj.tool.tool;
+package com.hsj.tool;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,13 +11,13 @@ import java.io.File;
 import java.io.FileOutputStream;
 
 /**
- * @Company     :  北京****科技有限公司
- * @Author      :  HSJ
- * @Version     :  FastAndroid V1.0
- * @Date        :  2017/2/21 12:54
- * @E-mail      :  mr.ajun@foxmail.com
- * @Class       :  BitmapTool
- * @Description :  Bitmap工具类：Bitmap转字符串、Bitmap压缩
+ * @Company:北京****科技有限公司
+ * @Author:HSJ
+ * @Version:FastAndroid V1.0
+ * @Date:2017/2/21 12:54
+ * @E-mail:mr.ajun@foxmail.com
+ * @Class:BitmapTool
+ * @Description:Bitmap工具类：Bitmap转字符串、Bitmap压缩
  */
 public class BitmapTool {
 
@@ -185,9 +185,9 @@ public class BitmapTool {
      */
     public static Bitmap setBitMap(Bitmap bitmap) {
 
-        File file = new File(Environment.getExternalStorageDirectory()+ "/xbsImage/");
+        File file = new File(Environment.getExternalStorageDirectory() + "/xbsImage/");
         file.mkdirs();
-        String fileName = Environment.getExternalStorageDirectory()+ "/xbsImage/" + System.currentTimeMillis() + ".jpg";
+        String fileName = Environment.getExternalStorageDirectory() + "/xbsImage/" + System.currentTimeMillis() + ".jpg";
         try {
             FileOutputStream b = new FileOutputStream(fileName);
             bitmap.compress(Bitmap.CompressFormat.PNG, 50, b);
