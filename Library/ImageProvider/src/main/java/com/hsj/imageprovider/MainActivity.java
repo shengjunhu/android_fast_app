@@ -1,9 +1,12 @@
 package com.hsj.imageprovider;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.hsj.imageprovider.ui.ImageSelectActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_camera:
                 break;
             case R.id.btn_image:
+                startActivity(new Intent(this, ImageSelectActivity.class));
                 break;
             case R.id.btn_video:
                 break;

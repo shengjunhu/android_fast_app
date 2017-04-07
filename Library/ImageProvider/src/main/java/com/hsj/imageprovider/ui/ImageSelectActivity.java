@@ -1,8 +1,10 @@
 package com.hsj.imageprovider.ui;
 
+import android.Manifest;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -17,7 +19,7 @@ import com.hsj.imageprovider.R;
  * @Class:ImageSelectActivity
  * @Description: 图片选择界面
  */
-public class ImageSelectActivity extends BaseActivity implements View.OnClickListener{
+public class ImageSelectActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,24 +40,32 @@ public class ImageSelectActivity extends BaseActivity implements View.OnClickLis
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             default:
                 break;
         }
     }
 
     private void initData() {
-        checkPermission();
+        String[] permission = {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
+        checkPermission(permission,100);
     }
 
-    /**
-     * 获取图片、相机操作
-     * 授权成功会自动调用该方法
-     */
     @Override
-    public void getImage() {
-        //TODO
-        super.getImage();
+    public void hadPermission(int permissionCode) {
+        Log.e("TAG", "hadPermission: ");
+        if(permissionCode == 100){
+            //TODO 1
+            Log.e("TAG", "hadPermission: 1");
+
+        }
+
+        if(permissionCode == 101){
+            //TODO 2
+            Log.e("TAG", "hadPermission: 2");
+        }
+
+        super.hadPermission(permissionCode);
     }
 
 

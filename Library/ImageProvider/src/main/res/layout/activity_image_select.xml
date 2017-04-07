@@ -33,7 +33,7 @@
 
             <RelativeLayout
                 android:id="@+id/rl_sure"
-                android:layout_width="60dp"
+                android:layout_width="54dp"
                 android:layout_height="32dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
@@ -44,7 +44,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_toStartOf="@id/tv_image_count_sure"
                     android:text="确定"
                     android:textSize="@dimen/sp16" />
 
@@ -72,6 +71,7 @@
         android:id="@+id/rl_image"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp44"
+        android:alpha="0.2"
         android:layout_alignParentBottom="true">
 
         <View
@@ -90,14 +90,14 @@
             android:textSize="@dimen/sp16" />
 
         <RelativeLayout
-            android:layout_width="60dp"
+            android:layout_width="54dp"
             android:layout_height="32dp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="@dimen/dp6">
 
             <TextView
-                android:id="@+id/tv_image_count"
+                android:id="@+id/tv_image_preview_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -110,7 +110,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toStartOf="@id/tv_image_count"
+                android:layout_toLeftOf="@id/tv_image_preview"
                 android:text="预览"
                 android:textSize="@dimen/sp16" />
         </RelativeLayout>
@@ -120,7 +120,7 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/toolbar" />
 
 </RelativeLayout>

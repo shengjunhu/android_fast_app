@@ -1,5 +1,7 @@
-package com.hsj.imageprovider.ui;
+package com.hsj.fastandroid.base;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -8,17 +10,17 @@ import android.view.View;
 import android.widget.Toast;
 
 /**
- * @Company:****息科技有限公司
+ * @Company:****科技有限公司
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/4/7 10:51
- * @Version:FastAndroid V21.0
+ * @Date:2017/4/7 12:14
+ * @Version:XBS V2.0
  * @Class:BaseActivity
- * @Description: 权限检测
+ * @Description:
  */
 public class BaseActivity extends AppCompatActivity {
 
-    private int PERMISSION_CODE = 0;
+    private int CHECK_PERMISSION_CODE = 100;
 
     /**
      * 查找View
@@ -32,21 +34,8 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     /**
-     * 展示对话框
-     */
-    public void showDialog(){
-
-    }
-
-    /**
-     * 取消对话框
-     */
-    public void dismissDilog(){
-
-    }
-
-    /**
      * Toast
+     *
      * @param msg
      */
     public void showToast(@NonNull String msg) {
@@ -56,7 +45,7 @@ public class BaseActivity extends AppCompatActivity {
     /**
      * 复写读取图片、调用camera方法，（子类复写该方法即可）
      */
-    public void hadPermission(int permissionCode) {
+    public void hadPermission() {
 
     }
 
@@ -65,34 +54,43 @@ public class BaseActivity extends AppCompatActivity {
      *
      * @param permission
      */
-    public void checkPermission(@NonNull String[] permission, int permissionCode) {
-        this.PERMISSION_CODE = permissionCode;
-        boolean flag = true;
-        for (int i = 0; i < permission.length; i++) {
-            flag = flag && (ActivityCompat.checkSelfPermission(this, permission[i]) == 0);
+    public void checkPermission(String[] permission) {
+        if (ActivityCompat.checkSelfPermission(this, permission[0]) != PackageManager.PERMISSION_GRANTED) {//检查有没有授权
+
+            if (!ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)) {//被拒绝后的再次提醒
+                showToast("当前操作需要以下权限!");
+                ActivityCompat.requestPermissions(this, permission, CHECK_PERMISSION_CODE);
+            } else {//初次申请权限
+                ActivityCompat.requestPermissions(this, permission, CHECK_PERMISSION_CODE);
+            }
+
+        } else {//已授权
+            hadPermission();
         }
 
-        if (flag) {//全都有权限
-            hadPermission(PERMISSION_CODE);
-        } else {//非全授权
-            ActivityCompat.requestPermissions(this, permission, PERMISSION_CODE);
-        }
     }
 
+    /**
+     * 权限申请结果回掉
+     *
+     * @param requestCode
+     * @param permissions
+     * @param grantResults
+     */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == PERMISSION_CODE) {
+        if (requestCode == CHECK_PERMISSION_CODE) {
             boolean flag = true;
             for (int i = 0; i < grantResults.length; i++) {
                 flag = flag && (grantResults[i] == 0);
             }
 
             if (flag) {
-                showToast("授权成功!");
-                hadPermission(PERMISSION_CODE);
+                hadPermission();
             } else {
                 showToast("权限被拒绝，无法进行以上操作!");
             }
+
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
