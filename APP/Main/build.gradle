@@ -1,8 +1,9 @@
 apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
     defaultConfig {
         applicationId "com.hsj.fastandroid"
         minSdkVersion 19
@@ -18,8 +19,11 @@ android {
         }
     }
 
+    rootProject.ext.compileVersion
+
     buildTypes {
         release {
+            buildConfigField "boolean", "DEBUG", "false"
             minifyEnabled true
             shrinkResources true
             zipAlignEnabled true
@@ -28,6 +32,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
+            buildConfigField "boolean", "DEBUG", "true"
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
