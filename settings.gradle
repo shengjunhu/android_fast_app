@@ -1,22 +1,22 @@
-include ':app',
+include ':APP:Main',
+        ':APP:Shop',
+        ':APP:Zone',
+        ':APP:Work',
+        ':APP:Me',
 
-        //功能测试Module
-        ':Test',
+        ':Base',
+        ':Library:Tool',
+        ':Library:Https',
+        ':Library:Widget',
+        ':Library:MediaProvider',
+        ':Library:QR',
+        ':Library:VideoPlayer',
+        ':Library:VideoRecord',
+        ':Library:Permission',
 
-        //及时通讯
-        'IMSDK:Chat',
-
-        //第三方SDK
-        'ThirdSDK:Map',
-        'ThirdSDK:Cloud',
-
-        //功能库
-        'Library:ImageProvider',
-        'Library:Tool',
-        'Library:Https',
-        'Library:Widget',
-
-        //基础核心库
-        ':Base'
-
-
+        ':ThirdSDK:Pay',
+        ':ThirdSDK:Login',
+        ':ThirdSDK:Share',
+        ':ThirdSDK:Map',
+        ':ThirdSDK:Cloud',
+        ':ThirdSDK:IM'

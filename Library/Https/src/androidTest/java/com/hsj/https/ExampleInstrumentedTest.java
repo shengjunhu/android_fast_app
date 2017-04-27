@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.hsj.https.test", appContext.getPackageName());
+        assertEquals("com.hsj.https", appContext.getPackageName());
     }
 }

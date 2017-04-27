@@ -1,6 +1,25 @@
-# Widget Modlue 混淆说明
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in F:\ToolBcakup\AndroidSDK/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the proguardFiles
+# directive in build.gradle.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
 
-# 1、自定义控件原则上不允许混淆、也不建议混淆
+# Add any project specific keep options here:
 
-# 2、但是作者测试Widget模块的时发现，即使混淆了大部分功能都能用，
-#    若非要混淆请多测试，混淆可能发生未知异常
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+
+# Uncomment this to preserve the line number information for
+# debugging stack traces.
+#-keepattributes SourceFile,LineNumberTable
+
+# If you keep the line number information, uncomment this to
+# hide the original source file name.
+#-renamesourcefileattribute SourceFile
