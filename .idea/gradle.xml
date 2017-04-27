@@ -9,12 +9,12 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/APP" />
+            <option value="$PROJECT_DIR$/APP/Base" />
             <option value="$PROJECT_DIR$/APP/Main" />
             <option value="$PROJECT_DIR$/APP/Me" />
             <option value="$PROJECT_DIR$/APP/Shop" />
             <option value="$PROJECT_DIR$/APP/Work" />
             <option value="$PROJECT_DIR$/APP/Zone" />
-            <option value="$PROJECT_DIR$/Base" />
             <option value="$PROJECT_DIR$/Library" />
             <option value="$PROJECT_DIR$/Library/Https" />
             <option value="$PROJECT_DIR$/Library/MediaProvider" />

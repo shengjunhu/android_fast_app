@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/APP/APP.iml" filepath="$PROJECT_DIR$/APP/APP.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Base/Base.iml" filepath="$PROJECT_DIR$/Base/Base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/APP/Base/Base.iml" filepath="$PROJECT_DIR$/APP/Base/Base.iml" />
       <module fileurl="file://$PROJECT_DIR$/ThirdSDK/Cloud/Cloud.iml" filepath="$PROJECT_DIR$/ThirdSDK/Cloud/Cloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/FastAndroid.iml" filepath="$PROJECT_DIR$/FastAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/Library/Https/Https.iml" filepath="$PROJECT_DIR$/Library/Https/Https.iml" />
