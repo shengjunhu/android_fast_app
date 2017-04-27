@@ -25,13 +25,6 @@ ext {
             rxlifecycleSdkVersion   : "1.0"
     ]
 
-    compileVersion{
-        compileOptions {
-            sourceCompatibility JavaVersion.VERSION_1_8
-            targetCompatibility JavaVersion.VERSION_1_8
-        }
-    }
-
     dependencies = [
             //support
             "appcompat-v7"             : "com.android.support:appcompat-v7:${version["androidSupportSdkVersion"]}",
