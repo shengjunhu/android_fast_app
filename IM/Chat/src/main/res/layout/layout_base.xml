@@ -33,12 +33,12 @@
 
         <TextView
             android:id="@+id/tv_title"
-            android:gravity="center_vertical|left"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
-            android:maxLength="20"
             android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:maxLength="20"
             android:maxLines="1"
             android:textColor="@color/white"
             android:textSize="18sp" />
@@ -51,8 +51,8 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="15dp"
             android:background="@null"
-            android:onClick="onHeadRightButtonClick"
             android:maxLines="1"
+            android:onClick="onHeadRightButtonClick"
             android:textColor="@drawable/selector_btn_top" />
 
         <TextView

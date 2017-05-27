@@ -403,10 +403,8 @@ public class ConversationActivity extends BaseActivity implements View.OnClickLi
      * 设置公共服务号 ActionBar
      */
     private void setPublicServiceActionBar(String targetId) {
-
         if (targetId == null)
             return;
-
 
         RongIM.getInstance().getPublicServiceProfile(Conversation.PublicServiceType.PUBLIC_SERVICE
                 , targetId, new RongIMClient.ResultCallback<PublicServiceProfile>() {

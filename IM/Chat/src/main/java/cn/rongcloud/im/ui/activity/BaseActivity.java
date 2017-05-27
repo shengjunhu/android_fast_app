@@ -52,8 +52,7 @@ public abstract class BaseActivity extends AppCompatActivity implements OnDataLi
         mTitle = (TextView) super.findViewById(R.id.tv_title);
         mBtnBackDrawable = getResources().getDrawable(R.drawable.ac_back_icon);
         mBtnBackDrawable.setBounds(0, 0, mBtnBackDrawable.getMinimumWidth(),
-                                   mBtnBackDrawable.getMinimumHeight());
-
+                mBtnBackDrawable.getMinimumHeight());
 
         mAsyncTaskManager = AsyncTaskManager.getInstance(getApplicationContext());
         // Activity管理
@@ -61,11 +60,10 @@ public abstract class BaseActivity extends AppCompatActivity implements OnDataLi
 
     }
 
-
     @Override
     public void setContentView(View view) {
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-            ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1);
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1);
         mContentView.addView(view, lp);
     }
 
@@ -74,7 +72,6 @@ public abstract class BaseActivity extends AppCompatActivity implements OnDataLi
         View view = LayoutInflater.from(this).inflate(layoutResID, null);
         setContentView(view);
     }
-
 
     /**
      * 设置头部是否可见
@@ -199,10 +196,10 @@ public abstract class BaseActivity extends AppCompatActivity implements OnDataLi
     /**
      * 发送请求（需要检查网络）
      *
-     * @param id 请求数据的用户ID或者groupID
+     * @param id          请求数据的用户ID或者groupID
      * @param requestCode 请求码
      */
-    public void request(String id , int requestCode) {
+    public void request(String id, int requestCode) {
         if (mAsyncTaskManager != null) {
             mAsyncTaskManager.request(id, requestCode, this);
         }
