@@ -1,4 +1,4 @@
-package com.hsj.main;
+package com.hsj.app;
 
 import android.content.Context;
 import android.support.multidex.MultiDexApplication;

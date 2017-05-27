@@ -1,4 +1,4 @@
-package com.hsj.main.ui;
+package com.hsj.app.ui;
 
 import android.view.View;
 
@@ -15,6 +15,7 @@ import com.hsj.main.R;
  * @Description:
  */
 public class AppLoginActivity extends AppBaseActivity {
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_app_login;

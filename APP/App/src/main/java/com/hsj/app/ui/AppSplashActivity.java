@@ -1,4 +1,4 @@
-package com.hsj.main.ui;
+package com.hsj.app.ui;
 
 import com.hsj.base.AppBaseActivity;
 
