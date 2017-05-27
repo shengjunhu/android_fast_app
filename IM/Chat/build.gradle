@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "cn.rongcloud.im"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 2017050918
+        versionName "2.8.11 Stable"
+
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+    }
+
+    signingConfigs {
+        config {
+            storeFile file("rong.key")
+            storePassword "Amigo123"
+            keyAlias "RongCloud"
+            keyPassword "Amigo123"
+        }
+    }
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    packagingOptions {
+        exclude 'AndroidManifest.xml'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.config //for release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.config //for release
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+repositories { flatDir { dirs 'aars' } }
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:support-v4:21.0.3'
+    compile project(':IM:Recognizer')
+    compile project(':IM:ContactCard')
+    compile project(':IM:Sticker')
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.facebook.stetho:stetho:1.4.1'
+    compile files('libs/MiPush_SDK_Client_3_2_2.jar')
+    compile project(':IM:IMKit')
+    compile project(':IM:CallKit')
+    compile project(':IM:RedPacket')
+    compile(name: 'HMS-SDK-2.4.0.300', ext: 'aar')
+}
+

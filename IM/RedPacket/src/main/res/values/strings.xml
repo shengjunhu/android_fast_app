@@ -1,0 +1,167 @@
+<resources>
+    <string name="app_name">JRMF_IM</string>
+
+    <!--发红包-->
+    <string name="_bribery_message">恭喜发财，大吉大利！</string>
+    <string name="btn_put">塞钱进红包</string>
+    <string name="btn_pay">立即支付</string>
+    <string name="_s_bribery">红包</string>
+    <string name="network_error">当前网络不佳，请稍后再试</string>
+    <string name="_de_dialog_item_message_delete">删除消息</string>
+    <string name="red_envelope_blessing">红包祝福语最多输入25个字噢～</string>
+    <string name="group_number">本群共%1$d人</string>
+
+
+    <!--添加银行卡-->
+    <string name="card_name_tip">请用{XXX}名下银行储蓄卡</string>
+    <string name="card_num_empty">银行卡号不能为空</string>
+    <string name="card_num_error">请输入正确银行卡号</string>
+    <string name="next_step_tip">点击下一步视为您同意《金融魔方用户协议》</string>
+    <string name="name_tip">请输入姓名</string>
+    <string name="name_error_tip">请输入正确的姓名</string>
+    <string name="idcard_tip">请输入正确的身份证号</string>
+    <string name="phone_tip">请输入正确的手机号</string>
+    <string name="phone_hint">请输入正确的银行预留手机号</string>
+    <string name="verify_code_empty">请输入验证码</string>
+    <string name="verify_code_error">请输入正确验证码</string>
+    <string name="bind_card_suss">银行卡绑定成功</string>
+    <string name="user_protocol">用户协议</string>
+
+    <!--webview-->
+    <string name="user_protocol_title">金融魔方用户协议</string>
+    <string name="wallet_title">我的钱包</string>
+
+    <!--paytype-->
+    <string name="input_pwd">请输入支付密码</string>
+    <string name="forget_pwd">重置支付密码</string>
+    <string name="please_pay">请支付</string>
+    <string name="send_code">发送验证码</string>
+    <string name="re_send_code">重新发送验证码</string>
+    <string name="re_send">重新发送</string>
+    <string name="input_verify_code">请输入您{phonenum}手机号收到的验证码</string>
+    <string name="input_verify_code_title">请输入短信验证码</string>
+    <string name="add_card_pay">添加银行卡支付</string>
+    <string name="alipay">支付宝支付</string>
+    <string name="verify_code_suss">验证码发送成功</string>
+    <string name="pay_waiting">支付结果确认中</string>
+    <string name="pay_failure">支付失败</string>
+
+    <!--重置密码-->
+    <string name="update_pwd_succ">支付失败</string>
+    <string name="set_pwd_succ">支付密码设置成功</string>
+
+
+    <!--拆红包原生-->
+
+    <string name="other_rp_has_left">已领取%1$d/%2$d</string>
+    <string name="other_rp_no_left">已领取%1$d/%2$d，已被领完</string>
+    <string name="self_rp_has_left">已领取%1$d/%2$d，共%3$s/%4$s元</string>
+    <string name="self_rp_no_left">已领取%1$d/%2$d，已被领完</string>
+
+    <!--红包显示-->
+    <string name="no_rp">手慢了, 红包派完了</string>
+    <string name="rp_expire">该红包已超过24小时。如已领取,可在"我的红包"中查看</string>
+
+
+
+
+    <!-- 我的钱包 -->
+    <string name="my_wallet_title">我的钱包</string>
+
+    <!--我的红包-->
+    <string name="my_rp_title">我的红包</string>
+    <string name="luck_rp">拼手气红包</string>
+    <string name="normal_rp">普通红包</string>
+    <string name="trade_suc">交易成功</string>
+    <string name="who_rp">%1$s的红包</string>
+    <string name="has_grab_rp">您已领取过该红包</string>
+
+    <!-- 银行卡 -->
+    <string name="my_bank_title">银行卡设置</string>
+    <string name="look_banks">查看支持银行</string>
+    <string name="name_error">请输入姓名</string>
+    <string name="id_card_error">请输入正确的身份证号</string>
+    <string name="phone_num_error">请输入正确的手机号</string>
+    <string name="card_id_error">银行卡编号错误</string>
+    <string name="send_code_suc">验证码发送成功</string>
+    <string name="req_code">请先获得验证码</string>
+    <string name="get_code">重新获取验证码</string>
+    <string name="input_code">请输入短信验证码</string>
+    <string name="input_code_error">请输入正确的验证码</string>
+    <string name="add_card_suc">银行卡添加成功</string>
+    <string name="pay_protocol"> 钱包快捷支付协议</string>
+
+    <!--收支明细 -->
+    <string name="trade_detail_title">交易记录</string>
+    <string name="update_pwd">修改支付密码</string>
+
+    <!-- 提现 -->
+    <string name="deposit_tip">提示：使用无手续费提现时，如选择的支行信息与提现至的银行卡不一致，会导致提现失败。
+        提现结果会以短信形式发送到您的银行卡预留手机号上。</string>
+    <string name="deposit_fee_tip">提示：本次提现需要收取%1$s元手续费，提现结果会以短信形式发送到您的银行卡预留手机号上</string>
+    <string name="card_limit">该卡本次最多可提现%1$s元</string>
+    <string name="deposit_money">提现%1$s元</string>
+    <string name="select_bank_card">选择银行卡</string>
+    <string name="charge">手续费%1$s元</string>
+    <string name="charge_tip_dialog">本次提现将从您所提金额内扣除%1$s元手续费</string>
+    <string name="get_deposit_over">提现金额超限</string>
+    <string name="get_deposit_low">您的金额不足以支付手续费</string>
+    <!-- 充值 -->
+    <string name="recharge_money">充值%1$s元</string>
+    <string name="no_card_bind">您还没有绑定银行卡，请先添加银行卡</string>
+    <string name="input_recharge_amount">请输入充值金额</string>
+    <string name="recharge_fail">充值失败</string>
+    <string name="recharge_suc">充值成功</string>
+    <string name="card_des">尾号(%1$s)</string>
+    <string name="card_recharge_limit">该卡本次最多可充值%1$s元</string>
+    <string name="cardname_card_des">%1$s(%2$s)</string>
+
+    <!--银行卡设置  -->
+    <string name="del_card_des">删除尾号为%1$s的银行卡</string>
+    <string name="unbind_suc">解绑成功</string>
+
+    <!--账户信息-->
+
+    <string name="account_info_title">账户信息</string>
+    <string name="update_user_info">修改账户信息</string>
+    <string name="set_user_info">设置账户信息</string>
+    <string name="account_net_error">当前网络不佳，获取账户信息失败</string>
+    <string name="no_authen">未实名认证</string>
+
+    <!--找回支付密码-->
+    <string name="get_pwd_title">找回支付密码</string>
+
+    <!--身份认证-->
+    <string name="update_userinfo_suc">修改成功</string>
+
+    <!--密码校验-->
+    <string name="pwd_error">支付密码错误</string>
+
+    <!--找回支付密码-->
+    <string name="set_pwd_error">请输入6位支付密码</string>
+    <string name="pwd_not_same">两次密码输入不一致</string>
+    <string name="set_pwd_suc">支付密码设置成功</string>
+
+    <!--网络-->
+    <string name="net_error">当前网络不佳</string>
+    <string name="net_error_l">当前网络不佳,请稍后再试</string>
+
+    <!--选择支行-->
+    <string name="no_city">没有与之对应的城市</string>
+    <string name="no_branch">没有与之对应的支行,请您手动输入支行</string>
+    <string name="no_sel_province">请选择省</string>
+    <string name="no_sel_city">请选择市</string>
+    <string name="no_sel_branch">请选择支行</string>
+    <string name="no_input_branch">请输入支行</string>
+    <string name="no_input_amount">请输入提现金额</string>
+    <string name="input_amount_error">请输入正确的提现金额</string>
+
+
+
+
+    <string name="to_buttom">到底了噢～</string>
+    <string name="loading">加载中...</string>
+    <string name="waiting">请稍后...</string>
+
+
+</resources>

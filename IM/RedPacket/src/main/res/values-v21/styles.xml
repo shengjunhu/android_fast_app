@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+>
+
+    <!--设置activity的打开动画-->
+    <style name="AnimTranslucent" parent="@android:style/Theme.Translucent">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/red_dark</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity" >
+        <!--<item name="android:activityOpenEnterAnimation">@null</item>-->
+        <!--<item name="android:activityOpenExitAnimation">@null</item>-->
+        <!--<item name="android:activityCloseEnterAnimation">@null</item>-->
+        <!--<item name="android:activityCloseExitAnimation">@null</item>-->
+    </style>
+
+
+
+</resources>

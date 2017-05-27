@@ -1,0 +1,79 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.jrmf360.rylib">
+
+    <!--<uses-permission android:name="android.permission.INTERNET" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+
+    <application>
+        <activity android:name="com.jrmf360.rylib.rp.ui.AddCardActivity"/>
+        <activity android:name="com.jrmf360.rylib.rp.ui.AddCardFirsstActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.jrmf360.rylib.rp.ui.AddCardSecondActivity"/>
+        <activity android:name="com.jrmf360.rylib.rp.ui.BankCardListActivity"/>
+        <activity
+            android:name="com.jrmf360.rylib.rp.ui.EnBrowserActivity"/>
+        <activity
+            android:name="com.jrmf360.rylib.rp.ui.PayTypeActivity"
+            android:theme="@style/jrmf_dialog"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.jrmf360.rylib.rp.ui.RealNameActivity"/>
+        <activity android:name="com.jrmf360.rylib.rp.ui.ResetPswdActivity"/>
+        <activity android:name="com.jrmf360.rylib.rp.ui.SendGroupEnvelopesActivity"/>
+        <activity android:name="com.jrmf360.rylib.rp.ui.SendSingleEnvelopesActivity"/>
+        <activity android:name="com.jrmf360.rylib.rp.ui.SettingPswdActivity"/>
+        <activity android:name="com.jrmf360.rylib.rp.ui.RpDetailActivity"/>
+        <activity android:name="com.jrmf360.rylib.rp.ui.MyRpActivity"/>
+        <activity android:name="com.jrmf360.rylib.rp.ui.FindPwdByInfoActivity"/>
+
+        <!--钱包 配置开始-->
+        <activity android:name="com.jrmf360.rylib.wallet.ui.MyWalletActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.AccountInfoActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.TradeHistoryActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.SecureSettingActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.SetPayPwdActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.IdentityAuthenActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.UpdatePwdActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.GetPwdActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.SupportBankCardActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.BankSettingActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.AddCardSecondActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.AddCardFirstActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.RechargeActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.GetDepositActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.PwdCheckActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.MyRpActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.SelectSubBankActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.WebViewActivity"/>
+        <activity android:name="com.jrmf360.rylib.wallet.ui.TradeDetailActivity"/>
+
+        <!--钱包配置结束-->
+
+
+        <!--支付宝 begin-->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind">
+
+        </activity>
+        <!--支付宝 end-->
+
+    </application>
+
+</manifest>
