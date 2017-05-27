@@ -1,6 +1,0 @@
-<root>
-    <item
-        name='android.content.res.Resources android.content.res.XmlResourceParser getAnimation(int)'>
-        <annotation name='java.lang.Deprecated' />
-    </item>
-</root>

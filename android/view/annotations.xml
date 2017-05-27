@@ -1,8 +1,0 @@
-<root>
-    <item name='android.view.View android.os.IBinder getWindowToken()'>
-        <annotation name='android.support.annotation.NonNull' />
-    </item>
-    <item name='android.view.View android.view.View findViewById(int)'>
-        <annotation name='android.support.annotation.NonNull' />
-    </item>
-</root>
