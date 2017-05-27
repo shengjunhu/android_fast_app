@@ -4,8 +4,8 @@ android {
     compileSdkVersion 23 
     buildToolsVersion "25.0.2"
     defaultConfig {
-        minSdkVersion 9
-        targetSdkVersion 19
+        minSdkVersion 15
+        targetSdkVersion 25
         versionCode 2017050918 
         versionName "2.8.11"
     }

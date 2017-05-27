@@ -40,9 +40,7 @@ import io.rong.imkit.widget.provider.RealTimeLocationMessageProvider;
 import io.rong.imlib.ipc.RongExceptionHandler;
 import io.rong.imlib.model.UserInfo;
 import io.rong.push.RongPushClient;
-import io.rong.push.common.RongException;
 import io.rong.recognizer.RecognizeExtensionModule;
-
 
 public class App extends MultiDexApplication {
 
@@ -50,8 +48,8 @@ public class App extends MultiDexApplication {
 
     @Override
     public void onCreate() {
-
         super.onCreate();
+
         Stetho.initialize(new Stetho.Initializer(this) {
             @Override
             protected Iterable<DumperPlugin> getDumperPlugins() {
@@ -70,14 +68,9 @@ public class App extends MultiDexApplication {
 
         if (getApplicationInfo().packageName.equals(getCurProcessName(getApplicationContext()))) {
 
-//            LeakCanary.install(this);//内存泄露检测
+            //LeakCanary.install(this);//内存泄露检测
             RongPushClient.registerHWPush(this);
             RongPushClient.registerMiPush(this, "2882303761517473625", "5451747338625");
-            try {
-                RongPushClient.registerGCM(this);
-            } catch (RongException e) {
-                e.printStackTrace();
-            }
 
             /**
              * 注意：
@@ -100,8 +93,6 @@ public class App extends MultiDexApplication {
                 RongIM.registerMessageTemplate(new RealTimeLocationMessageProvider());
                 RongIM.registerMessageType(TestMessage.class);
                 RongIM.registerMessageTemplate(new TestMessageProvider());
-
-
             } catch (Exception e) {
                 e.printStackTrace();
             }

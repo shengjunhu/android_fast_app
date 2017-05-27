@@ -42,7 +42,6 @@ import io.rong.message.TextMessage;
 /**
  * Created by Beyond on 2016/11/24.
  */
-
 public class ContactDetailActivity extends Activity {
 
     private AsyncImageView mTargetPortrait;

@@ -64,15 +64,15 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile 'com.android.support:support-v4:21.0.3'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.facebook.stetho:stetho:1.4.1'
     compile project(':IM:Recognizer')
     compile project(':IM:ContactCard')
     compile project(':IM:Sticker')
-    compile 'com.android.support:multidex:1.0.1'
-    compile 'com.facebook.stetho:stetho:1.4.1'
-    compile files('libs/MiPush_SDK_Client_3_2_2.jar')
     compile project(':IM:IMKit')
     compile project(':IM:CallKit')
     compile project(':IM:RedPacket')
+    compile files('libs/MiPush_SDK_Client_3_2_2.jar')
     compile(name: 'HMS-SDK-2.4.0.300', ext: 'aar')
 }
 

@@ -1,6 +1,5 @@
 package cn.rongcloud.contactcard.activities;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -38,7 +37,6 @@ import io.rong.imlib.model.UserInfo;
 /**
  * Created by Beyond on 30/12/2016.
  */
-
 public class ContactListActivity extends Activity {
     private ListView mListView;
     private List<MemberInfo> mAllMemberList;
