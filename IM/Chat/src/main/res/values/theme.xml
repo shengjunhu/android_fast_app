@@ -1,4 +1,5 @@
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <style name="MyTheme" parent="@android:style/Theme.Holo.Light">
         <item name="android:listDivider">@android:color/transparent</item>
@@ -14,6 +15,7 @@
         <!-- 设置activity切换动画 -->
         <item name="android:windowAnimationStyle">@style/activityAnimation</item>
     </style>
+
     <!-- animation 样式 -->
     <style name="activityAnimation" parent="@android:style/Animation">
         <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>

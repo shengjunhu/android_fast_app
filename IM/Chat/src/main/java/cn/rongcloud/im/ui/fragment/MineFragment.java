@@ -37,10 +37,6 @@ import io.rong.imkit.RongIM;
 import io.rong.imlib.model.CSCustomServiceInfo;
 import io.rong.imlib.model.UserInfo;
 
-/**
- * Created by AMing on 16/6/21.
- * Company RongCloud
- */
 public class MineFragment extends Fragment implements View.OnClickListener {
     private static final int COMPARE_VERSION = 54;
     public static final String SHOW_RED = "SHOW_RED";

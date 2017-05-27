@@ -4,7 +4,7 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -15,7 +15,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
-
 import cn.rongcloud.im.R;
 import cn.rongcloud.im.server.SealAction;
 import cn.rongcloud.im.server.network.async.AsyncTaskManager;
@@ -23,7 +22,7 @@ import cn.rongcloud.im.server.network.async.OnDataListener;
 import cn.rongcloud.im.server.network.http.HttpException;
 import cn.rongcloud.im.server.utils.NToast;
 
-public abstract class BaseActivity extends FragmentActivity implements OnDataListener {
+public abstract class BaseActivity extends AppCompatActivity implements OnDataListener {
 
     protected Context mContext;
     public AsyncTaskManager mAsyncTaskManager;
