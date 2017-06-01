@@ -11,11 +11,9 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 /**
- * @Company:南京荣之誉信息科技有限公司
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 14:52
- * @Version:XBS V2.0
  * @Class:AppBaseFragment
  * @Description:
  */
@@ -31,6 +29,8 @@ public abstract class AppBaseFragment extends Fragment implements View.OnClickLi
             rootView = inflater.inflate(getLayoutId(), container, false);
 
             initView();
+
+            ToolBar();
 
             initData();
         }

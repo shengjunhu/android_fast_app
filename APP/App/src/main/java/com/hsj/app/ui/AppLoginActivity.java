@@ -2,15 +2,13 @@ package com.hsj.app.ui;
 
 import android.view.View;
 
+import com.hsj.app.R;
 import com.hsj.base.AppBaseActivity;
-import com.hsj.main.R;
 
 /**
- * @Company:南京荣之誉信息科技有限公司
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 15:29
- * @Version:XBS V2.0
  * @Class:AppLoginActivity
  * @Description:
  */

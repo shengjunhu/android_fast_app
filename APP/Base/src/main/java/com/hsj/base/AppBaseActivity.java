@@ -13,6 +13,12 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
+
+        initView();
+
+        ToolBar();
+
+        initData();
     }
 
     protected abstract int getLayoutId();

@@ -1,12 +1,10 @@
 package com.hsj.app.ui;
 
 import android.view.View;
-
+import com.hsj.app.R;
 import com.hsj.base.AppBaseActivity;
-import com.hsj.main.R;
 
 public class AppMainActivity extends AppBaseActivity {
-
 
     @Override
     protected int getLayoutId() {

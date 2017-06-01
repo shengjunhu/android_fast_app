@@ -1,11 +1,9 @@
 package com.hsj.base;
 
 /**
- * @Company:南京荣之誉信息科技有限公司
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 15:17
- * @Version:XBS V2.0
  * @Class:Constant
  * @Description: 常量
  */
