@@ -1,19 +1,19 @@
-package com.hsj.app.ui;
+package com.hsj.base;
 
 import android.view.View;
-import com.hsj.app.R;
-import com.hsj.base.AppBaseActivity;
 
-public class AppMainActivity extends AppBaseActivity {
+/**
+ * @Author:HSJ
+ * @E-mail:mr.ajun@foxmail.com
+ * @Date:2017/6/1 17:12
+ * @Class:ImagePreviewActivity
+ * @Description:
+ */
+public class ImagePreviewActivity extends AppBaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_app_main;
-    }
-
-    @Override
-    protected void toolBar() {
-
+        return 0;
     }
 
     @Override

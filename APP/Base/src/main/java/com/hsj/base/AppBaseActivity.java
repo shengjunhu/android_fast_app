@@ -7,6 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+/**
+ * @Author:HSJ
+ * @E-mail:mr.ajun@foxmail.com
+ * @Date:2017/5/27 14:52
+ * @Class:AppBaseActivity
+ * @Description:
+ */
 public abstract class AppBaseActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
@@ -16,14 +23,14 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
 
         initView();
 
-        ToolBar();
+        toolBar();
 
         initData();
     }
 
     protected abstract int getLayoutId();
 
-    protected abstract void ToolBar();
+    protected void toolBar(){}
 
     protected abstract void initView();
 

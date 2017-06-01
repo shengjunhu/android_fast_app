@@ -30,7 +30,7 @@ public abstract class AppBaseFragment extends Fragment implements View.OnClickLi
 
             initView();
 
-            ToolBar();
+            toolBar();
 
             initData();
         }
@@ -39,7 +39,7 @@ public abstract class AppBaseFragment extends Fragment implements View.OnClickLi
 
     protected abstract int getLayoutId();
 
-    protected abstract void ToolBar();
+    protected void toolBar(){}
 
     protected abstract void initView();
 

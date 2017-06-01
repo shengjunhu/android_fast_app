@@ -19,7 +19,7 @@ public class AppRegisterActivity extends AppBaseActivity {
     }
 
     @Override
-    protected void ToolBar() {
+    protected void toolBar() {
 
     }
 

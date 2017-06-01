@@ -20,7 +20,7 @@ public class AppLoginActivity extends AppBaseActivity {
     }
 
     @Override
-    protected void ToolBar() {
+    protected void toolBar() {
 
     }
 

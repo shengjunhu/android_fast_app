@@ -1,11 +1,3 @@
-/**
- *  项目配置：
- *
- *  1、调试、发布
- *  2、版本号、版本名
- *  3、JDK编译版本、SDK编译版本
- *  compileSdkVersion rootProject.ext.android["compileSdkVersion"]
- */
 
 ext {
 
@@ -62,8 +54,6 @@ ext {
             "leakcanary-debug"         : "com.squareup.leakcanary:leakcanary-android:${version["leakcanaryVersion"]}",
             "leakcanary-test"          : "com.squareup.leakcanary:leakcanary-android-no-op:${version["leakcanaryVersion"]}",
             "leakcanary-release"       : "com.squareup.leakcanary:leakcanary-android-no-op:${version["leakcanaryVersion"]}"
-
     ]
-
 
 }
