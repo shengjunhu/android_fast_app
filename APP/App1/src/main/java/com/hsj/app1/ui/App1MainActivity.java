@@ -1,13 +1,15 @@
-package com.hsj.app4;
+package com.hsj.app1.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class App4MainActivity extends AppCompatActivity {
+import com.hsj.app1.R;
+
+public class App1MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_app4_main);
+        setContentView(R.layout.activity_app1_main);
     }
 }

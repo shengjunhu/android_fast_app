@@ -1,6 +1,7 @@
-package com.hsj.app;
+package com.hsj.app1.base;
 
 import android.content.Context;
+
 import com.hsj.base.BaseApplication;
 import com.squareup.leakcanary.LeakCanary;
 
@@ -11,7 +12,7 @@ import com.squareup.leakcanary.LeakCanary;
  * @Class:App
  * @Description:
  */
-public class App extends BaseApplication {
+public class App1 extends BaseApplication {
 
     public static Context appContext;
 
