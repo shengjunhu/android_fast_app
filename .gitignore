@@ -4,6 +4,7 @@
 build
 /local.properties
 /StudyPlan.md
+*.jks
 .DS_Store
 /captures
 .externalNativeBuild

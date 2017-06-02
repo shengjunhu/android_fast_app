@@ -1,7 +1,7 @@
 package com.hsj.app;
 
 import android.content.Context;
-import android.support.multidex.MultiDexApplication;
+import com.hsj.base.BaseApplication;
 import com.squareup.leakcanary.LeakCanary;
 
 /**
@@ -11,26 +11,16 @@ import com.squareup.leakcanary.LeakCanary;
  * @Class:App
  * @Description:
  */
-public class App extends MultiDexApplication {
+public class App extends BaseApplication {
 
     public static Context appContext;
 
     @Override
-    public void onCreate() {
-        super.onCreate();
-
+    protected void initModule() {
         if (LeakCanary.isInAnalyzerProcess(this)) return;
         LeakCanary.install(this);
 
         appContext = getApplicationContext();
-
-        initUserInfo();
-    }
-
-    /**
-     * 初始化用户信息
-     */
-    private void initUserInfo() {
 
     }
 

@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: rootProject.ext.plugins.application
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
@@ -10,19 +10,94 @@ android {
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
-
-        multiDexEnabled true
+        versionNameSuffix '_release'
 
         ndk { abiFilters "armeabi-v7a", "x86" }
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]
 
     }
+
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            debuggable false
+            jniDebuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            debuggable true
+            jniDebuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = "App_${variant.productFlavors[0].name}_v${defaultConfig.versionName}.apk"
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+
+    productFlavors {
+        baidu {
+            applicationId 'com.hsj.app'
+        }
+        xiaomi {
+            applicationId 'com.hsj.app1'
+        }
+        tencent {
+            applicationId 'com.hsj.app2'
+        }
+        qihu {
+            applicationId 'com.hsj.app3'
+        }
+        huawei {
+            applicationId 'com.hsj.app4'
+        }
+    }
+
+    packagingOptions {
+        exclude 'AndroidManifest.xml'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
     }
 }
 
@@ -31,12 +106,11 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:multidex:1.0.1'
-    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    testCompile rootProject.ext.dependencies["testCompile"]
+    compile rootProject.ext.dependencies["appcompat-v7"]
+    testCompile rootProject.ext.dependencies["leakcanary-test"]
+    debugCompile rootProject.ext.dependencies["leakcanary-debug"]
+    releaseCompile rootProject.ext.dependencies["leakcanary-release"]
+
     compile project(':APP:Base')
 }

@@ -1,59 +1,68 @@
-
 ext {
 
+    plugins = [
+            application                : 'com.android.application',
+            library                    : 'com.android.library',
+            maven                      : 'com.github.dcendents.android-maven',
+            bintray                    : 'com.jfrog.bintray'
+    ]
+
     android = [
-            compileSdkVersion           : 25,
-            buildToolsVersion           : "25.0.2",
-            minSdkVersion               : 15,
-            targetSdkVersion            : 25,
-            versionCode                 : 1705270,
-            versionName                 : "1.0.0"
+            compileSdkVersion          : 25,
+            buildToolsVersion          : "25.0.2",
+            minSdkVersion              : 15,
+            targetSdkVersion           : 25,
+            versionCode                : 1705270,
+            versionName                : "1.0.0"
     ]
 
     version = [
-            androidSupportSdkVersion    : "25.3.1",
-            retrofitSdkVersion          : "2.2.0",
-            rxlifecycleSdkVersion       : "1.0",
-            leakcanaryVersion           : "1.5"
+            androidSupportSdkVersion   : "25.3.1",
+            retrofitVersion            : "2.3.0",
+            okhttp3Version             : "3.8.0",
+            gsonVersion                : "2.8.1",
+            rxjavaVersion              : "x.y.z",
+            rxandroid                  : "2.0.1",
+            glideVersion               : "4.0.0-RC0",
+            rxlifecycleSdkVersion      : "1.0",
+            leakcanaryVersion          : "1.5.1"
     ]
 
     dependencies = [
+
             //support
             "support-v4"               : "com.android.support:support-v4:${version["androidSupportSdkVersion"]}",
             "appcompat-v7"             : "com.android.support:appcompat-v7:${version["androidSupportSdkVersion"]}",
             "design"                   : "com.android.support:design:${version["androidSupportSdkVersion"]}",
             "cardview-v7"              : "com.android.support:cardview-v7:${version["androidSupportSdkVersion"]}",
-            "annotations"              : "com.android.support:support-annotations:${version["androidSupportSdkVersion"]}",
             "recyclerview-v7"          : "com.android.support:recyclerview-v7:${version["androidSupportSdkVersion"]}",
+            "annotations"              : "com.android.support:support-annotations:${version["androidSupportSdkVersion"]}",
+            "multidex"                 : "com.android.support:multidex:1.0.1",
 
             //network
-            "retrofit"                 : "com.squareup.retrofit2:retrofit:${version["retrofitSdkVersion"]}",
-            "retrofit-converter-gson"  : "com.squareup.retrofit2:converter-gson:${version["retrofitSdkVersion"]}",
-            "retrofit-adapter-rxjava"  : "com.squareup.retrofit2:adapter-rxjava:${version["retrofitSdkVersion"]}",
-            "okhttp3"                  : "com.squareup.okhttp3:okhttp:3.6.0",
-            "okhttp-urlconnection"     : "com.squareup.okhttp:okhttp-urlconnection:2.0.0",
+            "retrofit"                 : "com.squareup.retrofit2:retrofit:${version["retrofitVersion"]}",
+            "retrofit-converters"      : "com.squareup.retrofit2:retrofit-converters:${version["retrofitVersion"]}",
+            "retrofit-adapters"        : "com.squareup.retrofit2:retrofit-adapters:${version["retrofitVersion"]}",
+            "rxjava"                   : "io.reactivex.rxjava2:rxjava:${version["rxjavaVersion"]}",
+            "rxandroid"                : "io.reactivex.rxjava2:rxandroid:${version["rxandroid"]}",
+            "okhttp3"                  : "com.squareup.okhttp3:okhttp:${version["okhttp3Version"]}",
+            "interceptor"              : "com.squareup.okhttp3:logging-interceptor:${version["okhttp3Version"]}",
+            "gson"                     : "com.google.code.gson:gson:${version["gsonVersion"]}",
 
-            //图片加载工具类
-            "glide"                    : "com.github.bumptech.glide:glide:3.7.0",
-
-            //rx
-            "rxandroid"                : "io.reactivex:rxandroid:2.0.1",
-            "rxjava"                   : "io.reactivex:rxjava:x.y.z",
+            //lifecycle
             "rxlifecycle"              : "com.trello:rxlifecycle:${version["rxlifecycleSdkVersion"]}",
             "rxlifecycle-components"   : "com.trello:rxlifecycle-components:${version["rxlifecycleSdkVersion"]}",
 
+            //glide
+            "glide"                    : "com.github.bumptech.glide:glide:${version["glideVersion"]}",
+
             //test
-            "junit"                    : "junit:junit:4.12",
-            "androidJUnitRunner"       : "android.support.test.runner.AndroidJUnitRunner",
-            "runner"                   : 'com.android.support.test:runner:0.5',
-            "espresso-core"            : "com.android.support.test.espresso:espresso-core:${version["espressoSdkVersion"]}",
-            "espresso-contrib"         : "com.android.support.test.espresso:espresso-contrib:${version["espressoSdkVersion"]}",
-            "espresso-intents"         : "com.android.support.test.espresso:espresso-intents:${version["espressoSdkVersion"]}",
+            "testCompile"              : "junit:junit:4.12",
+            "testInstrumentationRunner": "android.support.test.runner.AndroidJUnitRunner",
 
             //leakCanary
             "leakcanary-debug"         : "com.squareup.leakcanary:leakcanary-android:${version["leakcanaryVersion"]}",
             "leakcanary-test"          : "com.squareup.leakcanary:leakcanary-android-no-op:${version["leakcanaryVersion"]}",
             "leakcanary-release"       : "com.squareup.leakcanary:leakcanary-android-no-op:${version["leakcanaryVersion"]}"
     ]
-
 }

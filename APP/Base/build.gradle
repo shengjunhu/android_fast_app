@@ -8,6 +8,7 @@ android {
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -22,4 +23,5 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile rootProject.ext.dependencies["appcompat-v7"]
+    compile rootProject.ext.dependencies["multidex"]
 }
