@@ -9,7 +9,7 @@ import android.support.multidex.MultiDex;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/6/2 14:08
  * @Class:App
- * @Description:
+ * @Description: 基本Application
  */
 public abstract class BaseApplication extends Application {
 

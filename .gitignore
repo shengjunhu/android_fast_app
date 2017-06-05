@@ -3,8 +3,9 @@
 .idea
 build
 /local.properties
-/StudyPlan.md
-*.jks
 .DS_Store
 /captures
 .externalNativeBuild
+
+/doc/StudyPlan.md
+/doc/data/App.jks
