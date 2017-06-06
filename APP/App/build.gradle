@@ -13,9 +13,7 @@ android {
         versionNameSuffix '_release'
 
         ndk { abiFilters "armeabi-v7a", "x86" }
-
         testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]
-
     }
 
     buildTypes {
