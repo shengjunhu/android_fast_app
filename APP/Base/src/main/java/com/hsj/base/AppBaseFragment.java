@@ -65,5 +65,4 @@ public abstract class AppBaseFragment extends Fragment implements View.OnClickLi
         Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
     }
 
-
 }

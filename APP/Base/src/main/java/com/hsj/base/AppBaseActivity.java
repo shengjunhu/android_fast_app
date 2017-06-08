@@ -1,8 +1,11 @@
 package com.hsj.base;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.AnimRes;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -31,11 +34,13 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
 
     protected abstract int getLayoutId();
 
-    protected void toolBar(){}
-
     protected abstract void initView();
 
     protected abstract void initData();
+
+    protected void toolBar(){
+
+    }
 
     /**
      * 查找View
@@ -58,6 +63,32 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
     }
 
     /**
+     * activity切换动画
+     * @param clazz
+     * @param enterAnim
+     * @param exitAnim
+     */
+    public void activityAnim(Class clazz, @AnimRes int enterAnim,@AnimRes int exitAnim){
+        startActivity(new Intent(this,clazz));
+        overridePendingTransition(enterAnim,exitAnim);
+    }
+
+    /**
+     * fragment切换动画
+     * @param layoutId
+     * @param fragment
+     * @param enterAnim
+     * @param exitAnim
+     */
+    public void fragmentAnim(@IdRes int layoutId, Fragment fragment,@AnimRes int enterAnim, @AnimRes int exitAnim){
+        getSupportFragmentManager()
+                .beginTransaction()
+                .setCustomAnimations(enterAnim, exitAnim)
+                .replace(layoutId, fragment)
+                .commit();
+    }
+
+    /**
      * 按返回键
      */
     @Override
@@ -65,6 +96,9 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
         super.onBackPressed();
     }
 
+    /**
+     * 按返回键
+     */
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if(keyCode==KeyEvent.KEYCODE_BACK){

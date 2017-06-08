@@ -11,8 +11,9 @@ android {
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
 
-        ndk { abiFilters "armeabi-v7a", "x86" }
+        ndk { abiFilters "armeabi","armeabi-v7a", "x86"}
     }
+
     buildTypes {
         release {
             minifyEnabled true
@@ -23,14 +24,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            minifyEnabled true
-            shrinkResources true
-            zipAlignEnabled true
-            debuggable true
-            jniDebuggable true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
 }
 
 dependencies {
