@@ -6,10 +6,10 @@ import android.os.Environment;
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 16:39
- * @Class:FileTool
+ * @Class:FileManager
  * @Description: 文件操作工具类
  */
-public class FileTool {
+public class FileManager {
 
     /**
      * SD卡是否可用

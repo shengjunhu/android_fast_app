@@ -10,6 +10,7 @@ android {
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]
     }
     buildTypes {
         release {
@@ -21,5 +22,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile rootProject.ext.dependencies["testCompile"]
     compile rootProject.ext.dependencies["appcompat-v7"]
 }

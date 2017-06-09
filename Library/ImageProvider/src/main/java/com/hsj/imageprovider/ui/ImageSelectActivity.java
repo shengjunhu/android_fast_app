@@ -1,14 +1,19 @@
-package com.hsj.home.ui;
+package com.hsj.imageprovider.ui;
 
 import android.view.View;
-import com.hsj.base.AppBaseActivity;
-import com.hsj.home.R;
 
-public class AppHomeActivity extends AppBaseActivity {
+/**
+ * @Author:HSJ
+ * @E-mail:mr.ajun@foxmail.com
+ * @Date:2017/6/9 09:20
+ * @Class:ImageSelectActivity
+ * @Description:图片选择
+ */
+public class ImageSelectActivity extends BaseImageProviderActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_app_home;
+        return 0;
     }
 
     @Override
@@ -25,4 +30,5 @@ public class AppHomeActivity extends AppBaseActivity {
     public void onClick(View view) {
 
     }
+
 }

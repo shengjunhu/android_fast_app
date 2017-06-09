@@ -27,10 +27,19 @@ android {
     }
     sourceSets {
         main {
+
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            res.srcDirs = ['res']
             jni.srcDirs = []
             jniLibs.srcDirs = ['libs']
         }
     }
+
     packagingOptions {
         exclude 'AndroidManifest.xml'
     }

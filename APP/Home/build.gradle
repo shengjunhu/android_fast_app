@@ -1,4 +1,8 @@
-apply plugin: rootProject.ext.plugins.application
+if(rootProject.ext.android.isDebug){
+    apply plugin:rootProject.ext.plugins.application
+}else {
+    apply plugin:rootProject.ext.plugins.library
+}
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
@@ -36,6 +40,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+//    sourceSets {
+//        main {
+//            if(rootProject.ext.android.isDebug){
+//                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+//            }else {
+//                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+//            }
+//            res.srcDirs = ['res']
+//            jni.srcDirs = []
+//            jniLibs.srcDirs = ['libs']
+//        }
+//    }
 
 }
 
