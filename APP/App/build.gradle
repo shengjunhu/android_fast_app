@@ -44,13 +44,6 @@ android {
 //        }
 //    }
 
-
-    sourceSets{
-        main{
-            manifest.srcFile 'src/main/AndroidManifest.xml'
-        }
-    }
-
     applicationVariants.all { variant ->
         variant.outputs.each { output ->
             def outputFile = output.outputFile
