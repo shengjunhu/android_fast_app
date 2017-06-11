@@ -12,6 +12,7 @@ android {
         versionName rootProject.ext.android["versionName"]
 
         ndk { abiFilters "armeabi-v7a", "x86" }
+
         testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]
     }
 
@@ -34,16 +35,6 @@ android {
         }
     }
 
-//    sourceSets {
-//        main {
-//            //manifest.srcFile 'src/main/AndroidManifest.xml'
-//            assets.srcDirs = ['assets']
-//            jniLibs.srcDirs = ['libs']
-//            jni.srcDirs = ['src/main/jni']
-//            res.srcDirs = ['res']
-//        }
-//    }
-
     applicationVariants.all { variant ->
         variant.outputs.each { output ->
             def outputFile = output.outputFile
@@ -56,22 +47,24 @@ android {
 
     productFlavors {
         baidu {
-            applicationId 'com.hsj.app'
-        }
-        tencent {
-            applicationId 'com.hsj.app0'
-        }
-        xiaomi {
             applicationId 'com.hsj.app1'
         }
-        qihu {
+        tencent {
+            applicationId 'com.hsj.app2'
+        }
+        xiaomi {
             applicationId 'com.hsj.app3'
         }
-        huawei {
+        qihu {
             applicationId 'com.hsj.app4'
+        }
+        huawei {
+            applicationId 'com.hsj.app5'
         }
 
     }
+
+    resourcePrefix "app_"
 
     packagingOptions {
         exclude 'AndroidManifest.xml'

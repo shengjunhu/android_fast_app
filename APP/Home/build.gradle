@@ -41,18 +41,19 @@ android {
         }
     }
 
-//    sourceSets {
-//        main {
-//            if(rootProject.ext.android.isDebug){
-//                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
-//            }else {
-//                manifest.srcFile 'src/main/release/AndroidManifest.xml'
-//            }
-//            res.srcDirs = ['res']
-//            jni.srcDirs = []
-//            jniLibs.srcDirs = ['libs']
-//        }
-//    }
+    sourceSets {
+        main {
+            if(rootProject.ext.android.isDebug){
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            }else{
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+            }
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    resourcePrefix "home_"
 
 }
 
