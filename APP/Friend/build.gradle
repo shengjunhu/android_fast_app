@@ -40,8 +40,6 @@ android {
         }
     }
 
-    resourcePrefix "friend_"
-
     sourceSets {
         main {
             if(rootProject.ext.android.isAppDebug){

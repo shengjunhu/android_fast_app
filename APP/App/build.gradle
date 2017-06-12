@@ -64,8 +64,6 @@ android {
 
     }
 
-    resourcePrefix "app_"
-
     packagingOptions {
         exclude 'AndroidManifest.xml'
         exclude 'META-INF/DEPENDENCIES.txt'

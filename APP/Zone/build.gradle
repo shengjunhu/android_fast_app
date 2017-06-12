@@ -52,8 +52,6 @@ android {
         }
     }
 
-    resourcePrefix "zone_"
-
 }
 
 repositories {

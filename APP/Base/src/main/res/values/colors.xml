@@ -9,5 +9,6 @@
     <color name="navigationBarColor">#34B6FF</color>
 
     <color name="colorE">#EEEEEE</color>
+    <color name="colorWhite">#FFFFFF</color>
 
 </resources>

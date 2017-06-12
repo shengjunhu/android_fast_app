@@ -27,8 +27,6 @@ android {
         targetCompatibility JavaVersion.VERSION_1_7
     }
 
-    resourcePrefix "base_"
-
 }
 
 repositories {

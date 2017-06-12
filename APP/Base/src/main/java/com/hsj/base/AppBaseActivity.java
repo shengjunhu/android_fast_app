@@ -7,8 +7,12 @@ import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
+import android.view.Menu;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -18,7 +22,7 @@ import android.widget.Toast;
  * @Class:AppBaseActivity
  * @Description:
  */
-public abstract class AppBaseActivity extends AppCompatActivity implements View.OnClickListener{
+public abstract class AppBaseActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +31,7 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
 
         initView();
 
-        toolBar();
+        initToolBar();
 
         initData();
     }
@@ -36,11 +40,28 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
 
     protected abstract void initView();
 
+    protected abstract void initToolbar(Toolbar toolbar,TextView tv_left,TextView tv_center,TextView tv_right);
+
     protected abstract void initData();
 
-    protected void toolBar(){
+    /**
+     * 初始化Toolbar
+     */
+    protected void initToolBar() {
+        Toolbar toolbar = findView(R.id.tb_base);
+        TextView tv_left = findView(R.id.tv_left);
+        TextView tv_center = findView(R.id.tv_center);
+        EditText et_center = findView(R.id.et_center);
+        TextView tv_right = findView(R.id.tv_right);
 
+        initToolbar(toolbar,tv_left, tv_center,tv_right);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return super.onCreateOptionsMenu(menu);
+    }
+
 
     /**
      * 查找View
@@ -64,23 +85,25 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
 
     /**
      * activity切换动画
+     *
      * @param clazz
      * @param enterAnim
      * @param exitAnim
      */
-    public void activityAnim(Class clazz, @AnimRes int enterAnim,@AnimRes int exitAnim){
-        startActivity(new Intent(this,clazz));
-        overridePendingTransition(enterAnim,exitAnim);
+    public void activityAnim(Class clazz, @AnimRes int enterAnim, @AnimRes int exitAnim) {
+        startActivity(new Intent(this, clazz));
+        overridePendingTransition(enterAnim, exitAnim);
     }
 
     /**
      * fragment切换动画
+     *
      * @param layoutId
      * @param fragment
      * @param enterAnim
      * @param exitAnim
      */
-    public void fragmentAnim(@IdRes int layoutId, Fragment fragment,@AnimRes int enterAnim, @AnimRes int exitAnim){
+    public void fragmentAnim(@IdRes int layoutId, Fragment fragment, @AnimRes int enterAnim, @AnimRes int exitAnim) {
         getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(enterAnim, exitAnim)
@@ -88,19 +111,19 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
                 .commit();
     }
 
-    protected void startDialog(){
+    protected void startDialog() {
 
     }
 
-    protected void finishDialog(){
+    protected void finishDialog() {
 
     }
 
-    protected void startProgressBar(){
+    protected void startProgressBar() {
 
     }
 
-    protected void finishProgressBar(){
+    protected void finishProgressBar() {
 
     }
 
@@ -117,7 +140,7 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
      */
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if(keyCode==KeyEvent.KEYCODE_BACK){
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
             //return false;
         }
         return super.onKeyDown(keyCode, event);

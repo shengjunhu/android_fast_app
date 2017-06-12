@@ -52,8 +52,6 @@ android {
         }
     }
 
-    resourcePrefix "shop_"
-
 }
 
 repositories {

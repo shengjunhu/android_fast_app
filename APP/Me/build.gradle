@@ -52,8 +52,6 @@ android {
         }
     }
 
-    resourcePrefix "me_"
-
 }
 
 repositories {

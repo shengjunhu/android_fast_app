@@ -53,8 +53,6 @@ android {
         }
     }
 
-    resourcePrefix "home_"
-
 }
 
 repositories {

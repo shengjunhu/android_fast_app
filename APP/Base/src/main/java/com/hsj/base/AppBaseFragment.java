@@ -5,9 +5,12 @@ import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -23,15 +26,14 @@ public abstract class AppBaseFragment extends Fragment implements View.OnClickLi
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,@Nullable Bundle savedInstanceState) {
         if(rootView == null){
 
             rootView = inflater.inflate(getLayoutId(), container, false);
 
             initView();
 
-            toolBar();
+            initToolBar();
 
             initData();
         }
@@ -40,11 +42,24 @@ public abstract class AppBaseFragment extends Fragment implements View.OnClickLi
 
     protected abstract int getLayoutId();
 
-    protected void toolBar(){}
-
     protected abstract void initView();
 
+    protected abstract void initToolbar(Toolbar toolbar,TextView tv_left,TextView tv_center,TextView tv_right);
+
     protected abstract void initData();
+
+    /**
+     * 初始化Toolbar
+     */
+    protected void initToolBar() {
+        Toolbar toolbar = findView(R.id.tb_base);
+        TextView tv_left = findView(R.id.tv_left);
+        TextView tv_center = findView(R.id.tv_center);
+        EditText et_center = findView(R.id.et_center);
+        TextView tv_right = findView(R.id.tv_right);
+
+        initToolbar(toolbar,tv_left, tv_center,tv_right);
+    }
 
     /**
      * 查找View
