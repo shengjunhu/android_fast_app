@@ -1,4 +1,4 @@
-if(rootProject.ext.android.isDebug){
+if(rootProject.ext.android.isAppDebug){
     apply plugin:rootProject.ext.plugins.application
 }else {
     apply plugin:rootProject.ext.plugins.library
@@ -9,7 +9,7 @@ android {
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 
     defaultConfig {
-        applicationId "com.hsj.home"
+        //applicationId "com.hsj.home"
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
@@ -43,7 +43,7 @@ android {
 
     sourceSets {
         main {
-            if(rootProject.ext.android.isDebug){
+            if(rootProject.ext.android.isAppDebug){
                 manifest.srcFile 'src/main/debug/AndroidManifest.xml'
             }else{
                 manifest.srcFile 'src/main/release/AndroidManifest.xml'

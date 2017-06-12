@@ -1,11 +1,15 @@
-apply plugin: rootProject.ext.plugins.application
+if(rootProject.ext.android.isAppDebug){
+    apply plugin:rootProject.ext.plugins.application
+}else {
+    apply plugin:rootProject.ext.plugins.library
+}
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 
     defaultConfig {
-        applicationId "com.hsj.car"
+        //applicationId "com.hsj.car"
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
@@ -34,6 +38,20 @@ android {
             debuggable true
             jniDebuggable true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    resourcePrefix "car_"
+
+    sourceSets {
+        main {
+            if(rootProject.ext.android.isAppDebug){
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            }else{
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+            }
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
         }
     }
 

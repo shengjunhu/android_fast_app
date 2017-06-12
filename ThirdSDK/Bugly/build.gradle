@@ -1,22 +1,40 @@
-apply plugin: rootProject.ext.plugins.application
+if(rootProject.ext.android.isSDKDebug){
+    apply plugin:rootProject.ext.plugins.application
+}else {
+    apply plugin:rootProject.ext.plugins.library
+}
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 
     defaultConfig {
-        applicationId "com.hsj.tencentbugly"
+        //applicationId "com.hsj.tencentbugly"
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main {
+            if(rootProject.ext.android.isSDKDebug){
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            }else{
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+            }
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
 }
 
 dependencies {

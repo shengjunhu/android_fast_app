@@ -17,17 +17,12 @@ include ':APP:App',
         ':Library:DB',
         ':Library:Permission',
 
-        ':ThirdSDK:BaiDuMap',
-        ':ThirdSDK:GaoDeMap',
-        ':ThirdSDK:BaiDuCloud',
-        ':ThirdSDK:QiNiuCloud',
-        ':ThirdSDK:QQLogin',
-        ':ThirdSDK:WeiBoLogin',
-        ':ThirdSDK:WxLogin',
-        ':ThirdSDK:WxPay',
-        ':ThirdSDK:AliPay',
         ':ThirdSDK:Bugly',
-        ':ThirdSDK:Share'
+        ':ThirdSDK:Pay',
+        ':ThirdSDK:Login',
+        ':ThirdSDK:Share',
+        ':ThirdSDK:Map',
+        ':ThirdSDK:Cloud'
 
 //        ':ThirdSDK:IM:Chat',
 //        ':ThirdSDK:IM:IMLib',
