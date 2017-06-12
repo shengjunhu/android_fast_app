@@ -7,5 +7,6 @@ build
 /captures
 .externalNativeBuild
 
-/doc/StudyPlan.md
 /doc/data/App.jks
+/doc/StudyPlan.md
+

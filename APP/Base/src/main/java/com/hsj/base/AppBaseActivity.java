@@ -88,6 +88,22 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
                 .commit();
     }
 
+    protected void startDialog(){
+
+    }
+
+    protected void finishDialog(){
+
+    }
+
+    protected void startProgressBar(){
+
+    }
+
+    protected void finishProgressBar(){
+
+    }
+
     /**
      * 按返回键
      */

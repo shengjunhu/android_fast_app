@@ -1,18 +1,20 @@
-package com.hsj.base;
+package com.hsj.http.base;
+
+import com.hsj.http.BuildConfig;
 
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/5/27 15:17
- * @Class:Constant
- * @Description: 常量
+ * @Date:2017/6/12 12:51
+ * @Class:HttpConstant
+ * @Description:
  */
-public interface IConstant {
+public interface HttpConstant {
 
     /**
      * 服务器主机IP
      */
-    String HOST                 = "http://192.168.1.152";
+    String HOST                 = BuildConfig.HOST;
 
     /**
      * 应用APPID
@@ -79,7 +81,7 @@ public interface IConstant {
     /**
      * 微信登陆AppId
      */
-   String WX_APPID              = "wx0813d97dd646762e";
+    String WX_APPID              = "wx0813d97dd646762e";
 
     /**
      * 微博登陆的AppKey
@@ -96,8 +98,8 @@ public interface IConstant {
      * 需要访问用户信息填写，不需要填null
      */
     String SCOPE               = "email,direct_messages_read,direct_messages_write,"
-                             + "friendships_groups_read,friendships_groups_write,statuses_to_me_read,"
-                             + "follow_app_official_microblog," + "invitation_write";
+            + "friendships_groups_read,friendships_groups_write,statuses_to_me_read,"
+            + "follow_app_official_microblog," + "invitation_write";
 
 
 }

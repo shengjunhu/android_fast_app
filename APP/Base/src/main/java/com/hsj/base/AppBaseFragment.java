@@ -23,7 +23,8 @@ public abstract class AppBaseFragment extends Fragment implements View.OnClickLi
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
         if(rootView == null){
 
             rootView = inflater.inflate(getLayoutId(), container, false);
@@ -63,6 +64,22 @@ public abstract class AppBaseFragment extends Fragment implements View.OnClickLi
      */
     public void showToast(@NonNull String message) {
         Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
+    }
+
+    protected void startDialog(){
+
+    }
+
+    protected void finishDialog(){
+
+    }
+
+    protected void startProgressBar(){
+
+    }
+
+    protected void finishProgressBar(){
+
     }
 
 }
