@@ -1,4 +1,4 @@
-package com.hsj.base;
+package com.hsj.tool;
 
 /**
  * @Author:HSJ

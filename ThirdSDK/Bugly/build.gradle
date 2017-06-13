@@ -39,5 +39,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile rootProject.ext.dependencies["constraint-layout"]
     compile rootProject.ext.dependencies["appcompat-v7"]
 }
