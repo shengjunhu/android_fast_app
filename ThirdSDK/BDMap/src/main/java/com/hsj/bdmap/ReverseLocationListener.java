@@ -1,11 +1,11 @@
 package com.hsj.bdmap;
 
 /**
- * Author:HSJ
- * Email:mr.ajun@foxmail.com 
- * Date:2017-06-13 22:03
- * Class:NoViewLocation
- * Description:反地理编码定位回调
+ * @Author:HSJ
+ * @E-mail:mr.ajun@foxmail.com
+ * @Date:2017/6/12 12:51
+ * @Class:
+ * @Description:
  */
 public class ReverseLocationListener {
 
