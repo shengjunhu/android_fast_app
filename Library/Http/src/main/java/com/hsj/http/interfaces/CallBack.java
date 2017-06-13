@@ -7,21 +7,22 @@ package com.hsj.http.interfaces;
  * @Class:CallBack
  * @Description: 网络回调过程
  */
-public abstract class CallBack {
+public interface CallBack {
 
-    abstract void onStart();
+    void onStart();
 
-    abstract void onDoing(long currentSize, long totalSize, float progress, long networkSpeed);
+    void onDoing(long currentSize, long totalSize, float progress, long networkSpeed);
 
-    abstract void parseError();
+    void parseError();
 
-    abstract void onSuccess();
+    void onSuccess();
 
-    abstract void onCacheSuccess();
+    void onCacheSuccess();
 
-    abstract void onCacheError();
+    void onCacheError();
 
-    abstract void onError();
+    void onError();
 
-    abstract void onFinish();
+    void onFinish();
+
 }

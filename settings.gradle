@@ -16,13 +16,16 @@ include ':APP:App',
         ':Library:Tool',
         ':Library:DB',
         ':Library:Permission',
+        ':Library:Sample',
 
-        ':ThirdSDK:Bugly',
-        ':ThirdSDK:Pay',
-        ':ThirdSDK:Login',
-        ':ThirdSDK:Share',
-        ':ThirdSDK:Map',
-        ':ThirdSDK:Cloud'
+        ':ThirdSDK:WXPay',
+        ':ThirdSDK:AliPay',
+        ':ThirdSDK:BDMap',
+        ':ThirdSDK:GDMap',
+        ':ThirdSDK:QNCloud',
+        ':ThirdSDK:BDCloud',
+        ':ThirdSDK:LoginShare',
+        ':ThirdSDK:Bugly'
 
 //        ':ThirdSDK:IM:Chat',
 //        ':ThirdSDK:IM:IMLib',

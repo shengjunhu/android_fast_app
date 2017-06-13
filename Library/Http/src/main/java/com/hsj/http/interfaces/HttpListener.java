@@ -7,40 +7,12 @@ package com.hsj.http.interfaces;
  * @Class:HttpListener
  * @Description:
  */
-public abstract class HttpListener extends CallBack{
+public abstract class HttpListener {
 
-    @Override
-    void onStart() {
+    abstract void onSuccess();
 
-    }
-
-    @Override
-    void onDoing(long currentSize, long totalSize, float progress, long networkSpeed) {
+    public void onFail() {
 
     }
 
-    @Override
-    void parseError() {
-
-    }
-
-    @Override
-    void onCacheSuccess() {
-
-    }
-
-    @Override
-    void onCacheError() {
-
-    }
-
-    @Override
-    void onError() {
-
-    }
-
-    @Override
-    void onFinish() {
-
-    }
 }
