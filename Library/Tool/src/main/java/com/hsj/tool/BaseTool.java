@@ -11,7 +11,7 @@ import android.text.TextUtils;
  */
 public class BaseTool {
 
-    public boolean isEmpty(String str){
+    public static boolean isEmpty(String str){
         return TextUtils.isEmpty(str);
     }
 
