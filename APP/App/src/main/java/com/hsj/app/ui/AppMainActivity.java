@@ -6,8 +6,10 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TextView;
+
 import com.hsj.app.R;
 import com.hsj.base.AppBaseActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +24,8 @@ public class AppMainActivity extends AppBaseActivity {
 
     private boolean isExitApp;
     private boolean isFirstShow;
+    private ViewPager vp_main;
+    private TableLayout tab_main;
 
     @Override
     protected int getLayoutId() {
@@ -30,8 +34,8 @@ public class AppMainActivity extends AppBaseActivity {
 
     @Override
     protected void initView() {
-        ViewPager vp_main = findView(R.id.vp_main);
-        TableLayout tab_main = findView(R.id.tab_main);
+        vp_main = findView(R.id.vp_main);
+        tab_main = findView(R.id.tab_main);
     }
 
     @Override
@@ -42,6 +46,7 @@ public class AppMainActivity extends AppBaseActivity {
     @Override
     protected void initData() {
         List<String> tabNameList = new ArrayList<>();
+        List<Class> tabFragmentList = new ArrayList<>();
         tabNameList.add("首页");
         tabNameList.add("商城");
         tabNameList.add("购物车");
@@ -49,8 +54,6 @@ public class AppMainActivity extends AppBaseActivity {
         tabNameList.add("聊天");
         tabNameList.add("好友圈");
         tabNameList.add("我的");
-
-        Object[] tabNameArray = tabNameList.toArray();
 
         Class home = null;
         Class shop = null;
@@ -70,6 +73,20 @@ public class AppMainActivity extends AppBaseActivity {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+
+        tabFragmentList.add(home);
+        tabFragmentList.add(shop);
+        tabFragmentList.add(car);
+        tabFragmentList.add(friend);
+        tabFragmentList.add(chat);
+        tabFragmentList.add(zone);
+        tabFragmentList.add(me);
+
+        String[] tabNameArray = tabNameList.toArray(new String[tabNameList.size()]);
+
+        //vp_main.setAdapter(new TabFragmentAdapter(tabFragmentList, tabNameArray, getSupportFragmentManager(), this));
+        //tab_main.setupWithViewPager(vp_main);
+
     }
 
     @Override
