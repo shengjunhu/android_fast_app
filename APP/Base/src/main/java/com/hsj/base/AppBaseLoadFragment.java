@@ -22,6 +22,8 @@ import android.widget.Toast;
  */
 public abstract class AppBaseLoadFragment extends Fragment implements View.OnClickListener{
 
+    public String TAG = this.getClass().getSimpleName();
+
     private View rootView;
 
     @Nullable

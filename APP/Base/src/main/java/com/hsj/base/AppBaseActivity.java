@@ -24,6 +24,8 @@ import android.widget.Toast;
  */
 public abstract class AppBaseActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public String TAG = this.getClass().getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
