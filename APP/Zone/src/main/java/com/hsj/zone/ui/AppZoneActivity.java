@@ -7,6 +7,13 @@ import android.widget.TextView;
 import com.hsj.base.AppBaseActivity;
 import com.hsj.zone.R;
 
+/**
+ * @Author:HSJ
+ * @E-mail:mr.ajun@foxmail.com
+ * @Date:2017/6/14 09:46
+ * @Class:
+ * @Description:
+ */
 public class AppZoneActivity extends AppBaseActivity {
 
     @Override

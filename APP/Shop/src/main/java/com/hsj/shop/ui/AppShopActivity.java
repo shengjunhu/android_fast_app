@@ -7,6 +7,13 @@ import android.widget.TextView;
 import com.hsj.shop.R;
 import com.hsj.base.AppBaseActivity;
 
+/**
+ * @Author:HSJ
+ * @E-mail:mr.ajun@foxmail.com
+ * @Date:2017/6/14 09:46
+ * @Class:
+ * @Description:
+ */
 public class AppShopActivity extends AppBaseActivity {
 
     @Override

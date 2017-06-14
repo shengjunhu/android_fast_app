@@ -6,10 +6,18 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TextView;
-
 import com.hsj.app.R;
 import com.hsj.base.AppBaseActivity;
+import java.util.ArrayList;
+import java.util.List;
 
+/**
+ * @Author:HSJ
+ * @E-mail:mr.ajun@foxmail.com
+ * @Date:2017/6/14 09:46
+ * @Class:
+ * @Description:
+ */
 public class AppMainActivity extends AppBaseActivity {
 
     private boolean isExitApp;
@@ -33,7 +41,35 @@ public class AppMainActivity extends AppBaseActivity {
 
     @Override
     protected void initData() {
+        List<String> tabNameList = new ArrayList<>();
+        tabNameList.add("首页");
+        tabNameList.add("商城");
+        tabNameList.add("购物车");
+        tabNameList.add("好友");
+        tabNameList.add("聊天");
+        tabNameList.add("好友圈");
+        tabNameList.add("我的");
 
+        Object[] tabNameArray = tabNameList.toArray();
+
+        Class home = null;
+        Class shop = null;
+        Class car = null;
+        Class friend = null;
+        Class chat = null;
+        Class zone = null;
+        Class me = null;
+        try {
+            home = Class.forName("com.hsj.home.ui.fragment.HomeFragment");
+            shop = Class.forName("com.hsj.home.ui.fragment.ShopFragment");
+            car = Class.forName("com.hsj.home.ui.fragment.CarFragment");
+            friend = Class.forName("com.hsj.home.ui.fragment.FriendFragment");
+            chat = Class.forName("com.hsj.home.ui.fragment.ChatFragment");
+            zone = Class.forName("com.hsj.home.ui.fragment.ZoneFragment");
+            me = Class.forName("com.hsj.home.ui.fragment.MeFragment");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

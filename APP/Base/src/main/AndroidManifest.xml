@@ -4,8 +4,8 @@
 
     <application
         android:allowBackup="true"
-        android:supportsRtl="true">
-
+        android:supportsRtl="true"
+        android:label="@string/app_name">
     </application>
 
 </manifest>

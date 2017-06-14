@@ -19,6 +19,6 @@
     <TableLayout
         android:id="@+id/tab_main"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp50"/>
+        android:layout_height="@dimen/dp48"/>
 
 </LinearLayout>

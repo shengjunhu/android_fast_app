@@ -1,9 +1,10 @@
 include ':APP:App',
         ':APP:Home',
         ':APP:Shop',
-        ':APP:Zone',
         ':APP:Car',
         ':APP:Friend',
+        ':APP:Chat',
+        ':APP:Zone',
         ':APP:Me',
         ':APP:Base',
 

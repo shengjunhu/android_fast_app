@@ -7,7 +7,7 @@ import com.hsj.base.BaseApplication;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/6/5 10:39
  * @Class:AppFriend
- * @Description: 聊天好友模块初始化
+ * @Description:聊天好友模块初始化
  */
 public class AppFriend extends BaseApplication {
 

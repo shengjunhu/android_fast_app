@@ -6,7 +6,7 @@ import com.hsj.base.BaseApplication;
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/6/2 14:42
- * @Class:App5
+ * @Class:
  * @Description:
  */
 public class AppCar extends BaseApplication {

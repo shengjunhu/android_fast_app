@@ -8,8 +8,8 @@ import android.support.multidex.MultiDex;
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/6/2 14:08
- * @Class:App
- * @Description: 基本Application
+ * @Class:
+ * @Description:基本Application
  */
 public abstract class BaseApplication extends Application {
 
