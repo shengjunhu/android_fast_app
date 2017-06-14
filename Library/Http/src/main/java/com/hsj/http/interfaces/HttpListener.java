@@ -9,9 +9,9 @@ package com.hsj.http.interfaces;
  */
 public abstract class HttpListener {
 
-    abstract void onSuccess();
+    abstract void onSuccess(int requestId,String result);
 
-    public void onFail() {
+    public void onFailure(int requestId,Exception e) {
 
     }
 
