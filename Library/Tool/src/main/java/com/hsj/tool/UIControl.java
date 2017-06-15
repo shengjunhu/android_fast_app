@@ -8,4 +8,6 @@ package com.hsj.tool;
  * @Description:界面控制
  */
 public class UIControl {
+
+
 }

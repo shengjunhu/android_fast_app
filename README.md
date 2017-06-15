@@ -32,24 +32,26 @@
     ```
     
 ### 缓存路径：
-sd卡缓存路径--日志     :log
-          --图片     :image
-          --数据库    :db
-          --下载数据  :download
-          --临时数据  :temp
-          
-sp缓存: config.xml
+sp缓存: /data/data/{packageName}/shared_prefs/config.xml
         1、账户、密码(加密)
         2、userToken、imToken
-        3、apk新版本启动欢迎页flag
+        3、isNewVersion 新版本欢迎页
 
-SharedPreferences: /data/data/{packageName}/shared_prefs/config.xml
+sd卡缓存路径 (系统可清理、应用本身可清理)
+--日志     :log
+--图片     :image
+--数据库    :db
+--下载数据  :download
+--临时数据  :temp
 
+sd卡存储路径 (应用本身可清理)
+--日志     :log
+--图片     :image
+--数据库    :db
+--下载数据  :download
+--临时数据  :temp(图片压缩后的缓存、文件压缩解压)
 
-
-sd卡缓存路径       : sdPath/{packageName}/
-缓存路径：1、有sd卡 :
-        2、无sd卡 :
-        
-内置SD卡路径：/storage/emulated/0
-外置SD卡路径：/storage/extSdCard
+清理缓存：
+1、主线程清理内存
+2、子线程清理缓存文件
+3、卸载apk：子线程清空app所有相关文件
