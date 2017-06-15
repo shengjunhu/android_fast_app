@@ -30,3 +30,26 @@
     
     3、
     ```
+    
+### 缓存路径：
+sd卡缓存路径--日志     :log
+          --图片     :image
+          --数据库    :db
+          --下载数据  :download
+          --临时数据  :temp
+          
+sp缓存: config.xml
+        1、账户、密码(加密)
+        2、userToken、imToken
+        3、apk新版本启动欢迎页flag
+
+SharedPreferences: /data/data/{packageName}/shared_prefs/config.xml
+
+
+
+sd卡缓存路径       : sdPath/{packageName}/
+缓存路径：1、有sd卡 :
+        2、无sd卡 :
+        
+内置SD卡路径：/storage/emulated/0
+外置SD卡路径：/storage/extSdCard

@@ -8,7 +8,7 @@ import android.os.Environment;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 16:41
  * @Class:PhoneManager
- * @Description: 手机相关工具类
+ * @Description:手机相关工具类
  */
 public class PhoneManager {
 
