@@ -6,6 +6,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Activity显示样式 -->
+
+
     <!-- 布局配置start -->
     <style name="ww">
         <item name="android:layout_width">wrap_content</item>
