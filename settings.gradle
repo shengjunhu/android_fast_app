@@ -1,32 +1,35 @@
-include ':APP:App',
-        ':APP:Home',
-        ':APP:Shop',
-        ':APP:Car',
-        ':APP:Friend',
-        ':APP:Chat',
-        ':APP:Zone',
-        ':APP:Me',
-        ':APP:Base',
+include ':APP:App',                 //主app
+        ':APP:Home',                //app主页模块
+        ':APP:Shop',                //app商城模块
+        ':APP:Car',                 //app购物车模块
+        ':APP:Friend',              //app好友模块
+        ':APP:Chat',                //app聊天模块
+        ':APP:Zone',                //app好友圈模块
+        ':APP:Me',                  //app我的模块
+        ':APP:Base',                //app基本基类模块
 
-        ':Library:QRProvider',
-        ':Library:ImageProvider',
-        ':Library:VideoProvider',
-        ':Library:VideoPlayer',
-        ':Library:Http',
-        ':Library:Widget',
-        ':Library:Tool',
-        ':Library:DB',
-        ':Library:Permission',
-        ':Library:Sample',
+        ':Library:Sample',          //测试使用模块
+        ':Library:QRProvider',      //二维码库
+        ':Library:ImageProvider',   //图片提供库
+        ':Library:VideoProvider',   //视屏提供库
+        ':Library:VideoPlayer',     //视屏播放库
+        ':Library:Http',            //网络库
+        ':Library:Widget',          //自定义控件库
+        ':Library:Tool',            //工具库
+        ':Library:DB',              //数据缓存库
+        ':Library:Permission',      //权限处理库
+        ':Library:AutoLayout',      //自动布局库
+        ':Library:Keyboard',        //自定义键盘和表情库
+        ':Library:ImageManager',    //图片处理库
 
-        ':ThirdSDK:WXPay',
-        ':ThirdSDK:AliPay',
-        ':ThirdSDK:BDMap',
-        ':ThirdSDK:GDMap',
-        ':ThirdSDK:QNCloud',
-        ':ThirdSDK:BDCloud',
-        ':ThirdSDK:LoginShare',
-        ':ThirdSDK:Bugly'
+        ':ThirdSDK:WXPay',          //微信支付SDK
+        ':ThirdSDK:AliPay',         //支付宝支付SDK
+        ':ThirdSDK:BDMap',          //百度地图SDK
+        ':ThirdSDK:GDMap',          //高德地图SDK
+        ':ThirdSDK:QNCloud',        //七牛云SDK
+        ':ThirdSDK:BDCloud',        //百度云库
+        ':ThirdSDK:LoginShare',     //QQ、微信、微博登陆分享库
+        ':ThirdSDK:Bugly'           //腾讯热修复库
 
 //        ':ThirdSDK:IM:Chat',
 //        ':ThirdSDK:IM:IMLib',

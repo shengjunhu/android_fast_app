@@ -8,4 +8,7 @@ package com.hsj.tool;
  * @Description: SharedPreferences工具类
  */
 public class SPManager {
+
+
+
 }
