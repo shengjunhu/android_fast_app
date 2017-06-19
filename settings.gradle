@@ -18,7 +18,8 @@ include ':APP:App',                 //主app
         ':Library:Http',            //网络库
         ':Library:Widget',          //自定义控件库
         ':Library:Tool',            //工具库
-        ':Library:DB',              //数据缓存库
+        ':Library:DB',              //GreenDao数据缓存库
+        ':Library:DBObject',        //Object数据库
         ':Library:Permission',      //权限处理库
         ':Library:AutoLayout',      //自动布局库
         ':Library:Keyboard',        //自定义键盘和表情库
