@@ -15,7 +15,11 @@ public class BaseTool {
         return TextUtils.isEmpty(str);
     }
 
-    public String setText(String str){
+    public static boolean isEmpty(Object object){
+        return object!=null;
+    }
+
+    public String setStr(String str){
         if(TextUtils.isEmpty(str))return "";
         return str;
     }
