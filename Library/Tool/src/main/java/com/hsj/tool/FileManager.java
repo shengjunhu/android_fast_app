@@ -1,5 +1,6 @@
 package com.hsj.tool;
 
+import android.content.Context;
 import android.os.Environment;
 
 /**
@@ -18,6 +19,15 @@ public class FileManager {
      */
     public static boolean isSdUsable() {
         return Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState());
+    }
+
+    /**
+     *
+     * @param context
+     * @return
+     */
+    public static String getCacheDir(Context context) {
+        return "";
     }
 
 }
