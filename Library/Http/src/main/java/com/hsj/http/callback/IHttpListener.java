@@ -1,4 +1,4 @@
-package com.hsj.http.interfaces;
+package com.hsj.http.callback;
 
 /**
  * @Author:HSJ
