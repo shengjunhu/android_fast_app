@@ -24,7 +24,7 @@ public class App extends BaseApplication {
             LeakCanary.install(this);
 
         }else {
-            //Xlog.init();
+
         }
 
         appContext = getApplicationContext();

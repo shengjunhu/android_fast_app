@@ -7,7 +7,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true">
 
-        <activity android:name=".ui.AppShopActivity" />
+        <activity android:name=".ui.ShopActivity" />
 
     </application>
 

@@ -1,15 +1,14 @@
 package com.hsj.app.ui;
 
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.TableLayout;
 import android.widget.TextView;
-
 import com.hsj.app.R;
 import com.hsj.base.AppBaseActivity;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,8 +23,8 @@ public class AppMainActivity extends AppBaseActivity {
 
     private boolean isExitApp;
     private boolean isFirstShow;
-    private ViewPager vp_main;
-    private TableLayout tab_main;
+    private ViewPager vp_app;
+    private TabLayout tab_app;
 
     @Override
     protected int getLayoutId() {
@@ -34,8 +33,8 @@ public class AppMainActivity extends AppBaseActivity {
 
     @Override
     protected void initView() {
-        vp_main = findView(R.id.vp_main);
-        tab_main = findView(R.id.tab_main);
+        vp_app = findView(R.id.vp_app);
+        tab_app = findView(R.id.tab_app);
     }
 
     @Override
@@ -46,7 +45,7 @@ public class AppMainActivity extends AppBaseActivity {
     @Override
     protected void initData() {
         List<String> tabNameList = new ArrayList<>();
-        List<Class> tabFragmentList = new ArrayList<>();
+        List<Fragment> tabFragmentList = new ArrayList<>();
         tabNameList.add("首页");
         tabNameList.add("商城");
         tabNameList.add("购物车");
@@ -55,38 +54,29 @@ public class AppMainActivity extends AppBaseActivity {
         tabNameList.add("好友圈");
         tabNameList.add("我的");
 
-        Class home = null;
-        Class shop = null;
-        Class car = null;
-        Class friend = null;
-        Class chat = null;
-        Class zone = null;
-        Class me = null;
         try {
-            home = Class.forName("com.hsj.home.ui.fragment.HomeFragment");
-            shop = Class.forName("com.hsj.home.ui.fragment.ShopFragment");
-            car = Class.forName("com.hsj.home.ui.fragment.CarFragment");
-            friend = Class.forName("com.hsj.home.ui.fragment.FriendFragment");
-            chat = Class.forName("com.hsj.home.ui.fragment.ChatFragment");
-            zone = Class.forName("com.hsj.home.ui.fragment.ZoneFragment");
-            me = Class.forName("com.hsj.home.ui.fragment.MeFragment");
-        } catch (ClassNotFoundException e) {
+            Class<Fragment> home = (Class<Fragment>) Class.forName("com.hsj.home.ui.fragment.HomeFragment");
+            Class<Fragment> shop = (Class<Fragment>) Class.forName("com.hsj.home.ui.fragment.ShopFragment");
+            Class<Fragment> car = (Class<Fragment>) Class.forName("com.hsj.home.ui.fragment.CarFragment");
+            Class<Fragment> friend = (Class<Fragment>) Class.forName("com.hsj.home.ui.fragment.FriendFragment");
+            Class<Fragment> chat = (Class<Fragment>) Class.forName("com.hsj.home.ui.fragment.ChatFragment");
+            Class<Fragment> zone = (Class<Fragment>) Class.forName("com.hsj.home.ui.fragment.ZoneFragment");
+            Class<Fragment> me = (Class<Fragment>) Class.forName("com.hsj.home.ui.fragment.MeFragment");
+
+            tabFragmentList.add(home.newInstance());
+            tabFragmentList.add(shop.newInstance());
+            tabFragmentList.add(car.newInstance());
+            tabFragmentList.add(friend.newInstance());
+            tabFragmentList.add(chat.newInstance());
+            tabFragmentList.add(zone.newInstance());
+            tabFragmentList.add(me.newInstance());
+
+        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException e) {
             e.printStackTrace();
         }
 
-        tabFragmentList.add(home);
-        tabFragmentList.add(shop);
-        tabFragmentList.add(car);
-        tabFragmentList.add(friend);
-        tabFragmentList.add(chat);
-        tabFragmentList.add(zone);
-        tabFragmentList.add(me);
-
-        String[] tabNameArray = tabNameList.toArray(new String[tabNameList.size()]);
-
-        //vp_main.setAdapter(new TabFragmentAdapter(tabFragmentList, tabNameArray, getSupportFragmentManager(), this));
-        //tab_main.setupWithViewPager(vp_main);
-
+        vp_app.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(),tabFragmentList, tabNameList));
+        tab_app.setupWithViewPager(vp_app);
     }
 
     @Override

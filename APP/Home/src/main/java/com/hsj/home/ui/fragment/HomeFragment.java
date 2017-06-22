@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.hsj.base.AppBaseFragment;
+import com.hsj.home.R;
 
 /**
  * @Author:HSJ
@@ -17,7 +18,7 @@ public class HomeFragment extends AppBaseFragment{
 
     @Override
     protected int getLayoutId() {
-        return 0;
+        return R.layout.fragment_home;
     }
 
     @Override

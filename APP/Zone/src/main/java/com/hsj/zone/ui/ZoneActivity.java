@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.hsj.base.AppBaseActivity;
 import com.hsj.zone.R;
+import com.hsj.zone.ui.fragment.ZoneFragment;
 
 /**
  * @Author:HSJ
@@ -14,16 +15,19 @@ import com.hsj.zone.R;
  * @Class:
  * @Description:
  */
-public class AppZoneActivity extends AppBaseActivity {
+public class ZoneActivity extends AppBaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_app_zone;
+        return R.layout.activity_zone;
     }
 
     @Override
     protected void initView() {
-
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fl_zone, new ZoneFragment())
+                .commit();
     }
 
     @Override
