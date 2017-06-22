@@ -1,29 +1,26 @@
-package com.hsj.me.ui;
+package com.hsj.chat.ui;
 
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
 import com.hsj.base.AppBaseActivity;
-import com.hsj.me.R;
+import com.hsj.chat.R;
+import com.hsj.chat.ui.fragment.ChatFragment;
 
-/**
- * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/6/14 09:46
- * @Class:
- * @Description:
- */
-public class AppMeActivity extends AppBaseActivity {
+public class ChatActivity extends AppBaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_app_me;
+        return R.layout.activity_chat;
     }
 
     @Override
     protected void initView() {
-
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fl_chat, new ChatFragment())
+                .commit();
     }
 
     @Override

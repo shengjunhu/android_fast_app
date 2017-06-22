@@ -1,12 +1,12 @@
-package com.hsj.home.ui;
+package com.hsj.me.ui;
 
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
 import com.hsj.base.AppBaseActivity;
-import com.hsj.home.R;
-import com.hsj.home.ui.fragment.HomeFragment;
+import com.hsj.me.R;
+import com.hsj.me.ui.fragment.MeFragment;
 
 /**
  * @Author:HSJ
@@ -15,18 +15,18 @@ import com.hsj.home.ui.fragment.HomeFragment;
  * @Class:
  * @Description:
  */
-public class HomeActivity extends AppBaseActivity {
+public class MeActivity extends AppBaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_home;
+        return R.layout.activity_me;
     }
 
     @Override
     protected void initView() {
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.fl_home, new HomeFragment())
+                .replace(R.id.fl_me, new MeFragment())
                 .commit();
     }
 

@@ -3,7 +3,9 @@ package com.hsj.me.ui.fragment;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
+
 import com.hsj.base.AppBaseFragment;
+import com.hsj.me.R;
 
 /**
  * @Author:HSJ
@@ -16,7 +18,7 @@ public class MeFragment extends AppBaseFragment {
 
     @Override
     protected int getLayoutId() {
-        return 0;
+        return R.layout.fragment_me;
     }
 
     @Override

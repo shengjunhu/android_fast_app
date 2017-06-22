@@ -2,10 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/mmv"
-    tools:context="com.hsj.home.ui.HomeActivity">
+    tools:context="com.hsj.chat.ui.ChatActivity">
 
     <FrameLayout
-        android:id="@+id/fl_home"
+        android:id="@+id/fl_chat"
         style="@style/mm"/>
 
 </LinearLayout>

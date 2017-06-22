@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         >
 
-        <activity android:name=".ui.AppMeActivity"/>
+        <activity android:name=".ui.MeActivity"/>
 
     </application>
 

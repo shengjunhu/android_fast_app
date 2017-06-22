@@ -1,11 +1,12 @@
-package com.hsj.shop.ui;
+package com.hsj.car.ui;
 
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
-import com.hsj.shop.R;
+import com.hsj.car.R;
 import com.hsj.base.AppBaseActivity;
+import com.hsj.car.ui.fragment.CarFragment;
 
 /**
  * @Author:HSJ
@@ -14,16 +15,19 @@ import com.hsj.base.AppBaseActivity;
  * @Class:
  * @Description:
  */
-public class AppShopActivity extends AppBaseActivity {
+public class CarActivity extends AppBaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_app_shop;
+        return R.layout.activity_car;
     }
 
     @Override
     protected void initView() {
-
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fl_car, new CarFragment())
+                .commit();
     }
 
     @Override
