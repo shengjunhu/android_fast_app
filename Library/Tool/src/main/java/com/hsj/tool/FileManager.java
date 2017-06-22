@@ -28,7 +28,7 @@ import java.nio.channels.FileChannel;
 import java.text.DecimalFormat;
 import java.util.zip.GZIPInputStream;
 
-import static com.hsj.tool.Xlog.isSdUsable;
+import static com.hsj.tool.L.isSdUsable;
 
 /**
  * @Author:HSJ
