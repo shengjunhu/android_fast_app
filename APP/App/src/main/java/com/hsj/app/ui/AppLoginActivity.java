@@ -12,7 +12,7 @@ import com.hsj.base.AppBaseActivity;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 15:29
  * @Class:AppLoginActivity
- * @Description:
+ * @Description:应用登陆界面：密码登陆第三方登陆和短信登陆
  */
 public class AppLoginActivity extends AppBaseActivity {
 

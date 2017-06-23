@@ -17,7 +17,7 @@ import java.util.List;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/6/14 09:46
  * @Class:
- * @Description:
+ * @Description:应用主页
  */
 public class AppMainActivity extends AppBaseActivity {
 

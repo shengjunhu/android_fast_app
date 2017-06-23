@@ -12,7 +12,7 @@ import com.hsj.base.AppBaseActivity;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 15:28
  * @Class:AppWelcomeActivity
- * @Description: 引导页
+ * @Description:引导页
  */
 public class AppWelcomeActivity extends AppBaseActivity {
 

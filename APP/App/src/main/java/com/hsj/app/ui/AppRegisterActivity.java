@@ -12,7 +12,7 @@ import com.hsj.base.AppBaseActivity;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 15:30
  * @Class:AppRegisterActivity
- * @Description:
+ * @Description:应用注册和找回密码界面
  */
 public class AppRegisterActivity extends AppBaseActivity {
 

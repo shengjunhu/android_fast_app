@@ -11,7 +11,7 @@ import com.hsj.base.AppBaseActivity;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 15:26
  * @Class:AppSplashActivity
- * @Description: 启动页
+ * @Description:启动页
  */
 public class AppSplashActivity extends AppBaseActivity {
 
