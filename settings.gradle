@@ -1,14 +1,12 @@
 include ':APP:App',                 //主app
         ':APP:Home',                //app主页模块
         ':APP:Shop',                //app商城模块
-        ':APP:Car',                 //app购物车模块
         ':APP:Chat',                //app聊天模块
         ':APP:Zone',                //app好友圈模块
         ':APP:Me',                  //app我的模块
         ':APP:Base',                //app基本基类模块
 
-        ':Library:Sample',          //功能测试使用模块
-
+        ':Library:Sample',          //使用介绍module
         ':Library:Tool',            //工具库
         ':Library:Permission',      //权限处理库
         ':Library:Http',            //网络库

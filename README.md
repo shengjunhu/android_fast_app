@@ -1,36 +1,55 @@
 # FastAndroid
 工作中Android开发用的项目框架：模块化、组件化开发，可快速集成
-## 开发框架结构组成：
-- Sample Module 功能展示Demo
+
+## 开发框架：
+- 1、MVC框架： 使用简单（结合DataBinding）更好用
+- 2、MVP框架： 高解耦、类多复杂（View、Data、IPresenter、IContract）
+- 3、MVVM框架：一般般
+
+## 结构组成：
+### 主工程APP：
+  * App:
+  * Home:首页模块
+  * Shop:商城模块
+  * Chat:聊天模块
+  * Zone:朋友圈模块
+  * Me:我的模块
+  * Base:项目基类库
+  
+### 库工程Library：
+  * Tool:工具库
+  * Widget:自定义框架
+  * Http:网络请求框架
+  * DB:数据库
+  * DBObject:数据本地对象存储
+  * AutoLayout:自动布局、使用px
+  * AudioProvider:音频提供者
+  * QRProvider:二维码提供者
+  * ImageManager:图片处理者
+  * ImageProvider:图片提供者
+  * Permission:权限申请库
+  * Keyboard:虚拟键盘与表情、自定义密码键盘
+  * FileProvider:文件提供者
+  * VideoPlayer:视屏播放器
+  * VideoProvider:视屏提供者
+  * Web:js、html与android交互
+  * Sample:使用介绍库
+  
+### 第三方SDK库:
+  * AliPay:支付宝
+  * BDCloud:百度云存储
+  * BDMap:百度地图
+  * Bugly:腾讯bugly
+  * GDMap:高德地图
+  * LoginShare:QQ、微信、微博登陆分享
+  * QNCloud:七牛云
+  * WxPay:微信支付
+  * IM:即时通讯（融云）
 
 ## 插件功能：
 
 ### 编写阶段模块结构
-- Base Module
-    ```
-    1、base包是封装的基类
-    
-    2、tool包是工具类
-    
-    3、其他包是工具的二次封装
-    ```
-- Https Module
-    ```txt
-    1、基于Retrofit网络请求轻量级封装
-    
-    2、
-    
-    3、
-    ```
-- Widget Module
-    ```txt
-    1、自定义控件Module
-    
-    2、
-    
-    3、
-    ```
-    
+
 ### 缓存路径：
 sp缓存: /data/data/{packageName}/shared_prefs/config.xml
         1、账户、密码(加密)

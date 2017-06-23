@@ -1,33 +1,28 @@
-package com.hsj.car.ui;
+package com.hsj.app.wxapi;
 
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
-import com.hsj.car.R;
 import com.hsj.base.AppBaseActivity;
-import com.hsj.car.ui.fragment.CarFragment;
 
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/6/14 09:46
- * @Class:
+ * @Date:2017/6/23 10:20
+ * @Class:WXEntryActivity
  * @Description:
  */
-public class CarActivity extends AppBaseActivity {
+public class WXEntryActivity extends AppBaseActivity{
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_car;
+        return 0;
     }
 
     @Override
     protected void initView() {
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.fl_car, new CarFragment())
-                .commit();
+
     }
 
     @Override

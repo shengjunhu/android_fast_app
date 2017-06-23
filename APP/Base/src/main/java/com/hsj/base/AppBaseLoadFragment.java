@@ -18,7 +18,7 @@ import android.widget.Toast;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 14:52
  * @Class:AppBaseLoadFragment
- * @Description:懒加载Fragment
+ * @Description:1、加载中、2、加载成功、3、加载失败、4、网路故障
  */
 public abstract class AppBaseLoadFragment extends Fragment implements View.OnClickListener{
 

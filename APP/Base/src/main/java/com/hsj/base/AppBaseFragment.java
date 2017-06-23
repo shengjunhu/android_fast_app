@@ -18,7 +18,7 @@ import android.widget.Toast;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 14:52
  * @Class:AppBaseFragment
- * @Description:
+ * @Description:懒加载Fragment
  */
 public abstract class AppBaseFragment extends Fragment implements View.OnClickListener{
 

@@ -126,7 +126,7 @@ public class XRecycleView extends RecyclerView {
      * 第四步：设置数据为空时提示布局
      * @param emptyView
      */
-    public void setDataEmptyView(View emptyView){
+    public void setEmptyView(View emptyView){
         this.emptyView = emptyView;
     }
 
