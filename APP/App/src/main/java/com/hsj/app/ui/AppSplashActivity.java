@@ -21,7 +21,7 @@ public class AppSplashActivity extends AppBaseActivity {
     }
 
     @Override
-    protected void initView() {
+    protected void initUI() {
 
     }
 

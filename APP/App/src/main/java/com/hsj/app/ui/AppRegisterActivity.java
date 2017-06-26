@@ -22,7 +22,7 @@ public class AppRegisterActivity extends AppBaseActivity {
     }
 
     @Override
-    protected void initView() {
+    protected void initUI() {
 
     }
 

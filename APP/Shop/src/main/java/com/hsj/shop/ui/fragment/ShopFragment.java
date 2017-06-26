@@ -22,7 +22,7 @@ public class ShopFragment extends AppBaseFragment{
     }
 
     @Override
-    protected void initView() {
+    protected void initUI() {
 
     }
 

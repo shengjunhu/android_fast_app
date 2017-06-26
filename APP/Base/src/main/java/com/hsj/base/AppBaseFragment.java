@@ -33,7 +33,7 @@ public abstract class AppBaseFragment extends Fragment implements View.OnClickLi
 
             rootView = inflater.inflate(getLayoutId(), container, false);
 
-            initView();
+            initUI();
 
             initToolBar();
 
@@ -44,7 +44,7 @@ public abstract class AppBaseFragment extends Fragment implements View.OnClickLi
 
     protected abstract int getLayoutId();
 
-    protected abstract void initView();
+    protected abstract void initUI();
 
     protected abstract void initToolbar(Toolbar toolbar,TextView tv_left,TextView tv_center,TextView tv_right);
 

@@ -22,7 +22,7 @@ public class AppLoginActivity extends AppBaseActivity {
     }
 
     @Override
-    protected void initView() {
+    protected void initUI() {
 
     }
 

@@ -22,15 +22,15 @@ include ':APP:App',                 //主app
         ':Library:AutoLayout',      //自动布局库
         ':Library:Keyboard',        //自定义键盘和表情库
         ':Library:ImageManager',    //图片处理库
-        ':Library:Web',
+        ':Library:Web',             //JS、Html与android交互库
+        ':Library:Router',          //组件模块数据路由
 
-        ':ThirdSDK:WXPay',          //微信支付SDK
-        ':ThirdSDK:AliPay',         //支付宝支付SDK
+        ':ThirdSDK:Pay',
+        ':ThirdSDK:LoginShare',     //QQ、微信、微博登陆分享库
         ':ThirdSDK:BDMap',          //百度地图SDK
         ':ThirdSDK:GDMap',          //高德地图SDK
         ':ThirdSDK:QNCloud',        //七牛云SDK
         ':ThirdSDK:BDCloud',        //百度云库
-        ':ThirdSDK:LoginShare',     //QQ、微信、微博登陆分享库
         ':ThirdSDK:Bugly'           //腾讯热修复库
 
 //        ':ThirdSDK:IM:Chat',

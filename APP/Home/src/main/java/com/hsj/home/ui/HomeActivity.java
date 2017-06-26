@@ -23,7 +23,7 @@ public class HomeActivity extends AppBaseActivity {
     }
 
     @Override
-    protected void initView() {
+    protected void initUI() {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fl_home, new HomeFragment())

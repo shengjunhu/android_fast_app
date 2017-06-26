@@ -31,7 +31,7 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
 
-        initView();
+        initUI();
 
         initToolBar();
 
@@ -40,7 +40,7 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
 
     protected abstract int getLayoutId();
 
-    protected abstract void initView();
+    protected abstract void initUI();
 
     protected abstract void initToolbar(Toolbar toolbar,TextView tv_left,TextView tv_center,TextView tv_right);
 

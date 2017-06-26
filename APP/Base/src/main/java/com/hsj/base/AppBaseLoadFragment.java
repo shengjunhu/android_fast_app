@@ -18,7 +18,8 @@ import android.widget.Toast;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 14:52
  * @Class:AppBaseLoadFragment
- * @Description:1、加载中、2、加载成功、3、加载失败、4、网路故障
+ * @Description:界面数据全部来源网络，继承此activity
+ * 1、加载中、2、加载成功、3、加载失败、4、网络故障
  */
 public abstract class AppBaseLoadFragment extends Fragment implements View.OnClickListener{
 
@@ -33,7 +34,7 @@ public abstract class AppBaseLoadFragment extends Fragment implements View.OnCli
 
             rootView = inflater.inflate(getLayoutId(), container, false);
 
-            initView();
+            initUI();
 
             initToolBar();
 
@@ -44,7 +45,7 @@ public abstract class AppBaseLoadFragment extends Fragment implements View.OnCli
 
     protected abstract int getLayoutId();
 
-    protected abstract void initView();
+    protected abstract void initUI();
 
     protected abstract void initToolbar(Toolbar toolbar,TextView tv_left,TextView tv_center,TextView tv_right);
 

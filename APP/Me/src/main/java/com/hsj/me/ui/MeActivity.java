@@ -23,7 +23,7 @@ public class MeActivity extends AppBaseActivity {
     }
 
     @Override
-    protected void initView() {
+    protected void initUI() {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fl_me, new MeFragment())

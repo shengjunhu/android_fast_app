@@ -21,7 +21,7 @@ public class ChatFragment extends AppBaseFragment {
     }
 
     @Override
-    protected void initView() {
+    protected void initUI() {
 
     }
 

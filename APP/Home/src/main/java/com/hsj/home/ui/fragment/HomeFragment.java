@@ -22,7 +22,7 @@ public class HomeFragment extends AppBaseFragment{
     }
 
     @Override
-    protected void initView() {
+    protected void initUI() {
 
     }
 

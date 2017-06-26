@@ -32,7 +32,7 @@ public class AppMainActivity extends AppBaseActivity {
     }
 
     @Override
-    protected void initView() {
+    protected void initUI() {
         vp_app = findView(R.id.vp_app);
         tab_app = findView(R.id.tab_app);
     }

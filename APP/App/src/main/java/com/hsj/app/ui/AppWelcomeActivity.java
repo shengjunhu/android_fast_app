@@ -22,7 +22,7 @@ public class AppWelcomeActivity extends AppBaseActivity {
     }
 
     @Override
-    protected void initView() {
+    protected void initUI() {
 
     }
 

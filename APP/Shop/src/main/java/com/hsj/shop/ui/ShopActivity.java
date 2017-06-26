@@ -23,7 +23,7 @@ public class ShopActivity extends AppBaseActivity {
     }
 
     @Override
-    protected void initView() {
+    protected void initUI() {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fl_shop, new ShopFragment())

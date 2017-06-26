@@ -21,7 +21,7 @@ public class ZoneFragment extends AppBaseFragment {
     }
 
     @Override
-    protected void initView() {
+    protected void initUI() {
 
     }
 
