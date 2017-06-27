@@ -1,6 +1,6 @@
 package com.hsj.chat.base;
 
-import com.hsj.base.BaseApplication;
+import com.hsj.base.app.BaseApplication;
 
 /**
  * @Author:HSJ

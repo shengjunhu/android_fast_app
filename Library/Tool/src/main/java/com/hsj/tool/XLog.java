@@ -55,16 +55,14 @@ public class XLog {
      * 在Application中初始化Log
      *
      * @param isDebug         - 是否是调试
-     * @param isLog2File      - 是否将日志写入文件
      * @param isErrorLog2File - 是否将错误日志写入文件
      * @param logDir          - 写入文件路径
      * @return
      */
-    public static void initLog(boolean isDebug, boolean isLog2File, boolean isErrorLog2File, File logDir) {
-        XLog.isDebug = isDebug;
-        XLog.isLog2File = isLog2File;
+    public static void initLog(boolean isDebug,boolean isErrorLog2File, File logDir) {
+        XLog.isDebug         = isDebug;
         XLog.isErrorLog2File = isErrorLog2File;
-        XLog.logDir = logDir;
+        XLog.logDir          = logDir;
 
         checkLogFile();
     }
@@ -120,10 +118,9 @@ public class XLog {
 
             //TODO 输出日志
 
-
-        } else if (isLog2File) {//非调试：日志写文件
-
         } else if (isErrorLog2File) {//非调试：错误日志写文件
+
+            //TODO 输出日志
 
         }
     }

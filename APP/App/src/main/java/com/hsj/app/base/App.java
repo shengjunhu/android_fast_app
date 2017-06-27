@@ -1,8 +1,8 @@
 package com.hsj.app.base;
 
 import android.content.Context;
-import com.hsj.base.BaseApplication;
-import com.hsj.base.BuildConfig;
+import com.hsj.baseapp.BaseApplication;
+import com.hsj.baseapp.BuildConfig;
 import com.squareup.leakcanary.LeakCanary;
 
 /**

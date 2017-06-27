@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.hsj.app.R;
-import com.hsj.base.AppBaseActivity;
+import com.hsj.baseapp.AppBaseActivity;
 
 /**
  * @Author:HSJ

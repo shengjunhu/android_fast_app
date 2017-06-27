@@ -4,9 +4,9 @@ include ':APP:App',                 //主app
         ':APP:Chat',                //app聊天模块
         ':APP:Zone',                //app好友圈模块
         ':APP:Me',                  //app我的模块
-        ':APP:Base',                //app基本基类模块
+        ':APP:BaseApp',                //app基本基类模块
 
-        ':Library:Sample',          //使用介绍module
+        ':Library:Sample',          //使用介绍Module
         ':Library:Tool',            //工具库
         ':Library:Permission',      //权限处理库
         ':Library:Http',            //网络库
@@ -24,6 +24,8 @@ include ':APP:App',                 //主app
         ':Library:ImageManager',    //图片处理库
         ':Library:Web',             //JS、Html与android交互库
         ':Library:Router',          //组件模块数据路由
+        ':Library:BaseLib',                 //库文件初始化Module
+
 
         ':ThirdSDK:Pay',
         ':ThirdSDK:LoginShare',     //QQ、微信、微博登陆分享库
@@ -31,8 +33,7 @@ include ':APP:App',                 //主app
         ':ThirdSDK:GDMap',          //高德地图SDK
         ':ThirdSDK:QNCloud',        //七牛云SDK
         ':ThirdSDK:BDCloud',        //百度云库
-        ':ThirdSDK:Bugly'           //腾讯热修复库
-
+        ':ThirdSDK:Bugly',          //腾讯热修复库
 //        ':ThirdSDK:IM:Chat',
 //        ':ThirdSDK:IM:IMLib',
 //        ':ThirdSDK:IM:IMKit',
@@ -42,3 +43,4 @@ include ':APP:App',                 //主app
 //        ':ThirdSDK:IM:Recognizer',
 //        ':ThirdSDK:IM:RedPacket',
 //        ':ThirdSDK:IM:Sticker'
+        ':ThirdSDK:BaseSDK'
