@@ -43,10 +43,12 @@ dependencies {
     })
     testCompile rootProject.ext.dependencies["testCompile"]
     compile rootProject.ext.dependencies["multidex"]
+
     compile rootProject.ext.dependencies["constraint-layout"]
     compile rootProject.ext.dependencies["appcompat-v7"]
     compile rootProject.ext.dependencies["recyclerview-v7"]
     compile rootProject.ext.dependencies["design"]
+
     testCompile rootProject.ext.dependencies["leakcanary-test"]
     debugCompile rootProject.ext.dependencies["leakcanary-debug"]
     releaseCompile rootProject.ext.dependencies["leakcanary-release"]
