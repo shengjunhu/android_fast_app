@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.hsj.widget.stateview;
 
 import android.content.Context;
@@ -38,3 +39,4 @@ public class StateView extends FrameLayout{
     }
 
 }
+
