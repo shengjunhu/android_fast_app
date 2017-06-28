@@ -1,4 +1,4 @@
-package com.hsj.bdmap.interfaces;
+package com.hsj.bdmap;
 
 /**
  * @Author:HSJ
@@ -7,6 +7,6 @@ package com.hsj.bdmap.interfaces;
  * @Class:
  * @Description:
  */
-public class ReverseLocationListener {
+public interface LocationListener {
 
 }

@@ -1,4 +1,4 @@
-package com.hsj.bdmap.interfaces;
+package com.hsj.bdmap;
 
 /**
  * @Author:HSJ
