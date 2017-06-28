@@ -18,7 +18,7 @@ import android.widget.Toast;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 14:52
  * @Class:AppBaseFragment
- * @Description:懒加载Fragment
+ * @Description:普通Fragment、数据本地初始化
  */
 public abstract class AppBaseFragment extends Fragment implements View.OnClickListener{
 
@@ -61,6 +61,14 @@ public abstract class AppBaseFragment extends Fragment implements View.OnClickLi
         TextView tv_right = findView(R.id.tv_right);
 
         initToolbar(toolbar,tv_left, tv_center,tv_right);
+    }
+
+    /**
+     * 刷新数据
+     * @param isRefresh
+     */
+    protected void refreshData(boolean isRefresh){
+        if(isRefresh)initData();
     }
 
     /**

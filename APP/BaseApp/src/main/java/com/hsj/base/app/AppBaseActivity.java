@@ -20,7 +20,7 @@ import android.widget.Toast;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 14:52
  * @Class:AppBaseActivity
- * @Description:
+ * @Description:Activity基类：初始化UI、初始化数据、强制刷新数据、生命周期控制
  */
 public abstract class AppBaseActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -45,6 +45,34 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
     protected abstract void initToolbar(Toolbar toolbar,TextView tv_left,TextView tv_center,TextView tv_right);
 
     protected abstract void initData();
+
+    /**
+     * 刷新数据
+     * @param isRefresh
+     */
+    protected void refreshData(boolean isRefresh){
+        if(isRefresh)initData();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 
     /**
      * 初始化Toolbar

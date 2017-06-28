@@ -65,6 +65,13 @@ public abstract class AppBaseLoadActivity extends AppCompatActivity implements V
         return super.onCreateOptionsMenu(menu);
     }
 
+    /**
+     * 刷新数据
+     * @param isRefresh
+     */
+    protected void refreshData(boolean isRefresh){
+        if(isRefresh)initData();
+    }
 
     /**
      * 查找View
