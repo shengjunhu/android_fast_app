@@ -1,4 +1,4 @@
-package com.hsj.bdmap.base;
+package com.hsj.bdmap;
 
 public class MapViewProvider {
 

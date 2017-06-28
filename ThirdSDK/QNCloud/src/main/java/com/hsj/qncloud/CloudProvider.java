@@ -1,4 +1,4 @@
-package com.hsj.bdcloud;
+package com.hsj.qncloud;
 
 public class CloudProvider {
 

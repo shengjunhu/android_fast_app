@@ -1,15 +1,12 @@
 package com.hsj.imagemanager.bitmap;
 
 /**
- *  
- *  * Company:
- * Author:HSJ
- *  Email:mr.ajun@foxmail.com 
- *  * Date:2017-06-28 22:42
- *  * Class:BitmapProvider
- * Description:
- *  
+ * @Author:HSJ
+ * @E-mail:mr.ajun@foxmail.com
+ * @Date:2017/6/15 10:21
+ * @Class:BitmapTool
+ * @Description:Bitmap工具类
  */
+public class BitmapTool {
 
-public class BitmapProvider {
 }

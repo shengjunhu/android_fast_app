@@ -3,9 +3,8 @@ package com.hsj.app.ui;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
-
 import com.hsj.app.R;
-import com.hsj.baseapp.AppBaseActivity;
+import com.hsj.base.app.AppBaseActivity;
 
 /**
  * @Author:HSJ

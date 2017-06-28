@@ -1,15 +1,12 @@
 package com.hsj.imagemanager.cut;
 
 /**
- *  
- *  * Company:
- * Author:HSJ
- *  Email:mr.ajun@foxmail.com 
- *  * Date:2017-06-28 22:39
- *  * Class:ImageCutProvider
- * Description:
- *  
+ * @Author:HSJ
+ * @E-mail:mr.ajun@foxmail.com
+ * @Date:2017/6/15 10:21
+ * @Class:ImageCutProvider
+ * @Description:图片剪裁
  */
-
 public class ImageCutProvider {
+
 }

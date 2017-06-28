@@ -1,4 +1,4 @@
-package com.hsj.bdmap;
+package com.hsj.gdmap;
 
 /**
  * @Author:HSJ

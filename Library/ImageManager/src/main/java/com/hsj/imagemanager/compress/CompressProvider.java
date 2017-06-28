@@ -1,15 +1,12 @@
 package com.hsj.imagemanager.compress;
 
 /**
- *  
- *  * Company:
- * Author:HSJ
- *  Email:mr.ajun@foxmail.com 
- *  * Date:2017-06-28 22:40
- *  * Class:CompressProvider
- * Description:
- *  
+ * @Author:HSJ
+ * @E-mail:mr.ajun@foxmail.com
+ * @Date:2017/6/15 10:21
+ * @Class:CompressProvider
+ * @Description:图片压缩
  */
-
 public class CompressProvider {
+
 }

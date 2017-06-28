@@ -1,15 +1,12 @@
 package com.hsj.imagemanager.base;
 
 /**
- *  
- *  * Company:
- * Author:HSJ
- *  Email:mr.ajun@foxmail.com 
- *  * Date:2017-06-28 22:45
- *  * Class:ImageContext
- * Description:
- *  
+ * @Author:HSJ
+ * @E-mail:mr.ajun@foxmail.com
+ * @Date:2017/6/15 10:21
+ * @Class:ImageContext
+ * @Description:图片管理模块初始化部分
  */
-
 public class ImageContext {
+
 }

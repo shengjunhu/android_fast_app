@@ -1,15 +1,11 @@
 package com.hsj.imagemanager.shape;
 
 /**
- *  
- *  * Company:
- * Author:HSJ
- *  Email:mr.ajun@foxmail.com 
- *  * Date:2017-06-28 22:43
- *  * Class:XImageView
- * Description:
- *  
+ * @Author:HSJ
+ * @E-mail:mr.ajun@foxmail.com
+ * @Date:2017/6/15 10:21
+ * @Class:XImageView
+ * @Description:自定义图片：圆形、圆形边圈、方形
  */
-
 public class XImageView {
 }
