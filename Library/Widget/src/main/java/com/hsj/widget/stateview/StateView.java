@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.hsj.widget.stateview;
 
 import android.content.Context;
@@ -18,25 +17,21 @@ import android.widget.FrameLayout;
  */
 public class StateView extends FrameLayout{
 
+
     public StateView(@NonNull Context context) {
-        this(context,null);
+        super(context);
     }
 
     public StateView(@NonNull Context context, @Nullable AttributeSet attrs) {
-        this(context, attrs,0);
+        super(context, attrs);
     }
 
     public StateView(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
-        this(context, attrs, defStyleAttr);
-    }
-
-    public StateView(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
-        this(context, attrs, defStyleAttr, defStyleRes);
-    }
-
-    public StateView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
+    public StateView(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+    }
 }
 
