@@ -1,5 +1,8 @@
 package com.hsj.imagemanager.base;
 
+import android.content.Context;
+import android.widget.ImageView;
+
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
@@ -9,17 +12,17 @@ package com.hsj.imagemanager.base;
  */
 public class ImageLoader {
 
-    public ImageLoader with(){
+    public ImageLoader with(Context mContext){
 
         return this;
     }
 
-    public ImageLoader load(){
+    public ImageLoader load(String path){
 
         return this;
     }
 
-    public ImageLoader into(){
+    public ImageLoader into(ImageView iv){
 
         return this;
     }
