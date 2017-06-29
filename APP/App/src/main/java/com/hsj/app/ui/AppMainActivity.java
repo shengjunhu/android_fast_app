@@ -8,7 +8,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 import com.hsj.app.R;
-import com.hsj.baseapp.AppBaseActivity;
+import com.hsj.base.app.AppBaseActivity;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-include ':APP:App',                 //主app
+﻿include ':APP:App',                 //主app
         ':APP:Home',                //app主页模块
         ':APP:Shop',                //app商城模块
         ':APP:Chat',                //app聊天模块
@@ -28,12 +28,13 @@ include ':APP:App',                 //主app
 
         ':ThirdSDK:BaseSDK',        //SDK基类
         ':ThirdSDK:Pay',            //支付宝、微信支付
-        ':ThirdSDK:LoginShare',     //QQ、微信、微博登陆分享库
+        ':ThirdSDK:Login',          //QQ、微信、微博登陆分享库
         ':ThirdSDK:BDMap',          //百度地图SDK
         ':ThirdSDK:GDMap',          //高德地图SDK
         ':ThirdSDK:QNCloud',        //七牛云SDK
         ':ThirdSDK:BDCloud',        //百度云库
         ':ThirdSDK:Bugly'           //腾讯热修复库
+
 //        ':ThirdSDK:IM:Chat',
 //        ':ThirdSDK:IM:IMLib',
 //        ':ThirdSDK:IM:IMKit',
