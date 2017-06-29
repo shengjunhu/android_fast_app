@@ -17,7 +17,6 @@ import android.widget.FrameLayout;
  */
 public class StateView extends FrameLayout{
 
-
     public StateView(@NonNull Context context) {
         super(context);
     }

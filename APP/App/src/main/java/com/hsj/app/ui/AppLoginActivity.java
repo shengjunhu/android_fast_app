@@ -1,11 +1,11 @@
 package com.hsj.app.ui;
 
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
-
 import com.hsj.app.R;
-import com.hsj.baseapp.AppBaseActivity;
+import com.hsj.base.app.ui.AppBaseActivity;
 
 /**
  * @Author:HSJ
@@ -22,7 +22,7 @@ public class AppLoginActivity extends AppBaseActivity {
     }
 
     @Override
-    protected void initUI() {
+    protected void initUI(Bundle savedInstanceState) {
 
     }
 

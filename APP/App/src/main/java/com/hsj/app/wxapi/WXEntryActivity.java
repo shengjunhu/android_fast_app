@@ -1,10 +1,10 @@
 package com.hsj.app.wxapi;
 
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
-
-import com.hsj.baseapp.AppBaseActivity;
+import com.hsj.base.app.ui.AppBaseActivity;
 
 /**
  * @Author:HSJ
@@ -13,7 +13,7 @@ import com.hsj.baseapp.AppBaseActivity;
  * @Class:WXEntryActivity
  * @Description:
  */
-public class WXEntryActivity extends AppBaseActivity{
+public class WXEntryActivity extends AppBaseActivity {
 
     @Override
     protected int getLayoutId() {
@@ -21,7 +21,7 @@ public class WXEntryActivity extends AppBaseActivity{
     }
 
     @Override
-    protected void initView() {
+    protected void initUI(Bundle savedInstanceState) {
 
     }
 

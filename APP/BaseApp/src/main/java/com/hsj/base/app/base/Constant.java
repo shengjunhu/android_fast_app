@@ -1,4 +1,6 @@
-package com.hsj.base.app;
+package com.hsj.base.app.base;
+
+import com.hsj.base.app.BuildConfig;
 
 /**
  * @Author:HSJ

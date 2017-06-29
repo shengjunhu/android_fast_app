@@ -1,5 +1,6 @@
 package com.hsj.app.ui;
 
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -8,7 +9,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 import com.hsj.app.R;
-import com.hsj.baseapp.AppBaseActivity;
+import com.hsj.base.app.ui.AppBaseActivity;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +33,7 @@ public class AppMainActivity extends AppBaseActivity {
     }
 
     @Override
-    protected void initUI() {
+    protected void initUI(Bundle savedInstanceState) {
         vp_app = findView(R.id.vp_app);
         tab_app = findView(R.id.tab_app);
     }

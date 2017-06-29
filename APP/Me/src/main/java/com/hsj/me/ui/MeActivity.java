@@ -1,10 +1,11 @@
 package com.hsj.me.ui;
 
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
-import com.hsj.base.AppBaseActivity;
+import com.hsj.base.app.ui.AppBaseActivity;
 import com.hsj.me.R;
 import com.hsj.me.ui.fragment.MeFragment;
 
@@ -23,7 +24,7 @@ public class MeActivity extends AppBaseActivity {
     }
 
     @Override
-    protected void initUI() {
+    protected void initUI(Bundle savedInstanceState) {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fl_me, new MeFragment())

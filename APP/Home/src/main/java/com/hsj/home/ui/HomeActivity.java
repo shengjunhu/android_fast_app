@@ -1,10 +1,10 @@
 package com.hsj.home.ui;
 
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
-
-import com.hsj.base.AppBaseActivity;
+import com.hsj.base.app.ui.AppBaseActivity;
 import com.hsj.home.R;
 import com.hsj.home.ui.fragment.HomeFragment;
 
@@ -23,7 +23,7 @@ public class HomeActivity extends AppBaseActivity {
     }
 
     @Override
-    protected void initUI() {
+    protected void initUI(Bundle savedInstanceState) {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fl_home, new HomeFragment())

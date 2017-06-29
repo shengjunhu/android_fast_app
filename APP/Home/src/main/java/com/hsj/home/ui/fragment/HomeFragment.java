@@ -1,10 +1,10 @@
 package com.hsj.home.ui.fragment;
 
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
-
-import com.hsj.base.AppBaseFragment;
+import com.hsj.base.app.ui.AppBaseFragment;
 import com.hsj.home.R;
 
 /**
@@ -14,7 +14,7 @@ import com.hsj.home.R;
  * @Class:HomeFragment
  * @Description:
  */
-public class HomeFragment extends AppBaseFragment{
+public class HomeFragment extends AppBaseFragment {
 
     @Override
     protected int getLayoutId() {
@@ -22,7 +22,7 @@ public class HomeFragment extends AppBaseFragment{
     }
 
     @Override
-    protected void initUI() {
+    protected void initUI(Bundle savedInstanceState) {
 
     }
 

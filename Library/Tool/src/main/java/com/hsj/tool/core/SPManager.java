@@ -1,4 +1,4 @@
-package com.hsj.tool;
+package com.hsj.tool.core;
 
 import android.content.Context;
 import android.content.SharedPreferences;

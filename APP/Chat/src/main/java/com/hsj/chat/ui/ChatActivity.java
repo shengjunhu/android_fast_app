@@ -1,10 +1,10 @@
 package com.hsj.chat.ui;
 
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
-
-import com.hsj.base.AppBaseActivity;
+import com.hsj.base.app.ui.AppBaseActivity;
 import com.hsj.chat.R;
 import com.hsj.chat.ui.fragment.ChatFragment;
 
@@ -16,7 +16,7 @@ public class ChatActivity extends AppBaseActivity {
     }
 
     @Override
-    protected void initUI() {
+    protected void initUI(Bundle savedInstanceState) {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fl_chat, new ChatFragment())

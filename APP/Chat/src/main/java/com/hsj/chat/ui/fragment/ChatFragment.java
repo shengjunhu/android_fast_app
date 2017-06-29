@@ -1,9 +1,10 @@
 package com.hsj.chat.ui.fragment;
 
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
-import com.hsj.base.AppBaseFragment;
+import com.hsj.base.app.ui.AppBaseFragment;
 import com.hsj.chat.R;
 
 /**
@@ -21,7 +22,7 @@ public class ChatFragment extends AppBaseFragment {
     }
 
     @Override
-    protected void initUI() {
+    protected void initUI(Bundle savedInstanceState) {
 
     }
 
