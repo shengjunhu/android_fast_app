@@ -1,0 +1,40 @@
+apply from: "config.gradle"
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "http://objectbox.net/beta-repo/" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.1'
+        classpath 'io.objectbox:objectbox-gradle-plugin:0.9.12'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "http://objectbox.net/beta-repo/" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+task zipAll(type: Zip) {
+    baseName "objectbox"
+    from(rootDir) {
+        exclude '**/.idea/**'
+        exclude '**/build/**'
+        exclude '.gradle/**'
+        exclude '**/*.iml'
+        exclude '**/*.dll'
+        exclude '**/*.so'
+        exclude '**/local.properties'
+    }
+
+    destinationDir buildDir
+}
