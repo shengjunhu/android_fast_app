@@ -4,7 +4,7 @@ include ':APP:App',                 //主app
         ':APP:Chat',                //app聊天模块
         ':APP:Zone',                //app好友圈模块
         ':APP:Me',                  //app我的模块
-        ':APP:BaseApp',                //app基本基类模块
+        ':APP:BaseApp',             //app基本基类模块
 
         ':Library:BaseLib',         //库文件初始化Module
         ':Library:Sample',          //使用介绍Module
