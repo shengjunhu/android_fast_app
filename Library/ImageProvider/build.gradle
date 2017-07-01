@@ -9,7 +9,7 @@ android {
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 
     defaultConfig {
-        //applicationId "com.hsj.imageprovider"
+        //applicationId "com.hsj.provider.image"
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
@@ -39,6 +39,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile rootProject.ext.dependencies["appcompat-v7"]
+    compile project(path: ':Library:BaseLib')
     compile rootProject.ext.dependencies["recyclerview-v7"]
 }

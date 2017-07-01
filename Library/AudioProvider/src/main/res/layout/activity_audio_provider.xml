@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hsj.audioprovider.AudioProviderActivity">
+    tools:context="com.hsj.provider.audio.com.hsj.audio.com.hsj.provider.audio.AudioProviderActivity">
 
     <TextView
         android:layout_width="wrap_content"
