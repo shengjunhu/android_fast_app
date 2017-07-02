@@ -11,6 +11,7 @@ include ':APP:App',                 //主app
         ':Library:Tool',            //工具库
         ':Library:Permission',      //权限处理库
         ':Library:Http',            //网络库
+        ':Library:UIController',
         ':Library:Widget',          //自定义控件库
         ':Library:QRProvider',      //二维码库
         ':Library:ImageLoader',     //图片处理库
@@ -25,6 +26,7 @@ include ':APP:App',                 //主app
         ':Library:Keyboard',        //自定义键盘和表情库
         ':Library:Web',             //JS、Html与android交互库
         ':Library:Router',          //组件模块数据路由
+        ':Library:GPSLocation',     //GPS定位、手机信号基站
 
         ':ThirdSDK:BaseSDK',        //SDK基类
         ':ThirdSDK:Pay',            //支付宝、微信支付
