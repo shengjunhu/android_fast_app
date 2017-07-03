@@ -11,7 +11,7 @@ include ':APP:App',                 //主app
         ':Library:Tool',            //工具库
         ':Library:Permission',      //权限处理库
         ':Library:Http',            //网络库
-        ':Library:UIController',
+        ':Library:UIController',    //主题、状态栏、字体
         ':Library:Widget',          //自定义控件库
         ':Library:QRProvider',      //二维码库
         ':Library:ImageLoader',     //图片处理库

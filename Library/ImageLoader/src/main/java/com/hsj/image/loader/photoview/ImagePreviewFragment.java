@@ -1,4 +1,4 @@
-package com.hsj.widget.photoview;
+package com.hsj.image.loader.photoview;
 
 import android.support.v4.app.Fragment;
 

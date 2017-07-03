@@ -7,7 +7,7 @@ import android.os.Handler;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/6/28 10:27
  * @Class:HandlerController
- * @Description:全局Handler
+ * @Description:全局Handler--防止handler泄漏
  */
 class HandlerController {
 

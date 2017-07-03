@@ -1,4 +1,4 @@
-package com.hsj.widget.imageview;
+package com.hsj.image.loader.shape;
 
 import android.content.Context;
 import android.support.v7.widget.AppCompatImageView;

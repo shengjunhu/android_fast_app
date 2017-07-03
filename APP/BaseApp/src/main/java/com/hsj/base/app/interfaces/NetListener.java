@@ -8,4 +8,12 @@ package com.hsj.base.app.interfaces;
  * @Description:
  */
 public interface NetListener {
+
+    /**
+     * 网络状态回调
+     * @param netType     -- 当前网络类型
+     * @param isAvailable -- 网络是否可用
+     */
+    void netStatus(int netType,boolean isAvailable);
+
 }

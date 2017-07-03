@@ -22,7 +22,7 @@
         </activity>
 
         <activity
-            android:name=".photoview.ImagePreviewActivity"
+            android:name="com.hsj.image.loader.photoview.ImagePreviewActivity"
             android:screenOrientation="portrait" />
 
     </application>
