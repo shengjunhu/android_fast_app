@@ -12,17 +12,17 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.hsj.base.app.R;
+import com.hsj.base.lib.R;
 
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 14:52
- * @Class:AppBaseFragment
- * @Description:普通Fragment、数据本地初始化
+ * @Class:AppBaseLoadFragment
+ * @Description:界面数据全部来源网络、懒加载、继承此Fragment
+ * 1、加载中、2、加载成功、3、加载失败、4、网络故障
  */
-public abstract class AppBaseFragment extends Fragment implements View.OnClickListener{
+public abstract class BaseLibLoadFragment extends Fragment implements View.OnClickListener{
 
     public String TAG = this.getClass().getSimpleName();
 

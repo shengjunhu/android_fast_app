@@ -1,4 +1,4 @@
-package com.hsj.base.lib.ui;
+package com.hsj.base.sdk.ui;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.hsj.base.lib.R;
+import com.hsj.base.sdk.R;
 
 /**
  * @Author:HSJ
@@ -22,7 +22,7 @@ import com.hsj.base.lib.R;
  * @Description:界面数据全部来源网络、懒加载、继承此Fragment
  * 1、加载中、2、加载成功、3、加载失败、4、网络故障
  */
-public abstract class AppBaseLoadFragment extends Fragment implements View.OnClickListener{
+public abstract class BaseSDKLoadFragment extends Fragment implements View.OnClickListener{
 
     public String TAG = this.getClass().getSimpleName();
 

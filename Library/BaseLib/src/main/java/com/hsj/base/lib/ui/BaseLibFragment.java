@@ -1,4 +1,4 @@
-package com.hsj.base.sdk.ui;
+package com.hsj.base.lib.ui;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -12,8 +12,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.hsj.base.app.R;
+import com.hsj.base.lib.R;
 
 /**
  * @Author:HSJ
@@ -22,7 +21,7 @@ import com.hsj.base.app.R;
  * @Class:AppBaseFragment
  * @Description:普通Fragment、数据本地初始化
  */
-public abstract class AppBaseFragment extends Fragment implements View.OnClickListener{
+public abstract class BaseLibFragment extends Fragment implements View.OnClickListener{
 
     public String TAG = this.getClass().getSimpleName();
 

@@ -1,9 +1,11 @@
 package com.hsj.map.bd;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.TextView;
 
-import com.hsj.bdmap.R;
+import com.hsj.base.sdk.ui.BaseSDKActivity;
 
 /**
  * @Author:HSJ
@@ -12,11 +14,30 @@ import com.hsj.bdmap.R;
  * @Class:
  * @Description:
  */
-public class BDMainActivity extends AppCompatActivity {
+public class BDMainActivity extends BaseSDKActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bd_main);
+    protected int getLayoutId() {
+        return R.layout.activity_bd_main;
+    }
+
+    @Override
+    protected void initUI(Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    protected void initToolbar(Toolbar toolbar, TextView tv_left, TextView tv_center, TextView tv_right) {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }

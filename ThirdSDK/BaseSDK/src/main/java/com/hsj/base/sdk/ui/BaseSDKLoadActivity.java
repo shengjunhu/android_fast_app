@@ -14,17 +14,17 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.hsj.base.app.R;
+import com.hsj.base.sdk.R;
 
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 14:52
  * @Class:AppBaseActivity
- * @Description:Activity基类：初始化UI、初始化数据、强制刷新数据、生命周期控制
+ * @Description:界面数据全部来源网络，继承此activity
+ * 1、加载中、2、加载成功、3、加载失败、4、网络故障
  */
-public abstract class AppBaseActivity extends AppCompatActivity implements View.OnClickListener {
+public abstract class BaseSDKLoadActivity extends AppCompatActivity implements View.OnClickListener {
 
     public String TAG = this.getClass().getSimpleName();
 
@@ -49,34 +49,6 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
     protected abstract void initData();
 
     /**
-     * 刷新数据
-     * @param isRefresh
-     */
-    protected void refreshData(boolean isRefresh){
-        if(isRefresh)initData();
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
-
-    /**
      * 初始化Toolbar
      */
     protected void initToolBar() {
@@ -94,6 +66,13 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
         return super.onCreateOptionsMenu(menu);
     }
 
+    /**
+     * 刷新数据
+     * @param isRefresh
+     */
+    protected void refreshData(boolean isRefresh){
+        if(isRefresh)initData();
+    }
 
     /**
      * 查找View

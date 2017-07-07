@@ -14,8 +14,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.hsj.base.app.R;
+import com.hsj.base.lib.R;
 
 /**
  * @Author:HSJ
@@ -25,7 +24,7 @@ import com.hsj.base.app.R;
  * @Description:界面数据全部来源网络，继承此activity
  * 1、加载中、2、加载成功、3、加载失败、4、网络故障
  */
-public abstract class AppBaseLoadActivity extends AppCompatActivity implements View.OnClickListener {
+public abstract class BaseLibLoadActivity extends AppCompatActivity implements View.OnClickListener {
 
     public String TAG = this.getClass().getSimpleName();
 

@@ -1,21 +1,20 @@
-package com.hsj.base.lib.ui;
+package com.hsj.base.sdk.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.AnimRes;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
-import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.hsj.base.app.R;
+import com.hsj.base.sdk.R;
 
 /**
  * @Author:HSJ
@@ -24,7 +23,7 @@ import com.hsj.base.app.R;
  * @Class:AppBaseActivity
  * @Description:Activity基类：初始化UI、初始化数据、强制刷新数据、生命周期控制
  */
-public abstract class AppBaseActivity extends AppCompatActivity implements View.OnClickListener {
+public abstract class BaseSDKActivity extends AppCompatActivity implements View.OnClickListener {
 
     public String TAG = this.getClass().getSimpleName();
 
@@ -33,27 +32,26 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
 
-        initUI(savedInstanceState);
+        initToolBar(true);
 
-        initToolBar();
+        initUI(savedInstanceState);
 
         initData();
     }
 
     protected abstract int getLayoutId();
 
-    protected abstract void initUI(Bundle savedInstanceState);
+    protected abstract void initToolbar(ToolbarController mToolbar);
 
-    protected abstract void initToolbar(Toolbar toolbar,TextView tv_left,TextView tv_center,TextView tv_right);
+    protected abstract void initUI(Bundle savedInstanceState);
 
     protected abstract void initData();
 
     /**
      * 刷新数据
-     * @param isRefresh
      */
-    protected void refreshData(boolean isRefresh){
-        if(isRefresh)initData();
+    protected void refreshData() {
+        initData();
     }
 
     @Override
@@ -79,21 +77,15 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
     /**
      * 初始化Toolbar
      */
-    protected void initToolBar() {
+    protected void initToolBar(boolean isToolbar) {
         Toolbar toolbar = findView(R.id.tb_base);
-        TextView tv_left = findView(R.id.tv_left);
-        TextView tv_center = findView(R.id.tv_center);
-        EditText et_center = findView(R.id.et_center);
-        TextView tv_right = findView(R.id.tv_right);
-
-        initToolbar(toolbar,tv_left, tv_center,tv_right);
+        if(isToolbar){
+            setSupportActionBar(toolbar);
+            initToolbar(new ToolbarController(toolbar));
+        }else {
+            toolbar.setVisibility(View.GONE);
+        }
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        return super.onCreateOptionsMenu(menu);
-    }
-
 
     /**
      * 查找View
@@ -143,19 +135,72 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
                 .commit();
     }
 
-    protected void startDialog() {
+    /**
+     * 开始提示等待dialog
+     */
+    protected void startDialog(@Nullable String hint) {
 
     }
 
+    /**
+     * 结束提示dialog
+     */
     protected void finishDialog() {
 
     }
 
-    protected void startProgressBar() {
+    /**
+     * Toolbar控制者
+     */
+    private class ToolbarController {
 
-    }
+        private Toolbar mToolbar;
 
-    protected void finishProgressBar() {
+        private ToolbarController(Toolbar toolbar) {
+            this.mToolbar = toolbar;
+        }
+
+        /**
+         * 隐藏Toolbar
+         */
+        private void setToolbarHidde(){
+            mToolbar.setVisibility(View.GONE);
+        }
+
+        /**
+         * 设置Toolbar左标题
+         * @param leftDrawable - 做标题图标
+         * @param leftStr      -做标题文字
+         */
+        private void setToolbarLeft(@IdRes int leftDrawable,@Nullable String leftStr){
+            TextView tv_left = findView(R.id.tv_left);
+        }
+
+        /**
+         * 设置toolbar主标题文字
+         * @param centerStr - 主标题文字
+         */
+        private void setToolBarCenterText(@Nullable String centerStr){
+            TextView tv_center = findView(R.id.tv_center);
+        }
+
+        /**
+         * 设置toolbar搜索栏
+         * @param hintStr
+         */
+        private void setToolBarCenterSearch(@Nullable String hintStr){
+            EditText et_center = findView(R.id.et_center);
+
+        }
+
+        /**
+         * 设置Toolbar右标题
+         * @param rightDrawable - 右侧图标
+         * @param rightStr      - 右侧文字
+         */
+        private void setToolbarRight(@IdRes int rightDrawable,@Nullable String rightStr){
+            TextView tv_right = findView(R.id.tv_right);
+        }
 
     }
 
@@ -168,7 +213,7 @@ public abstract class AppBaseActivity extends AppCompatActivity implements View.
     }
 
     /**
-     * 按返回键
+     * 按键
      */
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
