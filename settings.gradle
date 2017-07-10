@@ -29,6 +29,11 @@ include ':APP:App',                 //主app
         ':Library:GPSLocation',     //GPS定位、手机信号基站
 
         ':ThirdSDK:BaseSDK',        //SDK基类
+        ':ThirdSDK:QQLogin',        //QQ登陆
+        ':ThirdSDK:WXLogin',        //微信登陆
+        ':ThirdSDK:WBLogin',        //微博登陆
+        ':ThirdSDK:AliPay',         //支付宝支付
+        ':ThirdSDK:WXPay',          //微信支付
         ':ThirdSDK:Pay',            //支付宝、微信支付
         ':ThirdSDK:Login',          //QQ、微信、微博登陆分享库
         ':ThirdSDK:BDMap',          //百度地图SDK

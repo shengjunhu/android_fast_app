@@ -72,6 +72,10 @@ ext {
             //leakCanary
             "leakcanary-debug"         : "com.squareup.leakcanary:leakcanary-android:${version["leakcanaryVersion"]}",
             "leakcanary-test"          : "com.squareup.leakcanary:leakcanary-android-no-op:${version["leakcanaryVersion"]}",
-            "leakcanary-release"       : "com.squareup.leakcanary:leakcanary-android-no-op:${version["leakcanaryVersion"]}"
+            "leakcanary-release"       : "com.squareup.leakcanary:leakcanary-android-no-op:${version["leakcanaryVersion"]}",
+
+            //微信：登录、支付、分享
+            "wechat"                   : "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+"
+
     ]
 }
