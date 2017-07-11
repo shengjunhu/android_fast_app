@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.Toolbar
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/tb_base"
     style="@style/mw"
@@ -8,29 +7,35 @@
     android:minHeight="?attr/actionBarSize"
     app:contentInsetStart="0dp">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp44">
+        android:layout_height="@dimen/dp44"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_left"
-            style="@style/ww"
-            android:layout_centerVertical="true"
-            android:padding="@dimen/dp10"
-            android:paddingEnd="@dimen/dp2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:paddingStart="@dimen/dp2"
+            android:gravity="start|center_vertical"
             android:textSize="@dimen/sp18"
-            />
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/tv_center"
-            style="@style/ww"
-            android:layout_centerInParent="true"
-            android:textSize="@dimen/sp20"/>
+            android:layout_width="0dp"
+            android:textAllCaps="false"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:textSize="@dimen/sp20"
+            android:visibility="gone"/>
 
         <EditText
             android:id="@+id/et_center"
             style="@style/wm"
-            android:layout_centerInParent="true"
             android:background="@null"
             android:gravity="center"
             android:imeActionLabel="搜索"
@@ -39,17 +44,19 @@
             android:minWidth="@dimen/dp220"
             android:textAllCaps="false"
             android:textSize="@dimen/sp16"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/tv_right"
-            style="@style/ww"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:padding="@dimen/dp10"
-            android:paddingStart="@dimen/dp2"
-            android:textSize="@dimen/sp18"/>
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:gravity="end|center_vertical"
+            android:paddingEnd="@dimen/dp2"
+            android:textSize="@dimen/sp18"
+            android:visibility="gone"/>
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </android.support.v7.widget.Toolbar>

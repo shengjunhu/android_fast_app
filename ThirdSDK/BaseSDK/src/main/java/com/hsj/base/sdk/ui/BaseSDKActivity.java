@@ -9,11 +9,13 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.hsj.base.sdk.R;
 
 /**
@@ -47,13 +49,6 @@ public abstract class BaseSDKActivity extends AppCompatActivity implements View.
 
     protected abstract void initData();
 
-    /**
-     * 刷新数据
-     */
-    protected void refreshData() {
-        initData();
-    }
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -79,10 +74,10 @@ public abstract class BaseSDKActivity extends AppCompatActivity implements View.
      */
     protected void initToolBar(boolean isToolbar) {
         Toolbar toolbar = findView(R.id.tb_base);
-        if(isToolbar){
+        if (isToolbar) {
             setSupportActionBar(toolbar);
             initToolbar(new ToolbarController(toolbar));
-        }else {
+        } else {
             toolbar.setVisibility(View.GONE);
         }
     }
@@ -99,12 +94,19 @@ public abstract class BaseSDKActivity extends AppCompatActivity implements View.
     }
 
     /**
+     * 刷新数据
+     */
+    protected void refreshData() {
+        initData();
+    }
+
+    /**
      * 弹出Toast
      *
      * @param message
      */
     public void showToast(@NonNull String message) {
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -161,34 +163,32 @@ public abstract class BaseSDKActivity extends AppCompatActivity implements View.
         }
 
         /**
-         * 隐藏Toolbar
-         */
-        private void setToolbarHidde(){
-            mToolbar.setVisibility(View.GONE);
-        }
-
-        /**
          * 设置Toolbar左标题
+         *
          * @param leftDrawable - 做标题图标
          * @param leftStr      -做标题文字
          */
-        private void setToolbarLeft(@IdRes int leftDrawable,@Nullable String leftStr){
+        private void setToolbarLeft(@IdRes int leftDrawable, @Nullable String leftStr) {
             TextView tv_left = findView(R.id.tv_left);
+            tv_left.setText(checktStr(leftStr));
+            tv_left.setVisibility(View.VISIBLE);
         }
 
         /**
          * 设置toolbar主标题文字
+         *
          * @param centerStr - 主标题文字
          */
-        private void setToolBarCenterText(@Nullable String centerStr){
+        private void setToolBarCenterText(@NonNull String centerStr) {
             TextView tv_center = findView(R.id.tv_center);
         }
 
         /**
          * 设置toolbar搜索栏
+         *
          * @param hintStr
          */
-        private void setToolBarCenterSearch(@Nullable String hintStr){
+        private void setToolBarCenterSearch(@Nullable String hintStr) {
             EditText et_center = findView(R.id.et_center);
 
         }
@@ -198,10 +198,64 @@ public abstract class BaseSDKActivity extends AppCompatActivity implements View.
          * @param rightDrawable - 右侧图标
          * @param rightStr      - 右侧文字
          */
-        private void setToolbarRight(@IdRes int rightDrawable,@Nullable String rightStr){
+        private void setToolbarRight(@IdRes int rightDrawable, @Nullable String rightStr) {
             TextView tv_right = findView(R.id.tv_right);
+            tv_right.setText(checktStr(rightStr));
+            tv_right.setVisibility(View.VISIBLE);
         }
 
+    }
+
+    /**
+     * 判断对象否为空
+     * @param obj
+     * @return
+     */
+    protected boolean notNull(Object obj) {
+        if (obj == null) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    /**
+     * 判断对象否为空
+     * @param str
+     * @return
+     */
+    protected boolean notNull(String str) {
+        if (TextUtils.isEmpty(str)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    /**
+     * TextView、EditText设置文本
+     * @param str
+     * @return
+     */
+    protected String checktStr(String str) {
+        if (notNull(str)) {
+            return str;
+        } else {
+            return "";
+        }
+    }
+
+    /**
+     * TextView、EditText设置文本
+     * @param num
+     * @return
+     */
+    protected String checktStr(Number num) {
+        if (num == null) {
+            return "";
+        } else {
+            return String.valueOf(num);
+        }
     }
 
     /**
