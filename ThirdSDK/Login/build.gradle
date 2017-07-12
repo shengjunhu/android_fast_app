@@ -30,14 +30,16 @@ android {
             }else{
                 manifest.srcFile 'src/main/release/AndroidManifest.xml'
             }
-            jni.srcDirs = []
-            jniLibs.srcDirs = ['libs']
         }
     }
 
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/open_sdk_r5793_lite.jar')
+    compile rootProject.ext.dependencies["weibo"]
+    compile rootProject.ext.dependencies["wechat"]
+
     compile project(path: ':Library:Base')
 }

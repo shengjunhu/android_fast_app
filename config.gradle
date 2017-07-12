@@ -45,17 +45,22 @@ ext {
             "multidex"                 : "com.android.support:multidex:1.0.1",
             "constraint-layout"        : "com.android.support.constraint:constraint-layout:1.0.2",
 
-            //network
+            //test
+            "testCompile"              : "junit:junit:4.12",
+            "testInstrumentationRunner": "android.support.test.runner.AndroidJUnitRunner",
+
+            //Network
             "retrofit"                 : "com.squareup.retrofit2:retrofit:${version["retrofitVersion"]}",
             "retrofit-converters"      : "com.squareup.retrofit2:retrofit-converters:${version["retrofitVersion"]}",
             "retrofit-adapters"        : "com.squareup.retrofit2:retrofit-adapters:${version["retrofitVersion"]}",
-            "rxjava"                   : "io.reactivex.rxjava2:rxjava:${version["rxjavaVersion"]}",
-            "rxandroid"                : "io.reactivex.rxjava2:rxandroid:${version["rxandroid"]}",
             "okhttp3"                  : "com.squareup.okhttp3:okhttp:${version["okhttp3Version"]}",
             "interceptor"              : "com.squareup.okhttp3:logging-interceptor:${version["okhttp3Version"]}",
             "gson"                     : "com.google.code.gson:gson:${version["gsonVersion"]}",
+            "fastjson"                 : "",
 
-            //lifecycle
+            //RxJava
+            "rxjava"                   : "io.reactivex.rxjava2:rxjava:${version["rxjavaVersion"]}",
+            "rxandroid"                : "io.reactivex.rxjava2:rxandroid:${version["rxandroid"]}",
             "rxlifecycle"              : "com.trello:rxlifecycle:${version["rxlifecycleSdkVersion"]}",
             "rxlifecycle-components"   : "com.trello:rxlifecycle-components:${version["rxlifecycleSdkVersion"]}",
 
@@ -65,17 +70,21 @@ ext {
             //ObjectBox
             "objectBox"                : "io.objectbox:objectbox-android:${version["objectBoxVersion"]}",
 
-            //test
-            "testCompile"              : "junit:junit:4.12",
-            "testInstrumentationRunner": "android.support.test.runner.AndroidJUnitRunner",
-
             //leakCanary
             "leakcanary-debug"         : "com.squareup.leakcanary:leakcanary-android:${version["leakcanaryVersion"]}",
             "leakcanary-test"          : "com.squareup.leakcanary:leakcanary-android-no-op:${version["leakcanaryVersion"]}",
             "leakcanary-release"       : "com.squareup.leakcanary:leakcanary-android-no-op:${version["leakcanaryVersion"]}",
 
-            //微信：登录、支付、分享
-            "wechat"                   : "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+"
+            //QQ、微信、微博：登录、支付、分享
+            "wechat"                   : "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+",
+            "weibo"                    : "com.sina.weibo.sdk:core:2.0.3:openDefaultRelease@aar",
+
+            //高德：3D地图、2D地图、导航、搜索、定位
+            "amap_3d"                  : "com.amap.api:3dmap:latest.integration",
+            "amap_2d"                  : "com.amap.api:map2d:latest.integration",
+            "amap_navi"                : "com.amap.api:navi-3dmap:latest.integration",
+            "amap_search"              : "com.amap.api:search:latest.integration",
+            "amap_location"            : "com.amap.api:location:latest.integration"
 
     ]
 }
