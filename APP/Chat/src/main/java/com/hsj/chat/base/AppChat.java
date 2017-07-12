@@ -1,6 +1,6 @@
 package com.hsj.chat.base;
 
-import com.hsj.base.app.base.BaseApplication;
+import com.hsj.base.app.base.BaseApp;
 
 /**
  * @Author:HSJ
@@ -9,7 +9,7 @@ import com.hsj.base.app.base.BaseApplication;
  * @Class:
  * @Description:
  */
-public class AppChat extends BaseApplication {
+public class AppChat extends BaseApp {
 
     @Override
     protected void initModule() {

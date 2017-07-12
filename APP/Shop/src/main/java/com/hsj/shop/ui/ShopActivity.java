@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
-import com.hsj.base.app.ui.AppBaseActivity;
+import com.hsj.base.app.ui.BaseActivity;
 import com.hsj.shop.R;
 import com.hsj.shop.ui.fragment.ShopFragment;
 
@@ -15,7 +15,7 @@ import com.hsj.shop.ui.fragment.ShopFragment;
  * @Class:
  * @Description:
  */
-public class ShopActivity extends AppBaseActivity {
+public class ShopActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {

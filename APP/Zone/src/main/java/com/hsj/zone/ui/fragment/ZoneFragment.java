@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
-import com.hsj.base.app.ui.AppBaseFragment;
+import com.hsj.base.app.ui.BaseFragment;
 import com.hsj.zone.R;
 
 /**
@@ -14,7 +14,7 @@ import com.hsj.zone.R;
  * @Class:ZoneFragment
  * @Description:
  */
-public class ZoneFragment extends AppBaseFragment {
+public class ZoneFragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {

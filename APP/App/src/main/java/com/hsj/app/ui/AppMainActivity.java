@@ -9,7 +9,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 import com.hsj.app.R;
-import com.hsj.base.app.ui.AppBaseActivity;
+import com.hsj.base.app.ui.BaseActivity;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +20,7 @@ import java.util.List;
  * @Class:
  * @Description:应用主页
  */
-public class AppMainActivity extends AppBaseActivity {
+public class AppMainActivity extends BaseActivity {
 
     private boolean isExitApp;
     private boolean isFirstShow;

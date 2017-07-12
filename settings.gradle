@@ -4,17 +4,18 @@ include ':APP:App',                 //主app
         ':APP:Chat',                //app聊天模块
         ':APP:Zone',                //app好友圈模块
         ':APP:Me',                  //app我的模块
-        ':APP:BaseApp',             //app基本基类模块
 
-        ':Library:BaseLib',         //库文件初始化Module
+        ':ThirdSDK:Login',          //QQ、微信、微博登陆分享库
+        ':ThirdSDK:Pay',            //支付宝、微信支付
+        ':ThirdSDK:BDMap',          //百度地图SDK
+        ':ThirdSDK:GDMap',          //高德地图SDK
+        ':ThirdSDK:QNCloud',        //七牛云SDK
+        ':ThirdSDK:BDCloud',        //百度云库
+        ':ThirdSDK:Bugly',          //腾讯热修复库
+
         ':Library:Sample',          //使用介绍Module
-        ':Library:Tool',            //工具库
         ':Library:Permission',      //权限处理库
-        ':Library:Http',            //网络库
-        ':Library:UIController',    //主题、状态栏、字体
-        ':Library:Widget',          //自定义控件库
         ':Library:QRProvider',      //二维码库
-        ':Library:ImageLoader',     //图片处理库
         ':Library:ImageProvider',   //图片提供库
         ':Library:VideoProvider',   //视屏提供库
         ':Library:FileProvider',    //文件提供库
@@ -28,26 +29,9 @@ include ':APP:App',                 //主app
         ':Library:Router',          //组件模块数据路由
         ':Library:GPSLocation',     //GPS定位、手机信号基站
 
-        ':ThirdSDK:BaseSDK',        //SDK基类
-        ':ThirdSDK:QQLogin',        //QQ登陆
-        ':ThirdSDK:WXLogin',        //微信登陆
-        ':ThirdSDK:WBLogin',        //微博登陆
-        ':ThirdSDK:AliPay',         //支付宝支付
-        ':ThirdSDK:WXPay',          //微信支付
-        ':ThirdSDK:Pay',            //支付宝、微信支付
-        ':ThirdSDK:Login',          //QQ、微信、微博登陆分享库
-        ':ThirdSDK:BDMap',          //百度地图SDK
-        ':ThirdSDK:GDMap',          //高德地图SDK
-        ':ThirdSDK:QNCloud',        //七牛云SDK
-        ':ThirdSDK:BDCloud',        //百度云库
-        ':ThirdSDK:Bugly'           //腾讯热修复库
-
-//        ':ThirdSDK:IM:Chat',
-//        ':ThirdSDK:IM:IMLib',
-//        ':ThirdSDK:IM:IMKit',
-//        ':ThirdSDK:IM:CallKit',
-//        ':ThirdSDK:IM:CallLib',
-//        ':ThirdSDK:IM:ContactCard',
-//        ':ThirdSDK:IM:Recognizer',
-//        ':ThirdSDK:IM:RedPacket',
-//        ':ThirdSDK:IM:Sticker'
+        ':Library:Tool',            //工具库
+        ':Library:Http',            //网络库
+        ':Library:UIController',    //主题、状态栏、字体
+        ':Library:Widget',          //自定义控件库
+        ':Library:ImageLoader',     //图片处理库
+        ':Library:Base'             //全局基类

@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
-import com.hsj.base.app.ui.AppBaseActivity;
+import com.hsj.base.app.ui.BaseActivity;
 
 /**
  * @Author:HSJ
@@ -13,7 +13,7 @@ import com.hsj.base.app.ui.AppBaseActivity;
  * @Class:AppSplashActivity
  * @Description:启动页
  */
-public class AppSplashActivity extends AppBaseActivity {
+public class AppSplashActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {

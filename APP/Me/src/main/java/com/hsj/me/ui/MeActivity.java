@@ -5,7 +5,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
-import com.hsj.base.app.ui.AppBaseActivity;
+import com.hsj.base.app.ui.BaseActivity;
 import com.hsj.me.R;
 import com.hsj.me.ui.fragment.MeFragment;
 
@@ -16,7 +16,7 @@ import com.hsj.me.ui.fragment.MeFragment;
  * @Class:
  * @Description:
  */
-public class MeActivity extends AppBaseActivity {
+public class MeActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {

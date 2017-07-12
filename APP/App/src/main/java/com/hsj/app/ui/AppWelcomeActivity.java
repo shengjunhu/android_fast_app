@@ -5,7 +5,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 import com.hsj.app.R;
-import com.hsj.base.app.ui.AppBaseActivity;
+import com.hsj.base.app.ui.BaseActivity;
 
 /**
  * @Author:HSJ
@@ -14,7 +14,7 @@ import com.hsj.base.app.ui.AppBaseActivity;
  * @Class:AppWelcomeActivity
  * @Description:引导页
  */
-public class AppWelcomeActivity extends AppBaseActivity {
+public class AppWelcomeActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
