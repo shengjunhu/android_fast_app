@@ -1,4 +1,4 @@
-package com.hsj.base.app.uitls.core;
+package com.hsj.base.app.uitls;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -10,7 +10,7 @@ import java.util.Locale;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 16:39
  * @Class:Xlog
- * @Description: 日志工具类
+ * @Description:日志工具类
  */
 public class XLog {
 

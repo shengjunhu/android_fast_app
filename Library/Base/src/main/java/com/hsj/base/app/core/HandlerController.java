@@ -1,4 +1,4 @@
-package com.hsj.base.app.control;
+package com.hsj.base.app.core;
 
 import android.os.Handler;
 
@@ -9,7 +9,7 @@ import android.os.Handler;
  * @Class:HandlerController
  * @Description:全局Handler--防止handler泄漏
  */
-class HandlerController {
+public class HandlerController {
 
     private static final Handler mHandler = new Handler();
 

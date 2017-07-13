@@ -1,4 +1,4 @@
-package com.hsj.base.app.uitls.core;
+package com.hsj.base.app.uitls;
 
 import android.content.Context;
 import android.content.SharedPreferences;

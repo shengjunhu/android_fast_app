@@ -1,4 +1,4 @@
-package com.hsj.base.app.uitls.core;
+package com.hsj.base.app.uitls;
 
 /**
  * @Author:HSJ

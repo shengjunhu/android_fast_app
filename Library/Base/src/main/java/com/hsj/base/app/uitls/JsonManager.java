@@ -1,4 +1,4 @@
-package com.hsj.base.app.uitls.core;
+package com.hsj.base.app.uitls;
 
 import com.google.gson.Gson;
 

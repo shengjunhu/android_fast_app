@@ -1,4 +1,4 @@
-package com.hsj.base.app.base;
+package com.hsj.base.app.core;
 
 import android.app.Application;
 import android.content.Context;

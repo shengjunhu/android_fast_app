@@ -1,4 +1,4 @@
-package com.hsj.base.app.control;
+package com.hsj.base.app.core;
 
 /**
  * @Author:HSJ
@@ -7,6 +7,6 @@ package com.hsj.base.app.control;
  * @Class:TaskManager
  * @Description:后台任务执行管理器
  */
-public class TaskController {
+public class TaskManager {
 
 }
