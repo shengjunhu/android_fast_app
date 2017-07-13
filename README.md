@@ -3,27 +3,27 @@
 
 ## 开发框架：
 * 1、MVC框架 ： 使用简单（结合DataBinding）更好用
-* 2、MVP框架 ： 高解耦、类多复杂（View、Data、IPresenter、IContract）
+* 2、MVP框架 ： 高解耦、类文件多（View、Data、IPresenter、IContract）
 * 3、MVVM框架： 一般般
 
 ## 结构组成：
 ### 主工程APP： 
-  * [App : app主模块](/APP/App/App_README.md)
-  * [Home: 首页模块](/APP/App/Home_README.md)
-  * [Shop: 商城模块](/APP/App/Shop_README.md)
-  * [Chat: 聊天模块](/APP/App/Chat_README.md)
-  * [Zone: 朋友圈模块](/APP/App/Zone_README.md)
-  * [Me  : 我的模块](/APP/App/Me_README.md)
+  * [App:app主模块](/APP/App/App_README.md)
+  * [Home:首页模块](/APP/App/Home_README.md)
+  * [Shop:商城模块](/APP/App/Shop_README.md)
+  * [Chat:聊天模块](/APP/App/Chat_README.md)
+  * [Zone:朋友圈模块](/APP/App/Zone_README.md)
+  * [Me:我的模块](/APP/App/Me_README.md)
  
 ### 库工程Library：
   * [Sample:使用说明Module](/Library/Sample/Sample_README.md)
-  * [Base   :项目基类库](/Library/Base/Base_README.md)
+  * [Base:项目基类库](/Library/Base/Base_README.md)
   * [UIController:UI控制库](/Library/UIController/UIController_README.md)
-  * [Widget :控件库](/Library/Widget/Widget_README.md)
-  * [Http   :网络库](/Library/Http/Http_README.md)
+  * [Widget:控件库](/Library/Widget/Widget_README.md)
+  * [Http:网络库](/Library/Http/Http_README.md)
   * [ImageLoader:图片加载库](/Library/ImageLoader/ImageLoader_README.md)
-  * [DB     :数据库模块](/Library/DB/DB_README.md)
-  * [DBObject: 对象存储](/Library/DBObject/DBObject_README.md)
+  * [DB:数据库模块](/Library/DB/DB_README.md)
+  * [DBObject:对象存储](/Library/DBObject/DBObject_README.md)
   * [AutoLayout:自动布局库](/Library/AutoLayout/AutoLayout_README.md)
   * [AudioProvider:音频提供者](/Library/AudioProvider/AudioProvider_README.md)
   * [QRProvider:二维码提供者](/Library/QRProvider/QRProvider_README.md)
