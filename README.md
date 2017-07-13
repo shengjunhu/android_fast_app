@@ -2,21 +2,21 @@
 工作中Android开发用的项目框架：模块化、组件化开发，可快速集成
 
 ## 开发框架：
-- 1、MVC框架： 使用简单（结合DataBinding）更好用
-- 2、MVP框架： 高解耦、类多复杂（View、Data、IPresenter、IContract）
-- 3、MVVM框架：一般般
+- 1、MVC框架 ： 使用简单（结合DataBinding）更好用
+- 2、MVP框架 ： 高解耦、类多复杂（View、Data、IPresenter、IContract）
+- 3、MVVM框架： 一般般
 
 ## 结构组成：
-### 主工程APP：
-  * App:
+### 主工程APP： 
+  * [App: app主模块](/APP/App/App_README.md)
   * Home:首页模块
   * Shop:商城模块
   * Chat:聊天模块
   * Zone:朋友圈模块
   * Me:我的模块
-  * Base:项目基类库
-  
+ 
 ### 库工程Library：
+  * Base:项目基类库
   * Tool:工具库
   * Widget:自定义框架
   * Http:网络请求框架
