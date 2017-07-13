@@ -1,4 +1,4 @@
-package com.hsj.tool.core;
+package com.hsj.base.app.uitls.core;
 
 import android.content.Context;
 import android.content.res.Resources;

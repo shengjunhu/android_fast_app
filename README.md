@@ -8,18 +8,17 @@
 
 ## 结构组成：
 ### 主工程APP： 
-  * [App: app主模块](/APP/App/App_README.md)
-  * Home:首页模块
-  * Shop:商城模块
-  * Chat:聊天模块
-  * Zone:朋友圈模块
-  * Me:我的模块
+  * [App : app主模块](/APP/App/App_README.md)
+  * [Home: 首页模块](/APP/App/Home_README.md)
+  * [Shop: 商城模块](/APP/App/Shop_README.md)
+  * [Chat: 聊天模块](/APP/App/Chat_README.md)
+  * [Zone: 朋友圈模块](/APP/App/Zone_README.md)
+  * [Me  : 我的模块](/APP/App/Me_README.md)
  
 ### 库工程Library：
-  * Base:项目基类库
-  * Tool:工具库
-  * Widget:自定义框架
-  * Http:网络请求框架
+  * [Base:项目基类库](/Libray/Base/Base_README.md)
+  * [Widget:控件库](/Libray/Widget/Widget_README.md)
+  * [Http:网络库](/Libray/Widget/Widget_README.md)
   * DB:数据库
   * DBObject:数据本地对象存储
   * AutoLayout:自动布局、使用px

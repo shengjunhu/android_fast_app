@@ -1,4 +1,4 @@
-package com.hsj.tool.rxbus;
+package com.hsj.base.app.uitls.rxbus;
 
 /**
  * @Author:HSJ

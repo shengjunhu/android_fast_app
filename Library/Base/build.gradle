@@ -62,7 +62,6 @@ dependencies {
     debugCompile rootProject.ext.dependencies["leakcanary-debug"]
     releaseCompile rootProject.ext.dependencies["leakcanary-release"]
 
-    compile project(path: ':Library:Tool')
     compile project(path: ':Library:Widget')
     compile project(path: ':Library:Http')
     compile project(path: ':Library:ImageLoader')

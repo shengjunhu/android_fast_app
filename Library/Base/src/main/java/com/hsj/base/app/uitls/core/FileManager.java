@@ -1,4 +1,4 @@
-﻿package com.hsj.tool.core;
+﻿package com.hsj.base.app.uitls.core;
 
 import android.annotation.SuppressLint;
 import android.content.ContentUris;

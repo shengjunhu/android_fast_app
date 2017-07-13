@@ -1,4 +1,4 @@
-package com.hsj.tool.core;
+package com.hsj.base.app.uitls.core;
 
 /**
  * @Company:南京荣之誉信息科技有限公司

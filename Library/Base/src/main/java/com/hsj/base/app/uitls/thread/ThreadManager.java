@@ -1,4 +1,4 @@
-package com.hsj.tool.thread;
+package com.hsj.base.app.uitls.thread;
 
 /**
  * @Author:HSJ
