@@ -2,9 +2,9 @@
 工作中Android开发用的项目框架：模块化、组件化开发，可快速集成
 
 ## 开发框架：
-- 1、MVC框架 ： 使用简单（结合DataBinding）更好用
-- 2、MVP框架 ： 高解耦、类多复杂（View、Data、IPresenter、IContract）
-- 3、MVVM框架： 一般般
+* 1、MVC框架 ： 使用简单（结合DataBinding）更好用
+* 2、MVP框架 ： 高解耦、类多复杂（View、Data、IPresenter、IContract）
+* 3、MVVM框架： 一般般
 
 ## 结构组成：
 ### 主工程APP： 
@@ -16,44 +16,47 @@
   * [Me  : 我的模块](/APP/App/Me_README.md)
  
 ### 库工程Library：
-  * [Base:项目基类库](/Libray/Base/Base_README.md)
-  * [Widget:控件库](/Libray/Widget/Widget_README.md)
-  * [Http:网络库](/Libray/Widget/Widget_README.md)
-  * DB:数据库
-  * DBObject:数据本地对象存储
-  * AutoLayout:自动布局、使用px
-  * AudioProvider:音频提供者
-  * QRProvider:二维码提供者
-  * ImageManager:图片处理者
-  * ImageProvider:图片提供者
-  * Permission:权限申请库
-  * Keyboard:虚拟键盘与表情、自定义密码键盘
-  * FileProvider:文件提供者
-  * VideoPlayer:视屏播放器
-  * VideoProvider:视屏提供者
-  * Web:js、html与android交互
-  * Sample:使用介绍库
+  * [Sample:使用说明Module](/Library/Sample/Sample_README.md)
+  * [Base   :项目基类库](/Library/Base/Base_README.md)
+  * [UIController:UI控制库](/Library/UIController/UIController_README.md)
+  * [Widget :控件库](/Library/Widget/Widget_README.md)
+  * [Http   :网络库](/Library/Http/Http_README.md)
+  * [ImageLoader:图片加载库](/Library/ImageLoader/ImageLoader_README.md)
+  * [DB     :数据库模块](/Library/DB/DB_README.md)
+  * [DBObject: 对象存储](/Library/DBObject/DBObject_README.md)
+  * [AutoLayout:自动布局库](/Library/AutoLayout/AutoLayout_README.md)
+  * [AudioProvider:音频提供者](/Library/AudioProvider/AudioProvider_README.md)
+  * [QRProvider:二维码提供者](/Library/QRProvider/QRProvider_README.md)
+  * [ImageProvider:图片提供者](/Library/ImageProvider/ImageProvider_README.md)
+  * [Permission:权限申请库](/Library/Permission/Permission_README.md)
+  * [Keyboard:自定义键盘](/Library/Keyboard/Keyboard_README.md)
+  * [FileProvider:文件提供者](/Library/FileProvider/FileProvider_README.md)
+  * [VideoPlayer:视屏播放器](/Library/VideoPlayer/VideoPlayer_README.md)
+  * [VideoProvider:视屏提供者](/Library/VideoProvider/VideoProvider_README.md)
+  * [Web:web封装库](/Library/Web/Web_README.md)
+  * [GPSLocation:GPS定位](/Library/GPSLocation/GPSLocation_README.md)
+  * [Router:数据路由者](/Library/Router/Router_README.md)
+  * [NdkLib:NDK模块](/Library/NdkLib/NdkLib_README.md)
   
 ### 第三方SDK库:
-  * AliPay:支付宝
-  * BDCloud:百度云存储
-  * BDMap:百度地图
-  * Bugly:腾讯bugly
-  * GDMap:高德地图
-  * LoginShare:QQ、微信、微博登陆分享
-  * QNCloud:七牛云
-  * WxPay:微信支付
-  * IM:即时通讯（融云）
+  * [Login  :第三方登陆模块](/ThirdSDK/Login/Login_README.md)
+  * [Pay:支付宝、微信](/ThirdSDK/Pay/Pay_README.md)
+  * [BDMap:百度地图](/ThirdSDK/BDMap/BDMap_README.md)
+  * [BDCloud:百度云存储](/ThirdSDK/BDCloud/BDCloud_README.md)
+  * [GDMap:高德地图](/ThirdSDK/GDMap/GDMap_README.md)
+  * [QNCloud:七牛云存储](/ThirdSDK/QNCloud/QNCloud_README.md)
+  * [IM:及时通讯](/ThirdSDK/IM/IM_README.md)
+  * [Bugly:热修复](/ThirdSDK/Bugly/Bugly_README.md)
 
-## 插件功能：
+### 插件功能：
 
 ### 编写阶段模块结构
 
 ### 缓存路径：
-sp缓存: /data/data/{packageName}/shared_prefs/config.xml
-        1、账户、密码(加密)
-        2、userToken、imToken
-        3、isNewVersion 新版本欢迎页
+* 1、sp      ：/data/data/{packageName}/shared_prefs/config.xml
+* 2、db      ：
+* 3、cache   ：
+* 4、log     ：
 
 sd卡缓存路径 (系统可清理、应用本身可清理)
 --日志     :log
