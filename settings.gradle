@@ -28,6 +28,7 @@ include ':APP:App',                 //主app
         ':Library:Web',             //JS、Html与android交互库
         ':Library:Router',          //组件模块数据路由
         ':Library:GPSLocation',     //GPS定位、手机信号基站
+        ':Library:NdkLib',          //NdkLIb：性能优化
 
         ':Library:Tool',            //工具库
         ':Library:Http',            //网络库
