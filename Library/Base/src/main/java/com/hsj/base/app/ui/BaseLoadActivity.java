@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hsj.base.app.R;
+import com.hsj.base.app.core.BaseApp;
 
 /**
  * @Author:HSJ
@@ -137,6 +138,12 @@ public abstract class BaseLoadActivity extends AppCompatActivity implements View
 
     protected void finishProgressBar() {
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        BaseApp.getRefWatcher().watch(this);
     }
 
     /**

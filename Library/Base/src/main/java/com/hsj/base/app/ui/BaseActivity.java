@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hsj.base.app.R;
+import com.hsj.base.app.core.BaseApp;
 
 /**
  * @Author:HSJ
@@ -67,6 +68,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        BaseApp.getRefWatcher().watch(this);
     }
 
     /**

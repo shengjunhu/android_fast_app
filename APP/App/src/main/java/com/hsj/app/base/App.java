@@ -1,9 +1,6 @@
 package com.hsj.app.base;
 
-import android.content.Context;
-import com.hsj.baseapp.BaseApplication;
-import com.hsj.baseapp.BuildConfig;
-import com.squareup.leakcanary.LeakCanary;
+import com.hsj.base.app.core.BaseApp;
 
 /**
  * @Author:HSJ
@@ -12,23 +9,12 @@ import com.squareup.leakcanary.LeakCanary;
  * @Class:App
  * @Description:
  */
-public class App extends BaseApplication {
-
-    public static Context appContext;
+public class App extends BaseApp {
 
     @Override
     protected void initModule() {
 
-        if(BuildConfig.DEBUG){
-            if (LeakCanary.isInAnalyzerProcess(this)) return;
-            LeakCanary.install(this);
-
-        }else {
-
-        }
-
-        appContext = getApplicationContext();
-
     }
+
 
 }

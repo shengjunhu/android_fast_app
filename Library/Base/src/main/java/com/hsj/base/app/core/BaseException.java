@@ -5,7 +5,7 @@ package com.hsj.base.app.core;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/7/12 09:58
  * @Class:BaseException
- * @Description:
+ * @Description:基类异常
  */
 public class BaseException extends RuntimeException {
 

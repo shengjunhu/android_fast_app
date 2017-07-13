@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hsj.base.app.R;
+import com.hsj.base.app.core.BaseApp;
 
 /**
  * @Author:HSJ
@@ -36,9 +37,9 @@ public abstract class BaseLoadFragment extends Fragment implements View.OnClickL
 
             rootView = inflater.inflate(getLayoutId(), container, false);
 
-            initUI(savedInstanceState);
-
             initToolBar();
+
+            initUI(savedInstanceState);
 
             initData();
         }
@@ -47,9 +48,9 @@ public abstract class BaseLoadFragment extends Fragment implements View.OnClickL
 
     protected abstract int getLayoutId();
 
-    protected abstract void initUI(Bundle savedInstanceState);
-
     protected abstract void initToolbar(Toolbar toolbar,TextView tv_left,TextView tv_center,TextView tv_right);
+
+    protected abstract void initUI(Bundle savedInstanceState);
 
     protected abstract void initData();
 
@@ -110,4 +111,9 @@ public abstract class BaseLoadFragment extends Fragment implements View.OnClickL
 
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        BaseApp.getRefWatcher().watch(this);
+    }
 }
