@@ -6,7 +6,9 @@ import android.widget.TextView;
 
 public class NdkLibActivity extends AppCompatActivity {
 
-    // Used to load the 'native-lib' library on application startup.
+    /**
+     * 加载so文件
+     */
     static {
         System.loadLibrary("native-lib");
     }
@@ -16,14 +18,13 @@ public class NdkLibActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lib_ndk);
 
-        // Example of a call to a native method
         TextView tv = (TextView) findViewById(R.id.sample_text);
         tv.setText(stringFromJNI());
     }
 
     /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
+     * JNI回调的结果
+     * @return
      */
     public native String stringFromJNI();
 }
