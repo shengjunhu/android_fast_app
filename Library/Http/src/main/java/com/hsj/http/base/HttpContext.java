@@ -8,4 +8,6 @@ package com.hsj.http.base;
  * @Description:网络模块初始化位置
  */
 public class HttpContext {
+
+
 }

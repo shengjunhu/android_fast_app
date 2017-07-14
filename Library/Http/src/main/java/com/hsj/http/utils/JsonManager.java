@@ -1,4 +1,4 @@
-package com.hsj.http.tool;
+package com.hsj.http.utils;
 
 import com.google.gson.Gson;
 
