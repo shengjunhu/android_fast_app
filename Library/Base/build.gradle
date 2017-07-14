@@ -1,4 +1,3 @@
-
 apply plugin: rootProject.ext.plugins.library
 
 android {

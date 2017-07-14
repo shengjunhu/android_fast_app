@@ -9,7 +9,7 @@ import android.os.Handler;
  * @Class:HandlerController
  * @Description:全局Handler--防止handler泄漏
  */
-public class HandlerController {
+public class AppHandler {
 
     private static final Handler mHandler = new Handler();
 
@@ -17,7 +17,7 @@ public class HandlerController {
         return mHandler;
     }
 
-    private HandlerController() {
+    private AppHandler() {
 
     }
 
