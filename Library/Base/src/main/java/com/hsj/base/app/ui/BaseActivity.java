@@ -8,15 +8,11 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hsj.base.app.R;
 import com.hsj.base.app.core.BaseApp;
 
 /**
@@ -35,16 +31,12 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
 
-        initToolBar(true);
-
         initUI(savedInstanceState);
 
         initData();
     }
 
     protected abstract int getLayoutId();
-
-    protected abstract void initToolbar(ToolbarController mToolbar);
 
     protected abstract void initUI(Bundle savedInstanceState);
 
@@ -69,19 +61,6 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     protected void onDestroy() {
         super.onDestroy();
         BaseApp.getRefWatcher().watch(this);
-    }
-
-    /**
-     * 初始化Toolbar
-     */
-    protected void initToolBar(boolean isToolbar) {
-        Toolbar toolbar = findView(R.id.tb_base);
-        if (isToolbar) {
-            setSupportActionBar(toolbar);
-            initToolbar(new ToolbarController(toolbar));
-        } else {
-            toolbar.setVisibility(View.GONE);
-        }
     }
 
     /**
@@ -154,61 +133,6 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     }
 
     /**
-     * Toolbar控制者
-     */
-    private class ToolbarController {
-
-        private Toolbar mToolbar;
-
-        private ToolbarController(Toolbar toolbar) {
-            this.mToolbar = toolbar;
-        }
-
-        /**
-         * 设置Toolbar左标题
-         *
-         * @param leftDrawable - 做标题图标
-         * @param leftStr      -做标题文字
-         */
-        private void setToolbarLeft(@IdRes int leftDrawable, @Nullable String leftStr) {
-            TextView tv_left = findView(R.id.tv_left);
-            tv_left.setText(checktStr(leftStr));
-            tv_left.setVisibility(View.VISIBLE);
-        }
-
-        /**
-         * 设置toolbar主标题文字
-         *
-         * @param centerStr - 主标题文字
-         */
-        private void setToolBarCenterText(@NonNull String centerStr) {
-            TextView tv_center = findView(R.id.tv_center);
-        }
-
-        /**
-         * 设置toolbar搜索栏
-         *
-         * @param hintStr
-         */
-        private void setToolBarCenterSearch(@Nullable String hintStr) {
-            EditText et_center = findView(R.id.et_center);
-
-        }
-
-        /**
-         * 设置Toolbar右标题
-         * @param rightDrawable - 右侧图标
-         * @param rightStr      - 右侧文字
-         */
-        private void setToolbarRight(@IdRes int rightDrawable, @Nullable String rightStr) {
-            TextView tv_right = findView(R.id.tv_right);
-            tv_right.setText(checktStr(rightStr));
-            tv_right.setVisibility(View.VISIBLE);
-        }
-
-    }
-
-    /**
      * 判断对象否为空
      * @param obj
      * @return
@@ -239,7 +163,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
      * @param str
      * @return
      */
-    protected String checktStr(String str) {
+    protected String checkStr(String str) {
         if (notNull(str)) {
             return str;
         } else {
@@ -252,7 +176,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
      * @param num
      * @return
      */
-    protected String checktStr(Number num) {
+    protected String checkStr(Number num) {
         if (num == null) {
             return "";
         } else {
