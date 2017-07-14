@@ -20,7 +20,7 @@
     屏幕左右对齐基线：16dp
     文字左侧对齐基线：72dp
     
-* 3、Material Design
+* 3、Material Design（android material design Demo）
     - 1、AppBarLayout
     - 2、CollapsingToolbarLayout
     - 3、CoordinatorLayout，
@@ -59,3 +59,13 @@
 * 11、Activity侧滑切换
 
 * 12、自定义控件、Paint使用
+
+###安排
+1、查询：android.support.constraint.ConstraintLayout用法
+2、查询微信调用二维码so接口
+3、Toast样式
+4、material design的搜索icon用法
+5、虚拟键对屏幕适配的问题
+6、android百度比适配
+7、Snackbar基本介绍
+8、

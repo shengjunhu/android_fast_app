@@ -54,9 +54,10 @@ ext {
             "retrofit-converters"      : "com.squareup.retrofit2:retrofit-converters:${version["retrofitVersion"]}",
             "retrofit-adapters"        : "com.squareup.retrofit2:retrofit-adapters:${version["retrofitVersion"]}",
             "okhttp3"                  : "com.squareup.okhttp3:okhttp:${version["okhttp3Version"]}",
+            "okio"                     : "com.squareup.okio:okio:1.13.0",
             "interceptor"              : "com.squareup.okhttp3:logging-interceptor:${version["okhttp3Version"]}",
             "gson"                     : "com.google.code.gson:gson:${version["gsonVersion"]}",
-            "fastjson"                 : "",
+            "fastjson"                 : "com.alibaba:fastjson:1.1.59.android",
 
             //RxJava
             "rxjava"                   : "io.reactivex.rxjava2:rxjava:${version["rxjavaVersion"]}",
