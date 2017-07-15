@@ -4,10 +4,8 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.TextView;
 import com.hsj.app.R;
 import com.hsj.base.app.ui.BaseActivity;
 import java.util.ArrayList;
@@ -36,11 +34,6 @@ public class AppMainActivity extends BaseActivity {
     protected void initUI(Bundle savedInstanceState) {
         vp_app = findView(R.id.vp_app);
         tab_app = findView(R.id.tab_app);
-    }
-
-    @Override
-    protected void initToolbar(Toolbar toolbar, TextView tv_left, TextView tv_center, TextView tv_right) {
-        toolbar.setVisibility(View.GONE);
     }
 
     @Override
