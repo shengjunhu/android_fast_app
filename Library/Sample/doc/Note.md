@@ -60,7 +60,7 @@
 
 * 12、自定义控件、Paint使用
 
-###安排
+### 安排
 1、查询：android.support.constraint.ConstraintLayout用法
 2、查询微信调用二维码so接口
 3、Toast样式
@@ -68,4 +68,11 @@
 5、虚拟键对屏幕适配的问题
 6、android百度比适配
 7、Snackbar基本介绍
-8、
+8、开发长连接demo 
+9、开发推送demo
+10、android原生进度pressbar
+11、banner
+12、微信公众帐号练习
+13、怎么调用AS icon
+14、cardview的阴影颜色
+15、sw

@@ -14,7 +14,6 @@ import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.content.FileProvider;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -27,8 +26,6 @@ import java.io.OutputStream;
 import java.nio.channels.FileChannel;
 import java.text.DecimalFormat;
 import java.util.zip.GZIPInputStream;
-
-import static com.hsj.tool.L.isSdUsable;
 
 /**
  * @Author:HSJ
@@ -72,7 +69,7 @@ public class FileManager {
      * @return
      */
     public static long getSdUsableSize() {
-        if (!isSdUsable()) {
+        if (!isSd()) {
             return 0;
         }
         File file = Environment.getExternalStorageDirectory();
@@ -94,7 +91,7 @@ public class FileManager {
      */
     public static long getStorageSize() {
         File file = null;
-        if(isSdUsable()){
+        if(isSd()){
             file = Environment.getExternalStorageDirectory();
         }else {
             file = Environment.getDataDirectory();
@@ -109,7 +106,7 @@ public class FileManager {
      */
     public static String getCacheDir1(Context context) {
         String cachePath = null;
-        if (isSdUsable()) {
+        if (isSd()) {
             //路径： /sdcard/Android/data/(PackageName)/cache
             cachePath = context.getExternalCacheDir().getPath();
         } else {
@@ -515,7 +512,7 @@ public class FileManager {
      * @return:存在为true
      */
     public static boolean sdExists(String fileName) {
-        if (!isSdUsable()) {
+        if (!isSd()) {
             return false;
         }
         return new File(Environment.getExternalStorageDirectory(), fileName).exists();
