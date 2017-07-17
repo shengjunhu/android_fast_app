@@ -39,7 +39,6 @@ public class AppMainActivity extends BaseActivity {
     @Override
     protected void initData() {
         List<String> tabNameList = new ArrayList<>();
-        List<Fragment> tabFragmentList = new ArrayList<>();
         tabNameList.add("首页");
         tabNameList.add("商城");
         tabNameList.add("购物车");
@@ -48,6 +47,7 @@ public class AppMainActivity extends BaseActivity {
         tabNameList.add("好友圈");
         tabNameList.add("我的");
 
+        List<Fragment> tabFragmentList = new ArrayList<>();
         try {
             Class<Fragment> home = (Class<Fragment>) Class.forName("com.hsj.home.ui.fragment.HomeFragment");
             Class<Fragment> shop = (Class<Fragment>) Class.forName("com.hsj.home.ui.fragment.ShopFragment");
