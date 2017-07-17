@@ -30,6 +30,7 @@
     - 7、TabLayout、
     - 8、TextInputLayout
     - 9、NestedScrollView
+    - 10、BottomNavigationView
 
 * 4、Theme
     - 1、主题样式
