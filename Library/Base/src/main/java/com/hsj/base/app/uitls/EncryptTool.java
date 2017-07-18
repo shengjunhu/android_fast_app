@@ -7,6 +7,6 @@ package com.hsj.base.app.uitls;
  * @Class:EncryptHelper
  * @Description:加密工具类
  */
-public class EncryptHelper {
+public class EncryptTool {
     
 }

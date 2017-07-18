@@ -1,12 +1,41 @@
 <resources>
 
-    <style name="BaseLibTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- 基类主题 -->
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="textColorPrimary">@color/colorPrimary</item>
+        <item name="colorControlNormal">#0086E9</item>
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+        <item name="android:windowBackground">@android:color/white</item>
     </style>
 
-    <style name="FullScreenTheme" parent="BaseLibTheme">
+    <!-- 基类Toolbar主题 -->
+    <style name="BaseToolbarTheme" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+
+    <!-- ToolbarPopupTheme -->
+    <style name="ToolbarPopupTheme" parent="@style/ThemeOverlay.AppCompat">
+        <item name="android:colorBackground">@color/colorPrimary</item>
+    </style>
+
+    <!-- toolbar菜单样式 -->
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="actionMenuTextAppearance">@style/ToolbarMenuTextSize</item>
+    </style>
+
+    <!-- toolbar菜单文字尺寸 -->
+    <style name="ToolbarMenuTextSize" parent="@style/TextAppearance.AppCompat.Menu">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!-- Activity全屏主题 -->
+    <style name="FullScreenTheme" parent="BaseTheme">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowNoTitle">true</item>

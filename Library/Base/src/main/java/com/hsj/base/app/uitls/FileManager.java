@@ -38,7 +38,6 @@ public class FileManager {
 
     /**
      * SD卡是否可用
-     *
      * @return
      */
     public static boolean isSd() {
@@ -65,7 +64,6 @@ public class FileManager {
 
     /**
      * 获得SD卡可用大小
-     *
      * @return
      */
     public static long getSdUsableSize() {
