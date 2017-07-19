@@ -5,7 +5,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="textColorPrimary">@color/colorPrimary</item>
         <item name="colorControlNormal">#0086E9</item>
         <item name="colorButtonNormal">@color/colorPrimary</item>
         <item name="android:windowBackground">@android:color/white</item>

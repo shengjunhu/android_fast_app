@@ -6,9 +6,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorControlActivated">@color/colorAccent</item>
-        <item name="android:navigationBarColor" tools:targetApi="lollipop">
-            @color/navigationBarColor
-        </item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/navigationBarColor</item>
     </style>
 
 </resources>
