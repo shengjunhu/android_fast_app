@@ -14,7 +14,6 @@ import android.support.annotation.Nullable;
  */
 public class LocationService extends IntentService {
 
-
     public LocationService(String name) {
         super(name);
     }

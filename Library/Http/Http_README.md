@@ -29,3 +29,5 @@ httpManager.request(Object obj)
            .requestHeader(Object...header)
            .requestBody(Bean bean)
            .start()
+           
+
