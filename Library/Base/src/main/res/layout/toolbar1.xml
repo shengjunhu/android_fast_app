@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar1"
+    style="@style/mw"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    app:contentInsetStart="0dp">
+
+    <RelativeLayout style="@style/mw">
+
+        <TextView
+            android:id="@+id/tb_left"
+            style="@style/ww"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp2"
+            android:drawableStart="@drawable/ic_back"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp10"
+            android:textAllCaps="false"
+            android:textSize="@dimen/sp16" />
+
+        <TextView
+            android:id="@+id/tb_center"
+            style="@style/ww"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp10"
+            android:textAllCaps="false"
+            android:textSize="@dimen/sp20" />
+
+        <TextView
+            android:id="@+id/tb_right"
+            style="@style/ww"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp2"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp10"
+            android:textAllCaps="false"
+            android:textSize="@dimen/sp16" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp0.5"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color9" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>
