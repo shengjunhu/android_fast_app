@@ -8,12 +8,12 @@
 
 ## 结构组成：
 ### 主工程APP： 
-  * [App:app主模块](/APP/App/App_README.md)
+  * [App :主模块](/APP/App/App_README.md)
   * [Home:首页模块](/APP/App/Home_README.md)
   * [Shop:商城模块](/APP/App/Shop_README.md)
   * [Chat:聊天模块](/APP/App/Chat_README.md)
   * [Zone:朋友圈模块](/APP/App/Zone_README.md)
-  * [Me:我的模块](/APP/App/Me_README.md)
+  * [Me  :我的模块](/APP/App/Me_README.md)
  
 ### 库工程Library：
   * [Sample:使用说明Module](/Library/Sample/Sample_README.md)
@@ -48,31 +48,39 @@
   * [IM:及时通讯](/ThirdSDK/IM/IM_README.md)
   * [Bugly:热修复](/ThirdSDK/Bugly/Bugly_README.md)
 
-### 插件功能：
+### 关于缓存：
+* 1、sp
+```
+①路径：/data/data/{packageName}/shared_prefs/config.xml
+②存储内容：账号、密码、token、设备ID、版本号、该版本号第一次登陆
+```
 
-### 编写阶段模块结构
+* 2、db：
+```
+①路径：
+②内容：网络数据字段存储
+```
+* 3、cache：
+```
+①image路径：
+②内容：网络加载图片缓存
+```
+* 4、log：
+①log路径：
+②内容：存放错误日志、上传服务器后删除
+```
+* 4、download：
+①路径：
+②内容：下载存放区
+```
 
-### 缓存路径：
-* 1、sp      ：/data/data/{packageName}/shared_prefs/config.xml
-* 2、db      ：
-* 3、cache   ：
-* 4、log     ：
+* 5、temp：
+```
+①路径：
+②内容：临时文件存放区
+```
 
-sd卡缓存路径 (系统可清理、应用本身可清理)
---日志     :log
---图片     :image
---数据库    :db
---下载数据  :download
---临时数据  :temp
+* 6、缓存清理
+1、应用内存清理：执行在主线程
+2、应用缓存清理：执行在子线程
 
-sd卡存储路径 (应用本身可清理)
---日志     :log
---图片     :image
---数据库    :db
---下载数据  :download
---临时数据  :temp(图片压缩后的缓存、文件压缩解压)
-
-清理缓存：
-1、主线程清理内存
-2、子线程清理缓存文件
-3、卸载apk：子线程清空app所有相关文件

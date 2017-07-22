@@ -15,6 +15,15 @@ import java.util.Locale;
 public class XLog {
 
     /**
+     * 功能如下：
+     *
+     * 1、开发环境->打印所有相关日志输出
+     * 2、改写日志输出行数为全部打印输出
+     * 3、发布环境->仅打印Error日志
+     * 4、定期删除无用日志
+     */
+
+    /**
      * 日志名称
      */
     private static String tag = "[Log]";

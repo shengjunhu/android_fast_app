@@ -23,6 +23,20 @@ import android.view.WindowManager;
 public class PhoneManager {
 
     /**
+     * 功能如下：
+     *
+     * 1、获取屏幕尺寸
+     * 2、屏幕尺寸转换
+     * 3、获取网络状态
+     * 4、获取SD卡是否可用
+     * 5、获取设备ID
+     * 6、获取设备品牌
+     * 7、获取设备系统型号
+     * 8、获取设备手机号码
+     * 9、获取设备GPS状态
+     */
+
+    /**
      * SD卡是否可用
      * @return
      */

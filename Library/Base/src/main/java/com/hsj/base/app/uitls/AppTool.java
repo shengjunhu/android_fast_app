@@ -9,8 +9,13 @@ package com.hsj.base.app.uitls;
  */
 public class AppTool {
 
-    public static void getAppVersionCode(){
-
-    }
+    /**
+     * 功能如下：
+     *
+     * 1、获取app版本号
+     * 2、获取app版本名
+     * 3、更新app时下载apk、安装apk
+     * 4、获取版本信息
+     */
 
 }

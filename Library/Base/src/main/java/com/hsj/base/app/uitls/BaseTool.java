@@ -18,6 +18,17 @@ import java.util.regex.Pattern;
 public class BaseTool {
 
     /**
+     * 功能如下：
+     *
+     * 1、不为null 或者 ""
+     * 2、当前所在线程
+     * 3、EditText、TextView设置文本
+     * 4、是否是手机号
+     * 5、格式化当前时间
+     *
+     */
+
+    /**
      * 判断字符串是否为null 或 ""
      * @param str
      * @return

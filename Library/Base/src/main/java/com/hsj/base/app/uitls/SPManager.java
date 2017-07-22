@@ -13,6 +13,14 @@ import android.content.SharedPreferences;
 public class SPManager {
 
     /**
+     * 功能如下：
+     *
+     * 1、存储String、Boolean、Number类型数据
+     * 2、存储内容：账号、密码、token、设备ID、版本号、该版本号第一次登陆
+     * 3、清除指定SP 文件名文件
+     */
+
+    /**
      * 默认sp文件名
      */
     private String fileName = "config";
