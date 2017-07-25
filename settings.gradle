@@ -16,7 +16,7 @@ include ':APP:App',                 //主app
         ':Library:Sample',          //使用介绍Module
         ':Library:Permission',      //权限处理库
         ':Library:QRProvider',      //二维码库
-        ':Library:ImageProvider',   //图片提供库
+        ':Library:PhotoProvider',   //图片提供库
         ':Library:VideoProvider',   //视屏提供库
         ':Library:FileProvider',    //文件提供库
         ':Library:AudioProvider',   //音频提供库

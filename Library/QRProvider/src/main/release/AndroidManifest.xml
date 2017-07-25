@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hsj.qrprovider">
+    package="com.hsj.provider.qr">
 
     <application
         android:allowBackup="true"
@@ -8,11 +8,11 @@
         android:supportsRtl="true">
 
         <activity
-            android:name=".QRMainActivity"
+            android:name="com.hsj.provider.qr.QRMainActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".QRActivity"
+            android:name="com.hsj.provider.qr.QRActivity"
             android:screenOrientation="portrait" />
 
     </application>
