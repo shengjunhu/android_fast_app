@@ -21,27 +21,32 @@ import java.lang.annotation.RetentionPolicy;
 public class UIStateView extends FrameLayout {
 
     /**
-     * 加载中
+     * 没有运行权限
      */
-    public static final int STATE_LOAD          = 0;
-    /**
-     * 加载成功
-     */
-    public static final int STATE_SUCCESS       = 1;
-    /**
-     * 加载成功却无数据
-     */
-    public static final int STATE_EMPTY         = 2;
+    public static final int STATE_PERMISSION = -2;
+
     /**
      * 加载失败(点击视图，可重新请求网络)
      */
-    public static final int STATE_FAILURE       = -1;
-    /**
-     * 没有运行权限
-     */
-    public static final int STATE_PERMISSION    = -2;
+    public static final int STATE_FAILURE = -1;
 
-    @IntDef({STATE_LOAD, STATE_SUCCESS, STATE_EMPTY, STATE_FAILURE, STATE_PERMISSION})
+    /**
+     * 加载中
+     */
+    public static final int STATE_LOAD = 0;
+
+    /**
+     * 加载成功
+     */
+    public static final int STATE_SUCCESS = 1;
+
+    /**
+     * 加载成功却无数据
+     */
+    public static final int STATE_EMPTY = 2;
+
+
+    @IntDef({STATE_PERMISSION, STATE_FAILURE, STATE_LOAD, STATE_SUCCESS, STATE_EMPTY})
     @Retention(RetentionPolicy.SOURCE)
     public @interface State {
 
@@ -56,10 +61,12 @@ public class UIStateView extends FrameLayout {
 
     public UIStateView(@NonNull Context context) {
         super(context);
+        initUIStateView();
     }
 
     public UIStateView(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        initUIStateView();
     }
 
     public UIStateView(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
