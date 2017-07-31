@@ -21,6 +21,7 @@ include ':APP:App',                 //主app
         ':Library:FileProvider',    //文件提供库
         ':Library:AudioProvider',   //音频提供库
         ':Library:VideoPlayer',     //视屏播放库
+        ':Library::TaskManager',    //任务管理器
         ':Library:DB',              //GreenDao数据缓存库
         ':Library:DBObject',        //Object数据库
         ':Library:AutoLayout',      //自动布局库
