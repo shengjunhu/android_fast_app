@@ -7,7 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.view.KeyEvent;
 import android.view.View;
 import com.hsj.app.R;
-import com.hsj.base.app.ui.BaseActivity;
+import com.hsj.app.base.ui.BaseActivity;
 import java.util.ArrayList;
 import java.util.List;
 

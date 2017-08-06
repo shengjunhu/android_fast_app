@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
-import com.hsj.base.app.ui.BaseActivity;
+import com.hsj.app.base.ui.BaseActivity;
 import com.hsj.shop.R;
 import com.hsj.shop.ui.fragment.ShopFragment;
 
@@ -28,11 +28,6 @@ public class ShopActivity extends BaseActivity {
                 .beginTransaction()
                 .replace(R.id.fl_shop, new ShopFragment())
                 .commit();
-    }
-
-    @Override
-    protected void initToolbar(Toolbar toolbar, TextView tv_left, TextView tv_center, TextView tv_right) {
-
     }
 
     @Override

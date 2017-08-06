@@ -5,7 +5,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 import com.hsj.app.R;
-import com.hsj.base.app.ui.BaseActivity;
+import com.hsj.app.base.ui.BaseActivity;
 
 /**
  * @Author:HSJ
@@ -24,11 +24,6 @@ public class AppLoginActivity extends BaseActivity {
     @Override
     protected void initUI(Bundle savedInstanceState) {
 
-    }
-
-    @Override
-    protected void initToolbar(Toolbar toolbar, TextView tv_left, TextView tv_center, TextView tv_right) {
-        toolbar.setVisibility(View.GONE);
     }
 
     @Override

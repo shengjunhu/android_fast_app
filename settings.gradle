@@ -21,18 +21,17 @@ include ':APP:App',                 //主app
         ':Library:FileProvider',    //文件提供库
         ':Library:AudioProvider',   //音频提供库
         ':Library:VideoPlayer',     //视屏播放库
-        ':Library::TaskManager',    //任务管理器
-        ':Library:DB',              //GreenDao数据缓存库
-        ':Library:DBObject',        //Object数据库
         ':Library:AutoLayout',      //自动布局库
         ':Library:Keyboard',        //自定义键盘和表情库
-        ':Library:Web',             //JS、Html与android交互库
-        ':Library:Router',          //组件模块数据路由
         ':Library:GPSLocation',     //GPS定位、手机信号基站
         ':Library:NdkLib',          //NdkLIb：性能优化
 
+        ':Library:Base',            //全局基类
+        ':Library:Web',             //JS、Html与android交互库
+        ':Library:Router',          //组件模块数据路由
         ':Library:Http',            //网络库
-        ':Library:UIController',    //主题、状态栏、字体
-        ':Library:Widget',          //自定义控件库
         ':Library:ImageLoader',     //图片处理库
-        ':Library:Base'             //全局基类
+        ':Library:Widget',          //自定义控件库
+        ':Library:UIController',    //主题、状态栏、字体
+        ':Library:DB',              //GreenDao数据缓存库
+        ':Library:DBObject'         //Object数据库

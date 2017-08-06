@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
-import com.hsj.base.app.ui.BaseActivity;
+import com.hsj.app.base.ui.BaseActivity;
 
 /**
  * @Author:HSJ

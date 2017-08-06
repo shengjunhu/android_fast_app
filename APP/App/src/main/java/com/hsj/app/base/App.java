@@ -1,6 +1,6 @@
 package com.hsj.app.base;
 
-import com.hsj.base.app.core.BaseApp;
+import com.hsj.app.base.core.BaseApp;
 
 /**
  * @Author:HSJ
@@ -15,6 +15,5 @@ public class App extends BaseApp {
     protected void initModule() {
 
     }
-
 
 }

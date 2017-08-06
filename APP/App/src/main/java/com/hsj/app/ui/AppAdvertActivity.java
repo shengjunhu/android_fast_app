@@ -21,7 +21,7 @@ package com.hsj.app.ui;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hsj.base.app.ui.BaseActivity;
+import com.hsj.app.base.ui.BaseActivity;
 
 /**
  * @Author:HSJ
