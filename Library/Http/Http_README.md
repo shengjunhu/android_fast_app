@@ -1,6 +1,10 @@
 # Http 网络请求框架
 
 ### 使用方法介绍
+* 0、网络请求参数配置：
+- a、请求超时15s
+- b、请求队列数默认为3
+
 *1、使用方法
 @HttpRequest(Tag = 20170702100)
 public void sendRequest(){
@@ -9,7 +13,7 @@ public void sendRequest(){
 }
 
 //必须实现
-onHttpSuccess(int ResponseId,Response resp,String data,T t)
+onHttpSuccess(int ResponseId,Response resp,T t)
 
 //一下三个可选择实现
 onHttpFailure(int ResponseId,Response resp,Exception e)
