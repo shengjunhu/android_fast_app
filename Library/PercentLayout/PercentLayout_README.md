@@ -1,4 +1,4 @@
-# AutoLayout 采用ui使用的px布局，自动转换适配
+# PercentLayout 采用ui使用的px布局，自动转换适配
 
 ### 采用主流dp适配
 1、通过dp自动适配

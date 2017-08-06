@@ -1,4 +1,4 @@
-package com.hsj.auto.layout.percent;
+package com.hsj.layout.percent;
 
 /**
  * @Author:HSJ
