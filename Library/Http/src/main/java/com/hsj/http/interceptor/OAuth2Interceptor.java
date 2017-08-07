@@ -9,7 +9,7 @@ import okhttp3.Response;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/08/07 23:31
  * @Class:OAuth2Interceptor
- * @Description:基于OAuth2网络请求，拦截本次请求获取token
+ * @Description:基于OAuth2网络请求，拦截本次请求先获取token再执行本次请求
  */
 public class OAuth2Interceptor implements Interceptor{
 
