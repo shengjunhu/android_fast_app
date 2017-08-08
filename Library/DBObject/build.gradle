@@ -1,5 +1,5 @@
 apply plugin:rootProject.ext.plugins.library
-
+apply plugin: rootProject.ext.plugins.retrolambda
 apply plugin: 'io.objectbox'
 
 android {

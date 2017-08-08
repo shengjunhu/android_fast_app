@@ -4,7 +4,8 @@ ext {
             application                : 'com.android.application',
             library                    : 'com.android.library',
             maven                      : 'com.github.dcendents.android-maven',
-            bintray                    : 'com.jfrog.bintray'
+            bintray                    : 'com.jfrog.bintray',
+            retrolambda                : 'me.tatarka.retrolambda'
     ]
 
     android = [

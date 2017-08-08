@@ -3,6 +3,7 @@ if(rootProject.ext.android.isLibDebug){
 }else {
     apply plugin:rootProject.ext.plugins.library
 }
+apply plugin: rootProject.ext.plugins.retrolambda
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
