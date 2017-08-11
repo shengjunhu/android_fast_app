@@ -16,22 +16,20 @@
  *
  ******************************************************************************/
 
-package com.hsj.http.task;
+package com.hsj.xmpp;
+
+import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 /**
- * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/7/31 13:32
- * @Version:XBS V2.0
- * @Description:后台上传任务管理器
+ * Example local unit test, which will execute on the development machine (host).
+ *
+ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class BGUpTaskManager {
-
-    /**
-     * 后台任务管理器：
-     *  1、在后台处理上传文件任务
-     *  2、每次启动App自动检测上传没完成的任务并自动启动继续执行未完成的工作
-     *  3、记录任务当前状态和处理进度（本地缓存记录）
-     */
-
+public class ExampleUnitTest {
+    @Test
+    public void addition_isCorrect() throws Exception {
+        assertEquals(4, 2 + 2);
+    }
 }

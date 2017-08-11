@@ -16,22 +16,29 @@
  *
  ******************************************************************************/
 
-package com.hsj.http.task;
+package com.hsj.socket;
+
+import android.content.Context;
+import android.support.test.InstrumentationRegistry;
+import android.support.test.runner.AndroidJUnit4;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import static org.junit.Assert.*;
 
 /**
- * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/7/31 13:40
- * @Class:BGLoadManager
- * @Description:
+ * Instrumentation test, which will execute on an Android device.
+ *
+ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class BGLoadManager {
+@RunWith(AndroidJUnit4.class)
+public class ExampleInstrumentedTest {
+    @Test
+    public void useAppContext() throws Exception {
+        // Context of the app under test.
+        Context appContext = InstrumentationRegistry.getTargetContext();
 
-    /**
-     * 后台上传任务管理器：
-     * 1、长期在后台执行下载任务
-     * 2、每次启动App自动检测下载没完成的任务并自动启动继续执行未完成的工作
-     * 3、记录任务当前状态和处理进度（本地缓存记录）
-     */
-
+        assertEquals("com.hsj.socket.test", appContext.getPackageName());
+    }
 }

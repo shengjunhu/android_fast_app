@@ -16,25 +16,16 @@
  *
  ******************************************************************************/
 
-package com.hsj.http.task;
+package com.hsj.xmpp;
 
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/7/31 13:36
- * @Class:BGTaskManager
- * @Description:后台任务管理器
+ * @Date:2017/8/11 19:20
+ * @Class:XmmppConnection
+ * @Description:
  */
-public class BGTaskManager {
-
-    /**
-     * 后台任务管理器：
-     *
-     * 1、长期在后台处理应用本身任务
-     * 2、长期在后台处理应用与服务器交互任务
-     * 3、类型：①应用本身处理耗时操作任务
-     *         ②上传用户当前位置任务
-     */
+public class XmmppConnection {
 
 
 }

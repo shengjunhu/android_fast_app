@@ -24,6 +24,10 @@ include ':APP:App',                 //主app
         ':Library:Keyboard',        //自定义键盘和表情库
         ':Library:GPSLocation',     //GPS定位、手机信号基站
         ':Library:NdkLib',          //NdkLIb：性能优化
+        ':Library:DB',              //GreenDao数据缓存库
+        ':Library:TaskManager',
+        ':Library:XMPP',
+        ':Library:Socket',
 
         ':Library:Base',            //全局基类
         ':Library:Web',             //JS、Html与android交互库
@@ -33,5 +37,4 @@ include ':APP:App',                 //主app
         ':Library:Widget',          //自定义控件库
         ':Library:UIController',    //主题、状态栏、字体
         ':Library:PercentLayout',   //百分比布局库
-        ':Library:DB',              //GreenDao数据缓存库
         ':Library:DBObject'         //Object数据库
