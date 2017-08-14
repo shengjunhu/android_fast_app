@@ -51,8 +51,9 @@
 ### 关于缓存：
 * 1、sp
 ```
-①路径：/data/data/{packageName}/shared_prefs/config.xml
-②存储内容：账号、密码、token、设备ID、版本号、该版本号第一次登陆
+①路径：/data/data/{packageName}/shared_prefs/xx.xml
+②设备信息：设备ID、版本号、该版本号第一次 /data/data/{packageName}/shared_prefs/appInfo.xml
+③用户信息：账号、密码、token /data/data/{packageName}/shared_prefs/userInfo.xml
 ```
 
 * 2、db：
