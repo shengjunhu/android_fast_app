@@ -10,7 +10,7 @@
         <item name="android:windowBackground">@android:color/white</item>
     </style>
 
-    <!-- 基类Toolbar主题 -->
+    <!-- 基类Toolbar主题Start -->
     <style name="BaseToolbarTheme" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textSize">14sp</item>
         <item name="android:textColorPrimary">@android:color/white</item>
@@ -22,17 +22,18 @@
         <item name="android:colorBackground">@color/colorPrimary</item>
     </style>
 
-    <!-- toolbar菜单样式 -->
+    <!-- Toolbar菜单样式 -->
     <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <item name="actionMenuTextColor">@android:color/white</item>
         <item name="actionMenuTextAppearance">@style/ToolbarMenuTextSize</item>
     </style>
 
-    <!-- toolbar菜单文字尺寸 -->
+    <!-- Toolbar菜单文字尺寸 -->
     <style name="ToolbarMenuTextSize" parent="@style/TextAppearance.AppCompat.Menu">
         <item name="android:textSize">10sp</item>
     </style>
 
+    <!-- Activity主题Start -->
     <!-- Activity全屏主题 -->
     <style name="FullScreenTheme" parent="BaseTheme">
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -42,8 +43,14 @@
         <item name="android:backgroundDimEnabled">true</item>
     </style>
 
-    <!-- Activity显示样式 -->
-
+    <!-- Activity透明主题 -->
+    <style name="TransparentTheme" parent="BaseTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
 
     <!-- 布局配置start -->
     <style name="ww">
@@ -113,7 +120,5 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:orientation">horizontal</item>
     </style>
-
-    <!-- 布局配置end -->
 
 </resources>

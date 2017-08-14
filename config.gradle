@@ -37,14 +37,14 @@ ext {
     dependencies = [
 
             //support
+            "multidex"                 : "com.android.support:multidex:1.0.1",
+            "constraint-layout"        : "com.android.support.constraint:constraint-layout:1.0.2",
             "support-v4"               : "com.android.support:support-v4:${version["androidSupportSdkVersion"]}",
             "appcompat-v7"             : "com.android.support:appcompat-v7:${version["androidSupportSdkVersion"]}",
             "design"                   : "com.android.support:design:${version["androidSupportSdkVersion"]}",
             "cardview-v7"              : "com.android.support:cardview-v7:${version["androidSupportSdkVersion"]}",
             "recyclerview-v7"          : "com.android.support:recyclerview-v7:${version["androidSupportSdkVersion"]}",
             "annotations"              : "com.android.support:support-annotations:${version["androidSupportSdkVersion"]}",
-            "multidex"                 : "com.android.support:multidex:1.0.1",
-            "constraint-layout"        : "com.android.support.constraint:constraint-layout:1.0.2",
 
             //test
             "testCompile"              : "junit:junit:4.12",
@@ -89,4 +89,5 @@ ext {
             "amap_location"            : "com.amap.api:location:latest.integration"
 
     ]
+
 }
