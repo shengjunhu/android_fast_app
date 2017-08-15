@@ -49,39 +49,85 @@
   * [Bugly:热修复](/ThirdSDK/Bugly/Bugly_README.md)
 
 ### 关于缓存：
-* 1、sp
+* 0-先读取内存、磁盘可用大小值；优先采用SD卡缓存
+
+* 1-SharedPreferences:
 ```
-①路径：/data/data/{packageName}/shared_prefs/xx.xml
-②设备信息：设备ID、版本号、该版本号第一次 /data/data/{packageName}/shared_prefs/appInfo.xml
-③用户信息：账号、密码、token /data/data/{packageName}/shared_prefs/userInfo.xml
+①根路径: /data/data/{packageName}/shared_prefs/xx.xml
+②设备信息:设备ID、版本号、该版本号第一次 /data/data/{packageName}/shared_prefs/appInfo.xml
+③用户信息:账号、（密码）、token        /data/data/{packageName}/shared_prefs/userInfo.xml
 ```
 
-* 2、db：
+* 2-cache:
 ```
-①路径：
-②内容：网络数据字段存储
-```
-* 3、cache：
-```
-①image路径：
-②内容：网络加载图片缓存
-```
-* 4、log：
-①log路径：
-②内容：存放错误日志、上传服务器后删除
-```
-* 4、download：
-①路径：
-②内容：下载存放区
+①根路径: /storage/emulated/0/Android/data/{packageName}/cache/
+         /data/data/{packageName}/cache/
+        
+②网络数据缓存:
+        /storage/emulated/0/Android/data/{packageName}/cache/db/data.db
+        /data/data/{packageName}/cache/db/data.db
+        
+③网络图片缓存:
+        /storage/emulated/0/Android/data/{packageName}/cache/image/
+        /data/data/{packageName}/cache/image/
+
+④网络视屏缓存:
+        /storage/emulated/0/Android/data/{packageName}/cache/video/
+        /data/data/{packageName}/cache/video/
+    
+⑤网络音频缓存:
+        /storage/emulated/0/Android/data/{packageName}/cache/audio/
+        /data/data/{packageName}/cache/audio/
+        
+⑤Web缓存:
+        /storage/emulated/0/Android/data/{packageName}/cache/web/
+        /data/data/{packageName}/cache/web/
 ```
 
-* 5、temp：
+* 3-files:
 ```
-①路径：
-②内容：临时文件存放区
+①根路径: /storage/emulated/0/Android/data/{packageName}/files/
+         /data/data/{packageName}/files/
+        
+②log异常日志: 上传后删除或超过一周删除
+        /storage/emulated/0/Android/data/{packageName}/files/log/
+        /data/data/{packageName}/files/log/
+        
+③apk下载: 安装成功后删除
+        /storage/emulated/0/Android/data/{packageName}/files/apk/
+        /data/data/{packageName}/files/apk/
+        
+④doc文档: 
+        /storage/emulated/0/Android/data/{packageName}/files/doc/
+        /data/data/{packageName}/files/doc/
+        
+⑤image编辑:完成操作后删除
+        /storage/emulated/0/Android/data/{packageName}/files/image/
+        /data/data/{packageName}/files/image/
+        
+⑤audio录制:完成操作后删除
+        /storage/emulated/0/Android/data/{packageName}/files/audio/
+        /data/data/{packageName}/files/audio/
+        
+⑥video录制:完成操作后删除
+        /storage/emulated/0/Android/data/{packageName}/files/video/
+        /data/data/{packageName}/files/video/
+        
+⑦adver广告图片:
+        /storage/emulated/0/Android/data/{packageName}/files/adver/
+        /data/data/{packageName}/files/adver/
+        
+⑧upload: 上传成功删除
+        /storage/emulated/0/Android/data/{packageName}/files/upload/
+        /data/data/{packageName}/files/upload/
+        
+⑨download:
+        /storage/emulated/0/Android/data/{packageName}/files/download/
+        /data/data/{packageName}/files/download/
 ```
 
-* 6、缓存清理
+* 4、缓存清理:
+```
 1、应用内存清理：执行在主线程
 2、应用缓存清理：执行在子线程
-
+```
