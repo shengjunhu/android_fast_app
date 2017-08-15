@@ -62,7 +62,6 @@ android {
         huawei {
             applicationId 'com.hsj.app5'
         }
-
     }
 
     packagingOptions {
