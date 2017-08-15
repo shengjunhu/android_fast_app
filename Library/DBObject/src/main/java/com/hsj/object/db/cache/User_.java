@@ -1,7 +1,7 @@
 
 package com.hsj.object.db.cache;
 
-import com.hsj.object.db.bean.User;
+import com.hsj.object.db.cache.UserCursor.Factory;
 
 import io.objectbox.EntityInfo;
 import io.objectbox.Property;
@@ -27,7 +27,7 @@ public final class User_ implements EntityInfo<User> {
 
     public static final String __DB_NAME = "User";
 
-    public static final CursorFactory<User> __CURSOR_FACTORY = new UserCursor.Factory();
+    public static final CursorFactory<User> __CURSOR_FACTORY = new Factory();
 
     @Internal
     static final UserIdGetter __ID_GETTER = new UserIdGetter();

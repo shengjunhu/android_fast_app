@@ -16,7 +16,18 @@ android {
                 cppFlags "-frtti -fexceptions"
             }
         }
+
+        ndk {
+            moduleName "app"
+            abiFilters "armeabi", "armeabi-v7a", "x86"
+        }
+
     }
+
+    sourceSets.main {
+        jni.srcDirs = []
+    }
+
     buildTypes {
         release {
             minifyEnabled false
