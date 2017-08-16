@@ -57,8 +57,12 @@
 * 1-SharedPreferences:
 ```
 ①根路径: /data/data/{packageName}/shared_prefs/xx.xml
-②设备信息: 设备ID、app版本号、该版本号第一次启动 /data/data/{packageName}/shared_prefs/appInfo.xml
-③用户信息: 账号、loginToken （密码）          /data/data/{packageName}/shared_prefs/userInfo.xml
+
+②设备信息：设备ID、app版本号、该版本号第一次启动 /data/data/{packageName}/shared_prefs/appInfo.xml
+
+③用户信息：账号、loginToken （密码）          /data/data/{packageName}/shared_prefs/userInfo.xml
+
+④操作信息：启动app后后台检测上次启动未完成任务   /data/data/{packageName}/shared_prefs/actionInfo.xml
 ```
 
 * 2-cache:
@@ -129,8 +133,9 @@
         /data/data/{packageName}/files/download/
 ```
 
-* 4、缓存清理:
+* 4-缓存管理:
 ```
 ①应用内存清理：执行在主线程
 ②应用缓存清理：执行在子线程
+③定期管理缓存：后台任务管理中检查缓存，缓存时间过长子线程中删除
 ```
