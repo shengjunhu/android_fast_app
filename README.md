@@ -22,7 +22,7 @@
   * [UIKit          :控件库](/Library/UIKit/UIKit_README.md)
   * [Http           :网络库](/Library/Http/Http_README.md)
   * [ImageLoader    :图片加载库](/Library/ImageLoader/ImageLoader_README.md)
-  * [PercentLayout  :自动布局库](/Library/PercentLayout/PercentLayout_README.md)
+  * [PercentLayout  :百分比布局库](/Library/PercentLayout/PercentLayout_README.md)
   * [AudioProvider  :音频提供者](/Library/AudioProvider/AudioProvider_README.md)
   * [QRProvider     :二维码提供者](/Library/QRProvider/QRProvider_README.md)
   * [PhotoProvider  :图片提供者](/Library/PhotoProvider/PhotoProvider_README.md)
