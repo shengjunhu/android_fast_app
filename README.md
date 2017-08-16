@@ -18,7 +18,7 @@
 ### 库工程Library：
   * [Sample         :使用说明Module](/Library/Sample/Sample_README.md)
   * [Base           :项目基类库](/Library/Base/Base_README.md)
-  * [UIController   :UI控制库](/Library/UIController/UIController_README.md)
+  * [UIController   :UI控制者](/Library/UIController/UIController_README.md)
   * [UIKit          :控件库](/Library/UIKit/UIKit_README.md)
   * [Http           :网络库](/Library/Http/Http_README.md)
   * [ImageLoader    :图片加载库](/Library/ImageLoader/ImageLoader_README.md)
@@ -131,6 +131,6 @@
 
 * 4、缓存清理:
 ```
-1、应用内存清理：执行在主线程
-2、应用缓存清理：执行在子线程
+①应用内存清理：执行在主线程
+②应用缓存清理：执行在子线程
 ```
