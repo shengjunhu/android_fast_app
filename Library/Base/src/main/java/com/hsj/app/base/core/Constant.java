@@ -1,6 +1,6 @@
 package com.hsj.app.base.core;
 
-import com.hsj.base.app.BuildConfig;
+import com.hsj.app.base.BuildConfig;
 
 /**
  * @Author:HSJ
@@ -37,11 +37,6 @@ public interface Constant {
     String ACCOUNT              = "account";
 
     /**
-     * 用户密码
-     */
-    String PASSWORD             = "password";
-
-    /**
      * 用户token
      */
     String USER_TOKEN           = "userToken";
@@ -57,7 +52,12 @@ public interface Constant {
     String DEVICE_ID            = "deviceId";
 
     /**
-     * 第一次启动app标志
+     *  当前app版本
+     */
+    String APP_VERSION_CODE     = "appVersionCode";
+
+    /**
+     * 新版本第一次启动
      */
     String NEW_VERSION_START    = "newVersionStart";
 
@@ -67,9 +67,10 @@ public interface Constant {
     String DB_NAME              = "data.db";
 
     /**
-     * 数据库版本
+     * 数据库版本号筒app版本号
      */
     int DB_VERSION              = BuildConfig.VERSION_CODE;
+
 
 /**********************************  第三方配置参数常量  *********************************************/
 
@@ -81,7 +82,7 @@ public interface Constant {
     /**
      * 微信登陆AppId
      */
-   String WX_APPID              = "wx0813d97dd646762e";
+    String WX_APPID             = "wx0813d97dd646762e";
 
     /**
      * 微博登陆的AppKey
@@ -91,7 +92,7 @@ public interface Constant {
     /**
      * 微博登陆成功自己的回调页面
      */
-    String REDIRECT_URL         = "http://www.365xbs.com";
+    String REDIRECT_URL         = "https://api.weibo.com/oauth2/default.html";
 
     /**
      * 微博的OAuth2.0 授权机制中 authorize 接口的一个参数

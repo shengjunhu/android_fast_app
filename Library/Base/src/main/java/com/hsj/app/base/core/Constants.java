@@ -15,19 +15,19 @@ public class Constants {
     public static String deviceId;
 
     /**
+     * 用户登录状态
+     */
+    public static boolean loginStatus;
+
+    /**
      * 用户账号
      */
     public static String account;
 
     /**
-     * 用户密码
+     * 用户登录后加密的登陆token
      */
-    public static String password;
-
-    /**
-     * 用户登录后加密的Token
-     */
-    public static String userToken;
+    public static String loginToken;
 
     /**
      * 融云imToken

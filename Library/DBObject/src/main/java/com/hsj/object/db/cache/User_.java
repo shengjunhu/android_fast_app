@@ -1,8 +1,8 @@
 
 package com.hsj.object.db.cache;
 
+import com.hsj.object.db.bean.User;
 import com.hsj.object.db.cache.UserCursor.Factory;
-
 import io.objectbox.EntityInfo;
 import io.objectbox.Property;
 import io.objectbox.annotation.apihint.Internal;
