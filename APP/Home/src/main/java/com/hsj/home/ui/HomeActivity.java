@@ -1,10 +1,9 @@
 package com.hsj.home.ui;
 
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.TextView;
-import com.hsj.app.base.ui.BaseActivity;
+
+import com.hsj.base.lib.ui.BaseActivity;
 import com.hsj.home.R;
 import com.hsj.home.ui.fragment.HomeFragment;
 

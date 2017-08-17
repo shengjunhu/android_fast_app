@@ -21,39 +21,43 @@ import java.lang.annotation.RetentionPolicy;
 public class UIStateView extends FrameLayout {
 
     /**
-     * 没有运行权限
+     * 没有运行权限（点击去设置权限）
      */
-    public static final int STATE_PERMISSION = -2;
+    public static final int STATE_PERMISSION = -3;
+
+    /**
+     * 没有登陆(点击去登陆)
+     */
+    public static final int STATE_NO_LOGIN   = -2;
 
     /**
      * 加载失败(点击视图，可重新请求网络)
      */
-    public static final int STATE_FAILURE = -1;
+    public static final int STATE_FAILURE    = -1;
 
     /**
      * 加载中
      */
-    public static final int STATE_LOAD = 0;
+    public static final int STATE_LOAD       = 0;
 
     /**
-     * 加载成功
+     * 加载成功（销毁本控件）
      */
-    public static final int STATE_SUCCESS = 1;
+    public static final int STATE_SUCCESS    = 1;
 
     /**
-     * 加载成功却无数据
+     * 加载成功却无数据（显示无数据占位图）
      */
-    public static final int STATE_EMPTY = 2;
+    public static final int STATE_EMPTY      = 2;
 
-
-    @IntDef({STATE_PERMISSION, STATE_FAILURE, STATE_LOAD, STATE_SUCCESS, STATE_EMPTY})
+    @IntDef({STATE_PERMISSION, STATE_NO_LOGIN, STATE_FAILURE, STATE_LOAD, STATE_SUCCESS, STATE_EMPTY})
     @Retention(RetentionPolicy.SOURCE)
     public @interface State {
 
     }
 
     /**
-     * 设置状态
+     * 设置状态：每设置一个状态销毁前一个状态
      */
     public void setState(@State int uiState) {
 

@@ -18,13 +18,59 @@
 
 package com.hsj.ui.kit.dialog;
 
+import android.app.Activity;
+
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/8/16 11:15
  * @Class:ProgressDialog
- * @Description:进度显示
+ * @Description:等待提示
  */
 public class ProgressDialog {
+
+    private Activity activity;
+    private String msg = " 请等待...";
+
+    /**
+     * 开始Dialog
+     * @param activity
+     */
+    private void start(Activity activity){
+        this.activity = activity;
+    }
+
+    /**
+     * 开始Dialog
+     * @param activity
+     * @param hitMsg
+     */
+    private void start(Activity activity,String hitMsg){
+        this.activity = activity;
+    }
+
+    /**
+     * 操作成功
+     * @param successMsg
+     */
+    private void onSucces(String successMsg){
+
+    }
+
+    /**
+     * 操作失败
+     * @param failureMsg
+     */
+    private void onFailure(String failureMsg){
+
+    }
+
+    /**
+     *  停止Dialog
+     */
+    private void stop(){
+
+    }
+
 
 }

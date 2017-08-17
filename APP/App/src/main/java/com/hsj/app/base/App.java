@@ -1,6 +1,6 @@
 package com.hsj.app.base;
 
-import com.hsj.app.base.core.BaseApp;
+import com.hsj.base.lib.core.BaseApp;
 
 /**
  * @Author:HSJ

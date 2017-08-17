@@ -8,4 +8,10 @@ package com.hsj.http.base;
  * @Description:
  */
 public class HttpConstants {
+
+    /**
+     * 设备ID
+     */
+    public static String deviceId = "000000000";
+
 }

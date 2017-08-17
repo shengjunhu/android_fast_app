@@ -21,7 +21,7 @@ package com.hsj.app.wxapi;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hsj.app.base.ui.BaseActivity;
+import com.hsj.base.lib.ui.BaseActivity;
 
 /**
  * @Company:南京荣之誉信息科技有限公司

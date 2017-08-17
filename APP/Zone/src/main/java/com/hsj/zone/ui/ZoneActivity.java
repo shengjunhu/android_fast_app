@@ -1,10 +1,9 @@
 package com.hsj.zone.ui;
 
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.TextView;
-import com.hsj.app.base.ui.BaseActivity;
+
+import com.hsj.base.lib.ui.BaseActivity;
 import com.hsj.zone.R;
 import com.hsj.zone.ui.fragment.ZoneFragment;
 

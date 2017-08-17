@@ -102,7 +102,7 @@ repositories {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(path: ':Library:Base')
+    compile project(path: ':Library:BaseLib')
     if (!rootProject.ext.android.isAppDebug) {
         compile project(path: ':APP:Home')
         compile project(path: ':APP:Shop')

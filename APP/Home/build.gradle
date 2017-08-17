@@ -69,5 +69,5 @@ repositories {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(path: ':Library:Base')
+    compile project(path: ':Library:BaseLib')
 }

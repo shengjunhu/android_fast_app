@@ -91,7 +91,7 @@ public interface HttpConstant {
     /**
      * 微博登陆成功自己的回调页面
      */
-    String REDIRECT_URL         = "http://www.365xbs.com";
+    String REDIRECT_URL         = "https://api.weibo.com/oauth2/default.html";
 
     /**
      * 微博的OAuth2.0 授权机制中 authorize 接口的一个参数
