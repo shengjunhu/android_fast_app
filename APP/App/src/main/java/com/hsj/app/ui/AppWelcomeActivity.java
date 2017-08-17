@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.hsj.app.R;
-import com.hsj.base.lib.ui.BaseActivity;
+import com.hsj.base.app.ui.AppBaseActivity;
 
 /**
  * @Author:HSJ
@@ -13,7 +13,7 @@ import com.hsj.base.lib.ui.BaseActivity;
  * @Class:AppWelcomeActivity
  * @Description:引导页
  */
-public class AppWelcomeActivity extends BaseActivity {
+public class AppWelcomeActivity extends AppBaseActivity {
 
     @Override
     protected int getLayoutId() {

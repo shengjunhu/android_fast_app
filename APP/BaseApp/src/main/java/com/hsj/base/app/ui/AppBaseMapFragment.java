@@ -31,10 +31,9 @@ public abstract class AppBaseMapFragment extends BaseFragment {
 
     public String TAG = this.getClass().getSimpleName();
 
-    /**
-     * 初始化网络
-     */
-    protected abstract void initHttp();
+    protected void initHttp(){
+
+    }
 
 }
 

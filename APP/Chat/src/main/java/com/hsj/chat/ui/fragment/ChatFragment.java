@@ -3,7 +3,7 @@ package com.hsj.chat.ui.fragment;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hsj.base.lib.ui.BaseFragment;
+import com.hsj.base.app.ui.AppBaseFragment;
 import com.hsj.chat.R;
 
 /**
@@ -13,7 +13,7 @@ import com.hsj.chat.R;
  * @Class:CarFragment
  * @Description:
  */
-public class ChatFragment extends BaseFragment {
+public class ChatFragment extends AppBaseFragment {
 
     @Override
     protected int getLayoutId() {

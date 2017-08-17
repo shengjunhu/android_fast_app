@@ -3,7 +3,7 @@ package com.hsj.zone.ui;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hsj.base.lib.ui.BaseActivity;
+import com.hsj.base.app.ui.AppBaseActivity;
 import com.hsj.zone.R;
 import com.hsj.zone.ui.fragment.ZoneFragment;
 
@@ -14,7 +14,7 @@ import com.hsj.zone.ui.fragment.ZoneFragment;
  * @Class:
  * @Description:
  */
-public class ZoneActivity extends BaseActivity {
+public class ZoneActivity extends AppBaseActivity {
 
     @Override
     protected int getLayoutId() {

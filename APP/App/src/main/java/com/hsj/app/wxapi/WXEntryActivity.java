@@ -3,7 +3,7 @@ package com.hsj.app.wxapi;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hsj.base.lib.ui.BaseActivity;
+import com.hsj.base.app.ui.AppBaseActivity;
 
 /**
  * @Author:HSJ
@@ -12,7 +12,7 @@ import com.hsj.base.lib.ui.BaseActivity;
  * @Class:WXEntryActivity
  * @Description:登陆、分享回调界面
  */
-public class WXEntryActivity extends BaseActivity {
+public class WXEntryActivity extends AppBaseActivity {
 
     @Override
     protected int getLayoutId() {

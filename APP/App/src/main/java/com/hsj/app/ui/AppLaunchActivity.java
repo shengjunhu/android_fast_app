@@ -3,7 +3,7 @@ package com.hsj.app.ui;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hsj.base.lib.ui.BaseActivity;
+import com.hsj.base.app.ui.AppBaseActivity;
 
 /**
  * @Author:HSJ
@@ -12,7 +12,7 @@ import com.hsj.base.lib.ui.BaseActivity;
  * @Class:AppLaunchActivity
  * @Description:启动页
  */
-public class AppLaunchActivity extends BaseActivity {
+public class AppLaunchActivity extends AppBaseActivity {
 
     @Override
     protected int getLayoutId() {

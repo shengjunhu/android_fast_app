@@ -40,8 +40,6 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     protected abstract void initUI(Bundle savedInstanceState);
 
-    protected abstract void init();
-
     protected abstract void initData();
 
     /**

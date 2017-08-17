@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.hsj.app.R;
-import com.hsj.base.lib.ui.BaseActivity;
+import com.hsj.base.app.ui.AppBaseActivity;
 
 /**
  * @Author:HSJ
@@ -13,7 +13,7 @@ import com.hsj.base.lib.ui.BaseActivity;
  * @Class:AppRegisterActivity
  * @Description:应用注册和找回密码界面
  */
-public class AppRegisterActivity extends BaseActivity {
+public class AppRegisterActivity extends AppBaseActivity {
 
     @Override
     protected int getLayoutId() {

@@ -6,8 +6,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.KeyEvent;
 import android.view.View;
+
 import com.hsj.app.R;
-import com.hsj.base.lib.ui.BaseActivity;
+import com.hsj.base.app.ui.AppBaseActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +20,7 @@ import java.util.List;
  * @Class:
  * @Description:应用主页
  */
-public class AppMainActivity extends BaseActivity {
+public class AppMainActivity extends AppBaseActivity {
 
     private boolean isExitApp;
     private boolean isFirstShow;

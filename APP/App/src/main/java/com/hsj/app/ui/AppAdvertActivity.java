@@ -21,7 +21,7 @@ package com.hsj.app.ui;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hsj.base.lib.ui.BaseActivity;
+import com.hsj.base.app.ui.AppBaseActivity;
 
 /**
  * @Author:HSJ
@@ -30,7 +30,7 @@ import com.hsj.base.lib.ui.BaseActivity;
  * @Class:AppAdvertActivity
  * @Description:广告页
  */
-public class AppAdvertActivity extends BaseActivity {
+public class AppAdvertActivity extends AppBaseActivity {
 
     @Override
     protected int getLayoutId() {

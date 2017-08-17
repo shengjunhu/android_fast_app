@@ -3,7 +3,7 @@ package com.hsj.zone.ui.fragment;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hsj.base.lib.ui.BaseFragment;
+import com.hsj.base.app.ui.AppBaseFragment;
 import com.hsj.zone.R;
 
 /**
@@ -13,7 +13,7 @@ import com.hsj.zone.R;
  * @Class:ZoneFragment
  * @Description:
  */
-public class ZoneFragment extends BaseFragment {
+public class ZoneFragment extends AppBaseFragment {
 
     @Override
     protected int getLayoutId() {
