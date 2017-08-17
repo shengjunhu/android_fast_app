@@ -12,7 +12,7 @@ android {
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
 
-        //ndk { abiFilters "armeabi"}
+        ndk { abiFilters "armeabi-v7a", "x86" }
         testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]
         multiDexEnabled true
     }
@@ -21,13 +21,6 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-
-    sourceSets {
-        main {
-            jni.srcDirs = []
-            jniLibs.srcDirs = ['libs']
         }
     }
 

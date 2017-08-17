@@ -27,11 +27,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            minifyEnabled true
-            shrinkResources true
-            zipAlignEnabled true
-            debuggable true
-            jniDebuggable true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -84,7 +80,7 @@ android {
     }
 
     dexOptions {
-        javaMaxHeapSize "4g"
+        javaMaxHeapSize "2g"
     }
 
     compileOptions {
@@ -102,7 +98,6 @@ repositories {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(path: ':Library:BaseLib')
     if (!rootProject.ext.android.isAppDebug) {
         compile project(path: ':APP:Home')
         compile project(path: ':APP:Shop')

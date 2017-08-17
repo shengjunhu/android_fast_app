@@ -16,20 +16,15 @@
  *
  ******************************************************************************/
 
-package com.hsj.xmpp;
-
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+package com.hsj.base.app;
 
 /**
- * Example local unit test, which will execute on the development machine (host).
- *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+ * @Author:HSJ
+ * @E-mail:mr.ajun@foxmail.com
+ * @Date:2017/8/17 13:04
+ * @Class:AppInfo
+ * @Description:
  */
-public class ExampleUnitTest {
-    @Test
-    public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
-    }
+public class AppInfo {
+
 }
