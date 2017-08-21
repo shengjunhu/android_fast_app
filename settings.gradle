@@ -13,6 +13,7 @@ include ':APP:App',                 //主app
         ':ThirdSDK:GDMap',          //高德地图SDK
         ':ThirdSDK:QNCloud',        //七牛云SDK
         ':ThirdSDK:BDCloud',        //百度云库
+        ':ThirdSDK:AR',             //AR技术
         ':ThirdSDK:Bugly',          //腾讯热修复库
 
         ':Library:Sample',          //使用介绍Module
@@ -25,6 +26,7 @@ include ':APP:App',                 //主app
         ':Library:VideoPlayer',     //视屏播放库
         ':Library:Keyboard',        //自定义键盘和表情库
         ':Library:GPSLocation',     //GPS定位、手机信号基站
+        ':Library:BlueTooth',       //蓝牙
         ':Library:NdkLib',          //NdkLIb：性能优化
         ':Library:DB',              //GreenDao数据缓存库
         ':Library:XMPP',            //长连接、及时通讯、推送

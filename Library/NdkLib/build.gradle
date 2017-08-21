@@ -19,7 +19,7 @@ android {
 
         ndk {
             moduleName "app"
-            abiFilters "armeabi", "armeabi-v7a", "x86"
+            abiFilters "armeabi-v7a", "x86"
         }
 
     }
@@ -34,6 +34,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    
     externalNativeBuild {
         cmake {
             path "CMakeLists.txt"

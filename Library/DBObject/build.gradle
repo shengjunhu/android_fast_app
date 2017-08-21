@@ -23,7 +23,6 @@ android {
 
     objectbox {
         generateTests true
-
         daoPackage 'com.hsj.object.db.cache'
         targetGenDir 'src/main/java/'
     }

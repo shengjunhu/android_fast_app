@@ -30,8 +30,6 @@ android {
             }else{
                 manifest.srcFile 'src/main/release/AndroidManifest.xml'
             }
-            jni.srcDirs = []
-            jniLibs.srcDirs = ['libs']
         }
     }
 

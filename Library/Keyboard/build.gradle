@@ -19,11 +19,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
-            zipAlignEnabled true
-            debuggable false
-            jniDebuggable false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
@@ -39,8 +35,6 @@ android {
             }else{
                 manifest.srcFile 'src/main/release/AndroidManifest.xml'
             }
-            jni.srcDirs = []
-            jniLibs.srcDirs = ['libs']
         }
     }
 
