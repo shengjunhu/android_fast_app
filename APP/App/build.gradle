@@ -12,6 +12,10 @@ android {
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
 
+        // 矢量图
+        vectorDrawables.useSupportLibrary = true
+
+        //打包时筛选出这两种架构
         ndk { abiFilters "armeabi-v7a", "x86" }
 
         testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]

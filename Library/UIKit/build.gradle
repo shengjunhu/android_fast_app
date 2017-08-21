@@ -12,6 +12,9 @@ android {
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
 
+        // 矢量图
+        vectorDrawables.useSupportLibrary = true
+
     }
     buildTypes {
         release {

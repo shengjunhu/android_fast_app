@@ -22,3 +22,14 @@
 2、Retrofit2 使用
 3、注解使用
 4、权限封装
+
+### res使用
+* 1 矢量图使用：
+```
+    vector xml图片适配效果好，文件小
+    ImageView 使用：app:srcCompat
+
+```
+
+
+### 原生API使用
