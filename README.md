@@ -34,8 +34,8 @@
   * [Keyboard       :自定义键盘](/Library/Keyboard/Keyboard_README.md)
   * [Web            :Web封装库](/Library/Web/Web_README.md)
   * [GPSLocation    :GPS定位](/Library/GPSLocation/GPSLocation_README.md)
+  * [BlueTooth      :数据库模块](/Library/BlueTooth/BlueTooth_README.md)
   * [DB             :数据库模块](/Library/DB/DB_README.md)
-  * [BlueTooth      :数据库模块](/Library/DB/DB_README.md)
   * [DBObject       :对象存储](/Library/DBObject/DBObject_README.md)
   * [Router         :数据路由者](/Library/Router/Router_README.md)
   * [NdkLib         :NDK模块](/Library/NdkLib/NdkLib_README.md)
@@ -51,7 +51,9 @@
   * [GDMap          :高德地图](/ThirdSDK/GDMap/GDMap_README.md)
   * [QNCloud        :七牛云存储](/ThirdSDK/QNCloud/QNCloud_README.md)
   * [IM             :及时通讯](/ThirdSDK/IM/IM_README.md)
-  * [AR             :及时通讯](/ThirdSDK/AR/AR_README.md)
+  * [AR             :AR](/ThirdSDK/AR/AR_README.md)
+  * [U3D            :unity3d模块](/ThirdSDK/U3D/U3D_README.md)
+  * [RePlugin       :RePlugin模块](/ThirdSDK/RePlugin/RePlugin_README.md)
   * [Bugly          :热修复](/ThirdSDK/Bugly/Bugly_README.md)
 
 ### 关于缓存：
