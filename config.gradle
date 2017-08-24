@@ -5,7 +5,8 @@ ext {
             library                    : 'com.android.library',
             maven                      : 'com.github.dcendents.android-maven',
             bintray                    : 'com.jfrog.bintray',
-            retrolambda                : 'me.tatarka.retrolambda'
+            //JDK1.8编译依赖
+            retrolambda                : 'me.tatarka.retrolambda',
     ]
 
     android = [
@@ -18,7 +19,7 @@ ext {
 
             isAppDebug                 : true,
             isLibDebug                 : true,
-            isSDKDebug                 : true
+            isSDKDebug                 : true,
     ]
 
     version = [
@@ -31,7 +32,7 @@ ext {
             glideVersion               : "4.0.0-RC0",
             rxlifecycleSdkVersion      : "1.0",
             leakcanaryVersion          : "1.5.1",
-            objectBoxVersion           : "0.9.12"
+            objectBoxVersion           : "0.9.12",
     ]
 
     dependencies = [
@@ -50,7 +51,7 @@ ext {
             "testCompile"              : "junit:junit:4.12",
             "testInstrumentationRunner": "android.support.test.runner.AndroidJUnitRunner",
 
-            //Network
+            //retrofit
             "retrofit"                 : "com.squareup.retrofit2:retrofit:${version["retrofitVersion"]}",
             "retrofit-converters"      : "com.squareup.retrofit2:retrofit-converters:${version["retrofitVersion"]}",
             "retrofit-adapters"        : "com.squareup.retrofit2:retrofit-adapters:${version["retrofitVersion"]}",
@@ -78,16 +79,26 @@ ext {
             "leakcanary-release"       : "com.squareup.leakcanary:leakcanary-android-no-op:${version["leakcanaryVersion"]}",
 
             //QQ、微信、微博：登录、支付、分享
+            "qq"                       : "/ThirdSDK/Login/libs/open_sdk_r5793_lite.jar",
+            "alipay"                   : "/ThirdSDK/Pay/libs/alipaySdk-20170623-proguard.jar",
             "wechat"                   : "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+",
             "weibo"                    : "com.sina.weibo.sdk:core:2.0.3:openDefaultRelease@aar",
+
+            //百度地图
+            "baidumap"                 : "/ThirdSDK/BDMap/libs/...",
+
+            //百度云
+            "baiducloud"               : "/ThirdSDK/BDCloud/libs/bos-android-sdk-1.0.2.jar",
+
+            //七牛云
+            "qiniucloud"               : "com.qiniu:qiniu-android-sdk:7.3.+",
 
             //高德：3D地图、2D地图、导航、搜索、定位
             "amap_3d"                  : "com.amap.api:3dmap:latest.integration",
             "amap_2d"                  : "com.amap.api:map2d:latest.integration",
             "amap_navi"                : "com.amap.api:navi-3dmap:latest.integration",
             "amap_search"              : "com.amap.api:search:latest.integration",
-            "amap_location"            : "com.amap.api:location:latest.integration"
-
+            "amap_location"            : "com.amap.api:location:latest.integration",
     ]
 
 }
