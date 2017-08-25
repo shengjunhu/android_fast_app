@@ -1,4 +1,8 @@
-apply plugin: rootProject.ext.plugins.application
+if(rootProject.ext.android.isAppDebug){
+    apply plugin:rootProject.ext.plugins.application
+}else {
+    apply plugin:rootProject.ext.plugins.library
+}
 apply plugin: rootProject.ext.plugins.retrolambda
 
 android {
@@ -6,7 +10,7 @@ android {
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 
     defaultConfig {
-        applicationId "com.hsj.app"
+        //applicationId "com.hsj.app"
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
@@ -23,11 +27,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
-            zipAlignEnabled true
-            debuggable false
-            jniDebuggable false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
@@ -36,55 +36,14 @@ android {
         }
     }
 
-    applicationVariants.all { variant ->
-        variant.outputs.each { output ->
-            def outputFile = output.outputFile
-            if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                def fileName = "App_${variant.productFlavors[0].name}_v${defaultConfig.versionName}.apk"
-                output.outputFile = new File(outputFile.parent, fileName)
+    sourceSets {
+        main {
+            if(rootProject.ext.android.isAppDebug){
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            }else{
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
             }
         }
-    }
-
-    productFlavors {
-        baidu {
-            applicationId 'com.hsj.app1'
-        }
-        tencent {
-            applicationId 'com.hsj.app2'
-        }
-        xiaomi {
-            applicationId 'com.hsj.app3'
-        }
-        qihu {
-            applicationId 'com.hsj.app4'
-        }
-        huawei {
-            applicationId 'com.hsj.app5'
-        }
-    }
-
-    packagingOptions {
-        exclude 'AndroidManifest.xml'
-        exclude 'META-INF/DEPENDENCIES.txt'
-        exclude 'META-INF/LICENSE.txt'
-        exclude 'META-INF/NOTICE.txt'
-        exclude 'META-INF/NOTICE'
-        exclude 'META-INF/LICENSE'
-        exclude 'META-INF/DEPENDENCIES'
-        exclude 'META-INF/notice.txt'
-        exclude 'META-INF/license.txt'
-        exclude 'META-INF/dependencies.txt'
-        exclude 'META-INF/LGPL2.1'
-    }
-
-    lintOptions {
-        checkReleaseBuilds false
-        abortOnError false
-    }
-
-    dexOptions {
-        javaMaxHeapSize "2g"
     }
 
     compileOptions {
