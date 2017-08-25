@@ -1,4 +1,5 @@
-include ':APP:App',                 //主app
+include ':APP:Host',                //app宿主程序
+        ':APP:App',                 //主app
         ':APP:Home',                //app主页模块
         ':APP:Shop',                //app商城模块
         ':APP:Chat',                //app聊天模块

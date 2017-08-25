@@ -1,9 +1,10 @@
-if(rootProject.ext.android.isSDKDebug){
-    apply plugin:rootProject.ext.plugins.application
-}else {
-    apply plugin:rootProject.ext.plugins.library
+if (rootProject.ext.android.isSDKDebug) {
+    apply plugin: rootProject.ext.plugins.application
+} else {
+    apply plugin: rootProject.ext.plugins.library
 }
 apply plugin: rootProject.ext.plugins.retrolambda
+apply plugin: 'replugin-host-gradle'
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
@@ -26,9 +27,9 @@ android {
 
     sourceSets {
         main {
-            if(rootProject.ext.android.isSDKDebug){
+            if (rootProject.ext.android.isSDKDebug) {
                 manifest.srcFile 'src/main/debug/AndroidManifest.xml'
-            }else{
+            } else {
                 manifest.srcFile 'src/main/release/AndroidManifest.xml'
             }
         }
@@ -41,8 +42,30 @@ android {
 
 }
 
+/**
+ * 配置项均为可选配置，默认无需添加
+ * 更多可选配置项参见replugin-host-gradle的RepluginConfig类
+ * 可更改配置项参见 自动生成RePluginHostConfig.java
+ */
+repluginHostConfig {
+    /**
+     * 是否使用 AppCompat 库
+     * 不需要个性化配置时，无需添加
+     */
+    useAppCompat = true
+    /**
+     * 背景不透明的坑的数量
+     * 不需要个性化配置时，无需添加
+     */
+    countNotTranslucentStandard = 6
+    countNotTranslucentSingleTop = 2
+    countNotTranslucentSingleTask = 3
+    countNotTranslucentSingleInstance = 2
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile rootProject.ext.dependencies["constraint-layout"]
     compile rootProject.ext.dependencies["appcompat-v7"]
+    compile rootProject.ext.dependencies["replugin"]
 }

@@ -3,10 +3,10 @@ ext {
     plugins = [
             application                : 'com.android.application',
             library                    : 'com.android.library',
-            maven                      : 'com.github.dcendents.android-maven',
-            bintray                    : 'com.jfrog.bintray',
             //JDK1.8编译依赖
             retrolambda                : 'me.tatarka.retrolambda',
+            //插件
+            replugin                   : 'replugin-host-gradle',
     ]
 
     android = [
@@ -99,6 +99,9 @@ ext {
             "amap_navi"                : "com.amap.api:navi-3dmap:latest.integration",
             "amap_search"              : "com.amap.api:search:latest.integration",
             "amap_location"            : "com.amap.api:location:latest.integration",
+
+            //plugin
+            "replugin"                 : "com.qihoo360.replugin:replugin-host-lib:2.2.0",
     ]
 
 }
