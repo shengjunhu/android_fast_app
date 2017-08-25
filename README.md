@@ -9,13 +9,13 @@
 ## 结构组成：
 ### 主工程APP： 
   * [Host           :宿主程序](/APP/Host/Host_README.md)
-  * [App            :主模块](/APP/App/App_README.md)
-  * [Home           :首页模块](/APP/App/Home_README.md)
-  * [Shop           :商城模块](/APP/App/Shop_README.md)
-  * [Chat           :聊天模块](/APP/App/Chat_README.md)
-  * [Zone           :朋友圈模块](/APP/App/Zone_README.md)
-  * [Me             :我的模块](/APP/App/Me_README.md)
-  * [BaseApp        :我的模块](/APP/App/BaseApp_README.md)
+  * [App            :应用入口插件](/APP/App/App_README.md)
+  * [Home           :应用首页插件](/APP/App/Home_README.md)
+  * [Shop           :应用商城插件](/APP/App/Shop_README.md)
+  * [Chat           :应用聊天插件](/APP/App/Chat_README.md)
+  * [Zone           :应用社区插件](/APP/App/Zone_README.md)
+  * [Me             :应用我的插件](/APP/App/Me_README.md)
+  * [BaseApp        :应用层基类模块](/APP/App/BaseApp_README.md)
  
 ### 库工程Library：
   * [Sample         :使用说明Module](/Library/Sample/Sample_README.md)
@@ -144,4 +144,36 @@
 ①应用内存清理：执行在主线程
 ②应用缓存清理：执行在子线程
 ③定期管理缓存：后台任务管理中检查缓存，缓存时间过长子线程中删除
+```
+
+### 关于作者：
+* Author：阿军
+* Date： 2017/1/9
+* E-Mail： mr.ajun@foxmail.com
+* GitHub：[GitHub](https://github.com/LittleRedArmy/RedPacket)
+* Blog：[CSDN](http://blog.csdn.net/hshengjun/article/details/54408704)
+
+### 关于License
+```text
+MIT License
+
+Copyright (c) 2017 2017 HSJ
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```
