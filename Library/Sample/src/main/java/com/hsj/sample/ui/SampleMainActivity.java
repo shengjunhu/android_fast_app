@@ -1,10 +1,12 @@
-package com.hsj.sample;
+package com.hsj.sample.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
+import com.hsj.sample.R;
 
 public class SampleMainActivity extends AppCompatActivity implements View.OnClickListener{
 

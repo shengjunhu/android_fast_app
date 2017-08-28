@@ -14,16 +14,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SampleMainActivity">
+        <activity android:name=".ui.SampleMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SwipeRefreshLayoutActivity" />
+        <activity android:name=".ui.SwipeRefreshLayoutActivity" />
         <activity
-            android:name=".LaunchActivity"
+            android:name=".ui.LaunchActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_launch"
             android:theme="@style/FullscreenTheme">
@@ -34,22 +34,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".ui.WelcomeActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_welcome"
             android:theme="@style/FullscreenTheme" />
         <activity
-            android:name=".DrawerActivity"
+            android:name=".ui.DrawerActivity"
             android:label="@string/title_activity_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.LoginActivity"
             android:label="@string/title_activity_login" />
         <activity
-            android:name=".ScrollingActivity"
+            android:name=".ui.ScrollingActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".NativeWidgetActivity"></activity>
+        <activity android:name=".ui.NativeWidgetActivity" />
+
     </application>
 
 </manifest>

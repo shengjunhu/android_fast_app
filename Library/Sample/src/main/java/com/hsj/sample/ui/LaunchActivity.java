@@ -1,4 +1,4 @@
-package com.hsj.sample;
+package com.hsj.sample.ui;
 
 import android.annotation.SuppressLint;
 import android.support.v7.app.ActionBar;
@@ -8,11 +8,13 @@ import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.hsj.sample.R;
+
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class WelcomeActivity extends AppCompatActivity {
+public class LaunchActivity extends AppCompatActivity {
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -86,8 +88,7 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_welcome);
+        setContentView(R.layout.activity_launch);
 
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);

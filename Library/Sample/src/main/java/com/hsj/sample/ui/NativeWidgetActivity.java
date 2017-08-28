@@ -1,7 +1,9 @@
-package com.hsj.sample;
+package com.hsj.sample.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.hsj.sample.R;
 
 public class NativeWidgetActivity extends AppCompatActivity {
 
