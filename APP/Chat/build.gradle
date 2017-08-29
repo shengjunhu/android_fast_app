@@ -22,13 +22,6 @@ android {
         }
     }
 
-    sourceSets {
-        main {
-            jni.srcDirs = []
-            jniLibs.srcDirs = ['libs']
-        }
-    }
-
     packagingOptions {
         exclude 'AndroidManifest.xml'
     }
