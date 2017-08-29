@@ -51,6 +51,9 @@ ext {
             "testCompile"              : "junit:junit:4.12",
             "testInstrumentationRunner": "android.support.test.runner.AndroidJUnitRunner",
 
+            //facebook
+            "stetho"                   : "com.facebook.stetho:stetho:1.4.1",
+
             //retrofit
             "retrofit"                 : "com.squareup.retrofit2:retrofit:${version["retrofitVersion"]}",
             "retrofit-converters"      : "com.squareup.retrofit2:retrofit-converters:${version["retrofitVersion"]}",

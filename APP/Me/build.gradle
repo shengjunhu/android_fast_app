@@ -19,6 +19,7 @@ android {
         testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]
 
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -28,6 +29,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    dataBinding {
+        enabled = true
     }
 
     sourceSets {

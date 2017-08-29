@@ -1,4 +1,4 @@
-apply plugin: rootProject.ext.plugins.library
+ apply plugin: rootProject.ext.plugins.library
 apply plugin: rootProject.ext.plugins.retrolambda
 
 android {
@@ -22,6 +22,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    dataBinding {
+        enabled = true
     }
 
     compileOptions {

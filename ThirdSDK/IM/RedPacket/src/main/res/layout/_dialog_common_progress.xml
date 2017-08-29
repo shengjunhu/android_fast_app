@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/_common_progress_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="2dip" >
+
+    <ProgressBar
+        android:id="@+id/comm_proress"
+        style="@style/mediumCustomProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/progress_dialog_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="5.0dip"
+        android:layout_toRightOf="@id/comm_proress"
+        android:text="请稍候..."
+        android:textColor="#ffffffff"
+        android:textSize="16sp" />
+
+</RelativeLayout>

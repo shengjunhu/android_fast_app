@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+     >
+    
+    <com.melink.bqmmsdk.widget.BQMMMessageText
+            android:maxWidth="225.0dip"
+            android:id="@+id/bqmm_message_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="left|center"
+            android:lineSpacingExtra="2dp"
+            android:minHeight="50dp"
+            android:textColor="#ff000000"
+            android:textSize="15sp" 
+            android:background="@drawable/bqmm_chatfrom_bg"
+            />
+    
+   <!--  展示非gif静态图片用 -->
+        <ImageView
+                android:id="@+id/bqmm_message_img"
+                android:layout_width="240px"
+                android:layout_height="240px"
+                android:scaleType="fitCenter" 
+                android:padding="5dp"
+                android:visibility="gone"
+                />
+     <!--    展示gif图片用 -->
+            <com.melink.bqmmsdk.widget.GifMovieView 
+                android:id="@+id/bqmm_message_gif"
+                android:layout_width="240px"
+                android:layout_height="240px"
+            	android:visibility="gone"
+            	android:padding="5dp"
+                />
+</RelativeLayout>

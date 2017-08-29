@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:orientation="vertical"
+     >
+    <com.jrmf360.rylib.rp.widget.ActionBarView
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:content="添加银行卡" />
+
+    <LinearLayout
+        android:id="@+id/layout_step2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_padding"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/base_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_username"
+                style="@style/text_black_16"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="username"
+                />
+
+            <TextView
+                android:id="@+id/tv_identityno"
+                style="@style/text_black_16"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical|right"
+                android:text="identityno"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_cardname"
+            style="@style/text_black_16"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:gravity="center_vertical"
+            android:text="cardname" />
+
+        <com.jrmf360.rylib.rp.widget.FloatingLabelTextView
+            android:id="@+id/ftv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            app:allowEmpty="false"
+            app:hint="银行预留手机号"
+            app:validatorType="phone" />
+
+
+        <TextView
+            android:id="@+id/tv_charge_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="3dip"
+            android:textSize="10sp"
+            android:textColor="@color/gray"
+            android:text="银行会从您卡上扣除1分钱用于验证您所填卡的真实有效性" />
+
+
+        <TextView
+            android:id="@+id/tv_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:paddingBottom="3dip"
+            android:layout_marginTop="25dp"
+            android:textSize="14sp"
+            android:text="点击下一步视为您同意《金融魔方用户协议》"/>
+
+        <Button
+            android:id="@+id/btn_next_step2"
+            style="@style/text_white_16"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="@dimen/base_padding"
+            android:background="@drawable/selector_common_btn"
+            android:text="下一步" />
+
+    </LinearLayout>
+</LinearLayout>

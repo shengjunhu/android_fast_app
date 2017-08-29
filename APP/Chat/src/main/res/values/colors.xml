@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <!-- -->
+    <color name="black_textview">#575757</color>
+    <color name="group_list_black_textview">#353535</color>
+    <color name="group_list_gray">#999999</color>
+    <color name="group_list_liner">#e4e4e4</color>
+    <color name="main_title_backgroud">#F2F2F2</color>
+    <color name="main_regist">#ffffff</color>
+    <color name="button_backgroud">#0195ff</color>
+    <color name="de_title_bg">#0195ff</color>
+    <color name="seal_bg">#f0f0f6</color>
+
+    <color name="rc_text_color_secondary_inverse">@android:color/white</color>
+
+    <!--actionbar-->
+    <color name="de_actionbar_bg">#0195ff</color>
+    <!---->
+    <color name="de_action_color">#3498DB</color>
+    <color name="de_action_white">@android:color/white</color>
+    <color name="de_transparent">#00000000</color>
+
+    <color name="de_draft_color">#cb120f</color>
+    <color name="main_theme_color">#0195ff</color>
+
+    <color name="press">#e8e8e8</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="text_line_color">#dfdfdd</color>
+    <color name="text_black_color">#333333</color>
+    <color name="text_tips_color">#666666</color>
+    <color name="mine_head_color">#cccccc</color>
+    <color name="text_color">#353535</color>
+
+    <!--SWITCH-->
+    <color name="ksw_md_ripple_normal">#1E000000</color>
+    <color name="ksw_md_solid_shadow">#33000000</color>
+    <color name="ksw_md_solid_normal">#ECECEC</color>
+    <color name="ksw_md_solid_disable">#FFFFFF</color>
+    <color name="ksw_md_solid_checked_disable">#aaaaaa</color>
+
+    <color name="ac_filter_string_color">#0099ff</color>
 </resources>

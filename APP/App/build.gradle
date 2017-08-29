@@ -36,6 +36,10 @@ android {
         }
     }
 
+    dataBinding {
+        enabled = true
+    }
+
     sourceSets {
         main {
             if(rootProject.ext.android.isAppDebug){

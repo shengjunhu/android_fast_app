@@ -10,15 +10,29 @@ android {
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 
     defaultConfig {
-        //applicationId "com.hsj.chat"
+        //applicationId "cn.rongcloud.im"
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
 
-        testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]
-
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
     }
+
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    packagingOptions {
+        exclude 'AndroidManifest.xml'
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -45,9 +59,38 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(path: ':APP:BaseApp')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile rootProject.ext.dependencies["multidex"]
+    compile rootProject.ext.dependencies["support-v4"]
+    compile rootProject.ext.dependencies["appcompat-v7"]
+
+    compile rootProject.ext.dependencies["stetho"]
+    compile files('libs/MiPush_SDK_Client_3_2_2.jar')
+    compile(name: 'HMS-SDK-2.4.0.300', ext: 'aar')
+
+    compile project(path: ':ThirdSDK:IM:Recognizer')
+    compile project(path: ':ThirdSDK:IM:Contactcard')
+    compile project(path: ':ThirdSDK:IM:Sticker')
+    compile project(path: ':ThirdSDK:IM:IMKit')
+    compile project(path: ':ThirdSDK:IM:CallKit')
+    compile project(path: ':ThirdSDK:IM:RedPacket')
 }
+
+

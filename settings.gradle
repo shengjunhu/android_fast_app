@@ -19,6 +19,15 @@ include ':APP:Host',                //app宿主程序
         ':ThirdSDK:RePlugin',       //插件化工具（采用360）
         ':ThirdSDK:Bugly',          //腾讯热修复库（采用Tencent）
 
+        ':ThirdSDK:IM:IMLib',
+        ':ThirdSDK:IM:IMKit',
+        ':ThirdSDK:IM:CallKit',
+        ':ThirdSDK:IM:CallLib',
+        ':ThirdSDK:IM:Recognizer',
+        ':ThirdSDK:IM:RedPacket',
+        ':ThirdSDK:IM:Sticker',
+        ':ThirdSDK:IM:Contactcard',
+
         ':Library:Sample',          //使用介绍Module
         ':Library:Permission',      //权限处理库
         ':Library:QRProvider',      //二维码库

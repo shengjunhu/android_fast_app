@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingRight="5dip"
+    android:paddingTop="3dip">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="银行卡号"
+        android:textColor="@color/black"
+        android:textSize="12dip" />
+
+    <com.jrmf360.rylib.rp.widget.ClearEditText
+        android:id="@+id/edittext"
+        style="@style/text_black_16"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:background="@null"
+        android:text="我了割草" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginTop="3dip"
+        android:background="@color/gray" />
+
+</LinearLayout>
+
