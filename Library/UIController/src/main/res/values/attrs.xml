@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 界面加载状态控件 -->
+    <declare-styleable name="UIStateView">
+        <attr name="state_load"         format="reference" />
+        <attr name="state_success"      format="reference" />
+        <attr name="state_empty"        format="reference" />
+        <attr name="state_network"      format="reference" />
+        <attr name="state_failure"      format="reference" />
+        <attr name="state_login"        format="reference" />
+        <attr name="state_permission"   format="reference" />
+    </declare-styleable>
+
+</resources>

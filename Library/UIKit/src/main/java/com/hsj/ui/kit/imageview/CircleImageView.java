@@ -16,15 +16,33 @@
  *
  ******************************************************************************/
 
-package com.hsj.ui.kit.img;
+package com.hsj.ui.kit.imageview;
+
+import android.content.Context;
+import android.support.v7.widget.AppCompatImageView;
+import android.util.AttributeSet;
 
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/8/16 11:27
  * @Class:CircleImageView
- * @Description:
+ * @Description:圆形图片
  */
-public class CircleImageView {
+public class CircleImageView extends AppCompatImageView{
+
+    public CircleImageView(Context context) {
+        super(context);
+    }
+
+    public CircleImageView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public CircleImageView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+
 
 }

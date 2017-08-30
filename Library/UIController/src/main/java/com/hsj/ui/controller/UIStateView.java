@@ -23,17 +23,22 @@ public class UIStateView extends FrameLayout {
     /**
      * 没有运行权限（点击去设置权限）
      */
-    public static final int STATE_PERMISSION = -3;
+    public static final int STATE_PERMISSION = -4;
 
     /**
      * 没有登陆(点击去登陆)
      */
-    public static final int STATE_NO_LOGIN   = -2;
+    public static final int STATE_LOGIN      = -3;
 
     /**
-     * 加载失败(点击视图，可重新请求网络)
+     * 服务器异常(点击视图，可重新请求网络)
      */
-    public static final int STATE_FAILURE    = -1;
+    public static final int STATE_FAILURE    = -2;
+
+    /**
+     * 网络异常（去打开网络）
+     */
+    public static final int STATE_NETWORK    = -1;
 
     /**
      * 加载中
@@ -50,7 +55,7 @@ public class UIStateView extends FrameLayout {
      */
     public static final int STATE_EMPTY      = 2;
 
-    @IntDef({STATE_PERMISSION, STATE_NO_LOGIN, STATE_FAILURE, STATE_LOAD, STATE_SUCCESS, STATE_EMPTY})
+    @IntDef({STATE_PERMISSION, STATE_LOGIN, STATE_FAILURE, STATE_NETWORK,STATE_LOAD, STATE_SUCCESS, STATE_EMPTY})
     @Retention(RetentionPolicy.SOURCE)
     public @interface State {
 
@@ -75,13 +80,12 @@ public class UIStateView extends FrameLayout {
 
     public UIStateView(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        initUIStateView();
+
     }
 
     private void initUIStateView() {
 
     }
-
 
 }
 

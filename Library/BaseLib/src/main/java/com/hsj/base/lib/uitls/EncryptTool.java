@@ -13,8 +13,17 @@ public class EncryptTool {
      * 功能如下：
      *
      * 1、MD5
-     * 2、Base64
-     * 3、
+     * 2、SHA1
+     * 3、Base64
+     * 4、AES
+     * 5、DES
+     * 6、RSA
      */
+
+    public static String md5(String str){
+        return "";
+    }
+
+
 
 }
