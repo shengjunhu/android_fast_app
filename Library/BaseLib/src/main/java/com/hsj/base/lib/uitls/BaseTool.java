@@ -1,5 +1,7 @@
 package com.hsj.base.lib.uitls;
 
+import android.content.Context;
+import android.net.TrafficStats;
 import android.text.TextUtils;
 
 import java.text.SimpleDateFormat;
@@ -30,28 +32,31 @@ public class BaseTool {
 
     /**
      * 判断字符串是否为null 或 ""
+     *
      * @param str
      * @return
      */
-    public static boolean isEmpty(String str){
+    public static boolean isEmpty(String str) {
         return TextUtils.isEmpty(str);
     }
 
     /**
      * EditText、TextView设置文本
+     *
      * @param str
      * @return
      */
-    public String setStr(String str){
-        if(TextUtils.isEmpty(str)){
+    public String setStr(String str) {
+        if (TextUtils.isEmpty(str)) {
             return "";
-        }else {
+        } else {
             return str;
         }
     }
 
     /**
      * 当前时间格式
+     *
      * @return
      */
     public static String timeFormat() {
@@ -67,11 +72,34 @@ public class BaseTool {
      */
     public static boolean isPhoneNum(String phoneNum) {
         if (isEmpty(phoneNum)) return false;
-
         String regExp0 = "^((13[0-9])|(15[^4])|(18[0,2,3,5-9])|(17[0-8])|(147))\\d{8}$";
         Matcher mMatcher0 = Pattern.compile(regExp0).matcher(phoneNum);
-
         return mMatcher0.matches();
+    }
+
+    /**
+     * 得到网络速度
+     *
+     * @param context
+     * @return
+     */
+    public String getNetSpeed(Context context) {
+        long lastTotalRxBytes = 0;
+        long lastTimeStamp = 0;
+
+        String netSpeed = "0 kb/s";
+        long nowTotalRxBytes = TrafficStats.getUidRxBytes(context.getApplicationInfo().uid) ==
+                TrafficStats.UNSUPPORTED ? 0 : (TrafficStats.getTotalRxBytes() / 1024);//转为KB;
+
+        long nowTimeStamp = System.currentTimeMillis();
+
+        long speed = ((nowTotalRxBytes - lastTotalRxBytes) * 1000 / (nowTimeStamp - lastTimeStamp));//毫秒转换
+
+        lastTimeStamp = nowTimeStamp;
+        lastTotalRxBytes = nowTotalRxBytes;
+        netSpeed = String.valueOf(speed) + " kb/s";
+
+        return netSpeed;
     }
 
 }
