@@ -8,6 +8,8 @@
     <color name="windowBackground">#FFFFFF</color>
     <color name="navigationBarColor">#34B6FF</color>
 
+    <color name="colorTheme">#FFFFFF</color>
+
     <color name="color3">#333333</color>
     <color name="color6">#666666</color>
     <color name="color9">#999999</color>

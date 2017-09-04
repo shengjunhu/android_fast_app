@@ -22,39 +22,69 @@ import android.widget.ScrollView;
  */
 public class RefreshLayout extends FrameLayout {
 
-    private boolean isRefresh,isLoadMore;
-    private int refreshTime,loadTime;
+    /**
+     * 处于刷新状态
+     */
+    private boolean isRefresh;
+    /**
+     * 处于加载状态
+     */
+    private boolean isLoadMore;
+    /**
+     * 停止刷新或加载（无论出于刷新or加载更多）
+     */
+    private boolean isStopRefreshOrLoad;
+    /**
+     * 刷新时间
+     */
+    private long refreshTime = 3000;
+    /**
+     * 加载时间
+     */
+    private long loadTime = 3000;
+    /**
+     * 刷新各状态提示文字
+     */
+    private String headerText;
+    /**
+     * 加载各状态提示问题
+     */
+    private String footerText;
+    /**
+     * 监听刷新状态
+     */
     private RefreshListener refreshListener;
 
     public RefreshLayout(@NonNull Context context) {
         super(context);
+        initRefreshLayout(context, null);
     }
 
     public RefreshLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        initRefreshLayout(context, attrs);
     }
 
     public RefreshLayout(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        initRefreshLayout();
+        initRefreshLayout(context, attrs);
     }
 
-     /*
-        1、下拉刷新：下拉刷新动画
-        2、上拉加载布局：上拉刷新动画、文本提示状态(数据加载完毕、没有更多数据、点击加载更多)
-        3、加头：支持View、layoutId
-        5、加脚：支持View、layoutId
-        6、支持RecycleView、LinearLayout、RelativeLayout、ScrollView
-        7、当RecycleView无数据，显示无数据占位布局（支持View、layoutId）
-
+    /**
+     * 1、下拉刷新：下拉刷新动画
+     * 2、上拉加载布局：上拉刷新动画、文本提示状态(数据加载完毕、没有更多数据、点击加载更多)
+     * 3、加头：支持View、layoutId
+     * 4、加脚：支持View、layoutId
+     * 5、支持RecycleView、LinearLayout、RelativeLayout、ScrollView
+     * 6、当RecycleView无数据，显示无数据占位布局（支持View、layoutId）
      */
-
-    private void initRefreshLayout() {
+    private void initRefreshLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
 
     }
 
     /**
      * 添加头
+     *
      * @param headerLayout
      */
     public void addHeader(@LayoutRes int headerLayout) {
@@ -63,6 +93,7 @@ public class RefreshLayout extends FrameLayout {
 
     /**
      * 添加头
+     *
      * @param headerView
      */
     public void addHeader(View headerView) {
@@ -71,6 +102,7 @@ public class RefreshLayout extends FrameLayout {
 
     /**
      * 添加脚
+     *
      * @param footerLayout
      */
     public void addFooter(@LayoutRes int footerLayout) {
@@ -79,6 +111,7 @@ public class RefreshLayout extends FrameLayout {
 
     /**
      * 添加头
+     *
      * @param footerView
      */
     public void addFooter(View footerView) {
@@ -86,7 +119,8 @@ public class RefreshLayout extends FrameLayout {
     }
 
     /**
-     * 添加内容
+     * 添加内容：RecyclerView
+     *
      * @param rv
      */
     public void setContentView(RecyclerView rv) {
@@ -94,7 +128,8 @@ public class RefreshLayout extends FrameLayout {
     }
 
     /**
-     * 添加内容
+     * 添加内容：RelativeLayout
+     *
      * @param rl
      */
     public void setContentView(RelativeLayout rl) {
@@ -102,7 +137,8 @@ public class RefreshLayout extends FrameLayout {
     }
 
     /**
-     * 添加内容
+     * 添加内容：LinearLayout
+     *
      * @param ll
      */
     public void setContentView(LinearLayout ll) {
@@ -110,7 +146,8 @@ public class RefreshLayout extends FrameLayout {
     }
 
     /**
-     * 添加内容
+     * 添加内容：ScrollView
+     *
      * @param sv
      */
     public void setContentView(ScrollView sv) {
@@ -118,7 +155,22 @@ public class RefreshLayout extends FrameLayout {
     }
 
     /**
+     * 没有数据设置占位布局
+     */
+    public void setBackgroundView(@LayoutRes int bgLayout){
+
+    }
+
+    /**
+     * 没有数据设置占位布局
+     */
+    public void setBackgroundView(View bgView){
+
+    }
+
+    /**
      * 添加监听
+     *
      * @param refreshListener
      */
     public void setRefreshListener(RefreshListener refreshListener) {
@@ -127,26 +179,61 @@ public class RefreshLayout extends FrameLayout {
 
     /**
      * 设置刷新超时时间
-    * @param refreshTime milliseconds
+     *
+     * @param refreshTime milliseconds
      */
-    public void setRefreshTime(int refreshTime) {
-
+    public void setRefreshTime(long refreshTime) {
+        this.refreshTime = refreshTime;
     }
 
     /**
      * 设置加载超时时间超时时间
+     *
      * @param loadTime milliseconds
      */
-    public void setLoadTime(int loadTime) {
-
+    public void setLoadTime(long loadTime) {
+        this.loadTime = loadTime;
     }
 
     /**
-     * 设置脚文字
-     * @param footText (数据加载完毕、没有更多数据、点击加载更多)(加载成功、加载失败)
+     * 设置刷新头 文字
+     *
+     * @param headerText (刷新时期状态)
      */
-    public void setFootText(@Nullable String footText) {
-
+    public void  setHeaderText(@Nullable String headerText) {
+        this.headerText = headerText;
     }
 
+    /**
+     * 设置加载脚 文字
+     *
+     * @param footerText (加载时各文本状态)
+     */
+    public void setFooterText(@Nullable String footerText) {
+        this.footerText = footerText;
+    }
+
+    /**
+     *  设置刷新状态
+     * @param refresh
+     */
+    public void setRefresh(boolean refresh) {
+        isRefresh = refresh;
+    }
+
+    /**
+     * 设置加载状态
+     * @param loadMore
+     */
+    public void setLoadMore(boolean loadMore) {
+        isLoadMore = loadMore;
+    }
+
+    /**
+     * 停止刷新or加载状态
+     * @param stopRefreshOrLoad
+     */
+    public void setStopRefreshOrLoad(boolean stopRefreshOrLoad) {
+        isStopRefreshOrLoad = stopRefreshOrLoad;
+    }
 }

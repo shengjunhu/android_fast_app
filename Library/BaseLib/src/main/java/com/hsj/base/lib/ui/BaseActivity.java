@@ -25,11 +25,16 @@ import com.hsj.base.lib.core.BaseApp;
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
 
     public String TAG = this.getClass().getSimpleName();
+    private int defaultLayout = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getLayoutId());
+        if (getLayoutId() == 0) {
+            setContentView(getLayoutId());
+        } else {
+            setContentView(getLayoutId());
+        }
 
         initUI(savedInstanceState);
 
@@ -41,6 +46,14 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     protected abstract void initUI(Bundle savedInstanceState);
 
     protected abstract void initData();
+
+    public void setDefaultLayout(int defaultLayout) {
+        this.defaultLayout = defaultLayout;
+    }
+
+    protected int getDefaultLayout() {
+        return defaultLayout;
+    }
 
     /**
      * 检测内存泄露
@@ -64,10 +77,11 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     /**
      * 刷新数据
+     *
      * @param isRefresh
      */
-    protected void refreshData(boolean isRefresh){
-        if(isRefresh)initData();
+    protected void refreshData(boolean isRefresh) {
+        if (isRefresh) initData();
     }
 
     /**
@@ -123,6 +137,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     /**
      * 判断字符串不为 null和 ""
+     *
      * @param str
      * @return
      */
@@ -136,6 +151,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     /**
      * TextView、EditText设置文本
+     *
      * @param str
      * @return
      */
@@ -149,6 +165,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     /**
      * TextView、EditText设置文本
+     *
      * @param num
      * @return
      */

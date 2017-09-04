@@ -43,16 +43,6 @@ public abstract class BaseWebFragment extends Fragment implements CancellationSi
 
     private View rootView;
 
-    @Override
-    public void onStart() {
-        super.onStart();
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -72,21 +62,6 @@ public abstract class BaseWebFragment extends Fragment implements CancellationSi
     protected abstract void initUI(Bundle savedInstanceState);
 
     protected abstract void initData();
-
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-    }
 
     @Override
     public void onDestroy() {
@@ -130,7 +105,10 @@ public abstract class BaseWebFragment extends Fragment implements CancellationSi
 
     }
 
-    protected void finishDialog(){
+    /**
+     * 停止加载对话框
+     */
+    protected void stopDialog(){
 
     }
 

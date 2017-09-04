@@ -28,11 +28,6 @@ public abstract class BaseLoadActivity extends AppCompatActivity implements View
     public String TAG = this.getClass().getSimpleName();
 
     @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
