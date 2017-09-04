@@ -62,95 +62,99 @@
 
 * 1-SharedPreferences:
 ```
-①根路径: /data/data/{packageName}/shared_prefs/xx.xml
+a-根路径: /data/data/{packageName}/shared_prefs/xx.xml
 
-②设备信息：设备ID、app版本号、该版本号第一次启动 /data/data/{packageName}/shared_prefs/appInfo.xml
+b-设备信息：设备ID、app版本号、该版本号第一次启动 /data/data/{packageName}/shared_prefs/appInfo.xml
 
-③用户信息：账号、loginToken （密码）          /data/data/{packageName}/shared_prefs/userInfo.xml
+c-用户信息：账号、loginToken （密码）          /data/data/{packageName}/shared_prefs/userInfo.xml
 
-④操作信息：启动app后后台检测上次启动未完成任务   /data/data/{packageName}/shared_prefs/actionInfo.xml
+d-操作信息：启动app后后台检测上次启动未完成任务   /data/data/{packageName}/shared_prefs/actionInfo.xml
+
+e-数据信息：应用中数据状态记录                 /data/data/{packageName}/shared_prefs/dataInfo.xml
 ```
 
 * 2-cache:
 ```
-①根路径: /storage/emulated/0/Android/data/{packageName}/cache/
+a-根路径: /storage/emulated/0/Android/data/{packageName}/cache/
          /data/data/{packageName}/cache/
         
-②网络数据缓存:
+b-网络数据缓存:
         /storage/emulated/0/Android/data/{packageName}/cache/db/data.db
         /data/data/{packageName}/cache/db/data.db
         
-③网络图片缓存:
+c-网络图片缓存:
         /storage/emulated/0/Android/data/{packageName}/cache/image/
         /data/data/{packageName}/cache/image/
 
-④网络视屏缓存:
+e-网络视屏缓存:
         /storage/emulated/0/Android/data/{packageName}/cache/video/
         /data/data/{packageName}/cache/video/
     
-⑤网络音频缓存:
+f-网络音频缓存:
         /storage/emulated/0/Android/data/{packageName}/cache/audio/
         /data/data/{packageName}/cache/audio/
         
-⑤Web缓存:
+g-Web缓存:
         /storage/emulated/0/Android/data/{packageName}/cache/web/
         /data/data/{packageName}/cache/web/
 ```
 
 * 3-files:
 ```
-①根路径: /storage/emulated/0/Android/data/{packageName}/files/
+a-根路径: /storage/emulated/0/Android/data/{packageName}/files/
          /data/data/{packageName}/files/
         
-②log异常日志: 上传后删除或超过一周删除
+b-log异常日志: 上传后删除或超过一周删除
         /storage/emulated/0/Android/data/{packageName}/files/log/
         /data/data/{packageName}/files/log/
         
-③apk下载: 安装成功后删除
+c-apk下载: 安装成功后删除
         /storage/emulated/0/Android/data/{packageName}/files/apk/
         /data/data/{packageName}/files/apk/
         
-④doc文档: 
+e-doc文档: 
         /storage/emulated/0/Android/data/{packageName}/files/doc/
         /data/data/{packageName}/files/doc/
         
-⑤image编辑:完成操作后删除
+f-image编辑:完成操作后删除
         /storage/emulated/0/Android/data/{packageName}/files/image/
         /data/data/{packageName}/files/image/
         
-⑤audio录制:完成操作后删除
+g-audio录制:完成操作后删除
         /storage/emulated/0/Android/data/{packageName}/files/audio/
         /data/data/{packageName}/files/audio/
         
-⑥video录制:完成操作后删除
+h-video录制:完成操作后删除
         /storage/emulated/0/Android/data/{packageName}/files/video/
         /data/data/{packageName}/files/video/
         
-⑦adver广告图片:
+i-adver广告图片:
         /storage/emulated/0/Android/data/{packageName}/files/adver/
         /data/data/{packageName}/files/adver/
         
-⑧upload: 上传成功删除
+j-upload: 上传成功删除
         /storage/emulated/0/Android/data/{packageName}/files/upload/
         /data/data/{packageName}/files/upload/
         
-⑨download:
+k-download:
         /storage/emulated/0/Android/data/{packageName}/files/download/
         /data/data/{packageName}/files/download/
 ```
 
 * 4-缓存管理:
 ```
-①应用内存清理：执行在主线程
-②应用缓存清理：执行在子线程
-③定期管理缓存：后台任务管理中检查缓存，缓存时间过长子线程中删除
+1-应用内存清理：执行在主线程
+
+2-应用缓存清理：执行在子线程
+
+3-定期管理缓存：后台任务管理中检查缓存，缓存时间过长子线程中删除
 ```
 
 ### 关于作者：
 * Author：阿军
 * Date： 2017/1/9
 * E-Mail： mr.ajun@foxmail.com
-* GitHub：[GitHub](https://github.com/LittleRedArmy/RedPacket)
+* GitHub：[GitHub](https://github.com/LittleRedArmy)
 * Blog：[CSDN](http://blog.csdn.net/hshengjun/article/details/54408704)
 
 ### 关于License
