@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--项目配置开关-->
+
+    <!--设置语音消息的码率 (单位 bps)-->
+    <integer name="rc_audio_encoding_bit_rate">7950</integer>
+
+    <!-- 设置发送输入状态 -->
+    <bool name="rc_typing_status">true</bool>
+
+    <!-- 下载文件默认存储路径 -->
+    <string name="rc_media_message_default_save_path">/RongCloud/Media/</string>
+
+    <!--实时位置共享会话类型-->
+    <string-array name="rc_realtime_support_conversation_types" translatable="false">
+        <item>private</item>
+        <item>group</item>
+    </string-array>
+
+</resources>
