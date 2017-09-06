@@ -1,6 +1,7 @@
 package com.hsj.base.lib.core;
 
 import android.annotation.SuppressLint;
+import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
@@ -18,7 +19,7 @@ import com.squareup.leakcanary.RefWatcher;
 public abstract class BaseApp extends Application {
 
     @SuppressLint("StaticFieldLeak")
-    private static BaseApp instance;
+    public static BaseApp instance;
     public static Context appContext;
     private RefWatcher mRefWatcher;
 
@@ -32,13 +33,20 @@ public abstract class BaseApp extends Application {
     public void onCreate() {
         super.onCreate();
 
-        instance = this;
+        if (LeakCanary.isInAnalyzerProcess(this)) {
+            mRefWatcher = RefWatcher.DISABLED;
+        } else {
+            mRefWatcher = LeakCanary.install(this);
+        }
 
-        appContext = getApplicationContext();
+        if (isInMainProcess(this)) {
+            instance = this;
 
-        mRefWatcher = LeakCanary.install(this);
+            appContext = getApplicationContext();
 
-        initModule();
+            initModule();
+        }
+
     }
 
     /**
@@ -48,6 +56,7 @@ public abstract class BaseApp extends Application {
 
     /**
      * 获取实例
+     *
      * @return
      */
     public static BaseApp getInstance() {
@@ -56,10 +65,33 @@ public abstract class BaseApp extends Application {
 
     /**
      * 获取观察者
+     *
      * @return
      */
     public static RefWatcher getRefWatcher() {
         return getInstance().mRefWatcher;
+    }
+
+    /**
+     * 获取当前是否在主进程
+     *
+     * @param context
+     * @return
+     */
+    public static boolean isInMainProcess(Context context) {
+        String mainProcess = context.getApplicationInfo().packageName;
+        int pid = android.os.Process.myPid();
+        ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        for (ActivityManager.RunningAppProcessInfo appProcess : activityManager.getRunningAppProcesses()) {
+            if (appProcess.pid == pid) {
+                if (mainProcess.equals(appProcess.processName)){
+                    return true;
+                }else {
+                    return false;
+                }
+            }
+        }
+        return false;
     }
 
 }

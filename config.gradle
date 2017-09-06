@@ -31,7 +31,7 @@ ext {
             rxandroid                  : "2.0.1",
             glideVersion               : "4.0.0-RC0",
             rxlifecycleSdkVersion      : "1.0",
-            leakcanaryVersion          : "1.5.1",
+            leakcanaryVersion          : "1.5.2",
             objectBoxVersion           : "0.9.12",
     ]
 
@@ -78,7 +78,6 @@ ext {
 
             //leakCanary
             "leakcanary-debug"         : "com.squareup.leakcanary:leakcanary-android:${version["leakcanaryVersion"]}",
-            "leakcanary-test"          : "com.squareup.leakcanary:leakcanary-android-no-op:${version["leakcanaryVersion"]}",
             "leakcanary-release"       : "com.squareup.leakcanary:leakcanary-android-no-op:${version["leakcanaryVersion"]}",
 
             //QQ、微信、微博：登录、支付、分享
