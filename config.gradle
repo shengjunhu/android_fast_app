@@ -102,6 +102,13 @@ ext {
             "amap_search"              : "com.amap.api:search:latest.integration",
             "amap_location"            : "com.amap.api:location:latest.integration",
 
+            //IM
+            "ImLib"                    : "cn.rongcloud.android:IMLib:2.8.6",
+            "ImKit"                    : "cn.rongcloud.android:IMKit:2.8.6",
+            "ImCallLib"                : "cn.rongcloud.android:CallLib:2.8.6",
+            "ImCallkit"                : "cn.rongcloud.android:CallKit:2.8.6",
+            "ImRedPacket"              : "cn.rongcloud.android:RedPacket:2.8.6",
+
             //plugin
             "replugin"                 : "com.qihoo360.replugin:replugin-host-lib:2.2.0",
     ]
