@@ -138,16 +138,19 @@
 #微博SDK（登录、分享）
 -keep class com.sina.weibo.sdk.** { *; }
 
+#高德地图
+
 #百度地图SDK
 -keep class com.baidu.** {*;}
 -keep class vi.com.** {*;}
 -dontwarn com.baidu.**
 
-#高德地图
-
-
 #百度云存储
+-keep class com.baidubce.**
 
+#百度文库阅读器
+-keep class com.baidubce.** {*;}
+-dontwarn com.baidubce.**
 
 #七牛云存储
 
