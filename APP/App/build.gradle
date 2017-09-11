@@ -57,12 +57,6 @@ android {
 
 }
 
-repositories {
-    flatDir {
-        dirs 'libs'
-    }
-}
-
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     if (rootProject.ext.android.isAppDebug) {

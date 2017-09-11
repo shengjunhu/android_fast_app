@@ -22,6 +22,15 @@ android {
         testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]
     }
 
+    signingConfigs {
+        config {
+            keyAlias 'FastAndroid'
+            keyPassword 'shengjunhu'
+            storeFile file('App.jks')
+            storePassword 'shengjunhu'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled true
@@ -29,10 +38,12 @@ android {
             zipAlignEnabled true
             debuggable false
             jniDebuggable false
+            signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
             minifyEnabled false
+            signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -41,7 +52,7 @@ android {
         variant.outputs.each { output ->
             def outputFile = output.outputFile
             if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                def fileName = "App_${variant.productFlavors[0].name}_v${defaultConfig.versionName}.apk"
+                def fileName = "App_${variant.productFlavors[0].name}_v${defaultConfig.versionName}_v${defaultConfig.versionCode}.apk"
                 output.outputFile = new File(outputFile.parent, fileName)
             }
         }
