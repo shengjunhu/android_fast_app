@@ -21,11 +21,11 @@ android {
         }
     }
 
-    objectbox {
-        generateTests true
-        daoPackage 'com.hsj.object.db.cache'
-        targetGenDir 'src/main/java/'
-    }
+//    objectbox {
+//        generateTests true
+//        daoPackage 'com.hsj.object.db.cache'
+//        targetGenDir 'src/main/java/'
+//    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -37,7 +37,7 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile rootProject.ext.dependencies["objectBox"]
-    //compile 'io.objectbox:objectbox-android:0.9.12'
-    //compile 'io.objectbox:objectbox-daocompat:0.9.12'
+    //compile 'io.objectbox:objectbox-android: 1.0.1'
+    //compile 'io.objectbox:objectbox-daocompat: 1.0.1'
 }
 

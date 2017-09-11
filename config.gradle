@@ -32,7 +32,7 @@ ext {
             glideVersion               : "4.0.0-RC0",
             rxlifecycleSdkVersion      : "1.0",
             leakcanaryVersion          : "1.5.2",
-            objectBoxVersion           : "0.9.12",
+            objectBoxVersion           : "1.0.1",
     ]
 
     dependencies = [
@@ -61,6 +61,7 @@ ext {
             "okhttp3"                  : "com.squareup.okhttp3:okhttp:${version["okhttp3Version"]}",
             "okio"                     : "com.squareup.okio:okio:1.13.0",
             "interceptor"              : "com.squareup.okhttp3:logging-interceptor:${version["okhttp3Version"]}",
+
             "gson"                     : "com.google.code.gson:gson:${version["gsonVersion"]}",
             "fastjson"                 : "com.alibaba:fastjson:1.1.59.android",
 
