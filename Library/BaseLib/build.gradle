@@ -53,8 +53,4 @@ dependencies {
 
     debugCompile rootProject.ext.dependencies["leakcanary-debug"]
     releaseCompile rootProject.ext.dependencies["leakcanary-release"]
-
-    compile project(path: ':Library:ImageLoader')
-    compile project(path: ':Library:UIKit')
-    compile project(path: ':Library:UIController')
 }

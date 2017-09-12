@@ -1,4 +1,4 @@
- apply plugin: rootProject.ext.plugins.library
+apply plugin: rootProject.ext.plugins.library
 apply plugin: rootProject.ext.plugins.retrolambda
 
 android {
@@ -50,9 +50,5 @@ dependencies {
     testCompile rootProject.ext.dependencies["annotations"]
 
     compile project(path: ':Library:BaseLib')
-    compile project(path: ':Library:Http')
-    compile project(path: ':Library:DBObject')
-    compile project(path: ':Library:TaskManager')
-
 }
 

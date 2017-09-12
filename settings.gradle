@@ -7,7 +7,8 @@ include ':APP:Host',                //app宿主程序
         ':APP:Me',                  //app我的模块
         ':APP:BaseApp',             //项目基类
 
-        ':ThirdSDK:Login',          //QQ、微信、微博登陆分享库
+        ':ThirdSDK:Login',          //QQ、微信、微博登陆库
+        ':ThirdSDK:Share',          //QQ、微信、微博分享库
         ':ThirdSDK:Pay',            //支付宝、微信支付
         ':ThirdSDK:Push',           //极光、小米、华为推送
         ':ThirdSDK:BDMap',          //百度地图SDK
@@ -40,7 +41,6 @@ include ':APP:Host',                //app宿主程序
         ':Library:GPSLocation',     //GPS定位、手机信号基站
         ':Library:BlueTooth',       //蓝牙
         ':Library:NdkLib',          //NdkLIb：性能优化
-        ':Library:DB',              //GreenDao数据缓存库
         ':Library:XMPP',            //长连接、及时通讯、推送
         ':Library:Socket',          //客户的端与服务器数据通信的封装
 

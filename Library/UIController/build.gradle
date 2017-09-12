@@ -1,4 +1,4 @@
-apply plugin:rootProject.ext.plugins.library
+apply plugin:rootProject.ext.plugins.application
 apply plugin: rootProject.ext.plugins.retrolambda
 
 android {
@@ -6,7 +6,7 @@ android {
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 
     defaultConfig {
-        //applicationId "com.hsj.ui.controller"
+        applicationId "com.hsj.ui.controller"
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
@@ -14,12 +14,15 @@ android {
 
         // 矢量图
         vectorDrawables.useSupportLibrary = true
-
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            debuggable false
+            jniDebuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -33,6 +36,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    provided rootProject.ext.dependencies["appcompat-v7"]
+    compile rootProject.ext.dependencies["appcompat-v7"]
 }
 

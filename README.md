@@ -45,6 +45,7 @@
   
 ### 第三方SDK库:
   * [Login          :第三方登陆模块](/ThirdSDK/Login/Login_README.md)
+  * [Share          :第三方分享模块](/ThirdSDK/Share/Share_README.md)
   * [Pay            :支付宝、微信](/ThirdSDK/Pay/Pay_README.md)
   * [Push           :极光、小米、华为推送](/ThirdSDK/Push/Push_README.md)
   * [BDMap          :百度地图](/ThirdSDK/BDMap/BDMap_README.md)
@@ -151,11 +152,13 @@ k-download:
 ```
 
 ### 关于作者：
+```
 * Author：阿军
 * Date： 2017/1/9
 * E-Mail： mr.ajun@foxmail.com
 * GitHub：[GitHub](https://github.com/LittleRedArmy)
 * Blog：[CSDN](http://blog.csdn.net/hshengjun/article/details/54408704)
+```
 
 ### 关于License
 ```text

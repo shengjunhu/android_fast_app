@@ -6,6 +6,7 @@ buildscript {
         mavenCentral()
         maven { url "http://objectbox.net/beta-repo/" }                     //数据库ObjectBox
         maven { url "https://dl.bintray.com/thelasterstar/maven/" }         //新浪微博
+        maven { url 'http://developer.huawei.com/repo/' }                   //华为推送
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.1'                    //工程构建gradle
@@ -22,8 +23,9 @@ allprojects {
     repositories {
         jcenter()
         mavenCentral()
-        maven { url "http://objectbox.net/beta-repo/" }
-        maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+        maven { url "http://objectbox.net/beta-repo/" }                     //数据库ObjectBox
+        maven { url "https://dl.bintray.com/thelasterstar/maven/" }         //新浪微博
+        maven { url 'http://developer.huawei.com/repo/' }                   //华为推送
     }
 }
 

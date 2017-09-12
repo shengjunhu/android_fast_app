@@ -25,7 +25,7 @@ ext {
     version = [
             androidSupportSdkVersion   : "25.3.1",
             retrofitVersion            : "2.3.0",
-            okhttp3Version             : "3.8.0",
+            okhttp3Version             : "3.9.0",
             gsonVersion                : "2.8.1",
             rxjavaVersion              : "x.y.z",
             rxandroid                  : "2.0.1",
@@ -102,6 +102,13 @@ ext {
             "amap_navi"                : "com.amap.api:navi-3dmap:latest.integration",
             "amap_search"              : "com.amap.api:search:latest.integration",
             "amap_location"            : "com.amap.api:location:latest.integration",
+
+            //极光推送
+            "j_ush"                    : "ThirdSDK/Push/libs/jpush-android-3.0.8.jar",
+            //华为推送
+            "huawei_push"              : "com.huawei.android.hms:push:2.5.2.300",
+            //小米推送
+            "mi_push"                  : "ThirdSDK/Push/libs/MiPush_SDK_Client_3_4_5.jar",
 
             //IM
             "ImLib"                    : "cn.rongcloud.android:IMLib:2.8.6",

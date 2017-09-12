@@ -1,4 +1,4 @@
-apply plugin:rootProject.ext.plugins.library
+apply plugin:rootProject.ext.plugins.application
 apply plugin: rootProject.ext.plugins.retrolambda
 
 android {
@@ -6,7 +6,7 @@ android {
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 
     defaultConfig {
-        //applicationId "com.hsj.layout"
+        applicationId "com.hsj.layout"
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
@@ -15,7 +15,11 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            debuggable false
+            jniDebuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

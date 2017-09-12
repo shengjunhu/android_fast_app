@@ -9,6 +9,8 @@ import android.support.multidex.MultiDex;
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 
+import java.util.List;
+
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
@@ -39,7 +41,7 @@ public abstract class BaseApp extends Application {
             mRefWatcher = LeakCanary.install(this);
         }
 
-        if (isInMainProcess(this)) {
+        if (isInMainProcess()) {
             instance = this;
 
             appContext = getApplicationContext();
@@ -74,21 +76,16 @@ public abstract class BaseApp extends Application {
 
     /**
      * 获取当前是否在主进程
-     *
-     * @param context
      * @return
      */
-    public static boolean isInMainProcess(Context context) {
-        String mainProcess = context.getApplicationInfo().packageName;
-        int pid = android.os.Process.myPid();
-        ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-        for (ActivityManager.RunningAppProcessInfo appProcess : activityManager.getRunningAppProcesses()) {
-            if (appProcess.pid == pid) {
-                if (mainProcess.equals(appProcess.processName)){
-                    return true;
-                }else {
-                    return false;
-                }
+    public boolean isInMainProcess() {
+        ActivityManager am = ((ActivityManager) getSystemService(Context.ACTIVITY_SERVICE));
+        List<ActivityManager.RunningAppProcessInfo> processInfo = am.getRunningAppProcesses();
+        String mainProcessName = getPackageName();
+        int myPid = android.os.Process.myPid();
+        for (ActivityManager.RunningAppProcessInfo info : processInfo) {
+            if (info.pid == myPid && mainProcessName.equals(info.processName)) {
+                return true;
             }
         }
         return false;

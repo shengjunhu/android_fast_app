@@ -1,4 +1,4 @@
-apply plugin: rootProject.ext.plugins.library
+apply plugin: rootProject.ext.plugins.application
 apply plugin: rootProject.ext.plugins.retrolambda
 
 android {
@@ -14,7 +14,11 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            debuggable false
+            jniDebuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

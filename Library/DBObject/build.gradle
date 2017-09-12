@@ -1,4 +1,4 @@
-apply plugin:rootProject.ext.plugins.library
+apply plugin:rootProject.ext.plugins.application
 apply plugin: rootProject.ext.plugins.retrolambda
 apply plugin: 'io.objectbox'
 
@@ -7,7 +7,7 @@ android {
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 
     defaultConfig {
-        //applicationId "com.hsj.object.db"
+        applicationId "com.hsj.object.db"
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
@@ -16,16 +16,14 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            debuggable false
+            jniDebuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-//    objectbox {
-//        generateTests true
-//        daoPackage 'com.hsj.object.db.cache'
-//        targetGenDir 'src/main/java/'
-//    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8

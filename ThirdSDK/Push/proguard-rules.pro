@@ -23,3 +23,35 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+#===================================关于Push混淆规则==================================================
+
+#Push
+-keep class com.hsj.push.AppPushReceiver{*;}
+-dontwarn com.hsj.push.**
+
+#JPush
+-keep class com.hsj.push.JPushReceiver{*;}
+-dontoptimize
+-dontpreverify
+-dontwarn cn.jpush.**
+-keep class cn.jpush.** { *; }
+-dontwarn cn.jiguang.**
+-keep class cn.jiguang.** { *; }
+-dontwarn com.google.**
+-keep class com.google.gson.** {*;}
+-keep class com.google.protobuf.** {*;}
+
+#HwPush
+-keep class com.hsj.push.HwPushReceiver{*;}
+-ignorewarning
+-keepattributes *Annotation*
+-keepattributes Exceptions
+-keepattributes InnerClasses
+-keepattributes Signature
+-keepattributes SourceFile,LineNumberTable
+-keep class com.huawei.hms.**{*;}
+
+#MiPush
+-keep class com.hsj.push.MiPushRecevier{*;}
+-dontwarn com.xiaomi.push.**
