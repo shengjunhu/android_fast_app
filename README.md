@@ -55,8 +55,8 @@
   * [IM             :及时通讯](/ThirdSDK/IM/IM_README.md)
   * [AR             :AR](/ThirdSDK/AR/AR_README.md)
   * [U3D            :unity3d模块](/ThirdSDK/U3D/U3D_README.md)
-  * [RePlugin       :RePlugin模块](/ThirdSDK/RePlugin/RePlugin_README.md)
   * [Bugly          :热修复](/ThirdSDK/Bugly/Bugly_README.md)
+  * [RePlugin       :RePlugin模块](/ThirdSDK/RePlugin/RePlugin_README.md)
 
 ### 关于缓存：
 * 0-先读取内存、磁盘可用大小值；优先采用SD卡缓存
