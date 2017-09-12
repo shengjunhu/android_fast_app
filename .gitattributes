@@ -1,8 +1,8 @@
 *.java linguist-language=android
-*.java linguist-language=java
-*.c linguist-language=java
-*.cpp linguist-language=java
-*.h linguist-language=java
-*.js linguist-language=java
-*.css linguist-language=java
-*.html linguist-language=java
+*.java linguist-language=android
+*.c linguist-language=android
+*.cpp linguist-language=android
+*.h linguist-language=android
+*.js linguist-language=android
+*.css linguist-language=android
+*.html linguist-language=android
