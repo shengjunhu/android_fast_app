@@ -1,5 +1,11 @@
 package com.hsj.image.loader.base;
 
+import android.app.Activity;
+import android.content.Context;
+import android.support.v4.app.Fragment;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.RequestManager;
+
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
@@ -9,19 +15,18 @@ package com.hsj.image.loader.base;
  */
 public class ImageLoader {
 
-    public ImageLoader with(){
-
-        return this;
+    public static RequestManager with(Activity activity){
+        return Glide.with(activity);
     }
 
-    public ImageLoader load(){
-
-        return this;
+    public static RequestManager with(Fragment fragment){
+        return Glide.with(fragment);
     }
 
-    public ImageLoader into(){
-
-        return this;
+    public static RequestManager with(Context context){
+        return Glide.with(context);
     }
+
+
 
 }

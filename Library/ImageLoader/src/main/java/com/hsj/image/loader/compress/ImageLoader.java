@@ -9,4 +9,19 @@ package com.hsj.image.loader.compress;
  */
 public class ImageLoader {
 
+    public ImageLoader with(){
+
+        return this;
+    }
+
+    public ImageLoader load(){
+
+        return this;
+    }
+
+    public ImageLoader into(){
+
+        return this;
+    }
+
 }

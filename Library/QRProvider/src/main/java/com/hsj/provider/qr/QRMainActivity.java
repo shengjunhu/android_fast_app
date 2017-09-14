@@ -18,15 +18,55 @@
 
 package com.hsj.provider.qr;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import com.hsj.qrprovider.R;
+import android.view.View;
+import android.widget.ImageView;
 
-public class QRMainActivity extends AppCompatActivity {
+import com.hsj.base.lib.ui.BaseActivity;
+import com.hsj.provider.qr.test.CameraTestActivity;
+
+public class QRMainActivity extends BaseActivity {
+
+    private ImageView iv_qr;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_qr_main);
+    protected int getLayoutId() {
+        return R.layout.activity_qr_main;
     }
+
+    @Override
+    protected void initUI(Bundle savedInstanceState) {
+        findView(R.id.btn_scan_qr).setOnClickListener(this);
+        findView(R.id.btn_create_qr).setOnClickListener(this);
+        iv_qr = findView(R.id.iv_qr);
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_scan_qr:
+                startActivity(new Intent(this, CameraTestActivity.class));
+                break;
+            case R.id.btn_create_qr:
+                createQrCode();
+                break;
+            default:
+                break;
+        }
+    }
+
+    /**
+     * 创建二维码
+     */
+    private void createQrCode() {
+        String qrText = "创建二维码";
+        //int qrImageId = R.drawable.ic_launcher;
+    }
+
 }

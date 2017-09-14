@@ -2,11 +2,14 @@ ext {
 
     plugins = [
             application                : 'com.android.application',
+
             library                    : 'com.android.library',
             //JDK1.8编译依赖
             retrolambda                : 'me.tatarka.retrolambda',
-            //插件
-            replugin                   : 'replugin-host-gradle',
+            //宿主插件
+            repluginHost               : 'replugin-host-gradle',
+            //库插件
+            repluginLib                : 'replugin-plugin-gradle',
     ]
 
     android = [
@@ -29,7 +32,7 @@ ext {
             gsonVersion                : "2.8.1",
             rxjavaVersion              : "x.y.z",
             rxandroid                  : "2.0.1",
-            glideVersion               : "4.0.0-RC0",
+            glideVersion               : "4.1.1",
             rxlifecycleSdkVersion      : "1.0",
             leakcanaryVersion          : "1.5.2",
             objectBoxVersion           : "1.0.1",
@@ -73,6 +76,8 @@ ext {
 
             //Glide
             "glide"                    : "com.github.bumptech.glide:glide:${version["glideVersion"]}",
+            "glideCompiler"            : "com.github.bumptech.glide:compiler:${version["glideVersion"]}",
+            "glideOkHttp"              : "com.github.bumptech.glide:okhttp3-integration:1.5.0@aar",
 
             //ObjectBox
             "objectBox"                : "io.objectbox:objectbox-android:${version["objectBoxVersion"]}",
@@ -91,7 +96,7 @@ ext {
             "baidumap"                 : "/ThirdSDK/BDMap/libs/...",
 
             //百度云
-            "baiducloud"               : "/ThirdSDK/BDCloud/libs/bos-android-sdk-1.0.2.jar",
+            "baiducloud"               : "/ThirdSDK/BDCloud/libs/bos-android-sdk-1.0.3.jar",
 
             //七牛云
             "qiniucloud"               : "com.qiniu:qiniu-android-sdk:7.3.+",
@@ -118,7 +123,8 @@ ext {
             "ImRedPacket"              : "cn.rongcloud.android:RedPacket:2.8.6",
 
             //plugin
-            "replugin"                 : "com.qihoo360.replugin:replugin-host-lib:2.2.0",
+            "repluginHost"             : "com.qihoo360.replugin:replugin-host-lib:2.2.0",
+            "repluginLib"              : "com.qihoo360.replugin:replugin-plugin-lib:2.2.0",
     ]
 
 }

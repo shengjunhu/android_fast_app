@@ -27,11 +27,9 @@
   * [PercentLayout  :百分比布局库](/Library/PercentLayout/PercentLayout_README.md)
   * [AudioProvider  :音频提供者](/Library/AudioProvider/AudioProvider_README.md)
   * [QRProvider     :二维码提供者](/Library/QRProvider/QRProvider_README.md)
-  * [PhotoProvider  :图片提供者](/Library/PhotoProvider/PhotoProvider_README.md)
+  * [MediaProvider  :图片提供者](/Library/MediaProvider/MediaProvider_README.md)
   * [FileProvider   :文件提供者](/Library/FileProvider/FileProvider_README.md)
   * [VideoPlayer    :视屏播放器](/Library/VideoPlayer/VideoPlayer_README.md)
-  * [VideoProvider  :视屏提供者](/Library/VideoProvider/VideoProvider_README.md)
-  * [Permission     :权限申请库](/Library/Permission/Permission_README.md)
   * [Keyboard       :自定义键盘](/Library/Keyboard/Keyboard_README.md)
   * [Web            :Web封装库](/Library/Web/Web_README.md)
   * [GPSLocation    :GPS定位](/Library/GPSLocation/GPSLocation_README.md)
@@ -56,7 +54,6 @@
   * [AR             :AR](/ThirdSDK/AR/AR_README.md)
   * [U3D            :unity3d模块](/ThirdSDK/U3D/U3D_README.md)
   * [Bugly          :热修复](/ThirdSDK/Bugly/Bugly_README.md)
-  * [RePlugin       :RePlugin模块](/ThirdSDK/RePlugin/RePlugin_README.md)
 
 ### 关于缓存：
 * 0-先读取内存、磁盘可用大小值；优先采用SD卡缓存

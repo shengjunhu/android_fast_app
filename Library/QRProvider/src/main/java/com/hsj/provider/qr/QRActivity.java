@@ -18,8 +18,9 @@
 
 package com.hsj.provider.qr;
 
-import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
+import com.hsj.base.lib.ui.BaseActivity;
 
 /**
  * @Author:HSJ
@@ -28,11 +29,30 @@ import android.view.View;
  * @Class:QRActivity
  * @Description:扫码界面
  */
-public class QRActivity extends AppCompatActivity implements View.OnClickListener{
+public class QRActivity extends BaseActivity{
+
+    @Override
+    protected int getLayoutId() {
+        return 0;
+    }
+
+    @Override
+    protected void initUI(Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
 
     @Override
     public void onClick(View view) {
 
+    }
+
+    static {
+        System.loadLibrary("iconv");
     }
 
 }

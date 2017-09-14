@@ -1,6 +1,5 @@
 apply plugin: rootProject.ext.plugins.application
 apply plugin: rootProject.ext.plugins.retrolambda
-apply plugin: rootProject.ext.plugins.replugin
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
@@ -106,6 +105,20 @@ android {
 
 }
 
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile rootProject.ext.dependencies["repluginHost"]
+    compile project(path: ':APP:BaseApp')
+}
+
+apply plugin: rootProject.ext.plugins.repluginHost
+
 /**
  * 配置项均为可选配置，默认无需添加
  * 更多可选配置项参见replugin-host-gradle的RepluginConfig类
@@ -125,16 +138,4 @@ repluginHostConfig {
     countNotTranslucentSingleTop        = 2
     countNotTranslucentSingleTask       = 3
     countNotTranslucentSingleInstance   = 2
-}
-
-repositories {
-    flatDir {
-        dirs 'libs'
-    }
-}
-
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile rootProject.ext.dependencies["replugin"]
-    compile project(path: ':APP:BaseApp')
 }

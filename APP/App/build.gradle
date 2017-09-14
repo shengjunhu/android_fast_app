@@ -46,8 +46,22 @@ android {
     }
 }
 
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile rootProject.ext.dependencies["repluginLib"]
     compile project(path: ':APP:BaseApp')
 
+}
+
+apply plugin: rootProject.ext.plugins.repluginLib
+
+repluginPluginConfig {
+
+    //插件名
+    pluginName = "App"
+    //宿主app的包名
+    hostApplicationId = "com.hsj.app.host"
+    //宿主app的启动activity
+    hostAppLauncherActivity = "com.hsj.app.host.LaunchActivity"
 }

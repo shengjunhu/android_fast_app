@@ -17,7 +17,6 @@ include ':APP:Host',                //app宿主程序
         ':ThirdSDK:BDCloud',        //百度云库
         ':ThirdSDK:AR',             //AR技术
         ':ThirdSDK:U3D',            //unity3d制作3d
-        ':ThirdSDK:RePlugin',       //插件化工具（采用360）
         ':ThirdSDK:Bugly',          //腾讯热修复库（采用Tencent）
 
         ':ThirdSDK:IM:IMLib',       //IM能力库
@@ -30,10 +29,8 @@ include ':APP:Host',                //app宿主程序
         ':ThirdSDK:IM:Contactcard', //个人卡片库
 
         ':Library:Sample',          //使用介绍Module
-        ':Library:Permission',      //权限处理库
         ':Library:QRProvider',      //二维码库
-        ':Library:PhotoProvider',   //图片提供库
-        ':Library:VideoProvider',   //视屏提供库
+        ':Library:MeidaProvider',   //图片提供库
         ':Library:FileProvider',    //文件提供库
         ':Library:AudioProvider',   //音频提供库
         ':Library:VideoPlayer',     //视屏播放库
