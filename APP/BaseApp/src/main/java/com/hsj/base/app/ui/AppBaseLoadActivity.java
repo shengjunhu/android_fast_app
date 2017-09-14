@@ -18,7 +18,7 @@
 
 package com.hsj.base.app.ui;
 
-import com.hsj.base.lib.ui.BaseActivity;
+import com.hsj.base.ui.BaseActivity;
 
 /**
  * @Author:HSJ

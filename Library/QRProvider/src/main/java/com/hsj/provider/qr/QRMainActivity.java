@@ -23,7 +23,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.hsj.base.lib.ui.BaseActivity;
+import com.hsj.base.ui.BaseActivity;
 import com.hsj.provider.qr.test.CameraTestActivity;
 
 public class QRMainActivity extends BaseActivity {

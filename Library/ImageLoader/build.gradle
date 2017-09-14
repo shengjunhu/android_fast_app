@@ -11,6 +11,7 @@ android {
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
+        ndk { abiFilters "armeabi-v7a", "x86" }
     }
 
     buildTypes {
@@ -48,5 +49,4 @@ dependencies {
     compile rootProject.ext.dependencies["glide"]
     annotationProcessor rootProject.ext.dependencies["glideCompiler"]
     compile rootProject.ext.dependencies["glideOkHttp"]
-    //compile rootProject.ext.dependencies["okhttp3"]
 }

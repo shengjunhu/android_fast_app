@@ -1,4 +1,4 @@
-apply plugin:rootProject.ext.plugins.application
+apply plugin: rootProject.ext.plugins.application
 apply plugin: rootProject.ext.plugins.retrolambda
 
 android {
@@ -11,7 +11,21 @@ android {
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
+        resourcePrefix "audio_"
+
+        ndk {
+            moduleName "mp3"
+            ldLibs "log", "z", "m"
+            abiFilters "armeabi-v7a", "x86"
+        }
+
     }
+
+    sourceSets.main {
+        jniLibs.srcDir 'src/main/libs'
+        jni.srcDirs = []
+    }
+
     buildTypes {
         release {
             minifyEnabled true
@@ -26,6 +40,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    sourceSets { main { jni.srcDirs = ['src/main/jni', 'src/main/jni/'] } }
 }
 
 dependencies {

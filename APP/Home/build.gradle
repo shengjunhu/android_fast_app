@@ -12,8 +12,8 @@ android {
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
 
+        ndk { abiFilters "armeabi-v7a", "x86" }
         testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]
-
     }
 
     buildTypes {
@@ -54,9 +54,7 @@ dependencies {
 }
 
 apply plugin: rootProject.ext.plugins.repluginLib
-
 repluginPluginConfig {
-
     //插件名
     pluginName = "Home"
     //宿主app的包名

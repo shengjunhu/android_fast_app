@@ -3,7 +3,9 @@
     package="com.hsj.provider.qr">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-feature android:name="android.hardware.Camera" />
+    <uses-feature android:name="android.hardware.camera2"/>
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application

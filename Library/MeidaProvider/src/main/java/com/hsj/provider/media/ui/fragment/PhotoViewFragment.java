@@ -2,7 +2,7 @@ package com.hsj.provider.media.ui.fragment;
 
 import android.os.Bundle;
 import android.view.View;
-import com.hsj.base.lib.ui.BaseLoadFragment;
+import com.hsj.base.ui.BaseLoadFragment;
 
 /**
  * @Author:HSJ

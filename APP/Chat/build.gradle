@@ -12,10 +12,7 @@ android {
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
 
-        multiDexEnabled true
-        ndk {
-            abiFilters "armeabi-v7a", "x86"
-        }
+        ndk { abiFilters "armeabi-v7a", "x86" }
     }
 
     packagingOptions {
@@ -66,9 +63,7 @@ dependencies {
 }
 
 apply plugin: rootProject.ext.plugins.repluginLib
-
 repluginPluginConfig {
-
     //插件名
     pluginName = "Chat"
     //宿主app的包名

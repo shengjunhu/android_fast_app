@@ -18,7 +18,7 @@
 
 package com.hsj.base.app.ui;
 
-import com.hsj.base.lib.ui.BaseFragment;
+import com.hsj.base.ui.BaseFragment;
 
 /**
  * @Author:HSJ
