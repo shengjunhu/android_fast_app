@@ -18,12 +18,6 @@ android {
             ldLibs "log", "z", "m"
             abiFilters "armeabi-v7a", "x86"
         }
-
-    }
-
-    sourceSets.main {
-        jniLibs.srcDir 'src/main/libs'
-        jni.srcDirs = []
     }
 
     buildTypes {

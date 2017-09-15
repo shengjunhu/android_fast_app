@@ -1,4 +1,4 @@
-package com.hsj.provider.audio;
+package com.hsj.provider.audio.mp3;
 
 /**
  * @Author:HSJ
