@@ -1,4 +1,4 @@
-package com.hsj.image.loader.photoview;
+package com.hsj.image.loader.preview;
 
 import android.support.v7.app.AppCompatActivity;
 

@@ -30,6 +30,7 @@ ext {
             retrofitVersion            : "2.3.0",
             okhttp3Version             : "3.9.0",
             gsonVersion                : "2.8.1",
+            fastJsonVersion            : "1.1.63.android",
             rxjavaVersion              : "x.y.z",
             rxandroid                  : "2.0.1",
             glideVersion               : "4.1.1",
@@ -65,8 +66,9 @@ ext {
             "okio"                     : "com.squareup.okio:okio:1.13.0",
             "interceptor"              : "com.squareup.okhttp3:logging-interceptor:${version["okhttp3Version"]}",
 
+            //json解析
             "gson"                     : "com.google.code.gson:gson:${version["gsonVersion"]}",
-            "fastjson"                 : "com.alibaba:fastjson:1.1.59.android",
+            "fastjson"                 : "com.alibaba:fastjson:${version["fastJsonVersion"]}",
 
             //RxJava
             "rxjava"                   : "io.reactivex.rxjava2:rxjava:${version["rxjavaVersion"]}",

@@ -1,5 +1,5 @@
 # MediaProvider
-Android 图片选择器
+Android 视屏图片选择器
 
 ### 功能如下：
 1、支持拍照单独回调

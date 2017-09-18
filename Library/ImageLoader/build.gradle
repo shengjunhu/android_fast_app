@@ -49,5 +49,5 @@ dependencies {
     compile rootProject.ext.dependencies["appcompat-v7"]
     compile rootProject.ext.dependencies["glide"]
     annotationProcessor rootProject.ext.dependencies["glideCompiler"]
-    compile rootProject.ext.dependencies["glideOkHttp"]
+    compile rootProject.ext.dependencies["okhttp3"]
 }

@@ -30,7 +30,8 @@ include ':APP:Host',                //app宿主程序
 
         ':Library:Sample',          //使用介绍Module
         ':Library:QRProvider',      //二维码库
-        ':Library:MeidaProvider',   //图片提供库
+        ':Library:PhotoProvider',   //图片提供库
+        ':Library:MeidaProvider',   //图片、视屏提供库
         ':Library:FileProvider',    //文件提供库
         ':Library:AudioProvider',   //音频提供库
         ':Library:VideoPlayer',     //视屏播放库

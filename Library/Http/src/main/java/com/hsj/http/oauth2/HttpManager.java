@@ -7,7 +7,7 @@ package com.hsj.http.oauth2;
  * @Class:HttpManager
  * @Description:
  */
-public class HttpManagers {
+public class HttpManager {
 
     private String TAG = this.getClass().getSimpleName();
 
