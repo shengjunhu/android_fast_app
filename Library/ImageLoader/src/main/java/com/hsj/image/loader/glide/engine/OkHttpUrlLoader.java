@@ -30,8 +30,7 @@ public class OkHttpUrlLoader implements ModelLoader<GlideUrl, InputStream> {
     }
 
     @Override
-    public LoadData<InputStream> buildLoadData(GlideUrl model, int width, int height,
-                                               Options options) {
+    public LoadData<InputStream> buildLoadData(GlideUrl model, int width, int height,Options options) {
         return new LoadData<>(model, new OkHttpStreamFetcher(client, model));
     }
 
