@@ -32,7 +32,7 @@ ext {
             gsonVersion                : "2.8.1",
             fastJsonVersion            : "1.1.63.android",
             rxjavaVersion              : "x.y.z",
-            rxandroid                  : "2.0.1",
+            rxandroidVersion           : "2.0.1",
             glideVersion               : "4.1.1",
             rxlifecycleSdkVersion      : "1.0",
             leakcanaryVersion          : "1.5.2",
@@ -72,7 +72,7 @@ ext {
 
             //RxJava
             "rxjava"                   : "io.reactivex.rxjava2:rxjava:${version["rxjavaVersion"]}",
-            "rxandroid"                : "io.reactivex.rxjava2:rxandroid:${version["rxandroid"]}",
+            "rxandroid"                : "io.reactivex.rxjava2:rxandroid:${version["rxandroidVersion"]}",
             "rxlifecycle"              : "com.trello:rxlifecycle:${version["rxlifecycleSdkVersion"]}",
             "rxlifecycle-components"   : "com.trello:rxlifecycle-components:${version["rxlifecycleSdkVersion"]}",
 

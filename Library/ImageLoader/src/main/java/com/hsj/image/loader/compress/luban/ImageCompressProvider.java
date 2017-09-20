@@ -2,14 +2,13 @@ package com.hsj.image.loader.compress.luban;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.support.annotation.Nullable;
-import android.support.annotation.UiThread;
-import android.support.annotation.WorkerThread;
+import android.support.annotation.MainThread;
+import android.support.annotation.NonNull;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.hsj.image.loader.interfaces.IImageCompressListener;
 
@@ -29,31 +28,56 @@ import java.util.List;
  */
 public class ImageCompressProvider implements Handler.Callback {
 
-    private static final String TAG = "ImageCompressProvider";
-
-    private static final String DEFAULT_DISK_CACHE_DIR = "luban_disk_cache";
-
-    private static final int MSG_COMPRESS_SUCCESS   = 0;
-    private static final int MSG_COMPRESS_START     = 1;
-    private static final int MSG_COMPRESS_ERROR     = 2;
+    /**
+     * 存放目录
+     */
+    private static final String DEFAULT_DISK_CACHE_DIR = "/image/compress";
 
     private Handler mHandler;
-
+    private static final int MSG_COMPRESS_SUCCESS = 0;
+    private static final int MSG_COMPRESS_START = 1;
+    private static final int MSG_COMPRESS_ERROR = 2;
+    /**
+     * 压缩当前位置
+     */
+    private int currentPosition = 0;
+    private int allPosition = 0;
+    /**
+     * 压缩后的文件
+     */
+    private List<File> compressFiles;
+    /**
+     * 压缩文件集合
+     */
+    private List<String> filePaths;
+    /**
+     * 存放根目录
+     */
+    private File cacheRootDir;
+    /**
+     * 默认存放的目录 cachePath + DEFAULT_DISK_CACHE_DIR
+     */
     private String mTargetDir;
-    private List<String> mPaths;
+    /**
+     * 允许压缩最小体积
+     */
     private int mLeastCompressSize;
+    /**
+     * 压缩监听
+     */
     private IImageCompressListener iImageCompressListener;
 
     private ImageCompressProvider(Builder builder) {
-        this.mPaths = builder.mPaths;
+        this.filePaths = builder.filePaths;
+        this.mLeastCompressSize = builder.mLeastCompressSize;
         this.mTargetDir = builder.mTargetDir;
         this.iImageCompressListener = builder.iImageCompressListener;
-        this.mLeastCompressSize = builder.mLeastCompressSize;
-        mHandler = new Handler(Looper.getMainLooper(), this);
+        this.mHandler = new Handler(Looper.getMainLooper(), this);
     }
 
     /**
-     * 建造模式
+     * 实例化建造者
+     *
      * @param context
      * @return
      */
@@ -61,89 +85,49 @@ public class ImageCompressProvider implements Handler.Callback {
         return new Builder(context);
     }
 
-    /**
-     * 获取缓存文件
-     *
-     * @param context A context.
-     */
-    private File getImageCacheFile(Context context, String suffix) {
-        if (TextUtils.isEmpty(mTargetDir)) {
-            mTargetDir = getImageCacheDir(context).getAbsolutePath();
-        }
-
-        String cacheBuilder = mTargetDir + "/" +
-                System.currentTimeMillis() +
-                (int) (Math.random() * 1000) +
-                (TextUtils.isEmpty(suffix) ? ".jpg" : suffix);
-
-        return new File(cacheBuilder);
-    }
-
-    /**
-     * 获取缓存缓存的目录
-     *
-     * @param context A context.
-     * @see #getImageCacheDir(Context, String)
-     */
-    @Nullable
-    private File getImageCacheDir(Context context) {
-        return getImageCacheDir(context, DEFAULT_DISK_CACHE_DIR);
-    }
-
-    /**
-     * 返回应用程序的私有缓存目录中给定名称的目录
-     * 使用存储检索媒体和缩略图。
-     *
-     * @param context   A context.
-     * @param cacheName The name of the subdirectory in which to store the cache.
-     * @see #getImageCacheDir(Context)
-     */
-    @Nullable
-    private File getImageCacheDir(Context context, String cacheName) {
-        File cacheDir = context.getExternalCacheDir();
-        if (cacheDir != null) {
-            File result = new File(cacheDir, cacheName);
-            if (!result.mkdirs() && (!result.exists() || !result.isDirectory())) {
-                // 文件无法创建目录，或结果存在，但不能目录
-                return null;
-            }
-            return result;
-        }
-        if (Log.isLoggable(TAG, Log.ERROR)) {
-            Log.e(TAG, "default disk cache dir is null");
-        }
-        return null;
-    }
-
     @Override
     public boolean handleMessage(Message msg) {
         if (iImageCompressListener == null) return false;
         switch (msg.what) {
             case MSG_COMPRESS_START:
-                iImageCompressListener.onStart();
+                iImageCompressListener.onCompressStart();
                 break;
             case MSG_COMPRESS_SUCCESS:
-                iImageCompressListener.onSuccess((File) msg.obj);
+                ++currentPosition;
+                compressFiles.add((File) msg.obj);
+                if (currentPosition == filePaths.size()) {
+                    iImageCompressListener.onCompressStop(compressFiles);
+                } else {
+                    iImageCompressListener.onCompressProgress(currentPosition, allPosition);
+                }
                 break;
             case MSG_COMPRESS_ERROR:
-                iImageCompressListener.onError((Throwable) msg.obj);
+                iImageCompressListener.onCompressError((Throwable) msg.obj);
                 break;
         }
-
         return false;
     }
 
     /**
      * 开始异步压缩
      */
-    @UiThread
+    @MainThread
     private void start(final Context context) {
-        if (mPaths == null || mPaths.size() == 0 || iImageCompressListener == null) {
-            iImageCompressListener.onError(new NullPointerException("image file cannot be null"));
+        if (filePaths == null || filePaths.size() == 0) {
+            iImageCompressListener.onCompressError(new NullPointerException("image file cannot be null"));
             return;
         }
 
-        Iterator<String> iterator = mPaths.iterator();
+        if (iImageCompressListener == null) {
+            throw new NullPointerException("IImageCompressListener is null");
+        }
+
+        cacheRootDir = getImageCompressDir(context);
+        allPosition = filePaths.size();
+        compressFiles = new ArrayList<>();
+
+        mHandler.sendMessage(mHandler.obtainMessage(MSG_COMPRESS_START));
+        Iterator<String> iterator = filePaths.iterator();
         while (iterator.hasNext()) {
             final String path = iterator.next();
             if (ImageCheck.isImage(path)) {
@@ -151,10 +135,8 @@ public class ImageCompressProvider implements Handler.Callback {
                     @Override
                     public void run() {
                         try {
-                            mHandler.sendMessage(mHandler.obtainMessage(MSG_COMPRESS_START));
-
                             File result = ImageCheck.isNeedCompress(mLeastCompressSize, path) ?
-                                    new CompressEngine(path, getImageCacheFile(context, ImageCheck.checkSuffix(path))).compress() :
+                                    new CompressEngine(path, setCompressImageFile(context, ImageCheck.checkSuffix(path))).compress() :
                                     new File(path);
 
                             mHandler.sendMessage(mHandler.obtainMessage(MSG_COMPRESS_SUCCESS, result));
@@ -164,43 +146,55 @@ public class ImageCompressProvider implements Handler.Callback {
                     }
                 });
             } else {
-                iImageCompressListener.onError(new FileNotFoundException("can not read the path : " + path));
+                iImageCompressListener.onCompressError(new FileNotFoundException("can not read the file : " + path));
             }
+
             iterator.remove();
         }
     }
 
     /**
-     * 获取要压缩单个文件,开始压缩
-     * @param path
+     * 获取压缩文件的根目录
      * @param context
-     * @return
-     * @throws IOException
      */
-    @WorkerThread
-    private File get(String path, Context context) throws IOException {
-        return new CompressEngine(path, getImageCacheFile(context, ImageCheck.checkSuffix(path))).compress();
+    private File getImageCompressDir(Context context) {
+        File cacheDir = null;
+        if (TextUtils.isEmpty(mTargetDir)) {
+            if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+                cacheDir = context.getExternalCacheDir();
+                cacheDir = new File(cacheDir, DEFAULT_DISK_CACHE_DIR);
+            } else {
+                cacheDir = context.getCacheDir();
+                cacheDir = new File(cacheDir, DEFAULT_DISK_CACHE_DIR);
+            }
+        } else {
+            cacheDir = new File(mTargetDir);
+        }
+        return cacheDir;
     }
 
     /**
-     * 获取要压缩文件集合,开始压缩
+     * 设置文件名
+     *
      * @param context
+     * @param suffix
      * @return
-     * @throws IOException
      */
-    @WorkerThread
-    private List<File> get(Context context) throws IOException {
-        List<File> results = new ArrayList<>();
-        Iterator<String> iterator = mPaths.iterator();
-        while (iterator.hasNext()) {
-            String path = iterator.next();
-            if (ImageCheck.isImage(path)) {
-                results.add(new CompressEngine(path, getImageCacheFile(context, ImageCheck.checkSuffix(path))).compress());
-            }
-            iterator.remove();
-        }
+    private File setCompressImageFile(Context context, String suffix) {
+        String compressFileName = cacheRootDir + "/" +
+                System.currentTimeMillis() +
+                (TextUtils.isEmpty(suffix) ? ".jpg" : suffix);
 
-        return results;
+        return new File(compressFileName);
+    }
+
+    /**
+     * 删除压缩目录
+     *
+     * @return
+     */
+    private void deletImageCacheDir() {
+
     }
 
     /**
@@ -210,35 +204,31 @@ public class ImageCompressProvider implements Handler.Callback {
 
         private Context context;
         private String mTargetDir;
-        private List<String> mPaths;
+        private List<String> filePaths;
         private int mLeastCompressSize = 100;
         private IImageCompressListener iImageCompressListener;
 
         Builder(Context context) {
             this.context = context;
-            this.mPaths = new ArrayList<>();
+            this.filePaths = new ArrayList<>();
         }
 
         private ImageCompressProvider build() {
             return new ImageCompressProvider(this);
         }
 
-        public Builder load(File file) {
-            this.mPaths.add(file.getAbsolutePath());
+        public Builder load(@NonNull File file) {
+            this.filePaths.add(file.getAbsolutePath());
             return this;
         }
 
-        public Builder load(String string) {
-            this.mPaths.add(string);
+        public Builder load(String filePath) {
+            this.filePaths.add(filePath);
             return this;
         }
 
-        public Builder load(List<String> list) {
-            this.mPaths.addAll(list);
-            return this;
-        }
-
-        public Builder setCompressLevel(int compressLevel) {
+        public Builder load(List<String> filePaths) {
+            this.filePaths.addAll(filePaths);
             return this;
         }
 
@@ -247,6 +237,12 @@ public class ImageCompressProvider implements Handler.Callback {
             return this;
         }
 
+        /**
+         * 存放目录 : 全路径
+         *
+         * @param targetDir
+         * @return
+         */
         public Builder setTargetDir(String targetDir) {
             this.mTargetDir = targetDir;
             return this;
@@ -268,26 +264,6 @@ public class ImageCompressProvider implements Handler.Callback {
         public void start() {
             build().start(context);
         }
-
-        /**
-         * 获取单个文件
-         * @param path
-         * @return
-         * @throws IOException
-         */
-        public File get(String path) throws IOException {
-            return build().get(path, context);
-        }
-
-        /**
-         * 获取文件集合
-         *
-         * @return the thumb image file list
-         */
-        public List<File> get() throws IOException {
-            return build().get(context);
-        }
-
     }
 
 }

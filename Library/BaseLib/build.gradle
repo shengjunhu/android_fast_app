@@ -19,9 +19,16 @@ android {
 
     buildTypes {
         release {
+            buildConfigField "boolean", "isLogDebug", "false"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            buildConfigField "boolean", "isLogDebug", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
     }
 
     compileOptions {
@@ -53,4 +60,8 @@ dependencies {
 
     debugCompile rootProject.ext.dependencies["leakcanary-debug"]
     releaseCompile rootProject.ext.dependencies["leakcanary-release"]
+
+    compile rootProject.ext.dependencies["rxjava"]
+    compile rootProject.ext.dependencies["rxandroid"]
+
 }

@@ -1,8 +1,16 @@
 package com.hsj.base.utils;
 
+import android.content.Context;
+import android.util.Log;
+
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 /**
@@ -15,46 +23,47 @@ import java.util.Locale;
 public class XLog {
 
     /**
-     * 功能如下：
-     *
-     * 1、开发环境->打印所有相关日志输出
-     * 2、改写日志输出行数为全部打印输出
-     * 3、发布环境->仅打印Error日志
-     * 4、定期删除无用日志
+     * 日志总开关
      */
-
+    private static boolean isLogEnable = true;
     /**
-     * 日志名称
+     * 调试状态
      */
-    private static String tag = "[Log]";
+    private static boolean isDebug = true;
     /**
-     * 日志文件输出格式
+     * 发布状态 是否输错误日志
      */
-    private static SimpleDateFormat LOG_FILE_NAME = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
-    /**
-     * 日志文件路径
-     */
-    private static File logDir;
+    private static boolean isErrorLogEnable = true;
     /**
      * 日志打印行数
      */
     private static final int MAX_LENGTH = 3000;
     /**
-     * 日志是否写到文件
+     * 日志输出类型
      */
-    private static boolean isLog2File;
+    private static char LOG_TYPE = 'v';
+
     /**
-     * 错误日志是否写到文件
+     * 日志名称
      */
-    private static boolean isErrorLog2File;
+    private static String TAG = "[Log]";
+
+    /**
+     * 日志存放目录
+     */
+    private static File logDir;
+    /**
+     * 日志目录名称
+     */
+    private static final SimpleDateFormat LOG_DIR = new SimpleDateFormat("yyyyMMdd", Locale.getDefault());
+    /**
+     * 日志文件名
+     */
+    private static final SimpleDateFormat LOG_NAME = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
     /**
      * 日志保存时间（day）
      */
-    private static final int LOG_SAVE_TIME = 3;
-    /**
-     * 是否是调试
-     */
-    private static boolean isDebug;
+    private static final int LOG_SAVE_DAYS = 3;
 
     private XLog() {
 
@@ -62,36 +71,16 @@ public class XLog {
 
     /**
      * 在Application中初始化Log
-     *
-     * @param isDebug         - 是否是调试
-     * @param isErrorLog2File - 是否将错误日志写入文件
-     * @param logDir          - 写入文件路径
-     * @return
      */
-    public static void initLog(boolean isDebug,boolean isErrorLog2File, File logDir) {
-        XLog.isDebug         = isDebug;
-        XLog.isErrorLog2File = isErrorLog2File;
-        XLog.logDir          = logDir;
-
-        checkLogFile();
+    public static void startLog(Context context) {
+        getLogDir(context);
+        deleteLogFile();
     }
 
-    /************************************** Debug： 调试 *******************************************/
-    public static void d(Object msg) {
-        d(tag, msg);
-    }
+    /****************************************** Warn：警告 *********************************************/
 
-    public static void d(String tag, Object msg) {
-        d(tag, msg, null);
-    }
-
-    public static void d(String tag, Object msg, Throwable tr) {
-        print(tag, msg.toString(), tr, 'd');
-    }
-
-    /**************************************** Warn：警告 *******************************************/
     public static void w(Object msg) {
-        w(tag, msg);
+        w(TAG, msg);
     }
 
     public static void w(String tag, Object msg) {
@@ -99,12 +88,13 @@ public class XLog {
     }
 
     public static void w(String tag, Object msg, Throwable tr) {
-        print(tag, msg.toString(), tr, 'w');
+        log(tag, msg.toString(), tr, 'w');
     }
 
-    /************************************* Error： 错误 ********************************************/
+    /******************************************** Error： 错误******************************************/
+
     public static void e(Object msg) {
-        e(tag, msg);
+        e(TAG, msg);
     }
 
     public static void e(String tag, Object msg) {
@@ -112,39 +102,82 @@ public class XLog {
     }
 
     public static void e(String tag, Object msg, Throwable tr) {
-        print(tag, msg.toString(), tr, 'e');
+        log(tag, msg.toString(), tr, 'e');
+    }
+
+    /******************************************* Debug： 调试*******************************************/
+
+    public static void d(Object msg) {
+        d(TAG, msg);
+    }
+
+    public static void d(String tag, Object msg) {
+        d(tag, msg, null);
+    }
+
+    public static void d(String tag, Object msg, Throwable tr) {
+        log(tag, msg.toString(), tr, 'd');
+    }
+
+    /********************************************** Info *********************************************/
+
+    public static void i(Object msg) {
+        i(TAG, msg);
+    }
+
+    public static void i(String tag, Object msg) {
+        i(tag, msg, null);
+    }
+
+    public static void i(String tag, Object msg, Throwable tr) {
+        log(tag, msg.toString(), tr, 'i');
+    }
+
+    /********************************************* Verbose ********************************************/
+
+    public static void v(Object msg) {
+        v(TAG, msg);
+    }
+
+    public static void v(String tag, Object msg) {
+        v(tag, msg, null);
+    }
+
+    public static void v(String tag, Object msg, Throwable tr) {
+        log(tag, msg.toString(), tr, 'v');
     }
 
     /**
-     * 打印日志
+     * 根据tag, msg和等级，输出日志
      *
      * @param tag
      * @param msg
-     * @param tr
+     * @param level
      */
-    private static void print(String tag, Object msg, Throwable tr, char LOG_TYPE) {
-        if (isDebug) {//调试：在控制台输出日志即可
+    private static void log(String tag, String msg, Throwable tr, char level) {
+        if (!isLogEnable) return;
 
-            //TODO 输出日志
+        if (isDebug) {//输出日志开关
+            if ('e' == level && ('e' == LOG_TYPE || 'v' == LOG_TYPE)) {         //e输出优先级最高
+                print("e", tag, msg, tr);
+            } else if ('w' == level && ('w' == LOG_TYPE || 'v' == LOG_TYPE)) {  //w输出优先级第二
+                print("e", tag, msg, tr);
+            } else if ('d' == level && ('d' == LOG_TYPE || 'v' == LOG_TYPE)) {  //d输出优先级第三
+                print("d", tag, msg);
+            } else if ('i' == level && ('d' == LOG_TYPE || 'v' == LOG_TYPE)) {  //i输出有限级第四
+                print("i", tag, msg);
+            } else {
+                print("v", tag, msg);
+            }
+        }
 
-        } else if (isErrorLog2File) {//非调试：错误日志写文件
-
-            //TODO 输出日志
-
+        if (isErrorLogEnable) {//错误日志记录文件
+            log2File(tag, String.valueOf(level), msg + tr == null ? "" : "\n" + Log.getStackTraceString(tr));
         }
     }
 
     /**
-     * 检查过期日志、并删除
-     */
-    private static void checkLogFile() {
-
-    }
-
-    /**
-     * Print log for define method. When information is too long, the Logger can also complete printing. The
-     * equivalent of "{@code android.util.Log.i("Tag", "Message")}" "{@code Logger.print("i",
-     * "Tag", "Message")}".
+     * 自定义打印日志方法，当信息比较长时日志也能完全的打印出来
      *
      * @param method  such as "{@code v, i, d, w, e, wtf}".
      * @param tag     tag.
@@ -164,11 +197,33 @@ public class XLog {
                 }
             }
         }
-
     }
 
     /**
-     * Through the reflection to call the print method.
+     * 自定义打印日志方法，当信息比较长时日志也能完全的打印出来
+     *
+     * @param method such as "{@code v, i, d, w, e, wtf}".
+     * @param o      message.
+     * @param e      error.
+     */
+    private static void print(String method, Object o, Throwable e) {
+        print(method, TAG, o.toString(), e);
+    }
+
+    /**
+     * 自定义打印日志方法，当信息比较长时日志也能完全的打印出来
+     *
+     * @param method  such as "{@code v, i, d, w, e, wtf}".
+     * @param tag     tag.
+     * @param message message.
+     * @param e       error.
+     */
+    private static void print(String method, String tag, String message, Throwable e) {
+        invokePrint(method, tag, message, e);
+    }
+
+    /**
+     * 通过映射来调用打印日志
      *
      * @param method  such as "{@code v, i, d, w, e, wtf}".
      * @param tag     tag.
@@ -186,34 +241,7 @@ public class XLog {
     }
 
     /**
-     * Print log for define method. When information is too long, the Logger can also complete printing. The
-     * equivalent of "{@code android.util.Log.i("Tag", "Message")}" "{@code Logger.print("i",
-     * "Tag", "Message")}".
-     *
-     * @param method such as "{@code v, i, d, w, e, wtf}".
-     * @param o      message.
-     * @param e      error.
-     */
-    private static void print(String method, Object o, Throwable e) {
-        print(method, tag, o.toString(), e);
-    }
-
-    /**
-     * Print log for define method. When information is too long, the Logger can also complete printing. The
-     * equivalent of "{@code android.util.Log.i("Tag", "Message")}" "{@code Logger.print("i",
-     * "Tag", "Message")}".
-     *
-     * @param method  such as "{@code v, i, d, w, e, wtf}".
-     * @param tag     tag.
-     * @param message message.
-     * @param e       error.
-     */
-    private static void print(String method, String tag, String message, Throwable e) {
-        invokePrint(method, tag, message, e);
-    }
-
-    /**
-     * Through the reflection to call the print method.
+     * 通过映射来调用打印日志
      *
      * @param method  such as "{@code v, i, d, w, e, wtf}".
      * @param tag     tag.
@@ -229,6 +257,83 @@ public class XLog {
         } catch (Exception e1) {
             System.out.println(tag + ": " + message);
         }
+    }
+
+    /**
+     * 将日志写入文件: IO线程
+     *
+     * @param logType log类型（e\w\d\i\v）
+     * @param tag
+     * @param text
+     */
+    private static void log2File(String tag, String logType, String text) {
+        Date currentTime = new Date();
+
+        // 目录名称20170920
+        String dir = LOG_DIR.format(currentTime);
+        File file = new File(dir);
+        if (!file.exists()) {
+            file.mkdir();
+        }
+
+        //文件名称：2017-09-20 08:00:00
+        file = new File(file, LOG_NAME.format(currentTime));
+
+        // 日志输出内容格式
+        String logContent = tag + ":" + logType + ":" + text;
+        try {
+            FileWriter filerWriter = new FileWriter(file, true);
+            BufferedWriter bufWriter = new BufferedWriter(filerWriter);
+            bufWriter.write(logContent);
+            bufWriter.newLine();
+            bufWriter.close();
+            filerWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 删除三天前的目录：IO线程
+     */
+    private static void deleteLogFile() {
+        //三天前日志目录：20170920
+        String deleteLogDir = LOG_DIR.format(getDateBefore());
+        long dir = Long.valueOf(deleteLogDir);
+        if (logDir != null && logDir.exists()) {
+            File[] files = logDir.listFiles();
+            if (files != null) {
+                for (File file : files) {
+                    String dirName = file.getName();
+                    long dir1 = Long.valueOf(dirName);
+                    if (dir > dir1) {
+                        FileManager.deleteDir(file.getAbsolutePath());
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * 得到LOG_SAVE_DAYS天前的日期
+     *
+     * @return
+     */
+    private static Date getDateBefore() {
+        Date time = new Date();
+        Calendar now = Calendar.getInstance();
+        now.setTime(time);
+        now.set(Calendar.DATE, now.get(Calendar.DATE) - LOG_SAVE_DAYS);
+        return now.getTime();
+    }
+
+    /**
+     * 获取日志存放目录: cache/log/
+     *
+     * @param context
+     */
+    private static void getLogDir(Context context) {
+        logDir = FileManager.getCacheDir(context, "log");
     }
 
 }

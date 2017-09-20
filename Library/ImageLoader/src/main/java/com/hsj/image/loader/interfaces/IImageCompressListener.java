@@ -1,6 +1,7 @@
 package com.hsj.image.loader.interfaces;
 
 import java.io.File;
+import java.util.List;
 
 /**
  * @Author:HSJ
@@ -13,15 +14,22 @@ public interface IImageCompressListener {
     /**
      * 开始压缩
      */
-    void onStart();
+    void onCompressStart();
 
     /**
      * 压缩成功
      */
-    void onSuccess(File file);
+    void onCompressProgress(int currentPosition,int allPosition);
 
     /**
      * 压缩失败
      */
-    void onError(Throwable e);
+    void onCompressError(Throwable e);
+
+    /**
+     * 完成压缩
+     * @param fileList
+     */
+    void onCompressStop(List<File> fileList);
+
 }
