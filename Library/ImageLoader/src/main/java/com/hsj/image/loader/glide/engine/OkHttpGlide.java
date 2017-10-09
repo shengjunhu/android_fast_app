@@ -13,6 +13,7 @@ import com.bumptech.glide.load.engine.cache.ExternalCacheDiskCacheFactory;
 import com.bumptech.glide.load.engine.cache.InternalCacheDiskCacheFactory;
 import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.module.AppGlideModule;
+import com.hsj.image.loader.R;
 
 import java.io.File;
 import java.io.InputStream;
@@ -34,7 +35,7 @@ public class OkHttpGlide extends AppGlideModule {
 
     @Override
     public boolean isManifestParsingEnabled() {
-        return super.isManifestParsingEnabled();
+        return false;
     }
 
     @Override
@@ -48,7 +49,7 @@ public class OkHttpGlide extends AppGlideModule {
             long usableSpace = sdDir.getUsableSpace();
             String usableSpaceFormat = Formatter.formatFileSize(context, usableSpace);
             if (usableSpace < DEFAULT_IMAGE_CACHE_SIZE) {
-                Toast.makeText(context, "存储空间不足,剩余空间为：" + usableSpaceFormat, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, context.getString(R.string.storage_hint) + usableSpaceFormat, Toast.LENGTH_SHORT).show();
             } else {
                 builder.setDiskCache(new ExternalCacheDiskCacheFactory(context, "image", DEFAULT_IMAGE_CACHE_SIZE));
             }
@@ -57,18 +58,16 @@ public class OkHttpGlide extends AppGlideModule {
             long usableSpace = dataDir.getUsableSpace();
             String usableSpaceFormat = Formatter.formatFileSize(context, usableSpace);
             if (usableSpace < DEFAULT_IMAGE_CACHE_SIZE) {
-                Toast.makeText(context, "存储空间不足,剩余空间为：" + usableSpaceFormat, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, context.getString(R.string.storage_hint) + usableSpaceFormat, Toast.LENGTH_SHORT).show();
             } else {
                 builder.setDiskCache(new InternalCacheDiskCacheFactory(context, "image", DEFAULT_IMAGE_CACHE_SIZE));
             }
         }
-        super.applyOptions(context, builder);
     }
 
     @Override
     public void registerComponents(Context context, Glide glide, Registry registry) {
         registry.replace(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory());
-        super.registerComponents(context, glide, registry);
     }
 
 }

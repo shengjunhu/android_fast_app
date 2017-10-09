@@ -129,4 +129,5 @@ public class OkHttpStreamFetcher implements DataFetcher<InputStream>, okhttp3.Ca
     public DataSource getDataSource() {
         return DataSource.REMOTE;
     }
+
 }

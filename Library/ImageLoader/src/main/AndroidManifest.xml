@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme">
 
         <meta-data
-            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+            android:name="com.hsj.image.loader.glide.engine.OkHttpGlide"
             android:value="GlideModule" />
 
     </application>

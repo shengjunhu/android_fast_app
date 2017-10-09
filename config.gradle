@@ -33,7 +33,7 @@ ext {
             fastJsonVersion            : "1.1.63.android",
             rxjavaVersion              : "x.y.z",
             rxandroidVersion           : "2.0.1",
-            glideVersion               : "4.1.1",
+            glideVersion               : "4.2.0",
             rxlifecycleSdkVersion      : "1.0",
             leakcanaryVersion          : "1.5.2",
             objectBoxVersion           : "1.0.1",
