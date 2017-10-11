@@ -117,7 +117,10 @@ ext {
             //小米推送
             "mi_push"                  : "ThirdSDK/Push/libs/MiPush_SDK_Client_3_4_5.jar",
 
-            //IM
+            //web浏览器（腾讯X5浏览服务sdk）
+            "tbs_x5"                   : "Library/Web/libs/tbs_sdk_v3.5.0_20170801_113025.jar",
+
+            //IM(融云)
             "ImLib"                    : "cn.rongcloud.android:IMLib:2.8.6",
             "ImKit"                    : "cn.rongcloud.android:IMKit:2.8.6",
             "ImCallLib"                : "cn.rongcloud.android:CallLib:2.8.6",
