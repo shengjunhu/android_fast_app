@@ -1,13 +1,11 @@
 package com.hsj.provider.qr;
 
 /**
- * @Company:南京荣之誉信息科技有限公司
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/10/25/20:23
- * @Version:XBS V2.0
+ * @Date:2017/6/12 12:38
  * @Class:QRCreateProvder
- * @Description:
+ * @Description:生成二维码
  */
 public class QRCreateProvder {
 }

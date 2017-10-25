@@ -120,12 +120,15 @@ ext {
             //web浏览器（腾讯X5浏览服务sdk）
             "tbs_x5"                   : "Library/Web/libs/tbs_sdk_v3.5.0_20170801_113025.jar",
 
+            //qr scan
+            "zxing_core"               : "com.google.zxing:core:3.3.0",
+
             //IM(融云)
-            "ImLib"                    : "cn.rongcloud.android:IMLib:2.8.6",
-            "ImKit"                    : "cn.rongcloud.android:IMKit:2.8.6",
-            "ImCallLib"                : "cn.rongcloud.android:CallLib:2.8.6",
-            "ImCallkit"                : "cn.rongcloud.android:CallKit:2.8.6",
-            "ImRedPacket"              : "cn.rongcloud.android:RedPacket:2.8.6",
+            "im_lib"                   : "cn.rongcloud.android:IMLib:2.8.6",
+            "im_kit"                   : "cn.rongcloud.android:IMKit:2.8.6",
+            "im_calllib"               : "cn.rongcloud.android:CallLib:2.8.6",
+            "im_callkit"               : "cn.rongcloud.android:CallKit:2.8.6",
+            "im_redpacket"             : "cn.rongcloud.android:RedPacket:2.8.6",
 
             //plugin
             "repluginHost"             : "com.qihoo360.replugin:replugin-host-lib:2.2.0",

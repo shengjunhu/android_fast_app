@@ -26,12 +26,16 @@
 
 #=======================================QRProvider==================================================
 
+-allowaccessmodification
 -optimizationpasses 5
 -dontusemixedcaseclassnames
 -dontskipnonpubliclibraryclasses
 -dontpreverify
 -verbose
--optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+-optimizations !code/simplification/cast,!field/*,!class/merging/*,!class/unboxing/enum,!code/allocation/variable,!method/marking/private
+-dontshrink
+-dontobfuscate
+-keepattributes *Annotation*
 
 -keep public class * extends android.app.Activity
 -keep public class * extends android.app.Application
@@ -66,3 +70,19 @@
 -keep class * implements android.os.Parcelable {
   public static final android.os.Parcelable$Creator *;
 }
+
+-keepclassmembers public class * extends android.view.View {
+   void set*(***);
+   *** get*();
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+-dontwarn android.support.**

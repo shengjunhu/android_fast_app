@@ -26,10 +26,10 @@ import com.hsj.base.ui.BaseActivity;
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/6/12 12:38
- * @Class:QRActivity
+ * @Class:QRScanActivity
  * @Description:扫码界面
  */
-public class QRActivity extends BaseActivity{
+public class QRScanActivity extends BaseActivity{
 
     @Override
     protected int getLayoutId() {
