@@ -1,0 +1,70 @@
+apply plugin:rootProject.ext.plugins.application
+apply plugin: rootProject.ext.plugins.retrolambda
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        applicationId "com.hsj.discover"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+
+        // 矢量图
+        vectorDrawables.useSupportLibrary = true
+
+        //打包时筛选出这两种架构
+        ndk { abiFilters "armeabi-v7a", "x86" }
+
+        testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]
+    }
+    
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            debuggable false
+            jniDebuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile rootProject.ext.dependencies["testCompile"]
+    compile project(path: ':Library:BaseApp')
+    compile rootProject.ext.dependencies["repluginLib"]
+}
+
+apply plugin: rootProject.ext.plugins.repluginLib
+repluginPluginConfig {
+    //插件名
+    pluginName = "Zone"
+    //宿主app的包名
+    hostApplicationId = "com.hsj.app.host"
+    //宿主app的启动activity
+    hostAppLauncherActivity = "com.hsj.app.host.LaunchActivity"
+}

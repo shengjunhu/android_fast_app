@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.hsj.app.R;
 import com.hsj.base.app.ui.AppBaseActivity;
+import com.qihoo360.replugin.RePlugin;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +30,16 @@ public class AppMainActivity extends AppBaseActivity {
 
     @Override
     protected int getLayoutId() {
+        RePlugin.registerHookingClass("com.hsj.home.ui.fragment.HomeFragment",
+                RePlugin.createComponentName("home", "com.hsj.home.ui.fragment.HomeFragment"), null);
+        RePlugin.registerHookingClass("com.hsj.shop.ui.fragment.ShopFragment",
+                RePlugin.createComponentName("shop", "com.hsj.shop.ui.fragment.ShopFragment"), null);
+        RePlugin.registerHookingClass("com.hsj.chat.ui.fragment.ChatFragment",
+                RePlugin.createComponentName("chat", "com.hsj.chat.ui.fragment.ChatFragment"), null);
+        RePlugin.registerHookingClass("com.hsj.discover.ui.fragment.DiscoverFragment",
+                RePlugin.createComponentName("discover", "com.hsj.discover.ui.fragment.DiscoverFragment"), null);
+        RePlugin.registerHookingClass("com.hsj.me.ui.fragment.MeFragment",
+                RePlugin.createComponentName("me","com.hsj.me.ui.fragment.MeFragment"),null);
         return R.layout.activity_app_main;
     }
 
@@ -43,34 +54,39 @@ public class AppMainActivity extends AppBaseActivity {
         List<String> tabNameList = new ArrayList<>();
         tabNameList.add("首页");
         tabNameList.add("商城");
-        tabNameList.add("购物车");
         tabNameList.add("好友");
-        tabNameList.add("聊天");
-        tabNameList.add("好友圈");
+        tabNameList.add("发现");
         tabNameList.add("我的");
 
         List<Fragment> tabFragmentList = new ArrayList<>();
         try {
-            Class<Fragment> home = (Class<Fragment>) Class.forName("com.hsj.home.ui.fragment.HomeFragment");
-            Class<Fragment> shop = (Class<Fragment>) Class.forName("com.hsj.home.ui.fragment.ShopFragment");
-            Class<Fragment> car = (Class<Fragment>) Class.forName("com.hsj.home.ui.fragment.CarFragment");
-            Class<Fragment> friend = (Class<Fragment>) Class.forName("com.hsj.home.ui.fragment.FriendFragment");
-            Class<Fragment> chat = (Class<Fragment>) Class.forName("com.hsj.home.ui.fragment.ChatFragment");
-            Class<Fragment> zone = (Class<Fragment>) Class.forName("com.hsj.home.ui.fragment.ZoneFragment");
-            Class<Fragment> me = (Class<Fragment>) Class.forName("com.hsj.home.ui.fragment.MeFragment");
+            ClassLoader homeClassLoader = RePlugin.fetchClassLoader("home");
+            ClassLoader shopClassLoader = RePlugin.fetchClassLoader("shop");
+            ClassLoader chatClassLoader = RePlugin.fetchClassLoader("chat");
+            ClassLoader discoverClassLoader = RePlugin.fetchClassLoader("discover");
+            ClassLoader meClassLoader = RePlugin.fetchClassLoader("me");
 
-            tabFragmentList.add(home.newInstance());
-            tabFragmentList.add(shop.newInstance());
-            tabFragmentList.add(car.newInstance());
-            tabFragmentList.add(friend.newInstance());
-            tabFragmentList.add(chat.newInstance());
-            tabFragmentList.add(zone.newInstance());
-            tabFragmentList.add(me.newInstance());
+            //使用插件的Classloader获取指定Fragment实例
+            Fragment homeFragment = homeClassLoader.loadClass("com.hsj.home.ui.fragment.HomeFragment")
+                    .asSubclass(Fragment.class).newInstance();
+            Fragment shopFragment = shopClassLoader.loadClass("com.hsj.shop.ui.fragment.ShopFragment")
+                    .asSubclass(Fragment.class).newInstance();
+            Fragment chatFragment = chatClassLoader.loadClass("com.hsj.chat.ui.fragment.ChatFragment")
+                    .asSubclass(Fragment.class).newInstance();
+            Fragment discoverFragment = discoverClassLoader.loadClass("com.hsj.discover.ui.fragment.DiscoverFragment")
+                    .asSubclass(Fragment.class).newInstance();
+            Fragment meFragment = meClassLoader.loadClass("com.hsj.me.ui.fragment.MeFragment")
+                    .asSubclass(Fragment.class).newInstance();
 
-        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException e) {
+            tabFragmentList.add(homeFragment);
+            tabFragmentList.add(shopFragment);
+            tabFragmentList.add(chatFragment);
+            tabFragmentList.add(discoverFragment);
+            tabFragmentList.add(meFragment);
+
+        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-
         vp_app.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(),tabFragmentList, tabNameList));
         tab_app.setupWithViewPager(vp_app);
     }
