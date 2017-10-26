@@ -3,7 +3,7 @@ include ':APP:Host',                //app宿主程序
         ':APP:Home',                //app主页模块
         ':APP:Shop',                //app商城模块
         ':APP:Chat',                //app聊天模块
-        ':APP:Discover',                //app好友圈模块
+        ':APP:Discover',            //app好友圈模块
         ':APP:Me',                  //app我的模块
 
         ':ThirdSDK:Login',          //QQ、微信、微博登陆库
