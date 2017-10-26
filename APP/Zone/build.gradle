@@ -12,7 +12,12 @@ android {
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
 
+        // 矢量图
+        vectorDrawables.useSupportLibrary = true
+
+        //打包时筛选出这两种架构
         ndk { abiFilters "armeabi-v7a", "x86" }
+
         testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]
     }
     
@@ -46,7 +51,12 @@ repositories {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(path: ':APP:BaseApp')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile rootProject.ext.dependencies["testCompile"]
+    compile project(path: ':Library:BaseApp')
+    compile rootProject.ext.dependencies["repluginLib"]
 }
 
 apply plugin: rootProject.ext.plugins.repluginLib

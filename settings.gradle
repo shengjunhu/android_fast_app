@@ -5,7 +5,6 @@ include ':APP:Host',                //app宿主程序
         ':APP:Chat',                //app聊天模块
         ':APP:Zone',                //app好友圈模块
         ':APP:Me',                  //app我的模块
-        ':APP:BaseApp',             //项目基类
 
         ':ThirdSDK:Login',          //QQ、微信、微博登陆库
         ':ThirdSDK:Share',          //QQ、微信、微博分享库
@@ -51,5 +50,6 @@ include ':APP:Host',                //app宿主程序
         ':Library:PercentLayout',   //百分比布局库
         ':Library:TaskManager',     //任务管理器
         ':Library:DBObject',        //Object数据库
+        ':Library:BaseApp',         //项目模块基类
         ':Library:BaseLib'          //全局库基类
 

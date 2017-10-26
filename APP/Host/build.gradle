@@ -113,8 +113,12 @@ repositories {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile rootProject.ext.dependencies["testCompile"]
+    compile project(path: ':Library:BaseApp')
     compile rootProject.ext.dependencies["repluginHost"]
-    compile project(path: ':APP:BaseApp')
 }
 
 apply plugin: rootProject.ext.plugins.repluginHost
