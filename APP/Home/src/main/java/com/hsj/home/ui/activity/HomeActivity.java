@@ -10,8 +10,8 @@ import com.hsj.home.ui.fragment.HomeFragment;
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/6/14 09:46
- * @Class:
+ * @Date:2017/6/14/09:46
+ * @Class:HomeActivity
  * @Description:
  */
 public class HomeActivity extends AppBaseActivity {

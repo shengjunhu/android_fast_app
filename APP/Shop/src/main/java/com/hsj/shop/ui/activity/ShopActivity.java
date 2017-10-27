@@ -10,8 +10,8 @@ import com.hsj.shop.ui.fragment.ShopFragment;
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/6/14 09:46
- * @Class:
+ * @Date:2017/6/14/09:46
+ * @Class:ShopActivity
  * @Description:
  */
 public class ShopActivity extends AppBaseActivity {

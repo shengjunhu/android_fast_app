@@ -1,27 +1,18 @@
 package com.hsj.me.base;
 
-import android.content.Context;
-
-import com.hsj.base.BaseApplication;
-import com.squareup.leakcanary.LeakCanary;
+import com.hsj.base.core.BaseApp;
 
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/5/27 16:01
- * @Class:App
+ * @Date:2017/5/27/16:01
+ * @Class:AppMe
  * @Description:
  */
-public class AppMe extends BaseApplication {
-
-    public static Context appContext;
+public class AppMe extends BaseApp {
 
     @Override
     protected void initModule() {
-        if (LeakCanary.isInAnalyzerProcess(this)) return;
-        LeakCanary.install(this);
-
-        appContext = getApplicationContext();
 
     }
 

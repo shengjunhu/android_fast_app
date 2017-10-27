@@ -9,7 +9,7 @@ import com.hsj.home.R;
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/6/14 09:42
+ * @Date:2017/6/14/09:42
  * @Class:HomeFragment
  * @Description:
  */

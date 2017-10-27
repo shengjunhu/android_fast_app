@@ -26,7 +26,7 @@ import com.hsj.base.app.ui.AppBaseActivity;
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/7/24 10:09
+ * @Date:2017/7/24/10:09
  * @Class:AppAdvertActivity
  * @Description:广告页
  */

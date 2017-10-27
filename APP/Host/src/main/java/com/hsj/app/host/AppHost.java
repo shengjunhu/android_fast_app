@@ -13,7 +13,7 @@ import com.qihoo360.replugin.RePluginEventCallbacks;
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/9/13 19:20
+ * @Date:2017/9/13/19:20
  * @Class:AppHost
  * @Description:Application类
  */

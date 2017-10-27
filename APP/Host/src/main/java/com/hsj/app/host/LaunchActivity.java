@@ -8,7 +8,7 @@ import com.hsj.base.app.ui.AppBaseActivity;
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/5/27 15:26
+ * @Date:2017/5/27/15:26
  * @Class:AppLaunchActivity
  * @Description:启动页
  */

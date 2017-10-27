@@ -35,6 +35,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile rootProject.ext.dependencies["appcompat-v7"]
     compile rootProject.ext.dependencies["objectBox"]
     //compile 'io.objectbox:objectbox-android: 1.0.1'
     //compile 'io.objectbox:objectbox-daocompat: 1.0.1'

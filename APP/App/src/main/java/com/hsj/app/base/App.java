@@ -5,7 +5,7 @@ import com.hsj.base.core.BaseApp;
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/5/27 16:01
+ * @Date:2017/5/27/16:01
  * @Class:App
  * @Description:
  */

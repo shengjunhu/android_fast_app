@@ -1,13 +1,35 @@
 package com.hsj.chat.ui.fragment;
 
+import android.os.Bundle;
+import android.view.View;
+import com.hsj.base.app.ui.AppBaseFragment;
+
 /**
- * @Company:南京荣之誉信息科技有限公司
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/10/26/15:42
- * @Version:XBS V2.0
  * @Class:ChatFragment
  * @Description:
  */
-public class ChatFragment {
+public class ChatFragment extends AppBaseFragment{
+
+    @Override
+    protected int getLayoutId() {
+        return 0;
+    }
+
+    @Override
+    protected void initUI(Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
+    }
 }

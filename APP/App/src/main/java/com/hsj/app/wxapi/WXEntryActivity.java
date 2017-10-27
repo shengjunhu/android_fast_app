@@ -8,7 +8,7 @@ import com.hsj.base.app.ui.AppBaseActivity;
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/6/23 10:20
+ * @Date:2017/6/23/10:20
  * @Class:WXEntryActivity
  * @Description:登陆、分享回调界面
  */

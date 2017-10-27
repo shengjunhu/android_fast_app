@@ -10,8 +10,8 @@ import com.hsj.me.ui.fragment.MeFragment;
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/6/14 09:46
- * @Class:
+ * @Date:2017/6/14/09:46
+ * @Class:MeActivity
  * @Description:
  */
 public class MeActivity extends AppBaseActivity {

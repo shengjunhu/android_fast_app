@@ -9,7 +9,7 @@ import com.hsj.shop.R;
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/6/14 09:46
+ * @Date:2017/6/14/09:46
  * @Class:ShopFragment
  * @Description:
  */
