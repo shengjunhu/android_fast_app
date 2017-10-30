@@ -2,7 +2,8 @@ package com.hsj.chat.ui.fragment;
 
 import android.os.Bundle;
 import android.view.View;
-import com.hsj.base.app.ui.AppBaseFragment;
+
+import com.hsj.base.ui.BaseFragment;
 
 /**
  * @Author:HSJ
@@ -11,7 +12,7 @@ import com.hsj.base.app.ui.AppBaseFragment;
  * @Class:ChatFragment
  * @Description:
  */
-public class ChatFragment extends AppBaseFragment{
+public class ChatFragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {

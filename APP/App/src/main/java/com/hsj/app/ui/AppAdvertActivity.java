@@ -20,8 +20,7 @@ package com.hsj.app.ui;
 
 import android.os.Bundle;
 import android.view.View;
-
-import com.hsj.base.app.ui.AppBaseActivity;
+import com.hsj.base.ui.BaseActivity;
 
 /**
  * @Author:HSJ
@@ -30,7 +29,7 @@ import com.hsj.base.app.ui.AppBaseActivity;
  * @Class:AppAdvertActivity
  * @Description:广告页
  */
-public class AppAdvertActivity extends AppBaseActivity {
+public class AppAdvertActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {

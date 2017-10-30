@@ -16,12 +16,11 @@
  *
  ******************************************************************************/
 
-package com.hsj.app.wxapi;
+package com.hsj.pay.wxapi;
 
 import android.os.Bundle;
 import android.view.View;
-
-import com.hsj.base.app.ui.AppBaseActivity;
+import com.hsj.base.ui.BaseActivity;
 
 /**
  * @Author:HSJ
@@ -30,7 +29,7 @@ import com.hsj.base.app.ui.AppBaseActivity;
  * @Class:WXPayActivity
  * @Description:支付回调界面
  */
-public class WXPayActivity extends AppBaseActivity {
+public class WXPayActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {

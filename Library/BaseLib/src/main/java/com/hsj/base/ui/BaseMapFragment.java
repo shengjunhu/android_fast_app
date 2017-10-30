@@ -95,7 +95,7 @@ public abstract class BaseMapFragment extends Fragment implements CancellationSi
 
     }
 
-    protected void finishDialog(){
+    protected void stopDialog(){
 
     }
 

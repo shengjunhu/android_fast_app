@@ -3,7 +3,7 @@ package com.hsj.discover.ui.activity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hsj.base.app.ui.AppBaseActivity;
+import com.hsj.base.ui.BaseActivity;
 import com.hsj.discover.R;
 import com.hsj.discover.ui.fragment.DiscoverFragment;
 
@@ -14,7 +14,7 @@ import com.hsj.discover.ui.fragment.DiscoverFragment;
  * @Class:DiscoverActivity
  * @Description:
  */
-public class DiscoverActivity extends AppBaseActivity {
+public class DiscoverActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {

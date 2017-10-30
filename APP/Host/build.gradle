@@ -117,7 +117,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testCompile rootProject.ext.dependencies["testCompile"]
-    compile project(path: ':Library:BaseApp')
+    compile project(path: ':Library:BaseLib')
     compile rootProject.ext.dependencies["repluginHost"]
 }
 

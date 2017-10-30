@@ -8,7 +8,7 @@ import android.view.KeyEvent;
 import android.view.View;
 
 import com.hsj.app.R;
-import com.hsj.base.app.ui.AppBaseActivity;
+import com.hsj.base.ui.BaseActivity;
 import com.qihoo360.replugin.RePlugin;
 
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ import java.util.List;
  * @Class:AppMainActivity
  * @Description:应用主页
  */
-public class AppMainActivity extends AppBaseActivity {
+public class AppMainActivity extends BaseActivity {
 
     private boolean isExitApp;
     private boolean isFirstShow;

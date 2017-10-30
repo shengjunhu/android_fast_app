@@ -2,7 +2,8 @@ package com.hsj.discover.ui.fragment;
 
 import android.os.Bundle;
 import android.view.View;
-import com.hsj.base.app.ui.AppBaseFragment;
+
+import com.hsj.base.ui.BaseFragment;
 import com.hsj.discover.R;
 
 /**
@@ -12,7 +13,7 @@ import com.hsj.discover.R;
  * @Class:ZoneFragment
  * @Description:
  */
-public class DiscoverFragment extends AppBaseFragment {
+public class DiscoverFragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {

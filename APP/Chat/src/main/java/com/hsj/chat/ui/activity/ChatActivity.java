@@ -2,7 +2,8 @@ package com.hsj.chat.ui.activity;
 
 import android.os.Bundle;
 import android.view.View;
-import com.hsj.base.app.ui.AppBaseActivity;
+
+import com.hsj.base.ui.BaseActivity;
 
 /**
  * @Author:HSJ
@@ -11,7 +12,7 @@ import com.hsj.base.app.ui.AppBaseActivity;
  * @Class:ChatActivity
  * @Description:
  */
-public class ChatActivity extends AppBaseActivity {
+public class ChatActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {

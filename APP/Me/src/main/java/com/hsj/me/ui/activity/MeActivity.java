@@ -3,7 +3,7 @@ package com.hsj.me.ui.activity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hsj.base.app.ui.AppBaseActivity;
+import com.hsj.base.ui.BaseActivity;
 import com.hsj.me.R;
 import com.hsj.me.ui.fragment.MeFragment;
 
@@ -14,7 +14,7 @@ import com.hsj.me.ui.fragment.MeFragment;
  * @Class:MeActivity
  * @Description:
  */
-public class MeActivity extends AppBaseActivity {
+public class MeActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {

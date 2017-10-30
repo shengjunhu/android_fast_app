@@ -4,10 +4,10 @@ package com.hsj.base.utils;
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 16:42
- * @Class:EncryptProvider
+ * @Class:EncryptTool
  * @Description:加密、解密工具类
  */
-public class EncryptProvider {
+public class EncryptTool {
 
     /**
      * 功能如下：

@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.hsj.app.R;
-import com.hsj.base.app.ui.AppBaseActivity;
+import com.hsj.base.ui.BaseActivity;
 
 /**
  * @Author:HSJ
@@ -13,7 +13,7 @@ import com.hsj.base.app.ui.AppBaseActivity;
  * @Class:AppLoginActivity
  * @Description:应用登陆界面：密码登陆第三方登陆和短信登陆
  */
-public class AppLoginActivity extends AppBaseActivity {
+public class AppLoginActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {

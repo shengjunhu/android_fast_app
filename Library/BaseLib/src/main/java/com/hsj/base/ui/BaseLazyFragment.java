@@ -17,14 +17,16 @@ import com.hsj.base.core.BaseApp;
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 14:52
- * @Class:BaseLoadFragment
- * @Description:Fragment数据加载：
- * 1、加载中、2、加载成功、3、加载失败、4、网络故障
+ * @Class:BaseLazyFragment
+ * @Description:数据懒加载
  */
-public abstract class BaseLoadFragment extends Fragment implements View.OnClickListener{
+public abstract class BaseLazyFragment extends Fragment implements View.OnClickListener{
 
     public String TAG = this.getClass().getSimpleName();
 
+    private boolean isVisible   = false; //当前Fragment是否可见
+    private boolean isInitView  = false; //是否与View建立起映射关系
+    private boolean isFirstLoad = true;  //是否是第一次加载数据
     private View rootView;
 
     @Nullable
@@ -36,7 +38,8 @@ public abstract class BaseLoadFragment extends Fragment implements View.OnClickL
 
             initUI(savedInstanceState);
 
-            initData();
+            isInitView = true;
+            loadData();
         }
         return rootView;
     }
@@ -46,6 +49,25 @@ public abstract class BaseLoadFragment extends Fragment implements View.OnClickL
     protected abstract void initUI(Bundle savedInstanceState);
 
     protected abstract void initData();
+
+    private void loadData() {
+        if (!isFirstLoad || !isVisible || !isInitView) { // 不加载数据
+            return;
+        }
+        initData();
+        isFirstLoad = false;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        if (isVisibleToUser) {
+            isVisible = true;
+            loadData();
+        } else {
+            isVisible = false;
+        }
+        super.setUserVisibleHint(isVisibleToUser);
+    }
 
     @Override
     public void onResume() {
@@ -62,15 +84,11 @@ public abstract class BaseLoadFragment extends Fragment implements View.OnClickL
         super.onStop();
     }
 
-    /**
-     * 检测内存泄露
-     */
     @Override
     public void onDestroy() {
         super.onDestroy();
         BaseApp.getRefWatcher().watch(this);
     }
-
 
     /**
      * 刷新数据
@@ -140,16 +158,14 @@ public abstract class BaseLoadFragment extends Fragment implements View.OnClickL
     }
 
     /**
-     * 启动加载提示
+     * 加载提示对话框
+     * @param hint
      */
     protected void startDialog(String hint){
 
     }
 
-    /**
-     * 停止加载提示
-     */
-    protected void stopDialog(){
+    protected void stophDialog(){
 
     }
 

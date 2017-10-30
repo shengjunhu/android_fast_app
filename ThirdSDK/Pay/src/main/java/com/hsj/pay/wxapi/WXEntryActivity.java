@@ -1,9 +1,8 @@
-package com.hsj.app.wxapi;
+package com.hsj.pay.wxapi;
 
 import android.os.Bundle;
 import android.view.View;
-
-import com.hsj.base.app.ui.AppBaseActivity;
+import com.hsj.base.ui.BaseActivity;
 
 /**
  * @Author:HSJ
@@ -12,7 +11,7 @@ import com.hsj.base.app.ui.AppBaseActivity;
  * @Class:WXEntryActivity
  * @Description:登陆、分享回调界面
  */
-public class WXEntryActivity extends AppBaseActivity {
+public class WXEntryActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {

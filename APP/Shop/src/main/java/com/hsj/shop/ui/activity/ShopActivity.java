@@ -3,7 +3,7 @@ package com.hsj.shop.ui.activity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hsj.base.app.ui.AppBaseActivity;
+import com.hsj.base.ui.BaseActivity;
 import com.hsj.shop.R;
 import com.hsj.shop.ui.fragment.ShopFragment;
 
@@ -14,7 +14,7 @@ import com.hsj.shop.ui.fragment.ShopFragment;
  * @Class:ShopActivity
  * @Description:
  */
-public class ShopActivity extends AppBaseActivity {
+public class ShopActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {

@@ -3,7 +3,7 @@ package com.hsj.home.ui.fragment;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hsj.base.app.ui.AppBaseFragment;
+import com.hsj.base.ui.BaseFragment;
 import com.hsj.home.R;
 
 /**
@@ -13,7 +13,7 @@ import com.hsj.home.R;
  * @Class:HomeFragment
  * @Description:
  */
-public class HomeFragment extends AppBaseFragment {
+public class HomeFragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {
