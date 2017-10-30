@@ -24,6 +24,9 @@ public abstract class BaseLoadFragment extends Fragment implements View.OnClickL
 
     public String TAG = this.getClass().getSimpleName();
 
+    private boolean isVisible   = false; //当前Fragment是否可见
+    private boolean isInitView  = false; //是否与View建立起映射关系
+    private boolean isFirstLoad = true;  //是否是第一次加载数据
     private View rootView;
 
     @Nullable
@@ -35,7 +38,8 @@ public abstract class BaseLoadFragment extends Fragment implements View.OnClickL
 
             initUI(savedInstanceState);
 
-            initData();
+            isInitView = true;
+            loadData();
         }
         return rootView;
     }
@@ -45,6 +49,25 @@ public abstract class BaseLoadFragment extends Fragment implements View.OnClickL
     protected abstract void initUI(Bundle savedInstanceState);
 
     protected abstract void initData();
+
+    private void loadData() {
+        if (!isFirstLoad || !isVisible || !isInitView) { // 不加载数据
+            return;
+        }
+        initData();
+        isFirstLoad = false;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        if (isVisibleToUser) {
+            isVisible = true;
+            loadData();
+        } else {
+            isVisible = false;
+        }
+        super.setUserVisibleHint(isVisibleToUser);
+    }
 
     @Override
     public void onResume() {

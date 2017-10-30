@@ -2,7 +2,7 @@ package com.hsj.provider.media.ui.fragment;
 
 import android.os.Bundle;
 import android.view.View;
-import com.hsj.base.ui.BaseLoadFragment;
+import com.hsj.base.ui.BaseFragment;
 
 /**
  * @Author:HSJ
@@ -11,7 +11,7 @@ import com.hsj.base.ui.BaseLoadFragment;
  * @Class:PhotoViewFragment
  * @Description:图片预览
  */
-public class PhotoViewFragment extends BaseLoadFragment{
+public class PhotoViewFragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {

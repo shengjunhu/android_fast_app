@@ -17,8 +17,7 @@ package com.hsj.provider.media.ui.fragment;
 
 import android.os.Bundle;
 import android.view.View;
-
-import com.hsj.base.ui.BaseLoadFragment;
+import com.hsj.base.ui.BaseFragment;
 
 /**
  * @Author:HSJ
@@ -27,7 +26,7 @@ import com.hsj.base.ui.BaseLoadFragment;
  * @Class:VideoViewFragment
  * @Description:Video预览
  */
-public class VideoViewFragment extends BaseLoadFragment{
+public class VideoViewFragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {
