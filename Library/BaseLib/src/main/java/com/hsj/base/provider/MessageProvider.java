@@ -3,10 +3,10 @@ package com.hsj.base.provider;
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/08/06 22:52
- * @Class:MsgProvider
+ * @Date:2017/08/06/22:52
+ * @Class:MessageProvider
  * @Description:短信提供者
  */
-public class MsgProvider {
+public class MessageProvider {
 
 }
