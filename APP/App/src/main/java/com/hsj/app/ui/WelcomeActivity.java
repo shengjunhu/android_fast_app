@@ -20,16 +20,17 @@ package com.hsj.app.ui;
 
 import android.os.Bundle;
 import android.view.View;
+
 import com.hsj.base.ui.BaseActivity;
 
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/7/24/10:09
- * @Class:AppAdvertActivity
+ * @Class:AppWelcomeActivity
  * @Description:广告页
  */
-public class AppAdvertActivity extends BaseActivity {
+public class WelcomeActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
@@ -50,4 +51,5 @@ public class AppAdvertActivity extends BaseActivity {
     public void onClick(View view) {
 
     }
+
 }

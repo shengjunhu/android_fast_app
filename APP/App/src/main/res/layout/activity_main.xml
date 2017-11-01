@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/mmv"
     android:background="@color/colorPrimary"
-    tools:context=".ui.AppMainActivity">
+    tools:context=".ui.MainActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_app"

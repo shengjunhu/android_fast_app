@@ -21,7 +21,9 @@ public class LaunchActivity extends BaseActivity {
 
     @Override
     protected void initUI(Bundle savedInstanceState) {
-
+        //进入欢迎页或者广告页
+        //startActivity(new Intent(this, WelActivity.class));
+        finish();
     }
 
     @Override

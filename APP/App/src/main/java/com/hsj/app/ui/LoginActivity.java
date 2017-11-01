@@ -9,15 +9,15 @@ import com.hsj.base.ui.BaseActivity;
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/5/27/15:30
- * @Class:AppRegisterActivity
- * @Description:应用注册和找回密码界面
+ * @Date:2017/5/27/15:29
+ * @Class:AppLoginActivity
+ * @Description:应用登陆界面：密码登陆第三方登陆和短信登陆
  */
-public class AppRegisterActivity extends BaseActivity {
+public class LoginActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_app_register;
+        return R.layout.activity_login;
     }
 
     @Override

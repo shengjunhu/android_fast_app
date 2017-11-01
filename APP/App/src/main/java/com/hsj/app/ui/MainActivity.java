@@ -21,7 +21,7 @@ import java.util.List;
  * @Class:AppMainActivity
  * @Description:应用主页
  */
-public class AppMainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity {
 
     private boolean isExitApp;
     private boolean isFirstShow;
@@ -40,7 +40,7 @@ public class AppMainActivity extends BaseActivity {
                 RePlugin.createComponentName("discover", "com.hsj.discover.ui.fragment.DiscoverFragment"), null);
         RePlugin.registerHookingClass("com.hsj.me.ui.fragment.MeFragment",
                 RePlugin.createComponentName("me","com.hsj.me.ui.fragment.MeFragment"),null);
-        return R.layout.activity_app_main;
+        return R.layout.activity_main;
     }
 
     @Override
