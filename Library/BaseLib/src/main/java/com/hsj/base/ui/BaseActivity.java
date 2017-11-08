@@ -25,16 +25,12 @@ import com.hsj.base.core.BaseApp;
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
 
     public String TAG = this.getClass().getSimpleName();
-    private int defaultLayout = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getLayoutId() == 0) {
-            setContentView(getLayoutId());
-        } else {
-            setContentView(getLayoutId());
-        }
+
+        setContentView(getLayoutId());
 
         initUI(savedInstanceState);
 
@@ -46,14 +42,6 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     protected abstract void initUI(Bundle savedInstanceState);
 
     protected abstract void initData();
-
-    public void setDefaultLayout(int defaultLayout) {
-        this.defaultLayout = defaultLayout;
-    }
-
-    protected int getDefaultLayout() {
-        return defaultLayout;
-    }
 
     /**
      * 检测内存泄露
