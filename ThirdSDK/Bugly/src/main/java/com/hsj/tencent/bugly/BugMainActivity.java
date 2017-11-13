@@ -3,8 +3,6 @@ package com.hsj.tencent.bugly;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.hsj.tencentbugly.R;
-
 public class BugMainActivity extends AppCompatActivity {
 
     @Override

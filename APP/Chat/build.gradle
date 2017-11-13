@@ -80,9 +80,9 @@ repluginPluginConfig {
     //插件名
     pluginName = "Chat"
     //宿主app的包名
-    hostApplicationId = "com.hsj.app.host"
+    hostApplicationId = "com.hsj.app"
     //宿主app的启动activity
-    hostAppLauncherActivity = "com.hsj.app.host.LaunchActivity"
+    hostAppLauncherActivity = "com.hsj.app.LaunchActivity"
 }
 
 

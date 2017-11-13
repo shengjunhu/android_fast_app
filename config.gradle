@@ -29,14 +29,13 @@ ext {
             androidSupportSdkVersion   : "25.3.1",
             retrofitVersion            : "2.3.0",
             okhttp3Version             : "3.9.0",
-            gsonVersion                : "2.8.1",
-            fastJsonVersion            : "1.1.63.android",
+            gsonVersion                : "2.8.2",
+            fastJsonVersion            : "1.1.65.android",
             rxjavaVersion              : "x.y.z",
             rxandroidVersion           : "2.0.1",
-            glideVersion               : "4.2.0",
-            rxlifecycleSdkVersion      : "1.0",
-            leakcanaryVersion          : "1.5.2",
-            objectBoxVersion           : "1.0.1",
+            glideVersion               : "4.3.1",
+            leakcanaryVersion          : "1.5.4",
+            objectBoxVersion           : "1.2.1",
     ]
 
     dependencies = [
@@ -56,7 +55,7 @@ ext {
             "testInstrumentationRunner": "android.support.test.runner.AndroidJUnitRunner",
 
             //facebook
-            "stetho"                   : "com.facebook.stetho:stetho:1.4.1",
+            "stetho"                   : "com.facebook.stetho:stetho:1.5.0",
 
             //retrofit
             "retrofit"                 : "com.squareup.retrofit2:retrofit:${version["retrofitVersion"]}",
@@ -73,8 +72,9 @@ ext {
             //RxJava
             "rxjava"                   : "io.reactivex.rxjava2:rxjava:${version["rxjavaVersion"]}",
             "rxandroid"                : "io.reactivex.rxjava2:rxandroid:${version["rxandroidVersion"]}",
-            "rxlifecycle"              : "com.trello:rxlifecycle:${version["rxlifecycleSdkVersion"]}",
-            "rxlifecycle-components"   : "com.trello:rxlifecycle-components:${version["rxlifecycleSdkVersion"]}",
+            "rxlifecycle"              : "com.trello.rxlifecycle2:rxlifecycle:2.2.0",
+            "rxlifecycle-android"      : "com.trello.rxlifecycle2:rxlifecycle-android:2.2.0",
+            "rxlifecycle-components"   : "com.trello.rxlifecycle2:rxlifecycle-components:2.2.0",
 
             //Glide
             "glide"                    : "com.github.bumptech.glide:glide:${version["glideVersion"]}",
@@ -131,8 +131,8 @@ ext {
             "im_redpacket"             : "cn.rongcloud.android:RedPacket:2.8.6",
 
             //plugin
-            "repluginHost"             : "com.qihoo360.replugin:replugin-host-lib:2.2.0",
-            "repluginLib"              : "com.qihoo360.replugin:replugin-plugin-lib:2.2.0",
+            "repluginHost"             : "com.qihoo360.replugin:replugin-host-lib:2.2.1",
+            "repluginLib"              : "com.qihoo360.replugin:replugin-plugin-lib:2.2.1",
     ]
 
 }

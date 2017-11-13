@@ -1,4 +1,4 @@
-package com.hsj.app.host;
+package com.hsj.app.ui;
 
 import android.os.Bundle;
 import android.view.View;

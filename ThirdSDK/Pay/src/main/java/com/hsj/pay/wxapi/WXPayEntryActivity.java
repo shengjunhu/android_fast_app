@@ -29,7 +29,7 @@ import com.hsj.base.ui.BaseActivity;
  * @Class:WXPayActivity
  * @Description:支付回调界面
  */
-public class WXPayActivity extends BaseActivity {
+public class WXPayEntryActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {

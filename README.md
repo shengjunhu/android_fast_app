@@ -8,8 +8,7 @@
 
 ## 结构组成：
 ### 主工程APP： 
-  * [Host           :宿主程序](/APP/Host/Host_README.md)
-  * [App            :应用入口插件](/APP/App/App_README.md)
+  * [App            :应用宿主程序](/APP/App/App_README.md)
   * [Home           :应用首页插件](/APP/App/Home_README.md)
   * [Shop           :应用商城插件](/APP/App/Shop_README.md)
   * [Chat           :应用聊天插件](/APP/App/Chat_README.md)

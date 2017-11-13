@@ -8,6 +8,6 @@ public class GDMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.hsj.gdmap.R.layout.activity_gd_main);
+        setContentView(R.layout.activity_gd_main);
     }
 }
