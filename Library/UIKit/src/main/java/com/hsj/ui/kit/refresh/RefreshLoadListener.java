@@ -3,11 +3,11 @@ package com.hsj.ui.kit.refresh;
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/7/14 19:10
- * @Class:RefreshListener
+ * @Date:2017/11/14/10:01
+ * @Class:RefreshLoadListener
  * @Description:
  */
-public interface RefreshListener {
+public interface RefreshLoadListener {
 
     void onRefresh();
 

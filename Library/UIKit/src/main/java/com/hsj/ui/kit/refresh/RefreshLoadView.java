@@ -16,11 +16,11 @@ import android.widget.ScrollView;
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/7/14 18:11
- * @Class:RefreshLoadLayout
- * @Description:刷新、加载控件
+ * @Date:2017/11/14/10:00
+ * @Class:RefreshLoadView
+ * @Description:下拉刷新、上拉加载
  */
-public class RefreshLayout extends FrameLayout {
+public class RefreshLoadView extends FrameLayout {
 
     /**
      * 处于刷新状态
@@ -37,11 +37,11 @@ public class RefreshLayout extends FrameLayout {
     /**
      * 刷新时间
      */
-    private long refreshTime = 3000;
+    private long refreshTime = 2000;
     /**
      * 加载时间
      */
-    private long loadTime = 3000;
+    private long loadTime = 2000;
     /**
      * 刷新各状态提示文字
      */
@@ -53,19 +53,19 @@ public class RefreshLayout extends FrameLayout {
     /**
      * 监听刷新状态
      */
-    private RefreshListener refreshListener;
+    private RefreshLoadListener refreshListener;
 
-    public RefreshLayout(@NonNull Context context) {
+    public RefreshLoadView(@NonNull Context context) {
         super(context);
         initRefreshLayout(context, null);
     }
 
-    public RefreshLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public RefreshLoadView(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         initRefreshLayout(context, attrs);
     }
 
-    public RefreshLayout(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
+    public RefreshLoadView(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initRefreshLayout(context, attrs);
     }
@@ -173,7 +173,7 @@ public class RefreshLayout extends FrameLayout {
      *
      * @param refreshListener
      */
-    public void setRefreshListener(RefreshListener refreshListener) {
+    public void setRefreshListener(RefreshLoadListener refreshListener) {
         this.refreshListener = refreshListener;
     }
 
@@ -236,4 +236,5 @@ public class RefreshLayout extends FrameLayout {
     public void setStopRefreshOrLoad(boolean stopRefreshOrLoad) {
         isStopRefreshOrLoad = stopRefreshOrLoad;
     }
+
 }
