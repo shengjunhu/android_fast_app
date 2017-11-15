@@ -7,7 +7,7 @@ package com.hsj.base.core;
  * @Class:Constants
  * @Description:变量
  */
-public class Constants {
+public class BaseConstants {
 
     /**
      * 用户设备ID

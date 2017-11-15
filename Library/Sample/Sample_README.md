@@ -40,3 +40,12 @@
 
 
 ### 原生API使用
+
+
+### 原生控件使用
+* 1 进度条
+```
+   a、android.support.v4.widget.ContentLoadingProgressBar
+   
+
+```

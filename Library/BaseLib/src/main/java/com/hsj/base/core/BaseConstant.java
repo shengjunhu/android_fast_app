@@ -4,10 +4,10 @@ package com.hsj.base.core;
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 15:17
- * @Class:Constant
+ * @Class:BaseConstant
  * @Description:常量
  */
-public interface Constant {
+public interface BaseConstant {
 
     /**
      * 服务器主机IP
