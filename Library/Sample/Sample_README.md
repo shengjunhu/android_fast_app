@@ -43,9 +43,66 @@
 
 
 ### 原生控件使用
-* 1 进度条
-```
-   a、android.support.v4.widget.ContentLoadingProgressBar
-   
+* 1 进度条 android.support.v4.widget.ContentLoadingProgressBar
 
+### SDK新版本适配
+- 0、SDK =19、21、23、25 屏幕、主题适配
+```
+    1、屏幕适配：
+        mipmap-xhdpi 系统图标适配
+        drawable-xhdpi app本地图片适配
+    
+    2、主题适配：
+        values-19
+        values-21
+        values-23
+    
+    3、语言适配：
+        中文 -> values/strings.xml
+        英文 -> values-en/strings.xml
+```
+
+- 1、SDK >= 23 权限适配
+```
+    ContextCompat.checkSelfPermission() 
+    ActivityCompat.requestPermissions() 
+    ActivityCompat.OnRequestPermissionsResultCallback 
+    ActivityCompat.shouldShowRequestPermissionRationale()
+
+    a、在Application中
+    
+    b、在Activity中申请
+    
+    c、在Fragment中申请
+    
+```
+
+- 2、SDK >= 24 文件适配
+```
+    res/xml/file_paths.xml
+    <resources>
+        <paths>
+            <root-path name="root_path" path="" />
+            <external-path name="external_path" path="."/>
+        </paths>
+    </resources>
+    
+    AndroidManifest.xml
+    <provider
+        android:name="android.support.v4.content.FileProvider"
+        android:authorities="${applicationId}.FileProvider"
+        android:exported="false"
+        android:grantUriPermissions="true">
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/file_paths" />
+    </provider>
+
+    Uri uri;
+    String authority = mContext.getPackageName() + ".FileProvider";
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        uri = FileProvider.getUriForFile(mContext, authority, file);
+    } else {
+        uri = Uri.fromFile(file);
+    }
 ```
