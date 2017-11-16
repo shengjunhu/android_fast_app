@@ -1,12 +1,17 @@
 package com.hsj.base.ui;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.AnimRes;
 import android.support.annotation.IdRes;
+import android.support.annotation.IntRange;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
@@ -14,6 +19,9 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.hsj.base.core.BaseApp;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Author:HSJ
@@ -42,6 +50,62 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     protected abstract void initUI(Bundle savedInstanceState);
 
     protected abstract void initData();
+
+    /**
+     * 权限
+     *
+     * @param requestCode
+     * @param permissions
+     */
+    protected void requestPermissions(@IntRange(from = 0) int requestCode, @NonNull String[] permissions) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            permissionResponse(requestCode, true);
+            return;
+        }
+
+        List<String> requestPermissions = new ArrayList<>();
+        for (String permission : permissions) {
+            if (ContextCompat.checkSelfPermission(this.getApplicationContext(), permission) == PackageManager.PERMISSION_DENIED) {
+                requestPermissions.add(permission);
+            }
+        }
+
+        if (requestPermissions.size() > 0) {
+            ActivityCompat.requestPermissions(this, requestPermissions.toArray(new String[]{}), requestCode);
+        } else {
+            permissionResponse(requestCode, true);
+        }
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        for (int i = 0; i < grantResults.length; i++) {
+            if (grantResults[i] == PackageManager.PERMISSION_DENIED) {
+                permissionResponse(requestCode, false);
+                showPermissionWarn();
+                return;
+            }
+        }
+        permissionResponse(requestCode, true);
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
+    /**
+     * 复写此方法读取回调
+     * @param requestCode
+     * @param granted
+     */
+    protected void permissionResponse(int requestCode, boolean granted) {
+
+    }
+
+    /**
+     *  权限被拒绝一次的提示对话框
+     */
+    private void showPermissionWarn() {
+
+    }
 
     /**
      * 检测内存泄露

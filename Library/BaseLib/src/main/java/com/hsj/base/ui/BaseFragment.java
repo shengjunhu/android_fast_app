@@ -1,17 +1,23 @@
 package com.hsj.base.ui;
 
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
+import android.support.annotation.IntRange;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
 import com.hsj.base.core.BaseApp;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Author:HSJ
@@ -20,7 +26,7 @@ import com.hsj.base.core.BaseApp;
  * @Class:AppBaseFragment
  * @Description:普通Fragment、数据本地初始化
  */
-public abstract class BaseFragment extends Fragment implements View.OnClickListener{
+public abstract class BaseFragment extends Fragment implements View.OnClickListener {
 
     public String TAG = this.getClass().getSimpleName();
 
@@ -28,8 +34,8 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,@Nullable Bundle savedInstanceState) {
-        if(rootView == null){
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        if (rootView == null) {
 
             rootView = inflater.inflate(getLayoutId(), container, false);
 
@@ -45,6 +51,63 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     protected abstract void initUI(Bundle savedInstanceState);
 
     protected abstract void initData();
+
+    /**
+     * 权限
+     *
+     * @param requestCode
+     * @param permissions
+     */
+    protected void requestPermissions(@IntRange(from = 0) int requestCode, @NonNull String[] permissions) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            permissionResponse(requestCode, true);
+            return;
+        }
+
+        List<String> requestPermissions = new ArrayList<>();
+        for (String permission : permissions) {
+            if (ContextCompat.checkSelfPermission(this.getContext(), permission) == PackageManager.PERMISSION_DENIED) {
+                requestPermissions.add(permission);
+            }
+        }
+
+        if (requestPermissions.size() > 0) {
+            ActivityCompat.requestPermissions(getActivity(), requestPermissions.toArray(new String[]{}), requestCode);
+        } else {
+            permissionResponse(requestCode, true);
+        }
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        for (int i = 0; i < grantResults.length; i++) {
+            if (grantResults[i] == PackageManager.PERMISSION_DENIED) {
+                permissionResponse(requestCode, false);
+                showPermissionWarn();
+                return;
+            }
+        }
+        permissionResponse(requestCode, true);
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
+    /**
+     * 复写此方法读取回调
+     *
+     * @param requestCode
+     * @param granted
+     */
+    protected void permissionResponse(int requestCode, boolean granted) {
+
+    }
+
+    /**
+     * 权限被拒绝一次的提示对话框
+     */
+    private void showPermissionWarn() {
+
+    }
 
     @Override
     public void onResume() {
@@ -73,10 +136,11 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
 
     /**
      * 刷新数据
+     *
      * @param isRefresh
      */
-    protected void refreshData(boolean isRefresh){
-        if(isRefresh)initData();
+    protected void refreshData(boolean isRefresh) {
+        if (isRefresh) initData();
     }
 
     /**
@@ -92,6 +156,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
 
     /**
      * 判断字符串不为 null和 ""
+     *
      * @param str
      * @return
      */
@@ -105,6 +170,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
 
     /**
      * TextView、EditText设置文本
+     *
      * @param str
      * @return
      */
@@ -118,6 +184,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
 
     /**
      * TextView、EditText设置文本
+     *
      * @param num
      * @return
      */
@@ -141,14 +208,14 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     /**
      * 启动加载提示
      */
-    protected void startDialog(String hint){
+    protected void startDialog(String hint) {
 
     }
 
     /**
      * 停止加载提示
      */
-    protected void stopDialog(){
+    protected void stopDialog() {
 
     }
 
