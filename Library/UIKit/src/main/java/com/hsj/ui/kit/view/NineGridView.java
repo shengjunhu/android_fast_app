@@ -1,5 +1,10 @@
 package com.hsj.ui.kit.view;
 
+import android.content.Context;
+import android.support.annotation.Nullable;
+import android.util.AttributeSet;
+import android.view.View;
+
 import java.util.ArrayList;
 
 /**
@@ -9,7 +14,7 @@ import java.util.ArrayList;
  * @Class:NineGridView
  * @Description:图片显示九宫格
  */
-public class NineGridView {
+public class NineGridView extends View{
 
     /**
      * 图片路径
@@ -21,8 +26,18 @@ public class NineGridView {
      */
     private ItemOnClickListener itemOnClickListener;
 
-    public interface ItemOnClickListener {
-        void onItmeClick();
+    public NineGridView(Context context) {
+        this(context,null);
+    }
+
+    public NineGridView(Context context, @Nullable AttributeSet attrs) {
+        this(context, attrs,0);
+    }
+
+    public NineGridView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+
+        initView();
     }
 
     /**
@@ -35,5 +50,10 @@ public class NineGridView {
     public void setData(ArrayList<String> path) {
 
     }
+
+    public interface ItemOnClickListener {
+        void onItmeClick();
+    }
+
 
 }

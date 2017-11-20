@@ -10,7 +10,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.FrameLayout;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -22,7 +21,7 @@ import java.lang.annotation.RetentionPolicy;
  * @Class:StateView
  * @Description:界面加载视图
  */
-public class UIStateView extends FrameLayout implements View.OnClickListener {
+public class UIStateView extends View implements View.OnClickListener {
 
     /**
      * 界面当前状态
@@ -77,26 +76,17 @@ public class UIStateView extends FrameLayout implements View.OnClickListener {
 
     }
 
-    /**
-     * 设置状态：每设置一个状态销毁前一个状态
-     */
-    public void setUIState(@State int uiCurrentState) {
-
-    }
-
     public UIStateView(@NonNull Context context) {
-        super(context);
-        this.initUIStateView(context, null);
+        this(context,null);
     }
 
     public UIStateView(@NonNull Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
-        this.initUIStateView(context, attrs);
+        this(context, attrs,0);
     }
 
     public UIStateView(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        this.initUIStateView(context, attrs);
+        initUIStateView(context, attrs);
     }
 
     /**
@@ -111,6 +101,13 @@ public class UIStateView extends FrameLayout implements View.OnClickListener {
         //TODO 控件初始化
 
         //TODO 自我检测运行权限
+    }
+
+    /**
+     * 设置状态：每设置一个状态销毁前一个状态
+     */
+    public void setUIState(@State int uiCurrentState) {
+
     }
 
     @Override

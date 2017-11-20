@@ -8,7 +8,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
@@ -20,7 +19,7 @@ import android.widget.ScrollView;
  * @Class:RefreshLoadView
  * @Description:下拉刷新、上拉加载
  */
-public class RefreshLoadView extends FrameLayout {
+public class RefreshLoadView extends View {
 
     /**
      * 处于刷新状态
@@ -56,13 +55,11 @@ public class RefreshLoadView extends FrameLayout {
     private RefreshLoadListener refreshListener;
 
     public RefreshLoadView(@NonNull Context context) {
-        super(context);
-        initRefreshLayout(context, null);
+        this(context,null);
     }
 
     public RefreshLoadView(@NonNull Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
-        initRefreshLayout(context, attrs);
+        this(context, attrs,0);
     }
 
     public RefreshLoadView(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
