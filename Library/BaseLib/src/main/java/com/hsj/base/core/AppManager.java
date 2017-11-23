@@ -5,7 +5,7 @@ package com.hsj.base.core;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 16:41
  * @Class:AppManager
- * @Description:
+ * @Description:收集AppActivity
  */
 public class AppManager {
 
