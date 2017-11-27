@@ -26,6 +26,7 @@
   * [PercentLayout  :百分比布局库](/Library/PercentLayout/PercentLayout_README.md)
   * [AudioProvider  :音频提供者](/Library/AudioProvider/AudioProvider_README.md)
   * [QRProvider     :二维码提供者](/Library/QRProvider/QRProvider_README.md)
+  * [QCR            :图片识别库](/Library/QCR/QCR_README.md)
   * [PhotoProvider  :图片提供者](/Library/PhotoProvider/PhotoProvider_README.md)
   * [MediaProvider  :视屏提供者](/Library/MediaProvider/MediaProvider_README.md)
   * [FileProvider   :文件提供者](/Library/FileProvider/FileProvider_README.md)
