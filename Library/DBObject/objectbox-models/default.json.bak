@@ -29,19 +29,15 @@
           "id": "5:8501770181789208406",
           "name": "userToken"
         }
-      ],
-      "relations": []
+      ]
     }
   ],
   "lastEntityId": "1:4930590905279254034",
   "lastIndexId": "1:2192152193339989690",
-  "lastRelationId": "0:0",
   "lastSequenceId": "0:0",
-  "modelVersion": 4,
-  "modelVersionParserMinimum": 4,
+  "modelVersion": 2,
   "retiredEntityUids": [],
   "retiredIndexUids": [],
   "retiredPropertyUids": [],
-  "retiredRelationUids": [],
   "version": 1
 }
