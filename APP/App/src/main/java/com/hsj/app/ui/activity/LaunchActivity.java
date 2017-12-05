@@ -1,8 +1,9 @@
-package com.hsj.app.ui;
+package com.hsj.app.ui.activity;
 
 import android.os.Bundle;
 import android.view.View;
 
+import com.hsj.app.R;
 import com.hsj.base.ui.BaseActivity;
 
 /**
@@ -16,23 +17,23 @@ public class LaunchActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return 0;
+        return R.layout.activity_launch;
     }
 
     @Override
     protected void initUI(Bundle savedInstanceState) {
         //进入欢迎页或者广告页
         //startActivity(new Intent(this, WelActivity.class));
-        finish();
-    }
-
-    @Override
-    protected void initData() {
-
+        this.finish();
     }
 
     @Override
     public void onClick(View view) {
+
+    }
+
+    @Override
+    protected void initData() {
 
     }
 }

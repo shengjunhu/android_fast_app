@@ -1,4 +1,4 @@
-package com.hsj.app.ui;
+package com.hsj.app.ui.activity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -26,12 +26,12 @@ public class LoginActivity extends BaseActivity {
     }
 
     @Override
-    protected void initData() {
+    public void onClick(View view) {
 
     }
 
     @Override
-    public void onClick(View view) {
+    protected void initData() {
 
     }
 }

@@ -1,4 +1,4 @@
-package com.hsj.app.ui;
+package com.hsj.app.ui.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -8,6 +8,7 @@ import android.view.KeyEvent;
 import android.view.View;
 
 import com.hsj.app.R;
+import com.hsj.app.ui.adapter.TabFragmentAdapter;
 import com.hsj.base.ui.BaseActivity;
 import com.qihoo360.replugin.RePlugin;
 
@@ -50,6 +51,11 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
+    public void onClick(View view) {
+
+    }
+
+    @Override
     protected void initData() {
         List<String> tabNameList = new ArrayList<>();
         tabNameList.add("首页");
@@ -89,11 +95,6 @@ public class MainActivity extends BaseActivity {
         }
         vp_app.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(),tabFragmentList, tabNameList));
         tab_app.setupWithViewPager(vp_app);
-    }
-
-    @Override
-    public void onClick(View view) {
-
     }
 
     @Override

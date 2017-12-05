@@ -1,10 +1,11 @@
-package com.hsj.app.ui;
+package com.hsj.app.ui.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
+
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
  * @Class:TabApdater
  * @Description:
  */
-public class TabFragmentAdapter extends FragmentPagerAdapter {
+public class TabFragmentAdapter extends FragmentStatePagerAdapter {
 
     private List<Fragment> tabFragmentList;
     private List<String> tabNameList;
@@ -43,11 +44,6 @@ public class TabFragmentAdapter extends FragmentPagerAdapter {
     @Override
     public boolean isViewFromObject(View view, Object object) {
         return super.isViewFromObject(view, object);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return super.getItemId(position);
     }
 
     @Override

@@ -15,8 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!--启动界面-->
         <activity
-            android:name=".ui.LaunchActivity"
+            android:name=".ui.activity.LaunchActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
@@ -28,26 +29,26 @@
 
         <!--新版本启动界面-->
         <activity
-            android:name=".ui.WelcomeActivity"
+            android:name=".ui.activity.WelcomeActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--广告界面-->
         <activity
-            android:name=".ui.AdvertActivity"
+            android:name=".ui.activity.AdvertActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--主界面-->
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.activity.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--登录界面：密码、短信、qq、微信、微博-->
         <activity
-            android:name=".ui.LoginActivity"
+            android:name=".ui.activity.LoginActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize">
@@ -60,7 +61,7 @@
 
         <!--注册界面：手机注册、密码修改、密码找回-->
         <activity
-            android:name=".ui.RegisterActivity"
+            android:name=".ui.activity.RegisterActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 

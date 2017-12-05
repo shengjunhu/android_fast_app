@@ -16,27 +16,26 @@
  *
  ******************************************************************************/
 
-package com.hsj.app.ui;
+package com.hsj.app.ui.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 
+import com.hsj.app.R;
 import com.hsj.base.ui.BaseActivity;
 
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/7/24/10:09
- * @Class:AdvertActivity
+ * @Class:AppWelcomeActivity
  * @Description:广告页
  */
-public class AdvertActivity extends BaseActivity implements Runnable{
+public class WelcomeActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return 0;
+        return R.layout.activity_welcome;
     }
 
     @Override
@@ -45,30 +44,13 @@ public class AdvertActivity extends BaseActivity implements Runnable{
     }
 
     @Override
-    protected void initData() {
-        getWindow().getDecorView().postDelayed(this, 5000);
-    }
-
-    @Override
     public void onClick(View view) {
 
     }
 
     @Override
-    public void run() {
-        startActivity(new Intent(this, WelcomeActivity.class));
-        finish();
-    }
+    protected void initData() {
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        return true;
-    }
-
-    @Override
-    public void onDestroy() {
-        getWindow().getDecorView().removeCallbacks(this);
-        super.onDestroy();
     }
 
 }
