@@ -1,7 +1,9 @@
-package com.hsj.provider.photo;
+package com.hsj.provider.photo.ui.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.hsj.provider.photo.R;
 
 public class MainActivity extends AppCompatActivity {
 
