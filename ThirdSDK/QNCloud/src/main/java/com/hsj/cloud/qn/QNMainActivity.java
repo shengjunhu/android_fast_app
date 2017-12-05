@@ -8,6 +8,6 @@ public class QNMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.hsj.qncloud.R.layout.activity_qn_main);
+        setContentView(R.layout.activity_qn_main);
     }
 }

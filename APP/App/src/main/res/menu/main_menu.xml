@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_home"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="主页" />
+    <item
+        android:id="@+id/item_shop"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="商城" />
+    <item
+        android:id="@+id/item_friend"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="好友" />
+    <item
+        android:id="@+id/item_discover"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="发现" />
+    <item
+        android:id="@+id/item_mine"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="我的" />
+
+</menu>

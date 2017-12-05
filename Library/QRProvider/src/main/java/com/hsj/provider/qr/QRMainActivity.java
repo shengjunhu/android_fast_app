@@ -18,13 +18,11 @@
 
 package com.hsj.provider.qr;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.hsj.base.ui.BaseActivity;
-import com.hsj.provider.qr.test.CameraTestActivity;
 
 public class QRMainActivity extends BaseActivity {
 
@@ -51,7 +49,7 @@ public class QRMainActivity extends BaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_scan_qr:
-                startActivity(new Intent(this, CameraTestActivity.class));
+
                 break;
             case R.id.btn_create_qr:
                 createQrCode();
