@@ -3,10 +3,7 @@ package cn.rongcloud.contactcard;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.widget.Toast;
@@ -67,7 +64,7 @@ public class ContactCardPlugin implements IPluginModule {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_CONTACT && resultCode == Activity.RESULT_OK) {
             Intent intent = new Intent(context, ContactDetailActivity.class);
-            intent.putExtra("contact", data.getParcelableExtra("contact"));
+            intent.putExtra("contact", data.getParcelableExtra("contact").toString());
             intent.putExtra("conversationType", conversationType);
             intent.putExtra("targetId", targetId);
             context.startActivity(intent);
