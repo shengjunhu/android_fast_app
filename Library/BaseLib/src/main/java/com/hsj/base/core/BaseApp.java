@@ -34,7 +34,6 @@ public abstract class BaseApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
         if (LeakCanary.isInAnalyzerProcess(this)) {
             mRefWatcher = RefWatcher.DISABLED;
         } else {
