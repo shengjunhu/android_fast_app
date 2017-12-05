@@ -6,10 +6,9 @@
 * 3、每个工程都可独立运行
 
 ### 结构组成
-* 1、Host  住宿应用：启动页
-* 2、App   广告页、主页、登录页、注册页、修改密码页
-* 3、Home  首页HomeActivity、首页HomeFragment
-* 4、Shop  商城ShopActivity、商城ShopFragment
-* 5、Chat  聊天ChatActivity、聊天ChatFragment
-* 6、Zone  社区ZoneActivity、社区ZoneFragment
-* 7、Me    我的MineActivity、我的MineFragment
+* 0、App       住宿应用：启动页、广告页、主页、登录页、注册页、修改密码页
+* 1、Home      首页HomeActivity、     首页HomeFragment    （新闻、直播、小说、视屏）
+* 2、Shop      商城ShopActivity、     商城ShopFragment    （商城主页、商城分类、购物车）
+* 3、Chat      聊天ChatActivity、     聊天ChatFragment    （会话列表、好友列表、圈子）
+* 4、Discover  发现DiscoverActivity、 发现DiscoverFragment（功能列表：附近人、陌生人聊天、）
+* 5、Me        我的MineActivity、     我的MineFragment    （个人中心：余额、用户信息）

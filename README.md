@@ -12,9 +12,8 @@
   * [Home           :应用首页插件](/APP/App/Home_README.md)
   * [Shop           :应用商城插件](/APP/App/Shop_README.md)
   * [Chat           :应用聊天插件](/APP/App/Chat_README.md)
-  * [Zone           :应用社区插件](/APP/App/Zone_README.md)
+  * [Discover       :应用发现模块](/APP/App/Discover_README.md)
   * [Me             :应用我的插件](/APP/App/Me_README.md)
-  * [BaseApp        :应用层基类模块](/APP/App/BaseApp_README.md)
  
 ### 库工程Library：
   * [Sample         :使用说明Module](/Library/Sample/Sample_README.md)
@@ -28,7 +27,7 @@
   * [QRProvider     :二维码提供者](/Library/QRProvider/QRProvider_README.md)
   * [QCR            :图片识别库](/Library/QCR/QCR_README.md)
   * [PhotoProvider  :图片提供者](/Library/PhotoProvider/PhotoProvider_README.md)
-  * [MediaProvider  :视屏提供者](/Library/MediaProvider/MediaProvider_README.md)
+  * [MediaProvider  :视屏图片音频提供者](/Library/MediaProvider/MediaProvider_README.md)
   * [FileProvider   :文件提供者](/Library/FileProvider/FileProvider_README.md)
   * [VideoPlayer    :视屏播放器](/Library/VideoPlayer/VideoPlayer_README.md)
   * [Keyboard       :自定义键盘](/Library/Keyboard/Keyboard_README.md)
