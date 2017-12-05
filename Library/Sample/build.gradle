@@ -12,6 +12,8 @@ android {
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
 
+        testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]
+
         ndk { abiFilters "armeabi-v7a", "x86" }
         // 矢量图
         vectorDrawables.useSupportLibrary = true
