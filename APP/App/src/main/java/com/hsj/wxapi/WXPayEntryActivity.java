@@ -16,15 +16,39 @@
  *
  ******************************************************************************/
 
-package com.hsj.app.engine;
+package com.hsj.wxapi;
+
+import android.os.Bundle;
+import android.view.View;
+
+import com.hsj.base.ui.BaseActivity;
 
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/7/21/15:37
- * @Class:AppInfoEngine
- * @Description:
+ * @Date:2017/8/14/10:15
+ * @Class:WXPayActivity
+ * @Description:支付回调界面
  */
-public class AppInfoEngine {
+public class WXPayEntryActivity extends BaseActivity {
 
+    @Override
+    protected int getLayoutId() {
+        return 0;
+    }
+
+    @Override
+    protected void initUI(Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    public void onClick(View view) {
+
+    }
 }

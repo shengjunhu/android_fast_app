@@ -1,4 +1,4 @@
-package com.hsj.app.ui.activity;
+package com.hsj.ui.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -8,7 +8,7 @@ import android.view.KeyEvent;
 import android.view.View;
 
 import com.hsj.app.R;
-import com.hsj.app.ui.adapter.TabFragmentAdapter;
+import com.hsj.ui.adapter.TabFragmentAdapter;
 import com.hsj.base.ui.BaseActivity;
 import com.qihoo360.replugin.RePlugin;
 

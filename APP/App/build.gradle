@@ -6,7 +6,7 @@ android {
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 
     defaultConfig {
-        applicationId "com.hsj.app"
+        applicationId "com.hsj"
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
@@ -58,21 +58,11 @@ android {
     }
 
     productFlavors {
-        baidu {
-            applicationId 'com.hsj.app1'
-        }
-        tencent {
-            applicationId 'com.hsj.app2'
-        }
-        xiaomi {
-            applicationId 'com.hsj.app3'
-        }
-        qihu {
-            applicationId 'com.hsj.app4'
-        }
-        huawei {
-            applicationId 'com.hsj.app5'
-        }
+        baidu {}
+        tencent {}
+        xiaomi {}
+        qihu {}
+        huawei {}
     }
 
     packagingOptions {

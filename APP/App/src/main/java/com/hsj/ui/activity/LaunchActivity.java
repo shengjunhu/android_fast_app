@@ -1,4 +1,4 @@
-package com.hsj.app.ui.activity;
+package com.hsj.ui.activity;
 
 import android.os.Bundle;
 import android.view.View;

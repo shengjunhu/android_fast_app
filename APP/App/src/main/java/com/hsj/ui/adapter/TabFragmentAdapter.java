@@ -1,4 +1,4 @@
-package com.hsj.app.ui.adapter;
+package com.hsj.ui.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

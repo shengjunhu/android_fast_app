@@ -1,4 +1,4 @@
-package com.hsj.app.base;
+package com.hsj.base;
 
 /**
  * @Author:HSJ

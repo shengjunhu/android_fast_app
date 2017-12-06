@@ -67,9 +67,9 @@ apply plugin: rootProject.ext.plugins.repluginLib
 
 repluginPluginConfig {
     //插件名
-    pluginName = "Shop"
+    pluginName = "shop"
     //宿主app的包名
-    hostApplicationId = "com.hsj.app"
+    hostApplicationId = "com.hsj"
     //宿主app的启动activity
-    hostAppLauncherActivity = "com.hsj.app.LaunchActivity"
+    hostAppLauncherActivity = "com.hsj.LaunchActivity"
 }

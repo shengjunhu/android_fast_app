@@ -1,4 +1,4 @@
-package com.hsj.app.wxapi;
+package com.hsj.wxapi;
 
 import android.os.Bundle;
 import android.view.View;

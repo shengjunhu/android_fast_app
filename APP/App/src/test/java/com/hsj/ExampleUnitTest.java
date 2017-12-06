@@ -1,4 +1,4 @@
-package com.hsj.app;
+package com.hsj;
 
 import org.junit.Test;
 

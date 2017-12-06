@@ -1,4 +1,4 @@
-package com.hsj.app.ui.activity;
+package com.hsj.ui.activity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,15 +9,15 @@ import com.hsj.base.ui.BaseActivity;
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/5/27/15:29
- * @Class:AppLoginActivity
- * @Description:应用登陆界面：密码登陆第三方登陆和短信登陆
+ * @Date:2017/5/27/15:30
+ * @Class:AppRegisterActivity
+ * @Description:应用注册和找回密码界面
  */
-public class LoginActivity extends BaseActivity {
+public class RegisterActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_login;
+        return R.layout.activity_register;
     }
 
     @Override
