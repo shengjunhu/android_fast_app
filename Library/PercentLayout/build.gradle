@@ -1,5 +1,4 @@
 apply plugin:rootProject.ext.plugins.application
-apply plugin: rootProject.ext.plugins.retrolambda
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
@@ -22,11 +21,6 @@ android {
             jniDebuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
     }
 
 }

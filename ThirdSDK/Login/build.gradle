@@ -1,5 +1,4 @@
 apply plugin:rootProject.ext.plugins.application
-apply plugin: rootProject.ext.plugins.retrolambda
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
@@ -25,19 +24,14 @@ android {
         }
     }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(path: ':Library:BaseLib')
 
     compile files('libs/open_sdk_r5793_lite.jar')
     compile rootProject.ext.dependencies["wechat"]
     compile rootProject.ext.dependencies["weibo"]
 
+    compile project(path: ':Library:BaseLib')
 }

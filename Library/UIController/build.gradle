@@ -1,12 +1,11 @@
-apply plugin:rootProject.ext.plugins.application
-apply plugin: rootProject.ext.plugins.retrolambda
+apply plugin:rootProject.ext.plugins.library
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 
     defaultConfig {
-        applicationId "com.hsj.ui.controller"
+        //applicationId "com.hsj.ui.controller"
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
@@ -18,18 +17,9 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
-            zipAlignEnabled true
-            debuggable false
-            jniDebuggable false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
     }
 
 }

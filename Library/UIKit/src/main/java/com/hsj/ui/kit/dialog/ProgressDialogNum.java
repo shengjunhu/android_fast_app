@@ -27,6 +27,10 @@ package com.hsj.ui.kit.dialog;
  */
 public class ProgressDialogNum {
 
-
+    /**
+     * 1、按钮显示当前进度、色值、动画
+     *
+     * 2、转圈、当前进度值
+     */
 
 }

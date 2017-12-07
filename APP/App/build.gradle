@@ -1,5 +1,4 @@
 apply plugin: rootProject.ext.plugins.application
-apply plugin: rootProject.ext.plugins.retrolambda
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
@@ -86,11 +85,6 @@ android {
 
     dexOptions {
         javaMaxHeapSize "2g"
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
     }
 
 }

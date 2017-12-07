@@ -19,7 +19,7 @@ import java.util.Set;
 public class SharedPrefer {
 
     /**
-     * AppInfo:App相关信息（版本号、该版本号是否第一次启动）
+     * AppInfo:App相关信息（版本号、该版本号是否第一次启动、主题、字体样式和颜色）
      */
     public static final String APP_INFO = "app_info";
 

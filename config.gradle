@@ -1,15 +1,10 @@
 ext {
 
     plugins = [
-            application                : 'com.android.application',
-
-            library                    : 'com.android.library',
-            //JDK1.8编译依赖
-            retrolambda                : 'me.tatarka.retrolambda',
-            //宿主插件
-            repluginHost               : 'replugin-host-gradle',
-            //库插件
-            repluginLib                : 'replugin-plugin-gradle',
+            application                : 'com.android.application',//应用
+            library                    : 'com.android.library',    //库
+            repluginHost               : 'replugin-host-gradle',   //宿主插件
+            repluginLib                : 'replugin-plugin-gradle', //库插件
     ]
 
     android = [
@@ -20,22 +15,9 @@ ext {
             versionCode                : 1705270,
             versionName                : "1.0.0",
 
-            isAppDebug                 : true,
-            isLibDebug                 : true,
-            isSDKDebug                 : true,
-    ]
-
-    version = [
-            androidSupportSdkVersion   : "25.3.1",
-            retrofitVersion            : "2.3.0",
-            okhttp3Version             : "3.9.0",
-            gsonVersion                : "2.8.2",
-            fastJsonVersion            : "1.1.65.android",
-            rxjavaVersion              : "x.y.z",
-            rxandroidVersion           : "2.0.1",
-            glideVersion               : "4.3.1",
-            leakcanaryVersion          : "1.5.4",
-            objectBoxVersion           : "1.2.1",
+            isAppDebug                 : true,//App模块调试
+            isLibDebug                 : true,//库模块调试
+            isSDKDebug                 : true,//第三方SDK调试
     ]
 
     dependencies = [
@@ -43,43 +25,43 @@ ext {
             //support
             "multidex"                 : "com.android.support:multidex:1.0.1",
             "constraint-layout"        : "com.android.support.constraint:constraint-layout:1.0.2",
-            "support-v4"               : "com.android.support:support-v4:${version["androidSupportSdkVersion"]}",
-            "appcompat-v7"             : "com.android.support:appcompat-v7:${version["androidSupportSdkVersion"]}",
-            "design"                   : "com.android.support:design:${version["androidSupportSdkVersion"]}",
-            "cardview-v7"              : "com.android.support:cardview-v7:${version["androidSupportSdkVersion"]}",
-            "recyclerview-v7"          : "com.android.support:recyclerview-v7:${version["androidSupportSdkVersion"]}",
-            "annotations"              : "com.android.support:support-annotations:${version["androidSupportSdkVersion"]}",
+            "support-v4"               : "com.android.support:support-v4:25.3.1",
+            "appcompat-v7"             : "com.android.support:appcompat-v7:25.3.1",
+            "design"                   : "com.android.support:design:25.3.1",
+            "cardview-v7"              : "com.android.support:cardview-v7:25.3.1",
+            "recyclerview-v7"          : "com.android.support:recyclerview-v7:25.3.1",
+            "annotations"              : "com.android.support:support-annotations:25.3.1",
 
             //test
             "testCompile"              : "junit:junit:4.12",
             "testInstrumentationRunner": "android.support.test.runner.AndroidJUnitRunner",
 
             //retrofit
-            "retrofit"                 : "com.squareup.retrofit2:retrofit:${version["retrofitVersion"]}",
-            "retrofit-converters"      : "com.squareup.retrofit2:retrofit-converters:${version["retrofitVersion"]}",
-            "retrofit-adapters"        : "com.squareup.retrofit2:retrofit-adapters:${version["retrofitVersion"]}",
-            "okhttp3"                  : "com.squareup.okhttp3:okhttp:${version["okhttp3Version"]}",
+            "retrofit"                 : "com.squareup.retrofit2:retrofit:2.3.0",
+            "retrofit-converters"      : "com.squareup.retrofit2:retrofit-converters:2.3.0",
+            "retrofit-adapters"        : "com.squareup.retrofit2:retrofit-adapters:2.3.0",
+            "okhttp3"                  : "com.squareup.okhttp3:okhttp:3.9.0",
             "okio"                     : "com.squareup.okio:okio:1.13.0",
-            "interceptor"              : "com.squareup.okhttp3:logging-interceptor:${version["okhttp3Version"]}",
+            "interceptor"              : "com.squareup.okhttp3:logging-interceptor:3.9.0",
 
             //json解析
-            "gson"                     : "com.google.code.gson:gson:${version["gsonVersion"]}",
-            "fastjson"                 : "com.alibaba:fastjson:${version["fastJsonVersion"]}",
+            "gson"                     : "com.google.code.gson:gson:2.8.2",
+            "fastjson"                 : "com.alibaba:fastjson:1.1.65.android",
 
             //RxJava
-            "rxjava"                   : "io.reactivex.rxjava2:rxjava:${version["rxjavaVersion"]}",
-            "rxandroid"                : "io.reactivex.rxjava2:rxandroid:${version["rxandroidVersion"]}",
+            "rxjava"                   : "io.reactivex.rxjava2:rxjava:x.y.z",
+            "rxandroid"                : "io.reactivex.rxjava2:rxandroid:2.0.1",
             "rxlifecycle"              : "com.trello.rxlifecycle2:rxlifecycle:2.2.0",
             "rxlifecycle-android"      : "com.trello.rxlifecycle2:rxlifecycle-android:2.2.0",
             "rxlifecycle-components"   : "com.trello.rxlifecycle2:rxlifecycle-components:2.2.0",
 
             //Glide
-            "glide"                    : "com.github.bumptech.glide:glide:${version["glideVersion"]}",
-            "glideCompiler"            : "com.github.bumptech.glide:compiler:${version["glideVersion"]}",
+            "glide"                    : "com.github.bumptech.glide:glide:4.3.1",
+            "glideCompiler"            : "com.github.bumptech.glide:compiler:4.3.1",
             "glideOkHttp"              : "com.github.bumptech.glide:okhttp3-integration:1.5.0@aar",
 
             //ObjectBox
-            "objectBox"                : "io.objectbox:objectbox-android:${version["objectBoxVersion"]}",
+            "objectBox"                : "io.objectbox:objectbox-android:1.2.1",
 
             //EventBus
             "eventBus"                 : "compile 'org.greenrobot:eventbus:3.1.1'",
@@ -88,8 +70,8 @@ ext {
             "stetho"                   : "com.facebook.stetho:stetho:1.5.0",
 
             //leakCanary
-            "leakcanary-debug"         : "com.squareup.leakcanary:leakcanary-android:${version["leakcanaryVersion"]}",
-            "leakcanary-release"       : "com.squareup.leakcanary:leakcanary-android-no-op:${version["leakcanaryVersion"]}",
+            "leakcanary-debug"         : "com.squareup.leakcanary:leakcanary-android:1.5.4",
+            "leakcanary-release"       : "com.squareup.leakcanary:leakcanary-android-no-op:1.5.4",
 
             //QQ、微信、微博：登录、支付、分享
             "qq"                       : "/ThirdSDK/Login/libs/open_sdk_r5793_lite.jar",
@@ -137,5 +119,4 @@ ext {
             "repluginHost"             : "com.qihoo360.replugin:replugin-host-lib:2.2.1",
             "repluginLib"              : "com.qihoo360.replugin:replugin-plugin-lib:2.2.1",
     ]
-
 }

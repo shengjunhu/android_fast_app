@@ -1,5 +1,4 @@
 apply plugin:rootProject.ext.plugins.application
-apply plugin: rootProject.ext.plugins.retrolambda
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
@@ -23,15 +22,10 @@ android {
         }
     }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(path: ':Library:BaseLib')
     compile rootProject.ext.dependencies["zxing_core"]
+    compile project(path: ':Library:BaseLib')
 }

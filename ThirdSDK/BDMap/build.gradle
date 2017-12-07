@@ -1,33 +1,37 @@
-apply plugin:rootProject.ext.plugins.application
-apply plugin: rootProject.ext.plugins.retrolambda
+if (rootProject.ext.android.isAppDebug){
+    apply plugin:rootProject.ext.plugins.application
+}else {
+    apply plugin:rootProject.ext.plugins.library
+}
 
 android {
-    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
-    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.hsj.map.bd"
-        minSdkVersion rootProject.ext.android["minSdkVersion"]
-        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
-        versionCode rootProject.ext.android["versionCode"]
-        versionName rootProject.ext.android["versionName"]
+        //applicationId "com.hsj.map.bd"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
         ndk { abiFilters "armeabi-v7a", "x86" }
     }
 
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
-            zipAlignEnabled true
-            debuggable false
-            jniDebuggable false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+    sourceSets {
+        main {
+            if (rootProject.ext.android.isAppDebug){
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            }else {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+            }
+        }
     }
 
 }

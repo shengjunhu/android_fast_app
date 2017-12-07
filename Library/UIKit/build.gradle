@@ -1,12 +1,11 @@
-apply plugin:rootProject.ext.plugins.application
-apply plugin: rootProject.ext.plugins.retrolambda
+apply plugin:rootProject.ext.plugins.library
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 
     defaultConfig {
-        applicationId "com.hsj.ui.kit"
+        //applicationId "com.hsj.ui.kit"
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
@@ -18,24 +17,14 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
-            zipAlignEnabled true
-            debuggable false
-            jniDebuggable false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
     }
 
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile rootProject.ext.dependencies["appcompat-v7"]
-    compile rootProject.ext.dependencies["recyclerview-v7"]
+    compile project(path: ':Library:BaseLib')
 }

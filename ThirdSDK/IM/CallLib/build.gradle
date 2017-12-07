@@ -1,5 +1,4 @@
 apply plugin:rootProject.ext.plugins.library
-apply plugin: rootProject.ext.plugins.retrolambda
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
@@ -18,11 +17,6 @@ android {
             jniLibs.srcDirs = ['libs']
             res.srcDirs = ['res']
         }
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
     }
 
 }

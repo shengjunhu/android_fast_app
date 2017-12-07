@@ -1,5 +1,7 @@
 package com.hsj.ui.kit.popwindow;
 
+import android.widget.PopupWindow;
+
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
@@ -7,6 +9,6 @@ package com.hsj.ui.kit.popwindow;
  * @Class:PopWindow
  * @Description:
  */
-public class PopWindow {
+public class PopWindow extends PopupWindow {
 
 }
