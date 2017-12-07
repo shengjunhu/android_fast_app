@@ -5,6 +5,7 @@ ext {
             library                    : 'com.android.library',    //库
             repluginHost               : 'replugin-host-gradle',   //宿主插件
             repluginLib                : 'replugin-plugin-gradle', //库插件
+            objectBox                  : 'io.objectbox'            //objectBox
     ]
 
     android = [
@@ -24,13 +25,13 @@ ext {
 
             //support
             "multidex"                 : "com.android.support:multidex:1.0.1",
+            "annotations"              : "com.android.support:support-annotations:25.3.1",
             "constraint-layout"        : "com.android.support.constraint:constraint-layout:1.0.2",
             "support-v4"               : "com.android.support:support-v4:25.3.1",
             "appcompat-v7"             : "com.android.support:appcompat-v7:25.3.1",
             "design"                   : "com.android.support:design:25.3.1",
             "cardview-v7"              : "com.android.support:cardview-v7:25.3.1",
             "recyclerview-v7"          : "com.android.support:recyclerview-v7:25.3.1",
-            "annotations"              : "com.android.support:support-annotations:25.3.1",
 
             //test
             "testCompile"              : "junit:junit:4.12",
@@ -61,7 +62,8 @@ ext {
             "glideOkHttp"              : "com.github.bumptech.glide:okhttp3-integration:1.5.0@aar",
 
             //ObjectBox
-            "objectBox"                : "io.objectbox:objectbox-android:1.2.1",
+            "objectBoxDebug"           : "io.objectbox:objectbox-android-objectbrowser:1.3.3",
+            "objectBox"                : "io.objectbox:objectbox-android:1.3.3",
 
             //EventBus
             "eventBus"                 : "compile 'org.greenrobot:eventbus:3.1.1'",
@@ -119,4 +121,5 @@ ext {
             "repluginHost"             : "com.qihoo360.replugin:replugin-host-lib:2.2.1",
             "repluginLib"              : "com.qihoo360.replugin:replugin-plugin-lib:2.2.1",
     ]
+
 }
