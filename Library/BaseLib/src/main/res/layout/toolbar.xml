@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.Toolbar
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/toolbar1"
-    style="@style/mw"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
     android:background="?attr/colorPrimary"
-    android:minHeight="?attr/actionBarSize"
-    app:contentInsetStart="0dp">
+    app:contentInsetStart="0dp"
+    app:popupTheme="@style/AppTheme.PopupOverlay"
+    app:theme="@style/AppTheme.AppBarOverlay">
 
     <RelativeLayout style="@style/mw">
 
@@ -14,10 +14,12 @@
             android:id="@+id/tv_left"
             style="@style/ww"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/dp2"
             android:drawableStart="@drawable/ic_back"
             android:gravity="center_vertical"
-            android:padding="@dimen/dp10"
+            android:paddingBottom="@dimen/dp9"
+            android:paddingEnd="@dimen/dp10"
+            android:paddingStart="@dimen/dp12"
+            android:paddingTop="@dimen/dp9"
             android:textAllCaps="false"
             android:textSize="@dimen/sp16" />
 
@@ -45,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp0.5"
             android:layout_alignParentBottom="true"
-            android:background="@color/color9" />
+            android:background="@color/colorC" />
 
     </RelativeLayout>
 

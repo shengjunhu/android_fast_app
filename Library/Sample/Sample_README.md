@@ -5,7 +5,7 @@
 * 2、CollapsingToolbarLayout
 * 3、CoordinatorLayout，
 * 4、FloatingActionButton、
-* 5、NavigationView、BottomNavigationView
+* 5、NavigationView
 * 6、Snackbar、
 * 7、TabLayout（使用于顶部当航）、BottomNavigationView(使用于底部当航)
 * 8、TextInputLayout
