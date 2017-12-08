@@ -10,7 +10,7 @@ ext {
 
     android = [
             compileSdkVersion          : 25,
-            buildToolsVersion          : "25.0.2",
+            buildToolsVersion          : "25.0.3",
             minSdkVersion              : 19,
             targetSdkVersion           : 25,
             versionCode                : 1705270,
@@ -24,102 +24,102 @@ ext {
     dependencies = [
 
             //support
-            "multidex"                 : "com.android.support:multidex:1.0.1",
-            "annotations"              : "com.android.support:support-annotations:25.3.1",
-            "constraint-layout"        : "com.android.support.constraint:constraint-layout:1.0.2",
-            "support-v4"               : "com.android.support:support-v4:25.3.1",
-            "appcompat-v7"             : "com.android.support:appcompat-v7:25.3.1",
-            "design"                   : "com.android.support:design:25.3.1",
-            "cardview-v7"              : "com.android.support:cardview-v7:25.3.1",
-            "recyclerview-v7"          : "com.android.support:recyclerview-v7:25.3.1",
+            multidex                 : 'com.android.support:multidex:1.0.1',
+            annotations              : 'com.android.support:support-annotations:25.3.1',
+            constraint_layout        : 'com.android.support.constraint:constraint-layout:1.0.2',
+            support_v4               : 'com.android.support:support-v4:25.3.1',
+            appcompat_v7             : 'com.android.support:appcompat-v7:25.3.1',
+            design                   : 'com.android.support:design:25.3.1',
+            cardview_v7              : 'com.android.support:cardview-v7:25.3.1',
+            recyclerview_v7          : 'com.android.support:recyclerview-v7:25.3.1',
 
             //test
-            "testCompile"              : "junit:junit:4.12",
-            "testInstrumentationRunner": "android.support.test.runner.AndroidJUnitRunner",
+            testInstrumentationRunner: 'android.support.test.runner.AndroidJUnitRunner',
+            testCompile              : 'junit:junit:4.12',
 
             //retrofit
-            "retrofit"                 : "com.squareup.retrofit2:retrofit:2.3.0",
-            "retrofit-converters"      : "com.squareup.retrofit2:retrofit-converters:2.3.0",
-            "retrofit-adapters"        : "com.squareup.retrofit2:retrofit-adapters:2.3.0",
-            "okhttp3"                  : "com.squareup.okhttp3:okhttp:3.9.0",
-            "okio"                     : "com.squareup.okio:okio:1.13.0",
-            "interceptor"              : "com.squareup.okhttp3:logging-interceptor:3.9.0",
+            retrofit                 : 'com.squareup.retrofit2:retrofit:2.3.0',
+            retrofit_converters      : 'com.squareup.retrofit2:retrofit-converters:2.3.0',
+            retrofit_adapters        : 'com.squareup.retrofit2:retrofit-adapters:2.3.0',
+            okhttp3                  : 'com.squareup.okhttp3:okhttp:3.9.0',
+            okio                     : 'com.squareup.okio:okio:1.13.0',
+            interceptor              : 'com.squareup.okhttp3:logging-interceptor:3.9.0',
 
             //json解析
-            "gson"                     : "com.google.code.gson:gson:2.8.2",
-            "fastjson"                 : "com.alibaba:fastjson:1.1.65.android",
+            gson                     : 'com.google.code.gson:gson:2.8.2',
+            fastjson                 : 'com.alibaba:fastjson:1.1.65.android',
 
             //RxJava
-            "rxjava"                   : "io.reactivex.rxjava2:rxjava:x.y.z",
-            "rxandroid"                : "io.reactivex.rxjava2:rxandroid:2.0.1",
-            "rxlifecycle"              : "com.trello.rxlifecycle2:rxlifecycle:2.2.0",
-            "rxlifecycle-android"      : "com.trello.rxlifecycle2:rxlifecycle-android:2.2.0",
-            "rxlifecycle-components"   : "com.trello.rxlifecycle2:rxlifecycle-components:2.2.0",
+            rxjava                   : 'io.reactivex.rxjava2:rxjava:x.y.z',
+            rxandroid                : 'io.reactivex.rxjava2:rxandroid:2.0.1',
+            rxlifecycle              : 'com.trello.rxlifecycle2:rxlifecycle:2.2.0',
+            rxlifecycle_android      : 'com.trello.rxlifecycle2:rxlifecycle-android:2.2.0',
+            rxlifecycle_components   : 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.0',
 
             //Glide
-            "glide"                    : "com.github.bumptech.glide:glide:4.3.1",
-            "glideCompiler"            : "com.github.bumptech.glide:compiler:4.3.1",
-            "glideOkHttp"              : "com.github.bumptech.glide:okhttp3-integration:1.5.0@aar",
+            glide                    : 'com.github.bumptech.glide:glide:4.3.1',
+            glideCompiler            : 'com.github.bumptech.glide:compiler:4.3.1',
+            glideOkHttp              : 'com.github.bumptech.glide:okhttp3-integration:1.5.0@aar',
 
             //ObjectBox
-            "objectBoxDebug"           : "io.objectbox:objectbox-android-objectbrowser:1.3.3",
-            "objectBox"                : "io.objectbox:objectbox-android:1.3.3",
+            objectBoxDebug           : 'io.objectbox:objectbox-android-objectbrowser:1.3.3',
+            objectBox                : 'io.objectbox:objectbox-android:1.3.3',
 
             //EventBus
-            "eventBus"                 : "compile 'org.greenrobot:eventbus:3.1.1'",
+            eventBus                 : 'org.greenrobot:eventbus:3.1.1',
 
             //facebook
-            "stetho"                   : "com.facebook.stetho:stetho:1.5.0",
+            stetho                   : 'com.facebook.stetho:stetho:1.5.0',
 
             //leakCanary
-            "leakcanary-debug"         : "com.squareup.leakcanary:leakcanary-android:1.5.4",
-            "leakcanary-release"       : "com.squareup.leakcanary:leakcanary-android-no-op:1.5.4",
+            leakcanary_debug         : 'com.squareup.leakcanary:leakcanary-android:1.5.4',
+            leakcanary_release       : 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4',
 
             //QQ、微信、微博：登录、支付、分享
-            "qq"                       : "/ThirdSDK/Login/libs/open_sdk_r5793_lite.jar",
-            "alipay"                   : "/ThirdSDK/Pay/libs/alipaySdk-20170623-proguard.jar",
-            "wechat"                   : "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+",
-            "weibo"                    : "com.sina.weibo.sdk:core:2.0.3:openDefaultRelease@aar",
+            qq                       : "/ThirdSDK/Login/libs/open_sdk_r5793_lite.jar",
+            alipay                   : "/ThirdSDK/Pay/libs/alipaySdk-20170623-proguard.jar",
+            wechat                   : 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+',
+            weibo                    : 'com.sina.weibo.sdk:core:2.0.3:openDefaultRelease@aar',
 
             //百度地图
-            "baidumap"                 : "/ThirdSDK/BDMap/libs/...",
+            baidumap                 : "/ThirdSDK/BDMap/libs/...",
 
             //百度云
-            "baiducloud"               : "/ThirdSDK/BDCloud/libs/bos-android-sdk-1.0.3.jar",
+            baiducloud               : "/ThirdSDK/BDCloud/libs/bos-android-sdk-1.0.3.jar",
 
             //七牛云
-            "qiniucloud"               : "com.qiniu:qiniu-android-sdk:7.3.+",
+            qiniucloud               : 'com.qiniu:qiniu-android-sdk:7.3.+',
 
             //高德：3D地图、2D地图、导航、搜索、定位
-            "amap_3d"                  : "com.amap.api:3dmap:latest.integration",
-            "amap_2d"                  : "com.amap.api:map2d:latest.integration",
-            "amap_navi"                : "com.amap.api:navi-3dmap:latest.integration",
-            "amap_search"              : "com.amap.api:search:latest.integration",
-            "amap_location"            : "com.amap.api:location:latest.integration",
+            amap_3d                  : 'com.amap.api:3dmap:latest.integration',
+            amap_2d                  : 'com.amap.api:map2d:latest.integration',
+            amap_navi                : 'com.amap.api:navi-3dmap:latest.integration',
+            amap_search              : 'com.amap.api:search:latest.integration',
+            amap_location            : 'com.amap.api:location:latest.integration',
 
             //极光推送
-            "j_ush"                    : "ThirdSDK/Push/libs/jpush-android-3.0.8.jar",
+            j_ush                    : "ThirdSDK/Push/libs/jpush-android-3.0.8.jar",
             //华为推送
-            "huawei_push"              : "com.huawei.android.hms:push:2.5.2.300",
+            huawei_push              : 'com.huawei.android.hms:push:2.5.2.300',
             //小米推送
-            "mi_push"                  : "ThirdSDK/Push/libs/MiPush_SDK_Client_3_4_5.jar",
+            mi_push                  : "ThirdSDK/Push/libs/MiPush_SDK_Client_3_4_5.jar",
 
             //web浏览器（腾讯X5浏览服务sdk）
-            "tbs_x5"                   : "Library/Web/libs/tbs_sdk_v3.5.0_20170801_113025.jar",
+            tbs_x5                   : "Library/Web/libs/tbs_sdk_v3.5.0_20170801_113025.jar",
 
             //qr scan
-            "zxing_core"               : "com.google.zxing:core:3.3.0",
+            zxing_core               : 'com.google.zxing:core:3.3.0',
 
             //IM(融云)
-            "im_lib"                   : "cn.rongcloud.android:IMLib:2.8.6",
-            "im_kit"                   : "cn.rongcloud.android:IMKit:2.8.6",
-            "im_calllib"               : "cn.rongcloud.android:CallLib:2.8.6",
-            "im_callkit"               : "cn.rongcloud.android:CallKit:2.8.6",
-            "im_redpacket"             : "cn.rongcloud.android:RedPacket:2.8.6",
+            im_lib                   : 'cn.rongcloud.android:IMLib:2.8.6',
+            im_kit                   : 'cn.rongcloud.android:IMKit:2.8.6',
+            im_calllib               : 'cn.rongcloud.android:CallLib:2.8.6',
+            im_callkit               : 'cn.rongcloud.android:CallKit:2.8.6',
+            im_redpacket             : 'cn.rongcloud.android:RedPacket:2.8.6',
 
             //plugin
-            "repluginHost"             : "com.qihoo360.replugin:replugin-host-lib:2.2.1",
-            "repluginLib"              : "com.qihoo360.replugin:replugin-plugin-lib:2.2.1",
+            repluginHost             : 'com.qihoo360.replugin:replugin-host-lib:2.2.1',
+            repluginLib              : 'com.qihoo360.replugin:replugin-plugin-lib:2.2.1'
     ]
 
 }

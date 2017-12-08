@@ -1,16 +1,17 @@
 apply plugin:rootProject.ext.plugins.application
 
 android {
-    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
-    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
         applicationId "com.hsj.provider.photo"
-        minSdkVersion rootProject.ext.android["minSdkVersion"]
-        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
-        versionCode rootProject.ext.android["versionCode"]
-        versionName rootProject.ext.android["versionName"]
-        testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
         ndk { abiFilters "armeabi-v7a", "x86" }
     }
 
@@ -32,6 +33,6 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    testCompile 'junit:junit:4.12'
+    testCompile  rootProject.ext.dependencies.testCompile
     compile project(path: ':Library:BaseLib')
 }

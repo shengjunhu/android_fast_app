@@ -1,15 +1,17 @@
 apply plugin: rootProject.ext.plugins.library
 
 android {
-    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
-    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
         //applicationId "com.hsj.http"
-        minSdkVersion rootProject.ext.android["minSdkVersion"]
-        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
-        versionCode rootProject.ext.android["versionCode"]
-        versionName rootProject.ext.android["versionName"]
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        ndk { abiFilters "armeabi-v7a", "x86" }
     }
 
     buildTypes {
@@ -33,24 +35,21 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     //Retrofit2
-    compile rootProject.ext.dependencies["retrofit"]
-
+    compile rootProject.ext.dependencies.retrofit
     //Retrofit2和RxJava2适配器
-    compile rootProject.ext.dependencies["retrofit-adapters"]
-
+    compile rootProject.ext.dependencies.retrofit_adapters
     //转换器：采用自定义FastJson转换器
-    compile rootProject.ext.dependencies["retrofit-converters"]
-
+    compile rootProject.ext.dependencies.retrofit_converters
     //拦截器
-    compile rootProject.ext.dependencies["interceptor"]
+    compile rootProject.ext.dependencies.interceptor
 
     //RxJava2
-    compile rootProject.ext.dependencies["rxjava"]
-    compile rootProject.ext.dependencies["rxandroid"]
+    compile rootProject.ext.dependencies.rxjava
+    compile rootProject.ext.dependencies.rxandroid
 
     //Json解析：采用FastJson解析
-    //compile rootProject.ext.dependencies["gson"]
-    compile rootProject.ext.dependencies["fastjson"]
+    //compile rootProject.ext.dependencies.gson
+    compile rootProject.ext.dependencies.fastjson
 
     compile project(path: ':Library:DBObject')
 

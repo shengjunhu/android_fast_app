@@ -1,19 +1,21 @@
 apply plugin: rootProject.ext.plugins.library
 
 android {
-    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
-    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
         //applicationId "com.hsj.base"
-        minSdkVersion rootProject.ext.android["minSdkVersion"]
-        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
-        versionCode rootProject.ext.android["versionCode"]
-        versionName rootProject.ext.android["versionName"]
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        vectorDrawables.useSupportLibrary = true
 
         ndk { abiFilters "armeabi-v7a", "x86" }
-        testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]
-        multiDexEnabled true
+
+        testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
     }
 
     buildTypes {
@@ -43,17 +45,17 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    testCompile rootProject.ext.dependencies["testCompile"]
-    compile rootProject.ext.dependencies["multidex"]
+    testCompile rootProject.ext.dependencies.testCompile
+    compile rootProject.ext.dependencies.multidex
 
-    testCompile rootProject.ext.dependencies["annotations"]
-    compile rootProject.ext.dependencies["constraint-layout"]
-    compile rootProject.ext.dependencies["support-v4"]
-    compile rootProject.ext.dependencies["appcompat-v7"]
-    compile rootProject.ext.dependencies["recyclerview-v7"]
-    compile rootProject.ext.dependencies["design"]
+    testCompile rootProject.ext.dependencies.annotations
+    compile rootProject.ext.dependencies.constraint_layout
+    compile rootProject.ext.dependencies.support_v4
+    compile rootProject.ext.dependencies.appcompat_v7
+    compile rootProject.ext.dependencies.recyclerview_v7
+    compile rootProject.ext.dependencies.design
 
-    debugCompile rootProject.ext.dependencies["leakcanary-debug"]
-    releaseCompile rootProject.ext.dependencies["leakcanary-release"]
+    debugCompile rootProject.ext.dependencies.leakcanary_debug
+    releaseCompile rootProject.ext.dependencies.leakcanary_release
 
 }

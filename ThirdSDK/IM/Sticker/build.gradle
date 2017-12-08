@@ -1,19 +1,16 @@
 apply plugin:rootProject.ext.plugins.library
 
 android {
-    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
-    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     useLibrary 'org.apache.http.legacy'
 
     defaultConfig {
-        minSdkVersion rootProject.ext.android["minSdkVersion"]
-        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
-        versionCode rootProject.ext.android["versionCode"]
-        versionName rootProject.ext.android["versionName"]
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
     }
     buildTypes {
         release {
@@ -30,5 +27,5 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile rootProject.ext.dependencies["support-v4"]
+    compile rootProject.ext.dependencies.support_v4
 }

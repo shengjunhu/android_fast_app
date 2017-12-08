@@ -1,15 +1,17 @@
 apply plugin: rootProject.ext.plugins.application
 
 android {
-    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
-    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
     defaultConfig {
         applicationId "com.hsj.lib.ndk"
-        minSdkVersion rootProject.ext.android["minSdkVersion"]
-        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
-        versionCode rootProject.ext.android["versionCode"]
-        versionName rootProject.ext.android["versionName"]
-        testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
         externalNativeBuild {
             cmake {
                 cppFlags "-frtti -fexceptions"
@@ -37,7 +39,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    
+
     externalNativeBuild {
         cmake {
             path "CMakeLists.txt"
@@ -51,8 +53,8 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    testCompile rootProject.ext.dependencies["testCompile"]
-    testCompile rootProject.ext.dependencies["annotations"]
-    compile rootProject.ext.dependencies["constraint-layout"]
-    compile rootProject.ext.dependencies["appcompat-v7"]
+    testCompile rootProject.ext.dependencies.testCompile
+    testCompile rootProject.ext.dependencies.annotations
+    compile rootProject.ext.dependencies.constraint_layout
+    compile rootProject.ext.dependencies.appcompat_v7
 }

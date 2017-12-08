@@ -1,16 +1,17 @@
 apply plugin:rootProject.ext.plugins.application
 
 android {
-    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
-    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
         applicationId "com.hsj.web"
-        minSdkVersion rootProject.ext.android["minSdkVersion"]
-        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
-        versionCode rootProject.ext.android["versionCode"]
-        versionName rootProject.ext.android["versionName"]
-        testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
     }
 
     buildTypes {

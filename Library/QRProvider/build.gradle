@@ -1,15 +1,17 @@
 apply plugin:rootProject.ext.plugins.application
 
 android {
-    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
-    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
         applicationId "com.hsj.provider.qr"
-        minSdkVersion rootProject.ext.android["minSdkVersion"]
-        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
-        versionCode rootProject.ext.android["versionCode"]
-        versionName rootProject.ext.android["versionName"]
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        ndk { abiFilters "armeabi-v7a", "x86" }
     }
     buildTypes {
         release {
@@ -26,6 +28,6 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile rootProject.ext.dependencies["zxing_core"]
+    compile rootProject.ext.dependencies.zxing_core
     compile project(path: ':Library:BaseLib')
 }

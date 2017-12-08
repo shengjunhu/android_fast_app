@@ -1,15 +1,15 @@
 apply plugin: rootProject.ext.plugins.library
 
 android {
-    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
-    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
         //applicationId "com.hsj.image.loader"
-        minSdkVersion rootProject.ext.android["minSdkVersion"]
-        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
-        versionCode rootProject.ext.android["versionCode"]
-        versionName rootProject.ext.android["versionName"]
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
 
         ndk { abiFilters "armeabi-v7a", "x86" }
     }
@@ -31,10 +31,10 @@ repositories {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile rootProject.ext.dependencies["constraint-layout"]
-    compile rootProject.ext.dependencies["appcompat-v7"]
-    compile rootProject.ext.dependencies["recyclerview-v7"]
-    compile rootProject.ext.dependencies["glide"]
-    annotationProcessor rootProject.ext.dependencies["glideCompiler"]
-    compile rootProject.ext.dependencies["okhttp3"]
+    compile rootProject.ext.dependencies.constraint_layout
+    compile rootProject.ext.dependencies.appcompat_v7
+    compile rootProject.ext.dependencies.recyclerview_v7
+    compile rootProject.ext.dependencies.glide
+    annotationProcessor rootProject.ext.dependencies.glideCompiler
+    compile rootProject.ext.dependencies.okhttp3
 }

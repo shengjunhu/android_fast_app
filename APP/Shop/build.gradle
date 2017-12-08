@@ -1,15 +1,15 @@
 apply plugin:rootProject.ext.plugins.application
 
 android {
-    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
-    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
         applicationId "com.hsj.shop"
-        minSdkVersion rootProject.ext.android["minSdkVersion"]
-        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
-        versionCode rootProject.ext.android["versionCode"]
-        versionName rootProject.ext.android["versionName"]
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
 
         // 矢量图
         vectorDrawables.useSupportLibrary = true
@@ -17,7 +17,7 @@ android {
         //打包时筛选出这两种架构
         ndk { abiFilters "armeabi-v7a", "x86" }
 
-        testInstrumentationRunner rootProject.ext.dependencies["testInstrumentationRunner"]
+        testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
     }
 
     buildTypes {
@@ -52,9 +52,9 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    testCompile rootProject.ext.dependencies["testCompile"]
+    testCompile rootProject.ext.dependencies.testCompile
     compile project(path: ':Library:BaseLib')
-    compile rootProject.ext.dependencies["repluginLib"]
+    compile rootProject.ext.dependencies.repluginLib
 }
 
 apply plugin: rootProject.ext.plugins.repluginLib

@@ -2,15 +2,16 @@ apply plugin:rootProject.ext.plugins.library
 apply plugin:rootProject.ext.plugins.objectBox
 
 android {
-    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
-    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
         //applicationId "com.hsj.object.db"
-        minSdkVersion rootProject.ext.android["minSdkVersion"]
-        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
-        versionCode rootProject.ext.android["versionCode"]
-        versionName rootProject.ext.android["versionName"]
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
         ndk { abiFilters "armeabi-v7a", "x86" }
     }
 
@@ -25,8 +26,8 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile rootProject.ext.dependencies["appcompat-v7"]
-    compile rootProject.ext.dependencies["objectBox"]
-    compile rootProject.ext.dependencies["objectBoxDebug"]
+    compile rootProject.ext.dependencies.appcompat_v7
+    compile rootProject.ext.dependencies.objectBox
+    compile rootProject.ext.dependencies.objectBoxDebug
 }
 
