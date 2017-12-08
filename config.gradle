@@ -16,9 +16,9 @@ ext {
             versionCode                : 1705270,
             versionName                : "1.0.0",
 
-            isAppDebug                 : true,//App模块调试
-            isLibDebug                 : true,//库模块调试
-            isSDKDebug                 : true,//第三方SDK调试
+            isAppDebug                 : true,
+            isLibDebug                 : true,
+            isSDKDebug                 : true,
     ]
 
     dependencies = [
