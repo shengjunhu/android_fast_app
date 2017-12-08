@@ -3,7 +3,7 @@ package com.hsj.shop.ui.activity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hsj.base.ui.BaseActivity;
+import com.hsj.base.ui.activity.BaseActivity;
 import com.hsj.shop.R;
 import com.hsj.shop.ui.fragment.ShopFragment;
 

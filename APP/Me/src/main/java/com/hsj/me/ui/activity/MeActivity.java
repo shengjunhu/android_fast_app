@@ -3,7 +3,7 @@ package com.hsj.me.ui.activity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hsj.base.ui.BaseActivity;
+import com.hsj.base.ui.activity.BaseActivity;
 import com.hsj.me.R;
 import com.hsj.me.ui.fragment.MeFragment;
 

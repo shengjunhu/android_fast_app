@@ -22,7 +22,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.hsj.base.ui.BaseActivity;
+import com.hsj.base.ui.activity.BaseActivity;
 
 public class QRMainActivity extends BaseActivity {
 

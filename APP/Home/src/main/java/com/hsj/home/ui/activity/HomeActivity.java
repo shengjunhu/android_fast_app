@@ -3,7 +3,7 @@ package com.hsj.home.ui.activity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hsj.base.ui.BaseActivity;
+import com.hsj.base.ui.activity.BaseActivity;
 import com.hsj.home.R;
 import com.hsj.home.ui.fragment.HomeFragment;
 

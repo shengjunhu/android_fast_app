@@ -21,7 +21,7 @@ package com.hsj.wxapi;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hsj.base.ui.BaseActivity;
+import com.hsj.base.ui.activity.BaseActivity;
 
 /**
  * @Author:HSJ

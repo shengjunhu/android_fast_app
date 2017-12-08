@@ -1,4 +1,4 @@
-package com.hsj.base.ui;
+package com.hsj.base.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;

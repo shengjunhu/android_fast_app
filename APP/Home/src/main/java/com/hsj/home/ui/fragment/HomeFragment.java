@@ -3,7 +3,7 @@ package com.hsj.home.ui.fragment;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hsj.base.ui.BaseFragment;
+import com.hsj.base.ui.fragment.BaseFragment;
 import com.hsj.home.R;
 
 /**

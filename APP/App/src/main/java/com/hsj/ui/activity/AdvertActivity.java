@@ -23,7 +23,7 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import com.hsj.R;
-import com.hsj.base.ui.BaseActivity;
+import com.hsj.base.ui.activity.BaseActivity;
 
 /**
  * @Author:HSJ

@@ -16,7 +16,7 @@
  *
  ******************************************************************************/
 
-package com.hsj.base.ui;
+package com.hsj.base.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;

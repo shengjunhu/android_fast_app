@@ -1,8 +1,10 @@
-package com.hsj.base.ui;
+package com.hsj.base.ui.activity;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.AnimRes;
 import android.support.annotation.IdRes;
 import android.support.annotation.IntRange;
 import android.support.annotation.NonNull;
@@ -10,12 +12,14 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.view.LayoutInflater;
+import android.view.KeyEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Toast;
+
 import com.hsj.base.core.BaseApp;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,27 +27,22 @@ import java.util.List;
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 14:52
- * @Class:AppBaseFragment
- * @Description:普通Fragment、数据本地初始化
+ * @Class:AppBaseActivity
+ * @Description:Activity基类：初始化UI、初始化数据、强制刷新数据、生命周期控制
  */
-public abstract class BaseFragment extends Fragment implements View.OnClickListener {
+public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
 
     public String TAG = this.getClass().getSimpleName();
 
-    private View rootView;
-
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (rootView == null) {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-            rootView = inflater.inflate(getLayoutId(), container, false);
+        setContentView(getLayoutId());
 
-            initUI(savedInstanceState);
+        initUI(savedInstanceState);
 
-            initData();
-        }
-        return rootView;
+        initData();
     }
 
     protected abstract int getLayoutId();
@@ -66,13 +65,13 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
 
         List<String> requestPermissions = new ArrayList<>();
         for (String permission : permissions) {
-            if (ContextCompat.checkSelfPermission(this.getContext(), permission) == PackageManager.PERMISSION_DENIED) {
+            if (ContextCompat.checkSelfPermission(this.getApplicationContext(), permission) == PackageManager.PERMISSION_DENIED) {
                 requestPermissions.add(permission);
             }
         }
 
         if (requestPermissions.size() > 0) {
-            ActivityCompat.requestPermissions(getActivity(), requestPermissions.toArray(new String[]{}), requestCode);
+            ActivityCompat.requestPermissions(this, requestPermissions.toArray(new String[]{}), requestCode);
         } else {
             permissionResponse(requestCode, true);
         }
@@ -94,7 +93,6 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
 
     /**
      * 复写此方法读取回调
-     *
      * @param requestCode
      * @param granted
      */
@@ -103,25 +101,10 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     }
 
     /**
-     * 权限被拒绝一次的提示对话框
+     *  权限被拒绝一次的提示对话框
      */
     private void showPermissionWarn() {
 
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
     }
 
     /**
@@ -133,6 +116,16 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
         BaseApp.getRefWatcher().watch(this);
     }
 
+    /**
+     * 查找View
+     *
+     * @param id  控件的id
+     * @param <V> View类型
+     * @return
+     */
+    protected <V extends View> V findView(@IdRes int id) {
+        return (V) findViewById(id);
+    }
 
     /**
      * 刷新数据
@@ -144,14 +137,54 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     }
 
     /**
-     * 查找View
+     * 弹出Toast
      *
-     * @param id  控件的id
-     * @param <V> View类型
-     * @return
+     * @param message
      */
-    protected <V extends View> V findView(@IdRes int id) {
-        return (V) rootView.findViewById(id);
+    public void showToast(@NonNull String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    /**
+     * activity切换动画
+     *
+     * @param clazz
+     * @param enterAnim
+     * @param exitAnim
+     */
+    public void activityAnim(Class clazz, @AnimRes int enterAnim, @AnimRes int exitAnim) {
+        startActivity(new Intent(this, clazz));
+        overridePendingTransition(enterAnim, exitAnim);
+    }
+
+    /**
+     * fragment切换动画
+     *
+     * @param layoutId
+     * @param fragment
+     * @param enterAnim
+     * @param exitAnim
+     */
+    public void fragmentAnim(@IdRes int layoutId, Fragment fragment, @AnimRes int enterAnim, @AnimRes int exitAnim) {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .setCustomAnimations(enterAnim, exitAnim)
+                .replace(layoutId, fragment)
+                .commit();
+    }
+
+    /**
+     * 开始提示等待dialog
+     */
+    protected void startDialog(@Nullable String hint) {
+
+    }
+
+    /**
+     * 结束提示dialog
+     */
+    protected void stopDialog() {
+
     }
 
     /**
@@ -197,26 +230,21 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     }
 
     /**
-     * 弹出Toast
-     *
-     * @param message
+     * 按返回键
      */
-    public void showToast(@NonNull String message) {
-        Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 
     /**
-     * 启动加载提示
+     * 按键
      */
-    protected void startDialog(String hint) {
-
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            //return false;
+        }
+        return super.onKeyDown(keyCode, event);
     }
-
-    /**
-     * 停止加载提示
-     */
-    protected void stopDialog() {
-
-    }
-
 }
