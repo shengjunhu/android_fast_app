@@ -22,8 +22,9 @@ package com.hsj.engine;
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/7/21/15:31
- * @Class:UserInfoEngine
- * @Description:
+ * @Class:UserInfoManager
+ * @Description:用户管理者
  */
-public class UserInfoEngine {
+public class UserInfoManager {
+
 }
