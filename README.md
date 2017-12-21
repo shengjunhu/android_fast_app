@@ -18,6 +18,7 @@
 ### 库工程Library：
   * [Sample         :使用说明Module](/Library/Sample/Sample_README.md)
   * [BaseLib        :项目基类库](/Library/BaseLib/BaseLib_README.md)
+  * [SafeManager    :项目基类库](/Library/SafeManager/SafeManager_README.md)
   * [UIController   :UI控制者](/Library/UIController/UIController_README.md)
   * [UIKit          :控件库](/Library/UIKit/UIKit_README.md)
   * [Http           :网络库](/Library/Http/Http_README.md)

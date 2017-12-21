@@ -50,5 +50,6 @@ include ':APP:App',                 //app宿主程序
         ':Library:PercentLayout',   //百分比布局库
         ':Library:TaskManager',     //任务管理器
         ':Library:DBObject',        //Object数据库
+        ':Library::SafeManager',    //安全管理库
         ':Library:BaseLib'          //全局库基类
 
