@@ -32,4 +32,25 @@ public class Banner extends View {
 
     }
 
+    /**
+     * 开始滚动
+     */
+    public void startPlay(){
+
+    }
+
+    /**
+     * 暂停滚动
+     */
+    public void pausePlay(){
+
+    }
+
+    /**
+     * 停止滚动
+     */
+    public void stopPlay(){
+
+    }
+
 }
