@@ -1,6 +1,5 @@
 package com.hsj.base.core;
 
-import android.annotation.SuppressLint;
 import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
@@ -20,9 +19,7 @@ import java.util.List;
  */
 public abstract class BaseApp extends Application {
 
-    @SuppressLint("StaticFieldLeak")
     public static BaseApp instance;
-    public static Context appContext;
     private RefWatcher mRefWatcher;
 
     @Override
@@ -43,7 +40,7 @@ public abstract class BaseApp extends Application {
         if (isInMainProcess()) {
             instance = this;
 
-            appContext = getApplicationContext();
+            Thread.setDefaultUncaughtExceptionHandler(new AppCrashHandler(this));
 
             initModule();
         }
