@@ -98,11 +98,14 @@ ext {
             amap_location            : 'com.amap.api:location:latest.integration',
 
             //极光推送
-            j_ush                    : "ThirdSDK/Push/libs/jpush-android-3.0.8.jar",
+            j_push                   :'cn.jiguang.sdk:jpush:3.1.0',
+            jcore                    :'cn.jiguang.sdk:jcore:1.1.8',
             //华为推送
-            huawei_push              : 'com.huawei.android.hms:push:2.5.2.300',
+            huawei_push              : 'com.huawei.android.hms:push:2.5.3.302',
             //小米推送
-            mi_push                  : "ThirdSDK/Push/libs/MiPush_SDK_Client_3_4_5.jar",
+            mi_push                  : "ThirdSDK/Push/libs/MiPush_SDK_Client_3_5_1.jar",
+            //魅族推送
+            meizu_push               : 'com.meizu.flyme.internet:push-internal:3.6.0@aar',
 
             //web浏览器（腾讯X5浏览服务sdk）
             tbs_x5                   : "Library/Web/libs/tbs_sdk_v3.5.0_20170801_113025.jar",

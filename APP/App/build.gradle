@@ -57,11 +57,14 @@ android {
     }
 
     productFlavors {
+        huawei {}
+        xiaomi {}
+        meizu {}
+        oppo {}
+        vivo {}
         baidu {}
         tencent {}
-        xiaomi {}
-        qihu {}
-        huawei {}
+        _360 {}
     }
 
     packagingOptions {
@@ -122,9 +125,9 @@ repluginHostConfig {
      * 背景不透明的坑的数量
      * 不需要个性化配置时，无需添加
      */
-    countNotTranslucentStandard         = 6
-    countNotTranslucentSingleTop        = 2
-    countNotTranslucentSingleTask       = 3
-    countNotTranslucentSingleInstance   = 2
+    countNotTranslucentStandard = 6
+    countNotTranslucentSingleTop = 2
+    countNotTranslucentSingleTask = 3
+    countNotTranslucentSingleInstance = 2
 }
 

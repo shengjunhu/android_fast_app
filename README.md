@@ -32,7 +32,6 @@
   * [FileProvider   :文件提供者](/Library/FileProvider/FileProvider_README.md)
   * [VideoPlayer    :视屏播放器](/Library/VideoPlayer/VideoPlayer_README.md)
   * [Keyboard       :自定义键盘](/Library/Keyboard/Keyboard_README.md)
-  * [Web            :Web封装库](/Library/Web/Web_README.md)
   * [GPSLocation    :GPS定位](/Library/GPSLocation/GPSLocation_README.md)
   * [BlueTooth      :数据库模块](/Library/BlueTooth/BlueTooth_README.md)
   * [DBObject       :对象存储](/Library/DBObject/DBObject_README.md)
@@ -42,10 +41,9 @@
   * [Socket         :NDK模块](/Library/Socket/Socket_README.md)
   
 ### 第三方SDK库:
-  * [Login          :第三方登陆模块](/ThirdSDK/Login/Login_README.md)
-  * [Share          :第三方分享模块](/ThirdSDK/Share/Share_README.md)
+  * [Auth           :第三方登陆、分享模块（qq、微信、微博）](/ThirdSDK/Auth/Auth_README.md)
   * [Pay            :支付宝、微信](/ThirdSDK/Pay/Pay_README.md)
-  * [Push           :极光、小米、华为推送](/ThirdSDK/Push/Push_README.md)
+  * [Push           :极光、小米、华为、魅族推送](/ThirdSDK/Push/Push_README.md)
   * [BDMap          :百度地图](/ThirdSDK/BDMap/BDMap_README.md)
   * [BDCloud        :百度云存储](/ThirdSDK/BDCloud/BDCloud_README.md)
   * [GDMap          :高德地图](/ThirdSDK/GDMap/GDMap_README.md)
@@ -53,10 +51,11 @@
   * [IM             :及时通讯](/ThirdSDK/IM/IM_README.md)
   * [AR             :AR](/ThirdSDK/AR/AR_README.md)
   * [U3D            :unity3d模块](/ThirdSDK/U3D/U3D_README.md)
+  * [Web            :TBS X5](/ThirdSDK/Web/Web_README.md)
   * [Bugly          :热修复](/ThirdSDK/Bugly/Bugly_README.md)
 
 ### 关于缓存：
-* 0-先读取内存、磁盘可用大小值；优先采用SD卡缓存
+* 0-优先采用SD卡缓存，先读取内存、磁盘可用大小值。
 
 * 1-SharedPreferences:
 ```

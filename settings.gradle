@@ -5,8 +5,7 @@ include ':APP:App',                 //app宿主程序
         ':APP:Discover',            //app好友圈模块
         ':APP:Me',                  //app我的模块
 
-        ':ThirdSDK:Login',          //QQ、微信、微博登陆库
-        ':ThirdSDK:Share',          //QQ、微信、微博分享库
+        ':ThirdSDK:Auth',           //QQ、微信、微博登陆、分享库
         ':ThirdSDK:Pay',            //支付宝、微信支付
         ':ThirdSDK:Push',           //极光、小米、华为推送
         ':ThirdSDK:BDMap',          //百度地图SDK
@@ -15,6 +14,7 @@ include ':APP:App',                 //app宿主程序
         ':ThirdSDK:BDCloud',        //百度云库
         ':ThirdSDK:AR',             //AR技术
         ':ThirdSDK:U3D',            //unity3d制作3d
+        ':ThirdSDK:Web',            //JS、Html与android交互库
         ':ThirdSDK:Bugly',          //腾讯热修复库（采用Tencent）
 
         ':ThirdSDK:IM:IMLib',       //IM能力库
@@ -41,7 +41,6 @@ include ':APP:App',                 //app宿主程序
         ':Library:XMPP',            //长连接、及时通讯、推送
         ':Library:Socket',          //客户的端与服务器数据通信的封装
 
-        ':Library:Web',             //JS、Html与android交互库
         ':Library:Router',          //组件模块数据路由
         ':Library:Http',            //网络库
         ':Library:ImageLoader',     //图片处理库
@@ -52,4 +51,3 @@ include ':APP:App',                 //app宿主程序
         ':Library:DBObject',        //Object数据库
         ':Library:SafeManager',    //安全管理库
         ':Library:BaseLib'          //全局库基类
-
