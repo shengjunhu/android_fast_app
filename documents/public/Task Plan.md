@@ -11,3 +11,7 @@
 * ':Library:Http',            //网络库
 * ':Library:Widget',          //自定义控件库
 * ':Library:ImageLoader',     //图片处理库
+
+GPUImage
+OpenCV
+GPUImageSDK
