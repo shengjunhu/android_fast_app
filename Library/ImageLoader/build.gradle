@@ -34,6 +34,7 @@ dependencies {
     compile rootProject.ext.dependencies.constraint_layout
     compile rootProject.ext.dependencies.appcompat_v7
     compile rootProject.ext.dependencies.recyclerview_v7
+
     compile rootProject.ext.dependencies.glide
     annotationProcessor rootProject.ext.dependencies.glideCompiler
     compile rootProject.ext.dependencies.okhttp3
