@@ -1,36 +1,47 @@
-apply plugin:rootProject.ext.plugins.application
+if (rootProject.ext.android.isSDKDebug){
+    apply plugin:rootProject.ext.plugins.application
+}else {
+    apply plugin:rootProject.ext.plugins.library
+}
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
-    buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.hsj.auth"
+        //applicationId "com.hsj.auth"
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
+
         ndk { abiFilters "armeabi-v7a", "x86" }
     }
 
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
-            zipAlignEnabled true
-            debuggable false
-            jniDebuggable false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            if (rootProject.ext.android.isSDKDebug) {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+            }
         }
     }
 
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile files('libs/open_sdk_r5793_lite.jar')
-    compile rootProject.ext.dependencies.wechat
-    compile rootProject.ext.dependencies.weibo
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/open_sdk_r5793_lite.jar')
+    implementation rootProject.ext.dependencies.wechat
+    implementation rootProject.ext.dependencies.weibo
 
-    compile project(path: ':Library:BaseLib')
+    implementation rootProject.ext.dependencies.constraint_layout
+    implementation rootProject.ext.dependencies.appcompat_v7
 }

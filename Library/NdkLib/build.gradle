@@ -1,7 +1,6 @@
 apply plugin: rootProject.ext.plugins.application
 
 android {
-    buildToolsVersion rootProject.ext.android.buildToolsVersion
     compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
@@ -19,23 +18,15 @@ android {
         }
 
         ndk {
-            moduleName "app"
+            moduleName "ndk"
             abiFilters "armeabi-v7a", "x86"
         }
 
     }
 
-    sourceSets.main {
-        jni.srcDirs = []
-    }
-
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
-            zipAlignEnabled true
-            debuggable false
-            jniDebuggable false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -49,12 +40,11 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    testCompile rootProject.ext.dependencies.testCompile
-    testCompile rootProject.ext.dependencies.annotations
-    compile rootProject.ext.dependencies.constraint_layout
-    compile rootProject.ext.dependencies.appcompat_v7
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation rootProject.ext.dependencies.testJunit
+    androidTestImplementation rootProject.ext.dependencies.testRunner
+    androidTestImplementation rootProject.ext.dependencies.testEspresso
+    implementation rootProject.ext.dependencies.annotations
+    implementation rootProject.ext.dependencies.constraint_layout
+    implementation rootProject.ext.dependencies.appcompat_v7
 }

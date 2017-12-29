@@ -33,18 +33,6 @@ public abstract class BaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<Ba
         return setData() == null ? 0 : setData().size();
     }
 
-    @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        final T t = setData().get(position);
-        bindItemData(t);
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                itemViewOnClick(t);
-            }
-        });
-    }
-
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private ViewHolder(View itemView) {

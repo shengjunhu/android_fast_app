@@ -2,7 +2,6 @@ apply plugin: rootProject.ext.plugins.library
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
-    buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
         //applicationId "com.hsj.base"
@@ -20,16 +19,15 @@ android {
 
     buildTypes {
         release {
-            buildConfigField "boolean", "isLogDebug", "false"
+            buildConfigField "boolean", "isDebug", "false"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            buildConfigField "boolean", "isLogDebug", "true"
+            buildConfigField "boolean", "isDebug", "true"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-
     }
 
 }
@@ -41,21 +39,20 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    testCompile rootProject.ext.dependencies.testCompile
-    compile rootProject.ext.dependencies.multidex
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation rootProject.ext.dependencies.testJunit
+    androidTestImplementation rootProject.ext.dependencies.testRunner
+    androidTestImplementation rootProject.ext.dependencies.testEspresso
 
-    testCompile rootProject.ext.dependencies.annotations
-    compile rootProject.ext.dependencies.constraint_layout
-    compile rootProject.ext.dependencies.support_v4
-    compile rootProject.ext.dependencies.appcompat_v7
-    compile rootProject.ext.dependencies.recyclerview_v7
-    compile rootProject.ext.dependencies.design
+    implementation rootProject.ext.dependencies.multidex
+    implementation rootProject.ext.dependencies.annotations
+    implementation rootProject.ext.dependencies.constraint_layout
+    implementation rootProject.ext.dependencies.support_v4
+    implementation rootProject.ext.dependencies.appcompat_v7
+    implementation rootProject.ext.dependencies.recyclerview_v7
+    implementation rootProject.ext.dependencies.design
 
-    debugCompile rootProject.ext.dependencies.leakcanary_debug
-    releaseCompile rootProject.ext.dependencies.leakcanary_release
+    debugImplementation rootProject.ext.dependencies.leakcanary_debug
+    releaseImplementation rootProject.ext.dependencies.leakcanary_release
 
 }

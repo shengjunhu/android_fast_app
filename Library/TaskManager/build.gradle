@@ -1,7 +1,10 @@
-apply plugin: rootProject.ext.plugins.library
+if (rootProject.ext.android.isLibDebug){
+    apply plugin:rootProject.ext.plugins.application
+}else {
+    apply plugin:rootProject.ext.plugins.library
+}
 
 android {
-    buildToolsVersion rootProject.ext.android.buildToolsVersion
     compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
@@ -21,9 +24,19 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            if (rootProject.ext.android.isLibDebug) {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+            }
+        }
+    }
+
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
 

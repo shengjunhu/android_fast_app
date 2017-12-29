@@ -1,7 +1,10 @@
-apply plugin: rootProject.ext.plugins.library
+if (rootProject.ext.android.isLibDebug){
+    apply plugin:rootProject.ext.plugins.application
+}else {
+    apply plugin:rootProject.ext.plugins.library
+}
 
 android {
-    buildToolsVersion rootProject.ext.android.buildToolsVersion
     compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
@@ -29,28 +32,36 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            if (rootProject.ext.android.isLibDebug) {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+            }
+        }
+    }
+
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.ext.dependencies.appcompat_v7
     //Retrofit2
-    compile rootProject.ext.dependencies.retrofit
+    implementation rootProject.ext.dependencies.retrofit
     //Retrofit2和RxJava2适配器
-    compile rootProject.ext.dependencies.retrofit_adapters
+    implementation rootProject.ext.dependencies.retrofit_adapters
     //转换器：采用自定义FastJson转换器
-    compile rootProject.ext.dependencies.retrofit_converters
+    implementation rootProject.ext.dependencies.retrofit_converters
     //拦截器
-    compile rootProject.ext.dependencies.interceptor
+    implementation rootProject.ext.dependencies.interceptor
 
     //RxJava2
-    compile rootProject.ext.dependencies.rxjava
-    compile rootProject.ext.dependencies.rxandroid
+    implementation rootProject.ext.dependencies.rxjava
+    implementation rootProject.ext.dependencies.rxandroid
 
     //Json解析：采用FastJson解析
-    //compile rootProject.ext.dependencies.gson
-    compile rootProject.ext.dependencies.fastjson
-
-    compile project(path: ':Library:DBObject')
+    //implementation rootProject.ext.dependencies.gson
+    implementation rootProject.ext.dependencies.fastjson
 
 }

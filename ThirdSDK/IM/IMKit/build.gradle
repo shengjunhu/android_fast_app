@@ -2,7 +2,6 @@ apply plugin:rootProject.ext.plugins.library
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
-    buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
         minSdkVersion rootProject.ext.android.minSdkVersion
@@ -34,7 +33,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'src/main/libs', include: ['*.jar'])
-    compile rootProject.ext.dependencies.support_v4
-    compile project(path: ':ThirdSDK:IM:IMLib')
+    implementation fileTree(dir: 'src/main/libs', include: ['*.jar'])
+    implementation rootProject.ext.dependencies.support_v4
+    implementation project(path: ':ThirdSDK:IM:IMLib')
 }

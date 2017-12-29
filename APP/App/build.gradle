@@ -2,7 +2,6 @@ apply plugin: rootProject.ext.plugins.application
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
-    buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
         applicationId "com.hsj"
@@ -10,6 +9,8 @@ android {
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
+
+        resourcePrefix "app_"
 
         // 矢量图
         vectorDrawables.useSupportLibrary = true
@@ -46,24 +47,21 @@ android {
         }
     }
 
-    applicationVariants.all { variant ->
-        variant.outputs.each { output ->
-            def outputFile = output.outputFile
-            if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                def fileName = "App_${variant.productFlavors[0].name}_v${defaultConfig.versionName}_v${defaultConfig.versionCode}.apk"
-                output.outputFile = new File(outputFile.parent, fileName)
-            }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "App_${variant.productFlavors[0].name}_v${variant.versionName}_v${variant.versionCode}.apk"
         }
     }
 
+    flavorDimensions "default"
     productFlavors {
-        huawei {}
-        xiaomi {}
-        meizu {}
-        oppo {}
-        vivo {}
-        baidu {}
-        tencent {}
+        huawei { dimension "default" }
+        xiaomi { dimension "default" }
+        meizu { dimension "default" }
+        oppo { dimension "default" }
+        vivo { dimension "default" }
+        baidu { dimension "default" }
+        tencent { dimension "default" }
         _360 {}
     }
 
@@ -99,13 +97,13 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    testCompile rootProject.ext.dependencies.testCompile
-    compile project(path: ':Library:BaseLib')
-    compile rootProject.ext.dependencies.repluginHost
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation rootProject.ext.dependencies.testJunit
+    androidTestImplementation rootProject.ext.dependencies.testRunner
+    androidTestImplementation rootProject.ext.dependencies.testEspresso
+
+    implementation project(path: ':Library:BaseLib')
+    implementation rootProject.ext.dependencies.repluginHost
 }
 
 apply plugin: rootProject.ext.plugins.repluginHost

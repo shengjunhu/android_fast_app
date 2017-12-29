@@ -21,8 +21,6 @@ import android.util.TypedValue;
 import android.util.Xml;
 import android.view.WindowManager;
 
-import com.hsj.base.core.BaseApp;
-
 import org.xmlpull.v1.XmlSerializer;
 
 import java.io.File;
@@ -236,8 +234,8 @@ public class PhoneManager {
      *
      * @return {@code true}: 是<br>{@code false}: 否
      */
-    public static boolean isPhone() {
-        TelephonyManager tm = (TelephonyManager) BaseApp.appContext.getSystemService(Context.TELEPHONY_SERVICE);
+    public static boolean isPhone(Context context) {
+        TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         return tm != null && tm.getPhoneType() != TelephonyManager.PHONE_TYPE_NONE;
     }
 
@@ -248,8 +246,8 @@ public class PhoneManager {
      * @return IMEI 码
      */
     @SuppressLint("HardwareIds")
-    public static String getIMEI() {
-        TelephonyManager tm = (TelephonyManager) BaseApp.appContext.getSystemService(Context.TELEPHONY_SERVICE);
+    public static String getIMEI(Context context) {
+        TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         return tm != null ? tm.getDeviceId() : null;
     }
 
@@ -260,8 +258,8 @@ public class PhoneManager {
      * @return IMSI 码
      */
     @SuppressLint("HardwareIds")
-    public static String getIMSI() {
-        TelephonyManager tm = (TelephonyManager) BaseApp.appContext.getSystemService(Context.TELEPHONY_SERVICE);
+    public static String getIMSI(Context context) {
+        TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         return tm != null ? tm.getSubscriberId() : null;
     }
 
@@ -276,8 +274,8 @@ public class PhoneManager {
      * <li>{@link TelephonyManager#PHONE_TYPE_SIP  } : 3</li>
      * </ul>
      */
-    public static int getPhoneType() {
-        TelephonyManager tm = (TelephonyManager) BaseApp.appContext.getSystemService(Context.TELEPHONY_SERVICE);
+    public static int getPhoneType(Context context) {
+        TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         return tm != null ? tm.getPhoneType() : -1;
     }
 
@@ -286,8 +284,8 @@ public class PhoneManager {
      *
      * @return {@code true}: 是<br>{@code false}: 否
      */
-    public static boolean isSimCardReady() {
-        TelephonyManager tm = (TelephonyManager) BaseApp.appContext.getSystemService(Context.TELEPHONY_SERVICE);
+    public static boolean isSimCardReady(Context context) {
+        TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         return tm != null && tm.getSimState() == TelephonyManager.SIM_STATE_READY;
     }
 
@@ -297,8 +295,8 @@ public class PhoneManager {
      *
      * @return sim 卡运营商名称
      */
-    public static String getSimOperatorName() {
-        TelephonyManager tm = (TelephonyManager) BaseApp.appContext.getSystemService(Context.TELEPHONY_SERVICE);
+    public static String getSimOperatorName(Context context) {
+        TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         return tm != null ? tm.getSimOperatorName() : null;
     }
 
@@ -308,8 +306,8 @@ public class PhoneManager {
      *
      * @return 移动网络运营商名称
      */
-    public static String getSimOperatorByMnc() {
-        TelephonyManager tm = (TelephonyManager) BaseApp.appContext.getSystemService(Context.TELEPHONY_SERVICE);
+    public static String getSimOperatorByMnc(Context context) {
+        TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         String operator = tm != null ? tm.getSimOperator() : null;
         if (operator == null) return null;
         switch (operator) {
@@ -347,8 +345,8 @@ public class PhoneManager {
      * VoiceMailNumber = *86<br>
      */
     @SuppressLint("HardwareIds")
-    public static String getPhoneStatus() {
-        TelephonyManager tm = (TelephonyManager) BaseApp.appContext
+    public static String getPhoneStatus(Context context) {
+        TelephonyManager tm = (TelephonyManager) context
                 .getSystemService(Context.TELEPHONY_SERVICE);
         String str = "";
         str += "DeviceId(IMEI) = " + tm.getDeviceId() + "\n";
@@ -376,11 +374,11 @@ public class PhoneManager {
      *
      * @return 联系人链表
      */
-    public static List<HashMap<String, String>> getAllContactInfo() {
+    public static List<HashMap<String, String>> getAllContactInfo(Context context) {
         SystemClock.sleep(3000);
         ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();
         // 1.获取内容解析者
-        ContentResolver resolver = BaseApp.appContext.getContentResolver();
+        ContentResolver resolver = context.getContentResolver();
         // 2.获取内容提供者的地址:com.android.contacts
         // raw_contacts 表的地址 :raw_contacts
         // view_data 表的地址 : data
@@ -448,10 +446,10 @@ public class PhoneManager {
      * <p>需添加权限 {@code <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>}</p>
      * <p>需添加权限 {@code <uses-permission android:name="android.permission.READ_SMS"/>}</p>
      */
-    public static void getAllSMS() {
+    public static void getAllSMS(Context context) {
         // 1.获取短信
         // 1.1 获取内容解析者
-        ContentResolver resolver = BaseApp.appContext.getContentResolver();
+        ContentResolver resolver = context.getContentResolver();
         // 1.2 获取内容提供者地址   sms,sms 表的地址:null  不写
         // 1.3 获取查询路径
         Uri uri = Uri.parse("content://sms");
@@ -543,8 +541,8 @@ public class PhoneManager {
      * @return AndroidID
      */
     @SuppressLint("HardwareIds")
-    public static String getAndroidID() {
-        return Settings.Secure.getString(BaseApp.appContext.getContentResolver(), Settings.Secure.ANDROID_ID);
+    public static String getAndroidID(Context context) {
+        return Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
     }
 
     /**
