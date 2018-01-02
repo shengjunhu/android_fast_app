@@ -23,7 +23,7 @@ public class LaunchActivity extends BaseActivity {
     protected void initUI(Bundle savedInstanceState) {
         //进入欢迎页或者广告页
         //startActivity(new Intent(this, WelActivity.class));
-        this.finish();
+        LaunchActivity.this.finish();
     }
 
     @Override

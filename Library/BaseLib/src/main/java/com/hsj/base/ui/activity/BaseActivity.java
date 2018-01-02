@@ -17,9 +17,7 @@ import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Toast;
-
 import com.hsj.base.core.BaseApp;
-
 import java.util.ArrayList;
 import java.util.List;
 

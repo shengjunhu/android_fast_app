@@ -4,7 +4,7 @@
 ## 开发框架：
 * 1、MVC框架 ： 使用简单（结合DataBinding更好用）
 * 2、MVP框架 ： 高解耦、提高维护效率、类文件多（View、Data、IPresenter、IContract）
-* 3、MVVM框架： 一般般
+* 3、MVVM框架： 使用简单（结合DataBinding更好用）
 
 ## 结构组成：
 ### 主工程APP： 
@@ -15,13 +15,13 @@
   * [Discover       :应用发现模块](/APP/App/Discover_README.md)
   * [Me             :应用我的插件](/APP/App/Me_README.md)
  
-### 库工程Library：
+### 常用功能库Library:
   * [Sample         :使用说明Module](/Library/Sample/Sample_README.md)
-  * [BaseLib        :项目基类库](/Library/BaseLib/BaseLib_README.md)
-  * [SafeManager    :项目基类库](/Library/SafeManager/SafeManager_README.md)
+  * [BaseLib        :项目基类封装和工具类库](/Library/BaseLib/BaseLib_README.md)
+  * [SafeManager    :项目安全加密库](/Library/SafeManager/SafeManager_README.md)
   * [UIController   :UI控制者](/Library/UIController/UIController_README.md)
-  * [UIKit          :控件库](/Library/UIKit/UIKit_README.md)
-  * [Http           :网络库](/Library/Http/Http_README.md)
+  * [UIKit          :自定义控件库](/Library/UIKit/UIKit_README.md)
+  * [Http           :网络请求库](/Library/Http/Http_README.md)
   * [ImageLoader    :图片加载库](/Library/ImageLoader/ImageLoader_README.md)
   * [PercentLayout  :百分比布局库](/Library/PercentLayout/PercentLayout_README.md)
   * [AudioProvider  :音频提供者](/Library/AudioProvider/AudioProvider_README.md)
@@ -36,7 +36,7 @@
   * [BlueTooth      :数据库模块](/Library/BlueTooth/BlueTooth_README.md)
   * [DBObject       :对象存储](/Library/DBObject/DBObject_README.md)
   * [Router         :数据路由者](/Library/Router/Router_README.md)
-  * [NdkLib         :NDK模块](/Library/NdkLib/NdkLib_README.md)
+  * [NdkLib         :编译C代码模块](/Library/NdkLib/NdkLib_README.md)
   * [XMPP           :XMPP模块](/Library/XMPP/XMPP_README.md)
   * [Socket         :NDK模块](/Library/Socket/Socket_README.md)
   
@@ -49,9 +49,9 @@
   * [GDMap          :高德地图](/ThirdSDK/GDMap/GDMap_README.md)
   * [QNCloud        :七牛云存储](/ThirdSDK/QNCloud/QNCloud_README.md)
   * [IM             :及时通讯](/ThirdSDK/IM/IM_README.md)
-  * [AR             :AR](/ThirdSDK/AR/AR_README.md)
+  * [AR             :AR录制与播放](/ThirdSDK/AR/AR_README.md)
   * [U3D            :unity3d模块](/ThirdSDK/U3D/U3D_README.md)
-  * [Web            :TBS X5](/ThirdSDK/Web/Web_README.md)
+  * [Web            :TBS X5 web模块](/ThirdSDK/Web/Web_README.md)
   * [Bugly          :热修复](/ThirdSDK/Bugly/Bugly_README.md)
 
 ### 关于缓存：
@@ -153,7 +153,6 @@ k-download:
 * Date： 2017/1/9
 * E-Mail： mr.ajun@foxmail.com
 * GitHub：[GitHub](https://github.com/hushengjun)
-* Blog：[CSDN](http://blog.csdn.net/hshengjun/article/details/54408704)
 ```
 
 ### 关于License
