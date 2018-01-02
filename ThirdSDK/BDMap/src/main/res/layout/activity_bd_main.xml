@@ -1,39 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/mmv"
-    tools:context="com.hsj.map.bd.BDMainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:baselineAligned="false"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.hsj.map.bd.BDMainActivity">
 
     <Button
         android:id="@+id/btn1"
-        style="@style/mw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btn2"
-        style="@style/mw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btn3"
-        style="@style/mw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btn4"
-        style="@style/mw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btn5"
-        style="@style/mw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btn6"
-        style="@style/mw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:textAllCaps="false" />
 
 </LinearLayout>
