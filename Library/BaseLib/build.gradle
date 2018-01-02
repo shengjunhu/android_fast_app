@@ -39,11 +39,10 @@ repositories {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation rootProject.ext.dependencies.testJunit
     androidTestImplementation rootProject.ext.dependencies.testRunner
     androidTestImplementation rootProject.ext.dependencies.testEspresso
-
     implementation rootProject.ext.dependencies.multidex
     implementation rootProject.ext.dependencies.annotations
     implementation rootProject.ext.dependencies.constraint_layout
@@ -51,8 +50,8 @@ dependencies {
     implementation rootProject.ext.dependencies.appcompat_v7
     implementation rootProject.ext.dependencies.recyclerview_v7
     implementation rootProject.ext.dependencies.design
+    implementation rootProject.ext.dependencies.vector_drawable
 
     debugImplementation rootProject.ext.dependencies.leakcanary_debug
     releaseImplementation rootProject.ext.dependencies.leakcanary_release
-
 }

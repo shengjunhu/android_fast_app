@@ -15,7 +15,7 @@ ext {
             minSdkVersion           : 19,
             targetSdkVersion        : 26,
             versionCode             : 1712290,
-            versionName             : "1.0.1",
+            versionName             : "1.0.0",
 
             isAppDebug              : true,
             isLibDebug              : true,
@@ -28,9 +28,10 @@ ext {
             multidex                 : 'com.android.support:multidex:1.0.1',
             constraint_layout        : 'com.android.support.constraint:constraint-layout:1.0.2',
             annotations              : 'com.android.support:support-annotations:26.1.0',
+            design                   : 'com.android.support:design:26.1.0',
+            vector_drawable          : 'com.android.support:support-vector-drawable:26.1.0',
             support_v4               : 'com.android.support:support-v4:26.1.0',
             appcompat_v7             : 'com.android.support:appcompat-v7:26.1.0',
-            design                   : 'com.android.support:design:26.1.0',
             cardview_v7              : 'com.android.support:cardview-v7:26.1.0',
             recyclerview_v7          : 'com.android.support:recyclerview-v7:26.1.0',
 
@@ -89,14 +90,12 @@ ext {
             wechat                   : 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+',
             weibo                    : 'com.sina.weibo.sdk:core:4.1.4:openDefaultRelease@aar',
 
-            //百度地图
-            baidumap                 : "/ThirdSDK/BDMap/libs/...",
-
             //百度云
             baiducloud               : "/ThirdSDK/BDCloud/libs/bos-android-sdk-1.0.3.jar",
 
             //七牛云
             qiniucloud               : 'com.qiniu:qiniu-android-sdk:7.3.+',
+
 
             //高德：3D地图、2D地图、导航、搜索、定位
             amap_3d                  : 'com.amap.api:3dmap:latest.integration',
@@ -104,6 +103,9 @@ ext {
             amap_navi                : 'com.amap.api:navi-3dmap:latest.integration',
             amap_search              : 'com.amap.api:search:latest.integration',
             amap_location            : 'com.amap.api:location:latest.integration',
+
+            //百度地图
+            baidumap                 : "/ThirdSDK/BDMap/libs/...",
 
             //极光推送
             j_push                   : 'cn.jiguang.sdk:jpush:3.1.0',
@@ -122,11 +124,11 @@ ext {
             zxing_core               : 'com.google.zxing:core:3.3.0',
 
             //IM(融云)
-            im_lib                   : 'cn.rongcloud.android:IMLib:2.8.6',
-            im_kit                   : 'cn.rongcloud.android:IMKit:2.8.6',
-            im_calllib               : 'cn.rongcloud.android:CallLib:2.8.6',
-            im_callkit               : 'cn.rongcloud.android:CallKit:2.8.6',
-            im_redpacket             : 'cn.rongcloud.android:RedPacket:2.8.6',
+            im_lib                   : 'cn.rongcloud.android:IMLib:2.8.23',
+            im_kit                   : 'cn.rongcloud.android:IMKit:2.8.23',
+            im_calllib               : 'cn.rongcloud.android:CallLib:2.8.23',
+            im_callkit               : 'cn.rongcloud.android:CallKit:2.8.23',
+            im_redpacket             : 'cn.rongcloud.android:RedPacket:2.8.23',
 
             //plugin
             repluginHost             : 'com.qihoo360.replugin:replugin-host-lib:2.2.1',
