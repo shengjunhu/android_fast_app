@@ -11,9 +11,9 @@ ext {
     ]
 
     android = [
-            compileSdkVersion       : 26,
+            compileSdkVersion       : 27,
             minSdkVersion           : 19,
-            targetSdkVersion        : 26,
+            targetSdkVersion        : 27,
             versionCode             : 1712290,
             versionName             : "1.0.0",
 
@@ -27,13 +27,14 @@ ext {
             //support
             multidex                 : 'com.android.support:multidex:1.0.1',
             constraint_layout        : 'com.android.support.constraint:constraint-layout:1.0.2',
-            annotations              : 'com.android.support:support-annotations:26.1.0',
-            design                   : 'com.android.support:design:26.1.0',
-            vector_drawable          : 'com.android.support:support-vector-drawable:26.1.0',
-            support_v4               : 'com.android.support:support-v4:26.1.0',
-            appcompat_v7             : 'com.android.support:appcompat-v7:26.1.0',
-            cardview_v7              : 'com.android.support:cardview-v7:26.1.0',
-            recyclerview_v7          : 'com.android.support:recyclerview-v7:26.1.0',
+            annotations              : 'com.android.support:support-annotations:27.0.2',
+            design                   : 'com.android.support:design:27.0.2',
+            vector_drawable          : 'com.android.support:support-vector-drawable:27.0.2',
+            support_v4               : 'com.android.support:support-v4:27.0.2',
+            appcompat_v7             : 'com.android.support:appcompat-v7:27.0.2',
+            cardview_v7              : 'com.android.support:cardview-v7:27.0.2',
+            recyclerview_v7          : 'com.android.support:recyclerview-v7:27.0.2',
+            percent_layout           : 'com.android.support:percent:27.0.2',
 
             //test
             testInstrumentationRunner: 'android.support.test.runner.AndroidJUnitRunner',

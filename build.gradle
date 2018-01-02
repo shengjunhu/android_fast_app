@@ -5,7 +5,7 @@ buildscript {
         google()
         jcenter()
         mavenCentral()
-        //maven { url 'https://maven.google.com' }                            //google
+        maven { url 'https://maven.google.com' }                            //google
         maven { url "http://objectbox.net/beta-repo/" }                     //数据库ObjectBox
         maven { url "https://dl.bintray.com/thelasterstar/maven/" }         //新浪微博
         maven { url 'http://developer.huawei.com/repo/' }                   //华为推送
@@ -27,7 +27,7 @@ allprojects {
         google()
         jcenter()
         mavenCentral()
-        //maven { url 'https://maven.google.com' }                            //google
+        maven { url 'https://maven.google.com' }                            //google
         maven { url "http://objectbox.net/beta-repo/" }                     //数据库ObjectBox
         maven { url "https://dl.bintray.com/thelasterstar/maven/" }         //新浪微博
         maven { url 'http://developer.huawei.com/repo/' }                   //华为推送

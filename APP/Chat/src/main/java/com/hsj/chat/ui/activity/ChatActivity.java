@@ -2,7 +2,6 @@ package com.hsj.chat.ui.activity;
 
 import android.os.Bundle;
 import android.view.View;
-
 import com.hsj.base.ui.activity.BaseActivity;
 
 /**

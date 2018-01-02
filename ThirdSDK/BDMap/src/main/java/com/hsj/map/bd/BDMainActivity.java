@@ -1,9 +1,8 @@
 package com.hsj.map.bd;
 
 import android.os.Bundle;
-import android.view.View;
-
-import com.hsj.base.ui.activity.BaseActivity;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 
 /**
  * @Author:HSJ
@@ -12,25 +11,12 @@ import com.hsj.base.ui.activity.BaseActivity;
  * @Class:
  * @Description:
  */
-public class BDMainActivity extends BaseActivity {
+public class BDMainActivity extends AppCompatActivity {
 
     @Override
-    protected int getLayoutId() {
-        return R.layout.activity_bd_main;
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_bd_main);
     }
 
-    @Override
-    protected void initUI(Bundle savedInstanceState) {
-
-    }
-
-    @Override
-    protected void initData() {
-
-    }
-
-    @Override
-    public void onClick(View view) {
-
-    }
 }

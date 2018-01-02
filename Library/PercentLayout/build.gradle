@@ -37,5 +37,5 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation rootProject.ext.dependencies.appcompat_v7
-    implementation 'com.android.support:percent:26.1.0'
+    implementation rootProject.ext.dependencies.percent_layout
 }

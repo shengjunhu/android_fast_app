@@ -10,8 +10,6 @@ android {
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
 
-        vectorDrawables.useSupportLibrary = true
-
         ndk { abiFilters "armeabi-v7a", "x86" }
 
         testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
@@ -43,14 +41,14 @@ dependencies {
     testImplementation rootProject.ext.dependencies.testJunit
     androidTestImplementation rootProject.ext.dependencies.testRunner
     androidTestImplementation rootProject.ext.dependencies.testEspresso
-    implementation rootProject.ext.dependencies.multidex
-    implementation rootProject.ext.dependencies.annotations
-    implementation rootProject.ext.dependencies.constraint_layout
-    implementation rootProject.ext.dependencies.support_v4
-    implementation rootProject.ext.dependencies.appcompat_v7
-    implementation rootProject.ext.dependencies.recyclerview_v7
-    implementation rootProject.ext.dependencies.design
-    implementation rootProject.ext.dependencies.vector_drawable
+
+    compileOnly rootProject.ext.dependencies.multidex
+    compileOnly rootProject.ext.dependencies.annotations
+    compileOnly rootProject.ext.dependencies.constraint_layout
+    compileOnly rootProject.ext.dependencies.support_v4
+    compileOnly rootProject.ext.dependencies.appcompat_v7
+    compileOnly rootProject.ext.dependencies.recyclerview_v7
+    compileOnly rootProject.ext.dependencies.design
 
     debugImplementation rootProject.ext.dependencies.leakcanary_debug
     releaseImplementation rootProject.ext.dependencies.leakcanary_release
