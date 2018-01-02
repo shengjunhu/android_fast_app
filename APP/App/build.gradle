@@ -55,6 +55,7 @@ android {
 
     flavorDimensions "default"
     productFlavors {
+        server { dimension "default" }
         huawei { dimension "default" }
         xiaomi { dimension "default" }
         meizu { dimension "default" }
@@ -62,7 +63,7 @@ android {
         vivo { dimension "default" }
         baidu { dimension "default" }
         tencent { dimension "default" }
-        _360 {}
+        _360 { dimension "default" }
     }
 
     packagingOptions {
