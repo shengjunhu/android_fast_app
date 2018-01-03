@@ -10,8 +10,7 @@
         <item name="android:textAllCaps">false</item>
         <item name="android:textColorPrimary">@color/colorWhiteTheme</item>
         <item name="android:windowBackground">@color/colorWhiteTheme</item>
-        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorBlueTheme
-        </item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorBlueTheme</item>
     </style>
 
     <!-- Activity 全屏主题 -->

@@ -11,8 +11,6 @@ android {
         versionName rootProject.ext.android.versionName
 
         ndk { abiFilters "armeabi-v7a", "x86" }
-
-        testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
     }
 
     buildTypes {
@@ -38,9 +36,6 @@ repositories {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    testImplementation rootProject.ext.dependencies.testJunit
-    androidTestImplementation rootProject.ext.dependencies.testRunner
-    androidTestImplementation rootProject.ext.dependencies.testEspresso
 
     compileOnly rootProject.ext.dependencies.multidex
     compileOnly rootProject.ext.dependencies.annotations
