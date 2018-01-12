@@ -49,6 +49,16 @@ android {
         }
     }
 
+    packagingOptions {
+        exclude 'AndroidManifest.xml'
+        exclude 'META-INF/DEPENDENCIES.txt'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
 }
 
 repositories {
@@ -60,8 +70,8 @@ repositories {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation rootProject.ext.dependencies.constraint_layout
-    implementation rootProject.ext.dependencies.appcompat_v7
-    implementation rootProject.ext.dependencies.recyclerview_v7
+    compileOnly rootProject.ext.dependencies.appcompat_v7
+    compileOnly rootProject.ext.dependencies.recyclerview_v7
 
     implementation rootProject.ext.dependencies.glide
     annotationProcessor rootProject.ext.dependencies.glideCompiler

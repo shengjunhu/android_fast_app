@@ -22,6 +22,16 @@ android {
         abortOnError false
     }
 
+    packagingOptions {
+        exclude 'AndroidManifest.xml'
+        exclude 'META-INF/DEPENDENCIES.txt'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
 }
 
 dependencies {

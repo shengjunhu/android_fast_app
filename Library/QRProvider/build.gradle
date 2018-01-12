@@ -34,10 +34,20 @@ android {
         }
     }
 
+    packagingOptions {
+        exclude 'AndroidManifest.xml'
+        exclude 'META-INF/DEPENDENCIES.txt'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation rootProject.ext.dependencies.zxing_core
-    implementation project(path: ':Library:BaseLib')
+    compileOnly project(path: ':Library:BaseLib')
 }

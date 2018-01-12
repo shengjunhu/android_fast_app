@@ -35,12 +35,22 @@ android {
         }
     }
 
+    packagingOptions {
+        exclude 'AndroidManifest.xml'
+        exclude 'META-INF/DEPENDENCIES.txt'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation rootProject.ext.dependencies.appcompat_v7
-    implementation rootProject.ext.dependencies.objectBox
-    implementation rootProject.ext.dependencies.objectBoxDebug
+    compileOnly rootProject.ext.dependencies.objectBox
+    compileOnly rootProject.ext.dependencies.objectBoxDebug
 }
 

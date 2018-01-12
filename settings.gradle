@@ -48,6 +48,6 @@ include ':APP:App',                 //app宿主程序
         ':Library:UIController',    //主题、状态栏、字体
         ':Library:PercentLayout',   //百分比布局库
         ':Library:TaskManager',     //任务管理器
-        ':Library:DBObject',        //Object数据库
+        ':Library:DB',        //Object数据库
         ':Library:SafeManager',    //安全管理库
         ':Library:BaseLib'          //全局库基类
