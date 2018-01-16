@@ -47,24 +47,24 @@ android {
         }
     }
 
-    android.applicationVariants.all { variant ->
-        variant.outputs.all {
-            outputFileName = "App_${variant.productFlavors[0].name}_v${variant.versionName}_v${variant.versionCode}.apk"
-        }
-    }
-
-    flavorDimensions "default"
-    productFlavors {
-        server { dimension "default" }
-        huawei { dimension "default" }
-        xiaomi { dimension "default" }
-        meizu { dimension "default" }
-        oppo { dimension "default" }
-        vivo { dimension "default" }
-        baidu { dimension "default" }
-        tencent { dimension "default" }
-        _360 { dimension "default" }
-    }
+//    android.applicationVariants.all { variant ->
+//        variant.outputs.all {
+//            outputFileName = "App_${variant.productFlavors[0].name}_v${variant.versionName}_v${variant.versionCode}.apk"
+//        }
+//    }
+//
+//    flavorDimensions "default"
+//    productFlavors {
+//        server { dimension "default" }
+//        huawei { dimension "default" }
+//        xiaomi { dimension "default" }
+//        meizu { dimension "default" }
+//        oppo { dimension "default" }
+//        vivo { dimension "default" }
+//        baidu { dimension "default" }
+//        tencent { dimension "default" }
+//        _360 { dimension "default" }
+//    }
 
     packagingOptions {
         exclude 'AndroidManifest.xml'

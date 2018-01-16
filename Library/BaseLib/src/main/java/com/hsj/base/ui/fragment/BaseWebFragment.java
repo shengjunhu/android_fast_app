@@ -66,7 +66,6 @@ public abstract class BaseWebFragment extends Fragment implements CancellationSi
     @Override
     public void onDestroy() {
         super.onDestroy();
-        BaseApp.getRefWatcher().watch(this);
     }
 
     /**

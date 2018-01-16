@@ -130,9 +130,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     @Override
     public void onDestroy() {
         super.onDestroy();
-        BaseApp.getRefWatcher().watch(this);
     }
-
 
     /**
      * 刷新数据

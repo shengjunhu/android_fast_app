@@ -66,7 +66,6 @@ public abstract class BaseLoadActivity extends AppCompatActivity implements View
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        BaseApp.getRefWatcher().watch(this);
     }
 
     /**

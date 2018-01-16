@@ -58,13 +58,11 @@ public abstract class BaseMapFragment extends Fragment implements CancellationSi
     @Override
     public void onStop() {
         super.onStop();
-        System.gc();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        BaseApp.getRefWatcher().watch(this);
     }
 
     /**

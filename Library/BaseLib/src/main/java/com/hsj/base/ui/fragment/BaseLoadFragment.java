@@ -68,9 +68,7 @@ public abstract class BaseLoadFragment extends Fragment implements View.OnClickL
     @Override
     public void onDestroy() {
         super.onDestroy();
-        BaseApp.getRefWatcher().watch(this);
     }
-
 
     /**
      * 刷新数据

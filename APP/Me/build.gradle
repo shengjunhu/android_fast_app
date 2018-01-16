@@ -36,16 +36,16 @@ android {
         }
     }
 
-    android.applicationVariants.all { variant ->
-        variant.outputs.all {
-            outputFileName = "App_${variant.productFlavors[0].name}_v${variant.versionName}_v${variant.versionCode}.apk"
-        }
-    }
-
-    flavorDimensions "default"
-    productFlavors {
-        me_plugin { dimension "default" }
-    }
+//    android.applicationVariants.all { variant ->
+//        variant.outputs.all {
+//            outputFileName = "App_${variant.productFlavors[0].name}_v${variant.versionName}_v${variant.versionCode}.apk"
+//        }
+//    }
+//
+//    flavorDimensions "default"
+//    productFlavors {
+//        me_plugin { dimension "default" }
+//    }
 
     dataBinding {
         enabled = true

@@ -7,8 +7,10 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".core.BaseApp"
         android:allowBackup="true"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        android:label="@string/app_name">
 
         <!-- 内容提供者 -->
         <provider

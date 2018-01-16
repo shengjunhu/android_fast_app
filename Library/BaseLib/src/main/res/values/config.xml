@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--项目配置开关-->
+    <!--推送消息 默认开-->
+    <bool name="push_msg_able">true</bool>
 
-    <!--设置语音消息的码率 (单位 bps)-->
-    <integer name="rc_audio_encoding_bit_rate">7950</integer>
-
-    <!-- 设置发送输入状态 -->
-    <bool name="rc_typing_status">true</bool>
-
-    <!-- 下载文件默认存储路径 -->
-    <string name="rc_media_message_default_save_path">/RongCloud/Media/</string>
-
-    <!--实时位置共享会话类型-->
-    <string-array name="rc_realtime_support_conversation_types" translatable="false">
-        <item>private</item>
-        <item>group</item>
+    <!--主题 默认蓝色-->
+    <string-array name="app_theme">
+        <item>blue_theme</item>
+        <item>pink_theme</item>
+        <item>orange_theme</item>
+        <item>white_theme</item>
+        <item>black_theme</item>
     </string-array>
+
+    <!--视屏录制时间 单位 s-->
+    <integer name="record_video_time">180</integer>
+
+    <!--语音录制时间 单位 s-->
+    <integer name="record_audio_time">180</integer>
 
 </resources>

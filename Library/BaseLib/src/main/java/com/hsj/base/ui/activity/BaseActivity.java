@@ -1,5 +1,6 @@
 package com.hsj.base.ui.activity;
 
+import android.app.Application;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -111,7 +112,6 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onDestroy() {
         super.onDestroy();
-        BaseApp.getRefWatcher().watch(this);
     }
 
     /**

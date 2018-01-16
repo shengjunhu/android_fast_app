@@ -1,5 +1,7 @@
 <resources>
+
     <string name="app_name">BaseLIb</string>
     <string name="search_result">SearchResult</string>
-    <string name="hint_search">please input the search content&#8230;</string>
+    <string name="hint_search">please input the search content</string>
+
 </resources>

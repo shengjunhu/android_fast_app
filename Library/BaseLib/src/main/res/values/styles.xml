@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- 全局基类主题 -->
-    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimaryDark">@color/colorBlueTheme</item>
         <item name="colorPrimary">@color/colorBlueTheme</item>
         <item name="colorAccent">@color/colorBlueTheme</item>

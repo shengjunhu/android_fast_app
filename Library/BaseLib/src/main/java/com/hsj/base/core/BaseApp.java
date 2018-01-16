@@ -17,9 +17,9 @@ import java.util.List;
  * @Class:BaseApp
  * @Description:基本Application
  */
-public abstract class BaseApp extends Application {
+public class BaseApp extends Application {
 
-    public static BaseApp instance;
+    public BaseApp instance;
     private RefWatcher mRefWatcher;
 
     @Override
@@ -50,32 +50,18 @@ public abstract class BaseApp extends Application {
     /**
      * 初始化各模块
      */
-    protected abstract void initModule();
+    protected void initModule() {
 
-    /**
-     * 获取实例
-     *
-     * @return
-     */
-    public static BaseApp getInstance() {
-        return instance;
-    }
-
-    /**
-     * 获取观察者
-     *
-     * @return
-     */
-    public static RefWatcher getRefWatcher() {
-        return getInstance().mRefWatcher;
     }
 
     /**
      * 获取当前是否在主进程
+     *
      * @return
      */
     public boolean isInMainProcess() {
         ActivityManager am = ((ActivityManager) getSystemService(Context.ACTIVITY_SERVICE));
+        if (am == null) return false;
         List<ActivityManager.RunningAppProcessInfo> processInfo = am.getRunningAppProcesses();
         String mainProcessName = getPackageName();
         int myPid = android.os.Process.myPid();

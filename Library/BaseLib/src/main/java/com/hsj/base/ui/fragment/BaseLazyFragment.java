@@ -87,7 +87,6 @@ public abstract class BaseLazyFragment extends Fragment implements View.OnClickL
     @Override
     public void onDestroy() {
         super.onDestroy();
-        BaseApp.getRefWatcher().watch(this);
     }
 
     /**
