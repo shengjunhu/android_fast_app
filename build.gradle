@@ -36,3 +36,17 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+task zipAll(type: Zip) {
+    baseName "db"
+    from(rootDir) {
+        exclude '**/.idea/**'
+        exclude '**/build/**'
+        exclude '.gradle/**'
+        exclude '**/*.iml'
+        exclude '**/*.dll'
+        exclude '**/*.so'
+        exclude '**/local.properties'
+    }
+    destinationDir buildDir
+}

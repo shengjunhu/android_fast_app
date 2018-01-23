@@ -50,6 +50,6 @@ dependencies {
     androidTestImplementation rootProject.ext.dependencies.testRunner
     androidTestImplementation rootProject.ext.dependencies.testEspresso
 
-    implementation rootProject.ext.dependencies.objectBox
-    implementation rootProject.ext.dependencies.objectBoxDebug
+    releaseImplementation rootProject.ext.dependencies.objectBox
+    debugImplementation rootProject.ext.dependencies.objectBoxDebug
 }
