@@ -1,4 +1,4 @@
-# SafeManager 安全管理者
+# Security 安全管理者
 
 ### 功能介绍
 1、加密管理

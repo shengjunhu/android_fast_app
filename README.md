@@ -8,7 +8,7 @@
 
 ## 结构组成：
 ### 主工程main：
-  * [app            :应用宿主程序](/main/App/App_README.md)
+  * [app            :应用宿主程序](/main/pp/App_README.md)
   * [home           :应用首页插件](/main/home/Home_README.md)
   * [shop           :应用商城插件](/main/shop/Shop_README.md)
   * [chat           :应用聊天插件](/main/chat/Chat_README.md)
@@ -18,7 +18,7 @@
 ### 常用功能库library:
   * [sample         :使用说明Module](/library/sample/Sample_README.md)
   * [baseLib        :项目基类封装和工具类库](/library/baselib/BaseLib_README.md)
-  * [security    :项目安全加密库](/library/security/SECURITY_README.md)
+  * [security    :项目安全加密库](/library/security/Security_README.md)
   * [uicontroller   :UI控制者](/library/uicontroller/UIController_README.md)
   * [uikit          :自定义控件库](/library/uikit/UIKit_README.md)
   * [http           :网络请求库](/library/http/Http_README.md)
@@ -34,7 +34,7 @@
   * [keyboard       :自定义键盘](/library/keyboard/Keyboard_README.md)
   * [gps            :GPS定位](/library/gps/GPS_README.md)
   * [bluetooth      :数据库模块](/library/bluetooth/BlueTooth_README.md)
-  * [db             :对象存储](/library/db/db_readme.md)
+  * [db             :对象存储](/library/db/DB_README.md)
   * [router         :数据路由者](/library/router/Router_README.md)
   * [ndklib         :编译C代码模块](/library/ndklib/NdkLib_README.md)
   * [xmpp           :xmpp模块](/library/xmpp/XMPP_README.md)
