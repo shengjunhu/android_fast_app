@@ -38,7 +38,7 @@ task clean(type: Delete) {
 }
 
 task zipAll(type: Zip) {
-    baseName "db"
+    baseName "/library/db"
     from(rootDir) {
         exclude '**/.idea/**'
         exclude '**/build/**'

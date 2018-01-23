@@ -72,8 +72,8 @@ ext {
             glideOkHttp3             : 'com.github.bumptech.glide:okhttp3-integration:4.4.0',
 
             //ObjectBox
-            objectBoxDebug           : 'io.objectbox:objectbox-android-objectbrowser:1.4.0',
             objectBox                : 'io.objectbox:objectbox-android:1.4.0',
+            objectBoxDebug           : 'io.objectbox:objectbox-android-objectbrowser:1.4.0',
 
             //EventBus
             eventBus                 : 'org.greenrobot:eventbus:3.1.1',
