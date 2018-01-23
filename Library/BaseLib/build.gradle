@@ -1,59 +1,61 @@
-apply plugin: rootProject.ext.plugins.library
+if (rootProject.ext.android.isBaseLib){
+    apply plugin:rootProject.ext.plugins.library
+}else {
+    apply plugin:rootProject.ext.plugins.application
+}
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
-        //applicationId "com.hsj.base"
+        if (!rootProject.ext.android.isBaseLib){
+            applicationId "com.hsj.base"
+        }
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
 
         ndk { abiFilters "armeabi-v7a", "x86" }
     }
 
     buildTypes {
         release {
-            buildConfigField "boolean", "isDebug", "false"
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-        debug {
-            buildConfigField "boolean", "isDebug", "true"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 
-    packagingOptions {
-        exclude 'AndroidManifest.xml'
-        exclude 'META-INF/DEPENDENCIES.txt'
+    sourceSets {
+        main {
+            if (rootProject.ext.android.isBaseLib) {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            }
+        }
     }
 
-    lintOptions {
-        checkReleaseBuilds false
-        abortOnError false
-    }
-}
-
-repositories {
-    flatDir {
-        dirs 'libs'
-    }
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation rootProject.ext.dependencies.appcompat_v7
+    implementation rootProject.ext.dependencies.constraint_layout
+    testImplementation rootProject.ext.dependencies.testJunit
+    androidTestImplementation rootProject.ext.dependencies.testRunner
+    androidTestImplementation rootProject.ext.dependencies.testEspresso
 
     compileOnly rootProject.ext.dependencies.multidex
     compileOnly rootProject.ext.dependencies.annotations
-    compileOnly rootProject.ext.dependencies.constraint_layout
     compileOnly rootProject.ext.dependencies.support_v4
-    compileOnly rootProject.ext.dependencies.appcompat_v7
     compileOnly rootProject.ext.dependencies.recyclerview_v7
     compileOnly rootProject.ext.dependencies.design
 
     debugImplementation rootProject.ext.dependencies.leakcanary_debug
     releaseImplementation rootProject.ext.dependencies.leakcanary_release
+
 }

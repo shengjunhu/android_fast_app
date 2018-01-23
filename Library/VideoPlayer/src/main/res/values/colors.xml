@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <!--默认主题颜色-->
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#34B6FF</color>
+    <color name="textColorPrimary">#34B6FF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#34B6FF</color>
+
+    <!--五种主题颜色-->
+    <color name="colorWhiteTheme">#FFFFFF</color>
+    <color name="colorBlackTheme">#333333</color>
+    <color name="colorBlueTheme">#34B6FF</color>
+    <color name="colorPinkTheme">#FF66FF</color>
+    <color name="colorOrangeTheme">#FF9900</color>
+
+    <!--文中常用颜色-->
+    <color name="color3">#333333</color>
+    <color name="color6">#666666</color>
+    <color name="color9">#999999</color>
+    <color name="colorC">#CCCCCC</color>
+    <color name="colorE">#EEEEEE</color>
 </resources>

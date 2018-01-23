@@ -8,22 +8,17 @@ android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
-        //applicationId "com.hsj.image.loader"
+        if (rootProject.ext.android.isLibDebug){
+            applicationId "com.hsj.image.loader"
+        }
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
 
-        externalNativeBuild {
-            cmake {
-                cppFlags ""
-            }
-        }
+        testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
 
-        ndk {
-            moduleName "jpeg"
-            abiFilters "armeabi-v7a", "x86"
-        }
+        ndk { abiFilters "armeabi-v7a", "x86" }
     }
 
     buildTypes {
@@ -43,37 +38,15 @@ android {
         }
     }
 
-    externalNativeBuild {
-        cmake {
-            path "CMakeLists.txt"
-        }
-    }
-
-    packagingOptions {
-        exclude 'AndroidManifest.xml'
-        exclude 'META-INF/DEPENDENCIES.txt'
-    }
-
-    lintOptions {
-        checkReleaseBuilds false
-        abortOnError false
-    }
-
-}
-
-repositories {
-    flatDir {
-        dirs 'libs'
-    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation rootProject.ext.dependencies.constraint_layout
-    compileOnly rootProject.ext.dependencies.appcompat_v7
-    compileOnly rootProject.ext.dependencies.recyclerview_v7
 
-    implementation rootProject.ext.dependencies.glide
-    annotationProcessor rootProject.ext.dependencies.glideCompiler
-    implementation rootProject.ext.dependencies.okhttp3
+    implementation rootProject.ext.dependencies.appcompat_v7
+    implementation rootProject.ext.dependencies.constraint_layout
+    testImplementation rootProject.ext.dependencies.testJunit
+    androidTestImplementation rootProject.ext.dependencies.testRunner
+    androidTestImplementation rootProject.ext.dependencies.testEspresso
 }
+

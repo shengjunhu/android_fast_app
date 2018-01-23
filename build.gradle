@@ -1,11 +1,11 @@
 apply from: "config.gradle"
 
 buildscript {
+    
     repositories {
         google()
         jcenter()
         mavenCentral()
-        maven { url 'https://maven.google.com' }                            //google
         maven { url "http://objectbox.net/beta-repo/" }                     //数据库ObjectBox
         maven { url "https://dl.bintray.com/thelasterstar/maven/" }         //新浪微博
         maven { url 'http://developer.huawei.com/repo/' }                   //华为推送
@@ -27,7 +27,6 @@ allprojects {
         google()
         jcenter()
         mavenCentral()
-        maven { url 'https://maven.google.com' }                            //google
         maven { url "http://objectbox.net/beta-repo/" }                     //数据库ObjectBox
         maven { url "https://dl.bintray.com/thelasterstar/maven/" }         //新浪微博
         maven { url 'http://developer.huawei.com/repo/' }                   //华为推送
@@ -36,19 +35,4 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
-}
-
-task zipAll(type: Zip) {
-    baseName "DBObject"
-    from(rootDir) {
-        exclude '**/.idea/**'
-        exclude '**/build/**'
-        exclude '.gradle/**'
-        exclude '**/*.iml'
-        exclude '**/*.dll'
-        exclude '**/*.so'
-        exclude '**/local.properties'
-    }
-
-    destinationDir buildDir
 }

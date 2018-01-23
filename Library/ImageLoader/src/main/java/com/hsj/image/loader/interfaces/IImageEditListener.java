@@ -15,7 +15,7 @@ public interface IImageEditListener {
 
     void onImageEditStart();
 
-    void onImageEditProgresss(long currentPosition,long allPosition);
+    void onImageEditProgresss(long currentPosition, long allPosition);
 
     void OnImageEditException(Exception e);
 

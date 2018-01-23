@@ -28,8 +28,6 @@
 
 package com.hsj.image.loader.compress.libjpeg;
 
-import java.awt.*;
-
 /**
  * Lossless transform parameters
  */

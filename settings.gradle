@@ -1,53 +1,43 @@
-include ':APP:App',                 //app宿主程序
-        ':APP:Home',                //app主页模块
-        ':APP:Shop',                //app商城模块
-        ':APP:Chat',                //app聊天模块
-        ':APP:Discover',            //app好友圈模块
-        ':APP:Me',                  //app我的模块
+include ':main:app',
+        ':main:home',
+        ':main:shop',
+        ':main:chat',
+        ':main:discover',
+        ':main:me',
 
-        ':ThirdSDK:Auth',           //QQ、微信、微博登陆、分享库
-        ':ThirdSDK:Pay',            //支付宝、微信支付
-        ':ThirdSDK:Push',           //极光、小米、华为推送
-        ':ThirdSDK:BDMap',          //百度地图SDK
-        ':ThirdSDK:GDMap',          //高德地图SDK
-        ':ThirdSDK:QNCloud',        //七牛云SDK
-        ':ThirdSDK:BDCloud',        //百度云库
-        ':ThirdSDK:AR',             //AR技术
-        ':ThirdSDK:U3D',            //unity3d制作3d
-        ':ThirdSDK:Web',            //JS、Html与android交互库
-        ':ThirdSDK:Bugly',          //腾讯热修复库（采用Tencent）
+        ':sdk:cloudqiniu',
+        ':sdk:cloudbaidu',
+        ':sdk:mapa',
+        ':sdk:mapbaidu',
+        ':sdk:pay',
+        ':sdk:bugly',
+        ':sdk:push',
+        ':sdk:auth',
 
-        ':ThirdSDK:IM:IMLib',       //IM能力库
-        ':ThirdSDK:IM:IMKit',       //IM UI库
-        ':ThirdSDK:IM:CallKit',     //语音电话库
-        ':ThirdSDK:IM:CallLib',     //语音通话能力库
-        ':ThirdSDK:IM:Recognizer',  //语音识别播放
-        ':ThirdSDK:IM:RedPacket',   //红包库
-        ':ThirdSDK:IM:Sticker',     //表情库
-        ':ThirdSDK:IM:Contactcard', //个人卡片库
-
-        ':Library:Sample',          //使用介绍Module
-        ':Library:QRProvider',      //二维码库
-        ':Library:OCR',             //图片识别库
-        ':Library:PhotoProvider',   //图片提供库
-        ':Library:MeidaProvider',   //图片、视屏提供库
-        ':Library:FileProvider',    //文件提供库
-        ':Library:AudioProvider',   //音频提供库
-        ':Library:VideoPlayer',     //视屏播放库
-        ':Library:Keyboard',        //自定义键盘和表情库
-        ':Library:GPSLocation',     //GPS定位、手机信号基站
-        ':Library:BlueTooth',       //蓝牙
-        ':Library:NdkLib',          //NdkLIb：性能优化
-        ':Library:XMPP',            //长连接、及时通讯、推送
-        ':Library:Socket',          //客户的端与服务器数据通信的封装
-
-        ':Library:Router',          //组件模块数据路由
-        ':Library:Http',            //网络库
-        ':Library:ImageLoader',     //图片处理库
-        ':Library:UIKit',           //自定义控件库
-        ':Library:UIController',    //主题、状态栏、字体
-        ':Library:PercentLayout',   //百分比布局库
-        ':Library:TaskManager',     //任务管理器
-        ':Library:DB',        //Object数据库
-        ':Library:SafeManager',    //安全管理库
-        ':Library:BaseLib'          //全局库基类
+        ':library:sample',
+        ':library:audioprovider',
+        ':library:bluetooth',
+        ':library:fileprovider',
+        ':library:gps',
+        ':library:imageloader',
+        ':library:keyboard',
+        ':library:mediaprovider',
+        ':library:ocr',
+        ':library:ndklib',
+        ':library:percentlayout',
+        ':library:photoprovider',
+        ':library:xmpp',
+        ':library:qrprovider',
+        ':library:router',
+        ':library:security',
+        ':library:socket',
+        ':library:taskmanager',
+        ':library:uicontroller',
+        ':library:uikit',
+        ':library:videoplayer',
+        ':library:web',
+        ':library:u3d',
+        ':library:ar',
+        ':library:http',
+        ':library:db',
+        ':library:baselib'

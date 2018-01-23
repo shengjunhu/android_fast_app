@@ -19,7 +19,7 @@ public interface IImageCompressListener {
     /**
      * 压缩成功
      */
-    void onCompressProgress(int currentPosition,int allPosition);
+    void onCompressProgress(int currentPosition, int allPosition);
 
     /**
      * 压缩失败

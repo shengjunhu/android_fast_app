@@ -28,8 +28,7 @@
 
 package com.hsj.image.loader.compress.libjpeg;
 
-import java.awt.image.*;
-import java.nio.*;
+import java.nio.ByteOrder;
 
 /**
  * TurboJPEG decompressor

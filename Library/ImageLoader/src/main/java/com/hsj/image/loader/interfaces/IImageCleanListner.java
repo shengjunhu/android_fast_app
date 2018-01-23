@@ -11,7 +11,7 @@ public interface IImageCleanListner {
 
     void onImageCleanStart();
 
-    void onImageCleanProgress(long currentPosition,long allPosition);
+    void onImageCleanProgress(long currentPosition, long allPosition);
 
     void onImageCleanException(Exception e);
 

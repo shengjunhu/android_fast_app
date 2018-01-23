@@ -28,8 +28,7 @@
 
 package com.hsj.image.loader.compress.libjpeg;
 
-import java.awt.*;
-import java.nio.*;
+import java.nio.ShortBuffer;
 
 /**
  * Custom filter callback interface

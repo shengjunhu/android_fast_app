@@ -8,23 +8,17 @@ android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
-        //applicationId "com.hsj.provider.audio"
+        if (rootProject.ext.android.isLibDebug){
+            applicationId "com.hsj.provider.audio"
+        }
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
-        resourcePrefix "audio_"
 
-        externalNativeBuild {
-            cmake {
-                cppFlags ""
-            }
-        }
+        testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
 
-        ndk {
-            moduleName "mp3"
-            abiFilters "armeabi-v7a", "x86"
-        }
+        ndk { abiFilters "armeabi-v7a", "x86" }
     }
 
     buildTypes {
@@ -44,25 +38,14 @@ android {
         }
     }
 
-    externalNativeBuild {
-        cmake {
-            path "CMakeLists.txt"
-        }
-    }
-
-    packagingOptions {
-        exclude 'AndroidManifest.xml'
-        exclude 'META-INF/DEPENDENCIES.txt'
-    }
-
-    lintOptions {
-        checkReleaseBuilds false
-        abortOnError false
-    }
-
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
     implementation rootProject.ext.dependencies.appcompat_v7
+    implementation rootProject.ext.dependencies.constraint_layout
+    testImplementation rootProject.ext.dependencies.testJunit
+    androidTestImplementation rootProject.ext.dependencies.testRunner
+    androidTestImplementation rootProject.ext.dependencies.testEspresso
 }

@@ -11,7 +11,7 @@ public interface IGlideLoadListener {
 
     void onGlideStart();
 
-    void onGlideProgress(long currentPosition,long allPosition);
+    void onGlideProgress(long currentPosition, long allPosition);
 
     void onGlideException(Exception e);
 

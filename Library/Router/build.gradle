@@ -8,13 +8,16 @@ android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
-        //applicationId "com.hsj.router"
+        if (rootProject.ext.android.isLibDebug){
+            applicationId "com.hsj.router"
+        }
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
 
         testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
+
         ndk { abiFilters "armeabi-v7a", "x86" }
     }
 
@@ -35,19 +38,15 @@ android {
         }
     }
 
-    packagingOptions {
-        exclude 'AndroidManifest.xml'
-        exclude 'META-INF/DEPENDENCIES.txt'
-    }
-
-    lintOptions {
-        checkReleaseBuilds false
-        abortOnError false
-    }
-
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(path: ':Library:BaseLib')
+
+    implementation rootProject.ext.dependencies.appcompat_v7
+    implementation rootProject.ext.dependencies.constraint_layout
+    testImplementation rootProject.ext.dependencies.testJunit
+    androidTestImplementation rootProject.ext.dependencies.testRunner
+    androidTestImplementation rootProject.ext.dependencies.testEspresso
 }
+

@@ -1,17 +1,13 @@
 package com.hsj.http;
 
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
-/**
- * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
- * @Date:2017/12/29/20:00
- * @Version:V1.0
- * @Class:HttpMainActivity
- * @Description:
- */
 public class HttpMainActivity extends AppCompatActivity {
 
-
-
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_http_main);
+    }
 }

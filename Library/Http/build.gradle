@@ -8,25 +8,21 @@ android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
-        //applicationId "com.hsj.http"
+        if (rootProject.ext.android.isLibDebug){
+            applicationId "com.hsj.http"
+        }
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
 
         ndk { abiFilters "armeabi-v7a", "x86" }
     }
 
     buildTypes {
         release {
-            buildConfigField "String", "HOST",  "\"http://www.xbs.com\""
-            buildConfigField "boolean", "isDebug", "false"
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-        debug {
-            buildConfigField "String", "HOST", "\"http://192.168.1.152\""
-            buildConfigField "boolean", "isDebug", "true"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -42,21 +38,17 @@ android {
         }
     }
 
-    packagingOptions {
-        exclude 'AndroidManifest.xml'
-        exclude 'META-INF/DEPENDENCIES.txt'
-    }
-
-    lintOptions {
-        checkReleaseBuilds false
-        abortOnError false
-    }
-
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
     implementation rootProject.ext.dependencies.appcompat_v7
+    implementation rootProject.ext.dependencies.constraint_layout
+    testImplementation rootProject.ext.dependencies.testJunit
+    androidTestImplementation rootProject.ext.dependencies.testRunner
+    androidTestImplementation rootProject.ext.dependencies.testEspresso
+
     //Retrofit2
     implementation rootProject.ext.dependencies.retrofit
     //Retrofit2和RxJava2适配器
@@ -73,5 +65,4 @@ dependencies {
     //Json解析：采用FastJson解析
     //implementation rootProject.ext.dependencies.gson
     implementation rootProject.ext.dependencies.fastjson
-
 }

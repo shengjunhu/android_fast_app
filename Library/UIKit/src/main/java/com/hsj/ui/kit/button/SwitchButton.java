@@ -687,7 +687,7 @@ public class SwitchButton extends View implements Checkable {
 
 
     @Override
-    public final void setOnClickListener(View.OnClickListener l) {
+    public final void setOnClickListener(OnClickListener l) {
     }
 
     @Override

@@ -231,7 +231,7 @@ public class XLog {
      */
     private static void invokePrint(String method, String tag, String message) {
         try {
-            Class<android.util.Log> logClass = android.util.Log.class;
+            Class<Log> logClass = Log.class;
             Method logMethod = logClass.getMethod(method, String.class, String.class);
             logMethod.setAccessible(true);
             logMethod.invoke(null, tag, message);
@@ -250,7 +250,7 @@ public class XLog {
      */
     private static void invokePrint(String method, String tag, String message, Throwable e) {
         try {
-            Class<android.util.Log> logClass = android.util.Log.class;
+            Class<Log> logClass = Log.class;
             Method logMethod = logClass.getMethod(method, String.class, String.class, Throwable.class);
             logMethod.setAccessible(true);
             logMethod.invoke(null, tag, message, e);

@@ -11,15 +11,16 @@ ext {
     ]
 
     android = [
-            compileSdkVersion       : 27,
+            compileSdkVersion       : 26,
             minSdkVersion           : 19,
-            targetSdkVersion        : 27,
+            targetSdkVersion        : 26,
             versionCode             : 1712290,
             versionName             : "1.0.0",
 
             isAppDebug              : true,
             isLibDebug              : true,
             isSDKDebug              : true,
+            isBaseLib               : true
     ]
 
     dependencies = [
@@ -86,17 +87,15 @@ ext {
             leakcanary_release       : 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4',
 
             //QQ、微信、微博：登录、支付、分享
-            qq                       : "/ThirdSDK/Login/libs/open_sdk_r5793_lite.jar",
-            alipay                   : "/ThirdSDK/Pay/libs/alipaySdk-20170623-proguard.jar",
+            qq                       : "/sdk/auth/libs/open_sdk_r5793_lite.jar",
+            alipay                   : "/sdk/pay/libs/alipaySdk-20170623-proguard.jar",
             wechat                   : 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+',
             weibo                    : 'com.sina.weibo.sdk:core:4.1.4:openDefaultRelease@aar',
 
             //百度云
-            baiducloud               : "/ThirdSDK/BDCloud/libs/bos-android-sdk-1.0.3.jar",
-
+            baiducloud               : "/sdk/cloudbaidu/libs/bos-android-sdk-1.0.3.jar",
             //七牛云
             qiniucloud               : 'com.qiniu:qiniu-android-sdk:7.3.+',
-
 
             //高德：3D地图、2D地图、导航、搜索、定位
             amap_3d                  : 'com.amap.api:3dmap:latest.integration',
@@ -106,7 +105,7 @@ ext {
             amap_location            : 'com.amap.api:location:latest.integration',
 
             //百度地图
-            baidumap                 : "/ThirdSDK/BDMap/libs/...",
+            baidumap                 : "/sdk/mapbaidu/libs/...",
 
             //极光推送
             j_push                   : 'cn.jiguang.sdk:jpush:3.1.0',
@@ -114,12 +113,12 @@ ext {
             //华为推送
             huawei_push              : 'com.huawei.android.hms:push:2.5.3.302',
             //小米推送
-            mi_push                  : "ThirdSDK/Push/libs/MiPush_SDK_Client_3_5_1.jar",
+            mi_push                  : "sdk/push/libs/MiPush_SDK_Client_3_5_1.jar",
             //魅族推送
             meizu_push               : 'com.meizu.flyme.internet:push-internal:3.6.0@aar',
 
             //web浏览器（腾讯X5浏览服务sdk）
-            tbs_x5                   : "Library/Web/libs/tbs_sdk_v3.5.0_20170801_113025.jar",
+            tbs_x5                   : "library/web/libs/tbs_sdk_v3.5.0_20170801_113025.jar",
 
             //qr scan
             zxing_core               : 'com.google.zxing:core:3.3.0',

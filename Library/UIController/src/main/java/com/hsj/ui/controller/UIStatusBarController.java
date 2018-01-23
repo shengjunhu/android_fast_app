@@ -6,19 +6,19 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
 import android.support.annotation.ColorInt;
-import android.support.annotation.IdRes;
 import android.support.annotation.IntRange;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+
+import com.hsj.ui.controller.R;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import com.hsj.ui.controller.R;
 
 /**
  * @Author:HSJ
@@ -262,7 +262,7 @@ public class UIStatusBarController {
      */
     @TargetApi(Build.VERSION_CODES.KITKAT)
     public static void setColorForDrawerLayout(Activity activity, DrawerLayout drawerLayout,
-                                               @ColorInt int color,@IntRange(from = 0, to = 255) int statusBarAlpha) {
+                                               @ColorInt int color, @IntRange(from = 0, to = 255) int statusBarAlpha) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -384,7 +384,7 @@ public class UIStatusBarController {
      * @param needOffsetView 需要向下偏移的 View
      */
     @TargetApi(Build.VERSION_CODES.KITKAT)
-    public static void setTranslucentForImageView(Activity activity, @IntRange(from = 0, to = 255) int statusBarAlpha,View needOffsetView) {
+    public static void setTranslucentForImageView(Activity activity, @IntRange(from = 0, to = 255) int statusBarAlpha, View needOffsetView) {
         setTransparentForWindow(activity);
         addTranslucentView(activity, statusBarAlpha);
         if (needOffsetView != null) {
@@ -426,7 +426,7 @@ public class UIStatusBarController {
      * @param statusBarAlpha 状态栏透明度
      * @param needOffsetView 需要向下偏移的 View
      */
-    public static void setTranslucentForImageViewInFragment(Activity activity, @IntRange(from = 0, to = 255) int statusBarAlpha,View needOffsetView) {
+    public static void setTranslucentForImageViewInFragment(Activity activity, @IntRange(from = 0, to = 255) int statusBarAlpha, View needOffsetView) {
         setTranslucentForImageView(activity, statusBarAlpha, needOffsetView);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT && Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
             clearPreviousSetting(activity);

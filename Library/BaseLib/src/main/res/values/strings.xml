@@ -1,7 +1,3 @@
 <resources>
-
-    <string name="app_name">BaseLIb</string>
-    <string name="search_result">SearchResult</string>
-    <string name="hint_search">please input the search content</string>
-
+    <string name="app_name">baselib</string>
 </resources>
