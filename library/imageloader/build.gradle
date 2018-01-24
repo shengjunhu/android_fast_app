@@ -63,5 +63,10 @@ dependencies {
     testImplementation rootProject.ext.dependencies.testJunit
     androidTestImplementation rootProject.ext.dependencies.testRunner
     androidTestImplementation rootProject.ext.dependencies.testEspresso
+
+    implementation rootProject.ext.dependencies.recyclerview_v7
+    implementation rootProject.ext.dependencies.glide
+    annotationProcessor rootProject.ext.dependencies.glideCompiler
+    implementation rootProject.ext.dependencies.okhttp3
 }
 

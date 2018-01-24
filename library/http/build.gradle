@@ -23,6 +23,14 @@ android {
 
     buildTypes {
         release {
+            buildConfigField "String", "HOST",  "\"http://www.xbs.com\""
+            buildConfigField "boolean", "isDebug", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField "String", "HOST", "\"http://192.168.1.152\""
+            buildConfigField "boolean", "isDebug", "true"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

@@ -11,9 +11,9 @@ ext {
     ]
 
     android = [
-            compileSdkVersion       : 26,
+            compileSdkVersion       : 27,
             minSdkVersion           : 19,
-            targetSdkVersion        : 26,
+            targetSdkVersion        : 27,
             versionCode             : 1712290,
             versionName             : "1.0.0",
 
@@ -66,10 +66,10 @@ ext {
             rxlifecycle_components   : 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.0',
 
             //Glide
-            glide                    : 'com.github.bumptech.glide:glide:4.4.0',
-            glideCompiler            : 'com.github.bumptech.glide:compiler:4.4.0',
-            glideAnnotations         : 'com.github.bumptech.glide:annotations:4.4.0',
-            glideOkHttp3             : 'com.github.bumptech.glide:okhttp3-integration:4.4.0',
+            glide                    : 'com.github.bumptech.glide:glide:4.5.0',
+            glideCompiler            : 'com.github.bumptech.glide:compiler:4.5.0',
+            glideAnnotations         : 'com.github.bumptech.glide:annotations:4.5.0',
+            glideOkHttp3             : 'com.github.bumptech.glide:okhttp3-integration:4.5.0',
 
             //ObjectBox
             objectBox                : 'io.objectbox:objectbox-android:1.4.0',
@@ -108,8 +108,8 @@ ext {
             baidumap                 : "/sdk/mapbaidu/libs/...",
 
             //极光推送
-            j_push                   : 'cn.jiguang.sdk:jpush:3.1.0',
-            jcore                    : 'cn.jiguang.sdk:jcore:1.1.8',
+            j_push                   : 'cn.jiguang.sdk:jpush:3.1.1',
+            jcore                    : 'cn.jiguang.sdk:jcore:1.1.9',
             //华为推送
             huawei_push              : 'com.huawei.android.hms:push:2.5.3.302',
             //小米推送
@@ -121,14 +121,14 @@ ext {
             tbs_x5                   : "library/web/libs/tbs_sdk_v3.5.0_20170801_113025.jar",
 
             //qr scan
-            zxing_core               : 'com.google.zxing:core:3.3.0',
+            zxing_core               : 'com.google.zxing:core:3.3.1',
 
             //IM(融云)
-            im_lib                   : 'cn.rongcloud.android:IMLib:2.8.23',
-            im_kit                   : 'cn.rongcloud.android:IMKit:2.8.23',
-            im_calllib               : 'cn.rongcloud.android:CallLib:2.8.23',
-            im_callkit               : 'cn.rongcloud.android:CallKit:2.8.23',
-            im_redpacket             : 'cn.rongcloud.android:RedPacket:2.8.23',
+            im_lib                   : 'cn.rongcloud.android:IMLib:2.8.27',
+            im_kit                   : 'cn.rongcloud.android:IMKit:2.8.27',
+            im_calllib               : 'cn.rongcloud.android:CallLib:2.8.27',
+            im_callkit               : 'cn.rongcloud.android:CallKit:2.8.27',
+            im_redpacket             : 'cn.rongcloud.android:RedPacket:2.8.27',
 
             //plugin
             repluginHost             : 'com.qihoo360.replugin:replugin-host-lib:2.2.2',
