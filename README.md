@@ -6,7 +6,7 @@
 * 2、MVP框架 ： 高解耦、提高维护效率、类文件多（View、Data、IPresenter、IContract）
 * 3、MVVM框架： 使用简单（结合DataBinding更好用）
 
-## 结构组成：
+## 结构组成：com.app.android
 ### 主工程main：
   * [app            :应用宿主程序](/main/pp/App_README.md)
   * [home           :应用首页插件](/main/home/Home_README.md)
