@@ -1,4 +1,4 @@
-package com.hsj.web;
+package com.app.android.web;
 
 import org.junit.Test;
 

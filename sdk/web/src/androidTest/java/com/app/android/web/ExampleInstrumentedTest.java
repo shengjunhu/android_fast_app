@@ -1,4 +1,4 @@
-package com.hsj.web;
+package com.app.android.web;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.hsj.web", appContext.getPackageName());
+        assertEquals("com.app.android.web", appContext.getPackageName());
     }
 }
