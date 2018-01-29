@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         if (rootProject.ext.android.isSDKDebug){
-            applicationId "com.hsj.auth"
+            applicationId "com.app.auth"
         }
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion

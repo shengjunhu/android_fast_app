@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hsj.base">
+    package="com.app.base">
 
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -33,7 +33,7 @@
         </provider>
 
         <!--网络变化监听-->
-        <receiver android:name="com.hsj.base.receiver.NetworkStateReceiver">
+        <receiver android:name="com.app.base.receiver.NetworkStateReceiver">
             <intent-filter>
                 <action android:name="android.NET.conn.CONNECTIVITY_CHANGE" />
                 <action android:name="android.Net.wifi.WIFI_STATE_CHANGED" />

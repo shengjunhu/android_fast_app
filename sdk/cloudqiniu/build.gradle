@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         if (rootProject.ext.android.isSDKDebug){
-            applicationId "com.hsj.cloud.qiniu"
+            applicationId "com.app.cloud.qiniu"
         }
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion

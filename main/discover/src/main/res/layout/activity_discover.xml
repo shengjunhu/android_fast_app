@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/mmv"
-    tools:context="com.hsj.discover.ui.activity.DiscoverActivity">
+    tools:context="com.app.discover.ui.activity.DiscoverActivity">
 
     <FrameLayout
         android:id="@+id/fl_zone"

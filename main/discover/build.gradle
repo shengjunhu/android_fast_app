@@ -4,7 +4,7 @@ android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.hsj.discover"
+        applicationId "com.app.discover"
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
@@ -69,7 +69,7 @@ repluginPluginConfig {
     //插件名
     pluginName = "discover"
     //宿主app的包名
-    hostApplicationId = "com.hsj"
+    hostApplicationId = "com.app"
     //宿主app的启动activity
-    hostAppLauncherActivity = "com.hsj.LaunchActivity"
+    hostAppLauncherActivity = "com.app.LaunchActivity"
 }

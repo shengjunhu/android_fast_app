@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         if (rootProject.ext.android.isSDKDebug){
-            applicationId "com.hsj.pay"
+            applicationId "com.app.pay"
         }
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion

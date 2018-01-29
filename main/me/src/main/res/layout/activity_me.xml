@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/mmv"
-    tools:context="com.hsj.me.ui.activity.MeActivity">
+    tools:context="com.app.me.ui.activity.MeActivity">
 
     <FrameLayout
         android:id="@+id/fl_me"

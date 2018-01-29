@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
-        android:name=".base.App"
+        android:name="com.app.base.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme">
         <!--启动界面-->
         <activity
-            android:name=".ui.activity.LaunchActivity"
+            android:name="com.app.ui.activity.LaunchActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
@@ -29,26 +29,26 @@
 
         <!--新版本启动界面-->
         <activity
-            android:name=".ui.activity.WelcomeActivity"
+            android:name="com.app.ui.activity.WelcomeActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--广告界面-->
         <activity
-            android:name=".ui.activity.AdvertActivity"
+            android:name="com.app.ui.activity.AdvertActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--主界面-->
         <activity
-            android:name=".ui.activity.MainActivity"
+            android:name="com.app.ui.activity.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--登录界面：密码、短信、qq、微信、微博-->
         <activity
-            android:name=".ui.activity.LoginActivity"
+            android:name="com.app.ui.activity.LoginActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize">
@@ -61,20 +61,20 @@
 
         <!--注册界面：手机注册、密码修改、密码找回-->
         <activity
-            android:name=".ui.activity.RegisterActivity"
+            android:name="com.app.ui.activity.RegisterActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--微信登录、分享-->
         <activity
-            android:name=".wxapi.WXEntryActivity"
+            android:name="com.app.wxapi.WXEntryActivity"
             android:exported="true"
             android:screenOrientation="behind"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <!--微信支付回调-->
         <activity
-            android:name=".wxapi.WXPayEntryActivity"
+            android:name="com.app.wxapi.WXPayEntryActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:screenOrientation="behind"
