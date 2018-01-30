@@ -49,7 +49,7 @@ dependencies {
     androidTestImplementation rootProject.ext.dependencies.testRunner
     androidTestImplementation rootProject.ext.dependencies.testEspresso
 
-    implementation files('libs/open_sdk_r5793_lite.jar')
+    implementation files('libs/open_sdk_r5990_lite.jar')
     implementation rootProject.ext.dependencies.wechat
     implementation rootProject.ext.dependencies.weibo
 }

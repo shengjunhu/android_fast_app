@@ -87,8 +87,8 @@ ext {
             leakcanary_release       : 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4',
 
             //QQ、微信、微博：登录、支付、分享
-            qq                       : "/sdk/auth/libs/open_sdk_r5793_lite.jar",
-            alipay                   : "/sdk/pay/libs/alipaySdk-20170623-proguard.jar",
+            qq                       : "/sdk/auth/libs/open_sdk_r5990_lite.jar",
+            alipay                   : "/sdk/pay/libs/alipaySdk-20170922.jar",
             wechat                   : 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+',
             weibo                    : 'com.sina.weibo.sdk:core:4.1.4:openDefaultRelease@aar',
 
@@ -97,7 +97,7 @@ ext {
             //七牛云
             qiniucloud               : 'com.qiniu:qiniu-android-sdk:7.3.+',
 
-            //高德：3D地图、2D地图、导航、搜索、定位
+            //高德：3D地图、2D地图、导航、搜索、定位（默认最新版本，具体版本号最好）
             amap_3d                  : 'com.amap.api:3dmap:latest.integration',
             amap_2d                  : 'com.amap.api:map2d:latest.integration',
             amap_navi                : 'com.amap.api:navi-3dmap:latest.integration',
@@ -108,12 +108,12 @@ ext {
             baidumap                 : "/sdk/mapbaidu/libs/...",
 
             //极光推送
-            j_push                   : 'cn.jiguang.sdk:jpush:3.1.1',
+            jpush                    : 'cn.jiguang.sdk:jpush:3.1.1',
             jcore                    : 'cn.jiguang.sdk:jcore:1.1.9',
             //华为推送
             huawei_push              : 'com.huawei.android.hms:push:2.5.3.302',
             //小米推送
-            mi_push                  : "sdk/push/libs/MiPush_SDK_Client_3_5_1.jar",
+            mi_push                  : "sdk/push/libs/MiPush_SDK_Client_3_6_0.jar",
             //魅族推送
             meizu_push               : 'com.meizu.flyme.internet:push-internal:3.6.0@aar',
 

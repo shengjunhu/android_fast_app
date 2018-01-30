@@ -48,4 +48,11 @@ dependencies {
     testImplementation rootProject.ext.dependencies.testJunit
     androidTestImplementation rootProject.ext.dependencies.testRunner
     androidTestImplementation rootProject.ext.dependencies.testEspresso
+
+    implementation rootProject.ext.dependencies.amap_2d
+    //implementation rootProject.ext.dependencies.amap_3d
+    //内含3d地图
+    implementation rootProject.ext.dependencies.amap_navi
+    implementation rootProject.ext.dependencies.amap_search
+    implementation rootProject.ext.dependencies.amap_location
 }
