@@ -18,7 +18,7 @@
 ### 常用功能库library:
   * [sample         :使用说明Module](/library/sample/Sample_README.md)
   * [baseLib        :项目基类封装和工具类库](/library/baselib/BaseLib_README.md)
-  * [security    :项目安全加密库](/library/security/Security_README.md)
+  * [security       :项目安全加密库](/library/security/Security_README.md)
   * [uicontroller   :UI控制者](/library/uicontroller/UIController_README.md)
   * [uikit          :自定义控件库](/library/uikit/UIKit_README.md)
   * [http           :网络请求库](/library/http/Http_README.md)
@@ -33,14 +33,14 @@
   * [videoplayer    :视屏播放器](/library/videoplayer/VideoPlayer_README.md)
   * [keyboard       :自定义键盘](/library/keyboard/Keyboard_README.md)
   * [gps            :GPS定位](/library/gps/GPS_README.md)
-  * [bluetooth      :数据库模块](/library/bluetooth/BlueTooth_README.md)
+  * [bluetooth      :蓝牙模块](/library/bluetooth/BlueTooth_README.md)
   * [db             :对象存储](/library/db/DB_README.md)
   * [router         :数据路由者](/library/router/Router_README.md)
-  * [ndklib         :编译C代码模块](/library/ndklib/NdkLib_README.md)
-  * [xmpp           :xmpp模块](/library/xmpp/XMPP_README.md)
-  * [socket         :NDK模块](/library/socket/Socket_README.md)
-  * [ar             :AR录制与播放](/library/ar/AR_README.md)
-  * [u3d            :unity3d模块](/library/u3d/U3D_README.md)
+  * [ndklib         :Ndk编译模块](/library/ndklib/NdkLib_README.md)
+  * [xmpp           :Xmpp模块](/library/xmpp/XMPP_README.md)
+  * [socket         :socket模块](/library/socket/Socket_README.md)
+  * [ar             :Ar录制与播放](/library/ar/AR_README.md)
+  * [u3d            :Unity3d模块](/library/u3d/U3D_README.md)
   
 ### 第三方SDK库:
   * [auth           :第三方登陆、分享模块（qq、微信、微博）](/sdk/auth/Auth_README.md)
@@ -67,7 +67,7 @@ c-用户信息：账号、loginToken （密码）          /data/data/{packageNa
 
 d-操作信息：启动app后后台检测上次启动未完成任务   /data/data/{packageName}/shared_prefs/actionInfo.xml
 
-e-数据信息：应用中数据状态记录                 /data/data/{packageName}/shared_prefs/dataInfo.xml
+e-数据信息：应用中数据状态记录                  /data/data/{packageName}/shared_prefs/dataInfo.xml
 ```
 
 * 2-cache:
