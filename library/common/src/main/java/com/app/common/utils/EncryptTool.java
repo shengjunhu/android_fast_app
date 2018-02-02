@@ -1,4 +1,4 @@
-package com.app.base.utils;
+package com.app.common.utils;
 
 import android.util.Base64;
 import java.io.File;

@@ -1,4 +1,4 @@
-package com.app.base.utils;
+package com.app.common.utils;
 
 import android.content.Context;
 import android.util.Log;
