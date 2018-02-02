@@ -1,4 +1,4 @@
-package com.app.base.ui.fragment;
+package com.app.common.ui.fragment;
 
 import android.content.pm.PackageManager;
 import android.os.Build;

@@ -1,4 +1,4 @@
-package com.app.base.thread;
+package com.app.common.thread;
 
 import android.os.AsyncTask;
 

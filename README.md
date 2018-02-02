@@ -17,7 +17,7 @@
  
 ### 常用功能库library:
   * [sample         :使用说明Module](/library/sample/Sample_README.md)
-  * [baseLib        :项目基类封装和工具类库](/library/baselib/BaseLib_README.md)
+  * [common         :项目基类封装和工具类库](/library/common/common_README.md)
   * [security       :项目安全加密库](/library/security/Security_README.md)
   * [uicontroller   :UI控制者](/library/uicontroller/UIController_README.md)
   * [uikit          :自定义控件库](/library/uikit/UIKit_README.md)

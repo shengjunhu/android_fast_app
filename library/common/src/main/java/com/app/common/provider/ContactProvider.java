@@ -1,4 +1,4 @@
-package com.app.base.provider;
+package com.app.common.provider;
 
 /**
  * @Author:HSJ

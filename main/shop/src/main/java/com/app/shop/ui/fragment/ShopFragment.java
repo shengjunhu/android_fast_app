@@ -3,7 +3,7 @@ package com.app.shop.ui.fragment;
 import android.os.Bundle;
 import android.view.View;
 import com.app.shop.R;
-import com.app.base.ui.fragment.BaseFragment;
+import com.app.common.ui.fragment.BaseFragment;
 
 /**
  * @Author:HSJ

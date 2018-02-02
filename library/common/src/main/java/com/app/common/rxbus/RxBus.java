@@ -1,4 +1,4 @@
-package com.app.base.rxbus;
+package com.app.common.rxbus;
 
 /**
  * @Author:HSJ

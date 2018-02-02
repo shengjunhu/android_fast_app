@@ -49,5 +49,5 @@ dependencies {
     androidTestImplementation rootProject.ext.dependencies.testRunner
     androidTestImplementation rootProject.ext.dependencies.testEspresso
 
-    implementation project(':library:baselib')
+    implementation project(':library:common')
 }

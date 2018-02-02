@@ -19,6 +19,12 @@ android {
         testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
 
         ndk { abiFilters "armeabi-v7a", "x86" }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: "com.app.push",
+                JPUSH_APPKEY : "c9910281bf34105d9c92a59a",
+                JPUSH_CHANNEL: "developer-default"
+        ]
     }
 
     buildTypes {

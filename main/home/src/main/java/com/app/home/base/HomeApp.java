@@ -1,6 +1,6 @@
 package com.app.home.base;
 
-import com.app.base.core.BaseApp;
+import com.app.common.core.BaseApp;
 
 /**
  * @Author:HSJ

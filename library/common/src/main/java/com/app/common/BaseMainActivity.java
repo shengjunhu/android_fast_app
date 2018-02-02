@@ -1,7 +1,8 @@
-package com.app.base;
+package com.app.common;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import com.app.common.R;
 
 public class BaseMainActivity extends AppCompatActivity {
 

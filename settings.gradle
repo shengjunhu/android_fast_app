@@ -40,4 +40,4 @@ include ':main:app',
         ':library:ar',
         ':library:http',
         ':library:db',
-        ':library:baselib'
+        ':library:common'

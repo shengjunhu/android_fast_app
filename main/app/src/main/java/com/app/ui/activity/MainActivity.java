@@ -7,7 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.view.KeyEvent;
 import android.view.View;
 import com.app.R;
-import com.app.base.ui.activity.BaseActivity;
+import com.app.common.ui.activity.BaseActivity;
 import com.app.ui.adapter.TabFragmentAdapter;
 import com.qihoo360.replugin.RePlugin;
 import java.util.ArrayList;

@@ -20,7 +20,7 @@ ext {
             isAppDebug              : true,
             isLibDebug              : true,
             isSDKDebug              : true,
-            isBaseLib               : true
+            isCommonDebug           : true
     ]
 
     dependencies = [

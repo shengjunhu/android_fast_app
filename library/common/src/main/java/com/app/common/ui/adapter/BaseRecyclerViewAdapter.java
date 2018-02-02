@@ -1,4 +1,4 @@
-package com.app.base.ui.adapter;
+package com.app.common.ui.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

@@ -2,7 +2,7 @@ package com.app.discover.ui.activity;
 
 import android.os.Bundle;
 import android.view.View;
-import com.app.base.ui.activity.BaseActivity;
+import com.app.common.ui.activity.BaseActivity;
 import com.app.discover.R;
 import com.app.discover.ui.fragment.DiscoverFragment;
 

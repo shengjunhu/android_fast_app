@@ -1,4 +1,4 @@
-package com.app.base.ui.activity;
+package com.app.common.ui.activity;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;

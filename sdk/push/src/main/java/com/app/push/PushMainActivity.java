@@ -8,6 +8,6 @@ public class PushMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.app.android.push.R.layout.activity_push_main);
+        setContentView(R.layout.activity_push_main);
     }
 }

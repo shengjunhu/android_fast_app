@@ -3,7 +3,7 @@ package com.app.me.ui.activity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.app.base.ui.activity.BaseActivity;
+import com.app.common.ui.activity.BaseActivity;
 import com.app.me.R;
 import com.app.me.ui.fragment.MeFragment;
 

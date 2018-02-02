@@ -1,4 +1,4 @@
-package com.app.base.cache;
+package com.app.common.cache;
 
 /**
  * @Author:HSJ

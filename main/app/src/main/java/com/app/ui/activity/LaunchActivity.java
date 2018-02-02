@@ -3,7 +3,7 @@ package com.app.ui.activity;
 import android.os.Bundle;
 import android.view.View;
 import com.app.R;
-import com.app.base.ui.activity.BaseActivity;
+import com.app.common.ui.activity.BaseActivity;
 
 /**
  * @Author:HSJ

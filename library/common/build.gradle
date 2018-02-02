@@ -1,4 +1,4 @@
-if (rootProject.ext.android.isBaseLib){
+if (rootProject.ext.android.isCommonDebug){
     apply plugin:rootProject.ext.plugins.library
 }else {
     apply plugin:rootProject.ext.plugins.application
@@ -8,8 +8,8 @@ android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
-        if (!rootProject.ext.android.isBaseLib){
-            applicationId "com.app.base"
+        if (!rootProject.ext.android.isCommonDebug){
+            applicationId "com.app.common"
         }
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
@@ -30,7 +30,7 @@ android {
 
     sourceSets {
         main {
-            if (rootProject.ext.android.isBaseLib) {
+            if (rootProject.ext.android.isCommonDebug) {
                 manifest.srcFile 'src/main/release/AndroidManifest.xml'
             } else {
                 manifest.srcFile 'src/main/debug/AndroidManifest.xml'

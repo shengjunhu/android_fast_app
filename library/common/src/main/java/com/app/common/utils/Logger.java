@@ -1,3 +1,19 @@
+/*
+ *   Copyright (c) 2017.  HSJ
+ *
+ *    Licensed under the Apache License, Version 2.0 (the "License");
+ *    you may not use this file except in compliance with the License.
+ *    You may obtain a copy of the License at
+ *
+ *          http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the License is distributed on an "AS IS" BASIS,
+ *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *    See the License for the specific language governing permissions and
+ *    limitations under the License.
+ */
+
 package com.app.common.utils;
 
 import android.content.Context;
@@ -17,10 +33,15 @@ import java.util.Locale;
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/5/27 16:39
- * @Class:Xlog
- * @Description:日志工具类
+ * @Class:Logger
+ * @Description:日志工具类(调试、错误日志收集、删除)
  */
-public class XLog {
+public class Logger {
+
+    /**
+     * 日志标签
+     */
+    private static String TAG = "[Logger]";
 
     /**
      * 日志总开关
@@ -35,18 +56,13 @@ public class XLog {
      */
     private static boolean isErrorLogEnable = true;
     /**
-     * 日志打印行数
+     * 日志打印行数（避免被缓冲打印不出来）
      */
-    private static final int MAX_LENGTH = 3000;
+    private static final int MAX_LENGTH = 5000;
     /**
      * 日志输出类型
      */
     private static char LOG_TYPE = 'v';
-
-    /**
-     * 日志名称
-     */
-    private static String TAG = "[Log]";
 
     /**
      * 日志存放目录
@@ -65,7 +81,7 @@ public class XLog {
      */
     private static final int LOG_SAVE_DAYS = 3;
 
-    private XLog() {
+    private Logger() {
 
     }
 

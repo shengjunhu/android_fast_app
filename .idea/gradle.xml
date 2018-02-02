@@ -11,8 +11,8 @@
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/library/ar" />
             <option value="$PROJECT_DIR$/library/audioprovider" />
-            <option value="$PROJECT_DIR$/library/baselib" />
             <option value="$PROJECT_DIR$/library/bluetooth" />
+            <option value="$PROJECT_DIR$/library/common" />
             <option value="$PROJECT_DIR$/library/db" />
             <option value="$PROJECT_DIR$/library/fileprovider" />
             <option value="$PROJECT_DIR$/library/gps" />

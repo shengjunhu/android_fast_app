@@ -1,4 +1,4 @@
-package com.app.base.permission;
+package com.app.common.permission;
 
 /**
  * @Author:HSJ

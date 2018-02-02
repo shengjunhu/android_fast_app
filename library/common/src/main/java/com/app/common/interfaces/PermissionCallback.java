@@ -1,4 +1,4 @@
-package com.app.base.interfaces;
+package com.app.common.interfaces;
 
 /**
  * @Author:HSJ

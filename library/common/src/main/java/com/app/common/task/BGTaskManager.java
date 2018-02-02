@@ -16,7 +16,7 @@
  *
  ******************************************************************************/
 
-package com.app.base.task;
+package com.app.common.task;
 
 /**
  * @Author:HSJ
