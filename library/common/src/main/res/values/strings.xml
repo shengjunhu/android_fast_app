@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">common</string>
+
+    <!--AppTool-->
+    <string name="apk_downloading">正在下载中…</string>
+    <string name="apk_download_progress">%d/100</string>
+    <string name="apk_click_install">下载完成</string>
+    <string name="apk_download_failed">下载失败</string>
+    <string name="apk_download_position">下载进度:%d%%/100%%</string>
+
 </resources>

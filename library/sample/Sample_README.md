@@ -38,7 +38,6 @@
     
 ```
 
-
 ### 原生API使用
 
 
@@ -105,4 +104,10 @@
     } else {
         uri = Uri.fromFile(file);
     }
+```
+
+* Activity进入退出动画
+```
+ overridePendingTransition
+ 一般在starActivity()后/activity.finish()前
 ```

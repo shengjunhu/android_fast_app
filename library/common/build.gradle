@@ -23,6 +23,12 @@ android {
 
     buildTypes {
         release {
+            buildConfigField "boolean", "isLogEnAble", rootProject.ext.android.isLogEnAble
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField "boolean", "isLogEnAble", rootProject.ext.android.isLogEnAble
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

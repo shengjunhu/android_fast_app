@@ -17,10 +17,11 @@ ext {
             versionCode             : 1712290,
             versionName             : "1.0.0",
 
-            isAppDebug              : true,
-            isLibDebug              : true,
-            isSDKDebug              : true,
-            isCommonDebug           : true
+            isAppDebug              : true,//应用模块是否调试
+            isLibDebug              : true,//Library是否调式
+            isSDKDebug              : true,//SDK是否调试
+            isCommonDebug           : true,//基类模块是否调试
+            isLogEnAble             : "true"//是否开启日志打印
     ]
 
     dependencies = [
