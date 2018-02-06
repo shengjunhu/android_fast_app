@@ -111,3 +111,17 @@
  overridePendingTransition
  一般在starActivity()后/activity.finish()前
 ```
+
+* 关于StatusBar
+```
+1、style主题：AppCompact
+2、android.support.v7.widget.FitWindowsLinearLayout
+3、android.support.v7.widget.FitWindowsFrameLayout
+
+```
+
+* 关于NavigationBar
+```
+1、style主题：AppCompact
+
+```
