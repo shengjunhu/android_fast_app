@@ -5,9 +5,9 @@ package com.hsj.ui.kit.refresh;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/11/14/10:01
  * @Class:RefreshLoadListener
- * @Description:
+ * @Description:刷新/加载的监听接口
  */
-public interface RefreshLoadListener {
+public interface RefreshListener {
 
     void onRefresh();
 

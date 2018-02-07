@@ -1,10 +1,14 @@
 package com.hsj.ui.kit.refresh;
 
 import android.content.Context;
+import android.os.Build;
 import android.support.annotation.AttrRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
+import android.support.v4.view.NestedScrollingChild;
+import android.support.v4.view.NestedScrollingParent;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
@@ -16,19 +20,27 @@ import android.widget.ScrollView;
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/11/14/10:00
- * @Class:RefreshLoadView
+ * @Class:RefreshLayout
  * @Description:下拉刷新、上拉加载
  */
-public class RefreshLoadView extends View {
+public class RefreshLayout extends View implements NestedScrollingParent, NestedScrollingChild {
 
     /**
-     * 处于刷新状态
+     * 是否可刷新
      */
     private boolean isRefresh;
     /**
-     * 处于加载状态
+     * 是否可加载
      */
     private boolean isLoadMore;
+    /**
+     * 是否自动刷新
+     */
+    private boolean isAutoRefresh;
+    /**
+     * 是否自动加载
+     */
+    private boolean isAutoLoadMore;
     /**
      * 停止刷新或加载（无论出于刷新or加载更多）
      */
@@ -52,22 +64,31 @@ public class RefreshLoadView extends View {
     /**
      * 监听刷新状态
      */
-    private RefreshLoadListener refreshListener;
+    private RefreshListener refreshListener;
 
-    public RefreshLoadView(@NonNull Context context) {
-        this(context,null);
+    public RefreshLayout(@NonNull Context context) {
+        super(context);
+        initRefreshLayout(context, null);
     }
 
-    public RefreshLoadView(@NonNull Context context, @Nullable AttributeSet attrs) {
-        this(context, attrs,0);
+    public RefreshLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+        super(context, attrs);
+        initRefreshLayout(context, attrs);
     }
 
-    public RefreshLoadView(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
+    public RefreshLayout(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initRefreshLayout(context, attrs);
     }
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+    public RefreshLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+        initRefreshLayout(context, attrs);
+    }
+
     /**
+     * 0、单纯的上拉/下拉布局滚动，回弹
      * 1、下拉刷新：下拉刷新动画
      * 2、上拉加载布局：上拉刷新动画、文本提示状态(数据加载完毕、没有更多数据、点击加载更多)
      * 3、加头：支持View、layoutId
@@ -82,9 +103,9 @@ public class RefreshLoadView extends View {
     /**
      * 添加头
      *
-     * @param headerLayout
+     * @param headerViewId
      */
-    public void addHeader(@LayoutRes int headerLayout) {
+    public void addHeader(@LayoutRes int headerViewId) {
 
     }
 
@@ -100,9 +121,9 @@ public class RefreshLoadView extends View {
     /**
      * 添加脚
      *
-     * @param footerLayout
+     * @param footerViewId
      */
-    public void addFooter(@LayoutRes int footerLayout) {
+    public void addFooter(@LayoutRes int footerViewId) {
 
     }
 
@@ -120,7 +141,7 @@ public class RefreshLoadView extends View {
      *
      * @param rv
      */
-    public void setContentView(RecyclerView rv) {
+    public void setLayout(RecyclerView rv) {
 
     }
 
@@ -129,7 +150,7 @@ public class RefreshLoadView extends View {
      *
      * @param rl
      */
-    public void setContentView(RelativeLayout rl) {
+    public void setLayout(RelativeLayout rl) {
 
     }
 
@@ -138,7 +159,7 @@ public class RefreshLoadView extends View {
      *
      * @param ll
      */
-    public void setContentView(LinearLayout ll) {
+    public void setLayout(LinearLayout ll) {
 
     }
 
@@ -147,21 +168,21 @@ public class RefreshLoadView extends View {
      *
      * @param sv
      */
-    public void setContentView(ScrollView sv) {
+    public void setLayout(ScrollView sv) {
 
     }
 
     /**
      * 没有数据设置占位布局
      */
-    public void setBackgroundView(@LayoutRes int bgLayout){
+    public void setBackgroundView(@LayoutRes int bgLayout) {
 
     }
 
     /**
      * 没有数据设置占位布局
      */
-    public void setBackgroundView(View bgView){
+    public void setBackgroundView(View bgView) {
 
     }
 
@@ -170,7 +191,7 @@ public class RefreshLoadView extends View {
      *
      * @param refreshListener
      */
-    public void setRefreshListener(RefreshLoadListener refreshListener) {
+    public void setRefreshListener(RefreshListener refreshListener) {
         this.refreshListener = refreshListener;
     }
 
@@ -197,7 +218,7 @@ public class RefreshLoadView extends View {
      *
      * @param headerText (刷新时期状态)
      */
-    public void  setHeaderText(@Nullable String headerText) {
+    public void setHeaderText(@Nullable String headerText) {
         this.headerText = headerText;
     }
 
@@ -211,27 +232,105 @@ public class RefreshLoadView extends View {
     }
 
     /**
-     *  设置刷新状态
+     * 设置刷新状态
+     *
      * @param refresh
      */
-    public void setRefresh(boolean refresh) {
+    public void setRefreshEnable(boolean refresh) {
         isRefresh = refresh;
     }
 
     /**
+     * 设置刷新状态
+     *
+     * @param autoRefresh
+     */
+    public void setAutoRefreshEnable(boolean autoRefresh) {
+        isRefresh = autoRefresh;
+    }
+
+    /**
      * 设置加载状态
+     *
      * @param loadMore
      */
-    public void setLoadMore(boolean loadMore) {
+    public void setLoadMoreEnable(boolean loadMore) {
         isLoadMore = loadMore;
     }
 
     /**
+     * 设置自动加载更多
+     *
+     * @param autoLoadMore
+     */
+    public void setAutoLoadMoreEnable(boolean autoLoadMore) {
+        isRefresh = autoLoadMore;
+    }
+
+    /**
      * 停止刷新or加载状态
+     *
      * @param stopRefreshOrLoad
      */
-    public void setStopRefreshOrLoad(boolean stopRefreshOrLoad) {
+    public void setStop(boolean stopRefreshOrLoad) {
         isStopRefreshOrLoad = stopRefreshOrLoad;
     }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * 开始加载在Window上
+     */
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+    }
+
+    /**
+     * 从window上移除
+     */
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+    }
+
+    @Override
+    public boolean onStartNestedScroll(@NonNull View child, @NonNull View target, int axes) {
+        return false;
+    }
+
+    @Override
+    public void onNestedScrollAccepted(@NonNull View child, @NonNull View target, int axes) {
+
+    }
+
+    @Override
+    public void onStopNestedScroll(@NonNull View target) {
+
+    }
+
+    @Override
+    public void onNestedScroll(@NonNull View target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed) {
+
+    }
+
+    @Override
+    public void onNestedPreScroll(@NonNull View target, int dx, int dy, @NonNull int[] consumed) {
+
+    }
+
+    @Override
+    public boolean onNestedFling(@NonNull View target, float velocityX, float velocityY, boolean consumed) {
+        return false;
+    }
+
+    @Override
+    public boolean onNestedPreFling(@NonNull View target, float velocityX, float velocityY) {
+        return false;
+    }
+
+    @Override
+    public int getNestedScrollAxes() {
+        return 0;
+    }
 }
