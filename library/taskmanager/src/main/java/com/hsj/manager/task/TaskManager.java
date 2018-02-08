@@ -27,5 +27,66 @@ package com.hsj.manager.task;
  */
 public class TaskManager {
 
+    private volatile static TaskManager taskManager;
+
+    public static TaskManager getInstance() {
+        if (taskManager == null) {
+            synchronized (TaskManager.class) {
+                if (taskManager == null) {
+                    taskManager = new TaskManager();
+                }
+            }
+        }
+        return taskManager;
+    }
+
+    /**
+     * 开启定位
+     */
+    public void doTask1() {
+
+    }
+
+    /**
+     * loginToken未过期时，刷新用户信息
+     */
+    public void doTask2() {
+
+    }
+
+    /**
+     * loginToken未过期时，刷新好友列表
+     */
+    public void doTask3() {
+
+    }
+
+    /**
+     * loginToken未过期时，刷新新消息
+     */
+    public void doTask4() {
+
+    }
+
+    /**
+     * 检测上次退出未完成的任务
+     */
+    public void doTask5() {
+
+    }
+
+    /**
+     * 上传错误日志
+     */
+    public void doTask6() {
+
+    }
+
+    /**
+     * 删除过期的缓存文件
+     */
+    public void doTask7() {
+
+    }
 
 }

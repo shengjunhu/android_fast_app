@@ -25,6 +25,11 @@ import android.widget.ScrollView;
  */
 public class RefreshLayout extends View implements NestedScrollingParent, NestedScrollingChild {
 
+    //NestedScrollingChild
+    //NestedScrollingParent
+    //NestedScrollingChildHelper
+    //NestedScrollingParentHelper
+
     /**
      * 是否可刷新
      */
