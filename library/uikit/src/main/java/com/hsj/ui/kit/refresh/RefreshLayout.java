@@ -21,7 +21,7 @@ import android.widget.ScrollView;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2017/11/14/10:00
  * @Class:RefreshLayout
- * @Description:下拉刷新、上拉加载
+ * @Description:刷新布局
  */
 public class RefreshLayout extends View implements NestedScrollingParent, NestedScrollingChild {
 

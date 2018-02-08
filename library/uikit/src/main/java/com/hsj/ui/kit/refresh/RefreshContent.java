@@ -19,11 +19,10 @@ package com.hsj.ui.kit.refresh;
 /**
  * @Author:HSJ
  * @E-mail:mr.ajun@foxmail.com
- * @Date:2018/2/6/18:29
+ * @Date:2018/2/8/15:46
  * @Version:V1.0
- * @Class:RefreshFooter
- * @Description:刷新脚
+ * @Class:RefreshContent
+ * @Description:刷新布局内容/无内容时显示提示无数据图
  */
-public class RefreshFooter {
-
+public class RefreshContent {
 }
