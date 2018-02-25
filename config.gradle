@@ -132,8 +132,8 @@ ext {
             im_redpacket             : 'cn.rongcloud.android:RedPacket:2.8.27',
 
             //plugin
-            repluginHost             : 'com.qihoo360.replugin:replugin-host-lib:2.2.2',
-            repluginLib              : 'com.qihoo360.replugin:replugin-plugin-lib:2.2.2',
+            repluginHost             : 'com.qihoo360.replugin:replugin-host-lib:2.2.4',
+            repluginLib              : 'com.qihoo360.replugin:replugin-plugin-lib:2.2.4',
     ]
 
 }
