@@ -28,13 +28,23 @@ import java.lang.annotation.Target;
  * @E-mail:mr.ajun@foxmail.com
  * @Date:2018/2/4/15:06
  * @Version:V1.0
- * @Class:TheadType
+ * @Class:TheadMode
  * @Description:线程类型
  */
 @Documented
 @Inherited
 @Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.SOURCE)
-public @interface TheadType {
+public @interface TheadMode {
+
+    String CURRENT_THREAD = "current_thread";
+
+    String UI_THEAD       = "ui_thread";
+
+    String MAIN_THEAD     = "main_thread";
+
+    String NEW_THEAD      = "new_thread";
+
+    String IO_THEAD       = "io_thread";
 
 }
