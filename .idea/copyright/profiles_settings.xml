@@ -1,5 +1,5 @@
 <component name="CopyrightManager">
-  <settings default="FastAndroid">
+  <settings>
     <module2copyright>
       <element module="All" copyright="FastAndroid" />
     </module2copyright>
