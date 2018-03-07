@@ -15,13 +15,15 @@ android {
         ndk { abiFilters "armeabi-v7a", "x86" }
 
         vectorDrawables.useSupportLibrary = true
+
+        resourcePrefix 'app_'
     }
 
     signingConfigs {
         config {
             keyAlias 'FastAndroid'
             keyPassword 'shengjunhu'
-            storeFile file('App.jks')
+            storeFile file('app.jks')
             storePassword 'shengjunhu'
         }
     }
@@ -43,8 +45,25 @@ android {
         }
     }
 
-    dataBinding {
-        enabled = true
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = "app_release_${variant.productFlavors[0].name}" +
+                        "_v${defaultConfig.versionName}_v${defaultConfig.versionCode}.apk"
+                outputFileName = fileName
+            }
+        }
+    }
+
+    flavorDimensions "release"
+    productFlavors {
+        huawei {
+            dimension "release"
+        }
+        xiaomi {
+            dimension "release"
+        }
     }
 
     lintOptions {

@@ -7,14 +7,34 @@ ext {
             kotlin_extensions       : 'kotlin-android-extensions',//kotlin android
             repluginHost            : 'replugin-host-gradle',     //宿主插件
             repluginLib             : 'replugin-plugin-gradle',   //库插件
-            objectBox               : 'io.objectbox'              //objectBox
+            objectBox               : 'io.objectbox',             //objectBox
+            andResGuard             : 'AndResGuard',              //AndResGuard
+            tinker                  : 'com.tencent.tinker.patch', //Tinker
+    ]
+
+    mavenUrl = [
+            objectbox               : "http://objectbox.net/beta-repo/",            //数据库ObjectBox
+            sina                    : "https://dl.bintray.com/thelasterstar/maven/",//新浪微博
+            huaweiPush              : "http://developer.huawei.com/repo/" ,         //华为推送
+    ]
+
+    gradleDependencies = [
+            gradleVersion           : 'com.android.tools.build:gradle:3.0.1',                 //工程构建gradle
+            kotlinGradle            : 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.1.51',     //kotlin
+            mavenGradle             : 'com.github.dcendents:android-maven-gradle-plugin:1.5', //maven依赖
+            objectboxGradle         : 'io.objectbox:objectbox-gradle-plugin:1.4.0',           //数据库引来ObjectBox
+            gradleBintray           : 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3', //第三方gradle依赖
+            repluginHost            : 'com.qihoo360.replugin:replugin-host-gradle:2.2.2',     //RePlugin 宿主插件框架
+            repluginPlugin          : 'com.qihoo360.replugin:replugin-plugin-gradle:2.2.2' ,  //RePlugin 库插件框架
+            tinker                  : 'com.tencent.tinker:tinker-patch-gradle-plugin:1.9.1',  //Tinker热修复
+            andResGuard             : 'com.tencent.mm:AndResGuard-gradle-plugin:1.2.11',      //微信资源混淆方案
     ]
 
     android = [
             compileSdkVersion       : 27,
             minSdkVersion           : 19,
             targetSdkVersion        : 27,
-            versionCode             : 1712290,
+            versionCode             : 1803070,
             versionName             : "1.0.0",
 
             isAppDebug              : true,//应用模块是否调试
@@ -37,6 +57,7 @@ ext {
             cardview_v7              : 'com.android.support:cardview-v7:27.0.2',
             recyclerview_v7          : 'com.android.support:recyclerview-v7:27.0.2',
             percent_layout           : 'com.android.support:percent:27.0.2',
+            ar                       : 'com.google.ar:core:1.0.0',
 
             //test
             testInstrumentationRunner: 'android.support.test.runner.AndroidJUnitRunner',
@@ -130,6 +151,13 @@ ext {
             im_calllib               : 'cn.rongcloud.android:CallLib:2.8.27',
             im_callkit               : 'cn.rongcloud.android:CallKit:2.8.27',
             im_redpacket             : 'cn.rongcloud.android:RedPacket:2.8.27',
+
+            //tinker
+            tinker                   : 'com.tencent.tinker:tinker-android-anno:1.9.1',
+            tinkerLib                : 'com.tencent.tinker:tinker-android-lib:1.9.1',
+
+            //AndFix
+            andFix                   : 'com.alipay.euler:andfix:0.5.0@aar',
 
             //plugin
             repluginHost             : 'com.qihoo360.replugin:replugin-host-lib:2.2.4',

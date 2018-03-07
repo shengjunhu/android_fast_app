@@ -19,6 +19,8 @@ android {
         testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
 
         ndk { abiFilters "armeabi-v7a", "x86" }
+
+        resourcePrefix 'task_'
     }
 
     buildTypes {

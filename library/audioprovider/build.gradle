@@ -28,6 +28,8 @@ android {
             moduleName "audio"
             abiFilters "armeabi-v7a", "x86"
         }
+
+        resourcePrefix 'audio_'
     }
 
     buildTypes {
