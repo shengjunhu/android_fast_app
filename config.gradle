@@ -24,8 +24,8 @@ ext {
             mavenGradle             : 'com.github.dcendents:android-maven-gradle-plugin:1.5', //maven依赖
             objectboxGradle         : 'io.objectbox:objectbox-gradle-plugin:1.4.0',           //数据库引来ObjectBox
             gradleBintray           : 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3', //第三方gradle依赖
-            repluginHost            : 'com.qihoo360.replugin:replugin-host-gradle:2.2.2',     //RePlugin 宿主插件框架
-            repluginPlugin          : 'com.qihoo360.replugin:replugin-plugin-gradle:2.2.2' ,  //RePlugin 库插件框架
+            repluginHost            : 'com.qihoo360.replugin:replugin-host-gradle:2.2.4',     //RePlugin 宿主插件框架
+            repluginPlugin          : 'com.qihoo360.replugin:replugin-plugin-gradle:2.2.4' ,  //RePlugin 库插件框架
             tinker                  : 'com.tencent.tinker:tinker-patch-gradle-plugin:1.9.1',  //Tinker热修复
             andResGuard             : 'com.tencent.mm:AndResGuard-gradle-plugin:1.2.11',      //微信资源混淆方案
     ]
