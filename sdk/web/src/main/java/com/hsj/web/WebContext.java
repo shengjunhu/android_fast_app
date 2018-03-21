@@ -20,7 +20,6 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 import com.tencent.smtt.sdk.QbSdk;
-import com.tencent.smtt.sdk.WebView;
 
 /**
  * @Author:HSJ
@@ -32,13 +31,24 @@ import com.tencent.smtt.sdk.WebView;
  */
 public final class WebContext {
 
-    public static void initWeb(@NonNull Context context){
+    public void initWeb(@NonNull Context context) {
 
-        QbSdk.initBuglyAsync(true);
+        QbSdk.PreInitCallback cb = new QbSdk.PreInitCallback() {
 
-        WebView.getCrashExtraMessage(context);
+            @Override
+            public void onViewInitFinished(boolean arg0) {
+                // x5內核初始化完成的回调，为true表示x5内核加载成功，
+                // 否则表示x5内核加载失败，会自动切换到系统内核。
+            }
 
-        QbSdk.initX5Environment(context,null);
+            @Override
+            public void onCoreInitFinished() {
+                // TODO Auto-generated method stub
+            }
+        };
+
+        //x5内核初始化接口
+        QbSdk.initX5Environment(context, cb);
 
     }
 
