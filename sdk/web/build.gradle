@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         if (rootProject.ext.android.isLibDebug){
-            applicationId "com.app.web"
+            applicationId "com.hsj.web"
         }
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
@@ -18,7 +18,7 @@ android {
 
         testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
 
-        ndk { abiFilters "armeabi-v7a", "x86" }
+        ndk { abiFilters "armeabi","armeabi-v7a", "x86" }
 
         resourcePrefix 'web_'
     }
@@ -43,11 +43,11 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation rootProject.ext.dependencies.appcompat_v7
     implementation rootProject.ext.dependencies.constraint_layout
     testImplementation rootProject.ext.dependencies.testJunit
     androidTestImplementation rootProject.ext.dependencies.testRunner
     androidTestImplementation rootProject.ext.dependencies.testEspresso
+    implementation files('libs/tbs_v3.6.0_20180211.jar')
 }

@@ -17,3 +17,6 @@ Android与web混合开发，基于腾讯X5浏览器内核
 3、支持上传下载及其进度
 4、支持调用支付宝、微信支付
 5、支持定位功能
+
+### 腾讯X5浏览内核使用方法
+1、使用地址：http://x5.tencent.com/tbs/guide/sdkInit.html
