@@ -15,10 +15,16 @@
             android:name=".ui.activity.LaunchActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-            <intent-filter>
+            <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="192.168.1.20"
+                    android:pathPattern="/main"
+                    android:scheme="http"/>
             </intent-filter>
         </activity>
 

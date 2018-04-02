@@ -17,15 +17,28 @@
 package com.hsj.web;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.app.hsj.R;
-
-public class WebMainActivity extends AppCompatActivity {
+/**
+ * @Author:HSJ
+ * @E-mail:mr.ajun@foxmail.com
+ * @Date:2018/4/2/09:52
+ * @Version:V1.0
+ * @Class:WebCommonActivity
+ * @Description:Web访问相同界面
+ */
+public class WebCommonActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.web_activity_main);
+        setContentView(R.layout.web_activity_common);
+
+
+
+
     }
+
+
 }
