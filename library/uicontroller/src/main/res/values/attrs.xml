@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <item type="id" name="status_bar_fake_view" />
-    <item type="id" name="status_bar_translucent_view" />
+    <item type="id" name="ui_status_bar_fake_view" />
+    <item type="id" name="ui_status_bar_translucent_view" />
 
     <!-- 界面加载状态控件 -->
-    <declare-styleable name="UIStateView">
-        <attr name="state_load"         format="reference" />
-        <attr name="state_success"      format="reference" />
-        <attr name="state_empty"        format="reference" />
-        <attr name="state_network"      format="reference" />
-        <attr name="state_failure"      format="reference" />
-        <attr name="state_login"        format="reference" />
-        <attr name="state_permission"   format="reference" />
+    <declare-styleable name="UIStatusView">
+        <attr name="ui_status_success"            format="reference" />
+        <attr name="ui_status_load"               format="reference" />
+        <attr name="ui_status_empty"              format="reference" />
+        <attr name="ui_status_data_exception"     format="reference" />
+        <attr name="ui_status_network_exception"  format="reference" />
+        <attr name="ui_server_exception"          format="reference" />
+        <attr name="ui_no_login"                  format="reference" />
+        <attr name="ui_no_server_permission"      format="reference" />
+        <attr name="ui_no_run_permission"         format="reference" />
     </declare-styleable>
 
 </resources>
