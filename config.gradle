@@ -111,7 +111,7 @@ ext {
             qq                       : "/sdk/auth/libs/open_sdk_r5990_lite.jar",
             alipay                   : "/sdk/pay/libs/alipaySdk-20170922.jar",
             wechat                   : 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+',
-            weibo                    : 'com.sina.weibo.sdk:core:4.1.4:openDefaultRelease@aar',
+            weibo                    : 'com.sina.weibo.sdk:core:4.2.7:openDefaultRelease@aar',
 
             //百度云
             baiducloud               : "/sdk/cloudbaidu/libs/bos-android-sdk-1.0.4.jar",
@@ -142,7 +142,7 @@ ext {
             tbs_x5                   : "library/web/libs/tbs_sdk_v3.5.0_20170801_113025.jar",
 
             //qr scan
-            zxing_core               : 'com.google.zxing:core:3.3.1',
+            zxing_core               : 'com.google.zxing:core:3.3.2',
 
             //IM(融云)
             im_lib                   : 'cn.rongcloud.android:IMLib:2.8.27',

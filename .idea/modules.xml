@@ -7,7 +7,6 @@
       <module fileurl="file://$PROJECT_DIR$/library/ar/ar.iml" filepath="$PROJECT_DIR$/library/ar/ar.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/audioprovider/audioprovider.iml" filepath="$PROJECT_DIR$/library/audioprovider/audioprovider.iml" />
       <module fileurl="file://$PROJECT_DIR$/sdk/auth/auth.iml" filepath="$PROJECT_DIR$/sdk/auth/auth.iml" />
-      <module fileurl="file://E:\git\FastAndroid\library\common\baselib.iml" filepath="E:\git\FastAndroid\library\common\baselib.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/bluetooth/bluetooth.iml" filepath="$PROJECT_DIR$/library/bluetooth/bluetooth.iml" />
       <module fileurl="file://$PROJECT_DIR$/sdk/bugly/bugly.iml" filepath="$PROJECT_DIR$/sdk/bugly/bugly.iml" />
       <module fileurl="file://$PROJECT_DIR$/main/chat/chat.iml" filepath="$PROJECT_DIR$/main/chat/chat.iml" />

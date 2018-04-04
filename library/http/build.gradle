@@ -25,7 +25,7 @@ android {
 
     buildTypes {
         release {
-            buildConfigField "String", "HOST",  "\"http://www.xbs.com\""
+            buildConfigField "String", "HOST",  "\"http://www.hsj.com\""
             buildConfigField "boolean", "isDebug", "false"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
