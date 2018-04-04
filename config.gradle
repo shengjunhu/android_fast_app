@@ -119,11 +119,11 @@ ext {
             qiniucloud               : 'com.qiniu:qiniu-android-sdk:7.3.+',
 
             //高德：3D地图、2D地图、导航、搜索、定位（默认最新版本，具体版本号最好）
-            amap_3d                  : 'com.amap.api:3dmap:latest.integration',
-            amap_2d                  : 'com.amap.api:map2d:latest.integration',
-            amap_navi                : 'com.amap.api:navi-3dmap:latest.integration',
-            amap_search              : 'com.amap.api:search:latest.integration',
-            amap_location            : 'com.amap.api:location:latest.integration',
+            amap_3d                  : 'com.amap.api:3dmap:6.1.0',
+            amap_2d                  : 'com.amap.api:map2d:5.2.0',
+            amap_navi                : 'com.amap.api:navi-3dmap:6.0.1_3dmap6.1.0',
+            amap_search              : 'com.amap.api:search:6.1.0',
+            amap_location            : 'com.amap.api:location:3.8.0',
 
             //百度地图
             baidumap                 : "/sdk/mapbaidu/libs/...",

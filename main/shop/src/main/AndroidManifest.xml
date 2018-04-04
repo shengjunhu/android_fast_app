@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.app.shop">
+    package="com.hsj.shop">
 
     <application
         android:allowBackup="true"

@@ -4,7 +4,7 @@ android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.app.home"
+        applicationId "com.hsj.home"
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
@@ -71,7 +71,7 @@ repluginPluginConfig {
     //插件名
     pluginName = "home"
     //宿主app的包名
-    hostApplicationId = "com.app"
+    hostApplicationId = "com.hsj.main"
     //宿主app的启动activity
-    hostAppLauncherActivity = "com.app.LaunchActivity"
+    hostAppLauncherActivity = "com.hsj.main.LaunchActivity"
 }

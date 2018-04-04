@@ -18,7 +18,7 @@ package com.hsj.provider.media.ui.activity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.app.common.ui.fragment.BaseFragment;
+import com.hsj.common.ui.fragment.BaseFragment;
 
 /**
  * @Author:HSJ
