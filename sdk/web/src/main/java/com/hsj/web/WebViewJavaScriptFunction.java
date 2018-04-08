@@ -25,7 +25,5 @@ package com.hsj.web;
  * @Description:调用JS代码
  */
 public interface WebViewJavaScriptFunction {
-
     void onJsFunctionCalled(String tag);
-
 }

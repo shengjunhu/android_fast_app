@@ -19,8 +19,6 @@ android {
         testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
 
         ndk { abiFilters "armeabi-v7a", "x86" }
-
-        resourcePrefix 'common_'
     }
 
     buildTypes {
@@ -65,5 +63,7 @@ dependencies {
 
     debugImplementation rootProject.ext.dependencies.leakcanary_debug
     releaseImplementation rootProject.ext.dependencies.leakcanary_release
+
+    compileOnly rootProject.ext.dependencies.eventBus
 
 }

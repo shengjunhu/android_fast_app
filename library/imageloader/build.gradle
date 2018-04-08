@@ -28,8 +28,6 @@ android {
             moduleName "jpg"
             abiFilters "armeabi-v7a", "x86"
         }
-
-        resourcePrefix 'imageloder_'
     }
 
     buildTypes {

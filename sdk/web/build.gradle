@@ -19,8 +19,6 @@ android {
         testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
 
         ndk { abiFilters "armeabi","armeabi-v7a", "x86" }
-
-        resourcePrefix 'web_'
     }
 
     buildTypes {
@@ -44,11 +42,12 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation rootProject.ext.dependencies.appcompat_v7
-    implementation rootProject.ext.dependencies.constraint_layout
     testImplementation rootProject.ext.dependencies.testJunit
     androidTestImplementation rootProject.ext.dependencies.testRunner
     androidTestImplementation rootProject.ext.dependencies.testEspresso
+    implementation rootProject.ext.dependencies.appcompat_v7
+    implementation rootProject.ext.dependencies.constraint_layout
+
     implementation files('libs/tbs_v3.6.0_20180211.jar')
 
     implementation project(':library:common')

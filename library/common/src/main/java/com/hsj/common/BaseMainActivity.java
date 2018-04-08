@@ -16,15 +16,60 @@
 
 package com.hsj.common;
 
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import com.app.common.R;
+import android.view.View;
 
-public class BaseMainActivity extends AppCompatActivity {
+import com.hsj.common.thread.ThreadManager;
+
+/**
+ * @Author:HSJ
+ * @E-mail:mr.ajun@foxmail.com
+ * @Date:2017-06-15 23:50
+ * @Class:BaseMainActivity
+ * @Description:common测试类
+ */
+public class BaseMainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base_main);
+
+        initUI();
+
+        initData();
     }
+
+    private void initUI() {
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
+    }
+
+    private void initData() {
+
+        //执行网络线程
+        ThreadManager.executeOnNetWorkThread(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        });
+
+        //执行文件读写线程
+        ThreadManager.executeOnSubThread(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        });
+
+    }
+
 }

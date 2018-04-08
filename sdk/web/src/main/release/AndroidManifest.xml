@@ -18,19 +18,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:hardwareAccelerated="true"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".WebMainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name=".WebCommonActivity"
+            android:label="WebView通用界面" />
     </application>
 
 </manifest>

@@ -17,7 +17,7 @@
 package com.hsj.common.utils;
 
 import android.util.Log;
-import com.app.common.BuildConfig;
+import com.hsj.common.BuildConfig;
 import java.lang.reflect.Method;
 
 /**

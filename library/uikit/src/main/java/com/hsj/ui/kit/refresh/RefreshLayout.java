@@ -12,6 +12,7 @@ import android.support.v4.view.NestedScrollingParent;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
@@ -23,7 +24,7 @@ import android.widget.ScrollView;
  * @Class:RefreshLayout
  * @Description:刷新布局
  */
-public class RefreshLayout extends View implements NestedScrollingParent, NestedScrollingChild {
+public class RefreshLayout extends ViewGroup implements NestedScrollingParent, NestedScrollingChild {
 
     //NestedScrollingChild
     //NestedScrollingParent
@@ -297,6 +298,11 @@ public class RefreshLayout extends View implements NestedScrollingParent, Nested
     @Override
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
+    }
+
+    @Override
+    protected void onLayout(boolean b, int i, int i1, int i2, int i3) {
+
     }
 
     @Override

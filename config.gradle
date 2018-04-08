@@ -139,7 +139,7 @@ ext {
             meizu_push               : 'com.meizu.flyme.internet:push-internal:3.6.0@aar',
 
             //web浏览器（腾讯X5浏览服务sdk）
-            tbs_x5                   : "library/web/libs/tbs_sdk_v3.5.0_20170801_113025.jar",
+            tbs_x5                   : "library/web/libs/tbs_v3.6.0_20180211.jar",
 
             //qr scan
             zxing_core               : 'com.google.zxing:core:3.3.2',

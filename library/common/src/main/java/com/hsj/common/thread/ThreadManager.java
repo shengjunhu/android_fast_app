@@ -43,20 +43,22 @@ public final class ThreadManager {
 
     /**
      * AsyncTask的默认线程池Executor. 负责长时间的任务(网络访问) 默认3个线程
+     * 建议执行网络请求
      */
     public static final Executor NETWORK_EXECUTOR;
 
     /**
-     * 副线程的Handle, 只有一个线程 可以执行比较快但不能在ui线程执行的操作. 文件读写不建议在此线程执行,
+     * 副线程的Handle
+     * 只有一个线程 可以执行比较快但不能在ui线程执行的操作. 文件读写不建议在此线程执行,
      * 请使用FILE_THREAD_HANDLER 此线程禁止进行网络操作.如果需要进行网络操作. 请使用NETWORK_EXECUTOR
      */
     private static Handler SUB_THREAD_HANDLER;
     private static HandlerThread SUB_THREAD;
 
     /**
-     * 文件读写线程的Handle, 只有一个线程 可以执行文件读写操作,
+     * 文件读写线程的Handle
+     * 只有一个线程 可以执行文件读写操作,
      * 如图片解码等，此线程禁止进行网络操作.
-     * 如果需要进行网络操作，请使用NETWORK_EXECUTOR.
      */
     private static Handler FILE_THREAD_HANDLER;
     /**
@@ -76,10 +78,6 @@ public final class ThreadManager {
                 0, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
         ((ThreadPoolExecutor) result).setCorePoolSize(3);
         return result;
-    }
-
-    public static void init() {
-
     }
 
     /**
@@ -134,6 +132,10 @@ public final class ThreadManager {
         return getFileThreadHandler().getLooper();
     }
 
+    /**
+     * 获取副线程
+     * @return
+     */
     public static Thread getSubThread() {
         if (SUB_THREAD == null) {
             getSubThreadHandler();

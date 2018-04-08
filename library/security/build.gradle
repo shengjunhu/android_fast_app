@@ -28,8 +28,6 @@ android {
             moduleName "encrypt"
             abiFilters "armeabi-v7a", "x86"
         }
-
-        resourcePrefix 'security_'
     }
 
     buildTypes {

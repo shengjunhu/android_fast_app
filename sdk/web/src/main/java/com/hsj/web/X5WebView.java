@@ -18,9 +18,17 @@ package com.hsj.web;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.res.TypedArray;
+import android.support.annotation.ColorInt;
 import android.util.AttributeSet;
+import android.util.TypedValue;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.tencent.smtt.sdk.WebChromeClient;
 import com.tencent.smtt.sdk.WebSettings;
 import com.tencent.smtt.sdk.WebSettings.LayoutAlgorithm;
 import com.tencent.smtt.sdk.WebView;
@@ -36,20 +44,83 @@ import com.tencent.smtt.sdk.WebViewClient;
  */
 public class X5WebView extends WebView {
 
-    TextView title;
+    /**
+     * web界面标题
+     */
+    private TextView title;
+    private ProgressBar progressBar;
 
     public X5WebView(Context arg0) {
-        super(arg0);
-        setBackgroundColor(85621);
+        this(arg0, null);
+    }
+
+    public X5WebView(Context arg0, AttributeSet arg1) {
+        this(arg0, arg1, 0);
     }
 
     @SuppressLint("SetJavaScriptEnabled")
-    public X5WebView(Context arg0, AttributeSet arg1) {
-        super(arg0, arg1);
-        this.setWebViewClient(client);
-        // this.setWebChromeClient(chromeClient);
+    public X5WebView(Context context, AttributeSet attributeSet, int i) {
+        super(context, attributeSet, i);
+
+        if (attributeSet != null) {
+            TypedArray ta = context.obtainStyledAttributes(attributeSet, R.styleable.X5WebView);
+            boolean isPb = ta.getBoolean(R.styleable.X5WebView_progressbar, true);
+            int pbColor = ta.getColor(R.styleable.X5WebView_progressbar_color,
+                    getResources().getColor(R.color.colorBlueTheme));
+            ta.recycle();
+            initWebView(context, isPb, pbColor);
+        } else {
+            initWebView(context, false, 0);
+        }
+    }
+
+    private void initWebView(Context context, boolean isPb, int pbColor) {
+        if (isPb) {
+            progressBar = new ProgressBar(context, null,
+                    android.R.attr.progressBarStyleHorizontal);
+            progressBar.setMax(100);
+            progressBar.setMinimumHeight(dp2px(context,2));
+            progressBar.setBackgroundColor(pbColor);
+
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+            lp.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+            this.addViewInLayout(progressBar,0,lp);
+        }
+
+        this.setWebViewClient(new WebViewClient() {
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                view.loadUrl(url);
+                return true;//防止加载网页时调起系统浏览器
+            }
+        });
+
+        this.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public void onProgressChanged(WebView webView, int i) {
+                super.onProgressChanged(webView, i);
+                if (progressBar != null) {
+                    if (i == 100) {
+                        progressBar.setVisibility(View.GONE);
+                    } else {
+                        progressBar.setProgress(i);
+                    }
+                }
+            }
+
+            @Override
+            public void onReceivedTitle(WebView webView, String s) {
+                super.onReceivedTitle(webView, s);
+                if (title != null) {
+                    title.setText(s);
+                }
+            }
+        });
+
         // WebStorage webStorage = WebStorage.getInstance();
+
         initWebViewSettings();
+
         this.getView().setClickable(true);
     }
 
@@ -79,15 +150,32 @@ public class X5WebView extends WebView {
         // settings 的设计
     }
 
-    private WebViewClient client = new WebViewClient() {
-        /**
-         * 防止加载网页时调起系统浏览器
-         */
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
-            return true;
-        }
+    /**
+     * 设置标题文字
+     *
+     * @param title
+     */
+    public void setTitle(TextView title) {
+        this.title = title;
+    }
 
-    };
+    /**
+     * 设置WebView亮度
+     *
+     * @param lightColor
+     */
+    public void setWebViewLight(@ColorInt int lightColor) {
+        this.setBackgroundColor(lightColor);
+    }
 
+    /**
+     * dp转px
+     * @param context
+     * @param dpValue
+     * @return
+     */
+    public  int dp2px(Context context, float dpValue) {
+        float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
+    }
 }

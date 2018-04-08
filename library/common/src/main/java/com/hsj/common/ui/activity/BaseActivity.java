@@ -2,21 +2,34 @@ package com.hsj.common.ui.activity;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.AnimRes;
 import android.support.annotation.IdRes;
 import android.support.annotation.IntRange;
+import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.hsj.common.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,23 +44,57 @@ import java.util.List;
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
 
     public String TAG = this.getClass().getSimpleName();
+    private boolean isShowTitle = true;
+    private TextView tv_left, tv_center, tv_right;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        super.setContentView(R.layout.activity_base_main);
 
-        setContentView(getLayoutId());
+        if (isShowTitle) {
+            Toolbar toolbar = super.findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            tv_left = super.findViewById(R.id.tv_left);
+            tv_center = super.findViewById(R.id.tv_center);
+            tv_right = super.findViewById(R.id.tv_right);
+        } else {
+            super.findViewById(R.id.toolbar).setVisibility(View.GONE);
+        }
+
+        FrameLayout mContentView = super.findViewById(R.id.fl_base);
+        View view = LayoutInflater.from(this).inflate(getLayoutId(), null);
+        mContentView.addView(view);
 
         initUI(savedInstanceState);
 
         initData();
     }
 
+    @LayoutRes
     protected abstract int getLayoutId();
 
     protected abstract void initUI(Bundle savedInstanceState);
 
     protected abstract void initData();
+
+    public void setShowTitle(boolean showTitle) {
+        isShowTitle = showTitle;
+    }
+
+    public TextView getTitleLeft() {
+        tv_left.setOnClickListener(this);
+        return tv_left;
+    }
+
+    public TextView getTitleCenter() {
+        return tv_center;
+    }
+
+    public TextView getTitleRight() {
+        tv_right.setOnClickListener(this);
+        return tv_right;
+    }
 
     /**
      * 权限
@@ -91,6 +138,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     /**
      * 复写此方法读取回调
+     *
      * @param requestCode
      * @param granted
      */
@@ -99,7 +147,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     }
 
     /**
-     *  权限被拒绝一次的提示对话框
+     * 权限被拒绝一次的提示对话框
      */
     private void showPermissionWarn() {
 
@@ -173,65 +221,15 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     /**
      * 开始提示等待dialog
      */
-    protected void startDialog(@Nullable String hint) {
+    protected void startProgressDialog(@Nullable String hint) {
 
     }
 
     /**
      * 结束提示dialog
      */
-    protected void stopDialog() {
+    protected void stopProgressDialog() {
 
-    }
-
-    /**
-     * 判断字符串不为 null和 ""
-     *
-     * @param str
-     * @return
-     */
-    protected boolean notNull(String str) {
-        if (TextUtils.isEmpty(str)) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    /**
-     * TextView、EditText设置文本
-     *
-     * @param str
-     * @return
-     */
-    protected String checkStr(String str) {
-        if (notNull(str)) {
-            return str;
-        } else {
-            return "";
-        }
-    }
-
-    /**
-     * TextView、EditText设置文本
-     *
-     * @param num
-     * @return
-     */
-    protected String checkStr(Number num) {
-        if (num == null) {
-            return "";
-        } else {
-            return String.valueOf(num);
-        }
-    }
-
-    /**
-     * 按返回键
-     */
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
     }
 
     /**
@@ -244,4 +242,36 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         }
         return super.onKeyDown(keyCode, event);
     }
+
+    /**
+     * 文本不随系统字体增大儿增大
+     *
+     * @return
+     */
+    @Override
+    public Resources getResources() {
+        Resources res = super.getResources();
+        Configuration config = new Configuration();
+        config.setToDefaults();
+        res.updateConfiguration(config, res.getDisplayMetrics());
+        return res;
+    }
+
+    /**
+     * 失去焦点，软键盘自动收起
+     *
+     * @param event
+     * @return
+     */
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if (null != this.getCurrentFocus() && event.getAction() == MotionEvent.ACTION_UP) {
+            InputMethodManager mInputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            if (null != mInputMethodManager) {
+                return mInputMethodManager.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), 0);
+            }
+        }
+        return super.onTouchEvent(event);
+    }
+
 }

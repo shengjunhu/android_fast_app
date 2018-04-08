@@ -15,8 +15,6 @@ android {
         ndk { abiFilters "armeabi-v7a", "x86" }
 
         vectorDrawables.useSupportLibrary = true
-
-        resourcePrefix 'app_'
     }
 
     signingConfigs {
