@@ -34,7 +34,6 @@
   * [keyboard       :自定义键盘](/library/keyboard/Keyboard_README.md)
   * [gps            :GPS定位](/library/gps/GPS_README.md)
   * [bluetooth      :蓝牙模块](/library/bluetooth/BlueTooth_README.md)
-  * [db             :对象存储](/library/db/DB_README.md)
   * [router         :数据路由者](/library/router/Router_README.md)
   * [ndklib         :Ndk编译模块](/library/ndklib/NdkLib_README.md)
   * [xmpp           :Xmpp模块](/library/xmpp/XMPP_README.md)

@@ -39,5 +39,4 @@ include ':main:app',
         ':library:http',
         ':library:security',
         ':library:socket',
-        ':library:db',
         ':library:common'
