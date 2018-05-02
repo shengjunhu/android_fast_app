@@ -13,3 +13,5 @@
 
 2、使用fmod做变音处理（播放音频变声）
 
+3、fomd关于android 介绍文档（https://www.fmod.com/resources/documentation-api?page=content/generated/platform_android/basics.html）
+

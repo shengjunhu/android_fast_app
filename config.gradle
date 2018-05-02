@@ -17,7 +17,7 @@ ext {
     ]
 
     gradleDependencies = [
-            gradleVersion            : 'com.android.tools.build:gradle:3.0.1',                 //工程构建gradle
+            gradleVersion            : 'com.android.tools.build:gradle:3.1.2',                 //工程构建gradle
             mavenGradle              : 'com.github.dcendents:android-maven-gradle-plugin:1.5', //maven依赖
             gradleBintray            : 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3', //第三方gradle依赖
             repluginHost             : 'com.qihoo360.replugin:replugin-host-gradle:2.2.4',     //RePlugin 宿主插件框架
@@ -30,7 +30,7 @@ ext {
             compileSdkVersion        : 27,
             minSdkVersion            : 19,
             targetSdkVersion         : 27,
-            versionCode              : 1803070,
+            versionCode              : 1805010,
             versionName              : "1.0.0",
 
             isAppDebug               : true,//应用模块是否调试
@@ -43,8 +43,8 @@ ext {
     dependencies = [
 
             //support
-            multidex                 : 'com.android.support:multidex:1.0.1',
-            constraint_layout        : 'com.android.support.constraint:constraint-layout:1.0.2',
+            multidex                 : 'com.android.support:multidex:1.0.2',
+            constraint_layout        : 'com.android.support.constraint:constraint-layout:1.1.0',
             annotations              : 'com.android.support:support-annotations:27.1.1',
             design                   : 'com.android.support:design:27.1.1',
             vector_drawable          : 'com.android.support:support-vector-drawable:27.1.1',
@@ -75,7 +75,8 @@ ext {
             interceptor              : 'com.squareup.okhttp3:logging-interceptor:3.10.0',
 
             //json解析
-            gson                     : 'com.google.code.gson:gson:2.8.2',
+            gson                     : 'com.google.code.gson:gson:2.8.3',
+            fastjson                 : 'com.alibaba:fastjson:1.1.65.android',
 
             //RxJava
             rxjava                   : 'io.reactivex.rxjava2:rxjava:2.x.y',

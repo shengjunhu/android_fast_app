@@ -11,7 +11,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.1'                    //工程构建gradle
+        classpath 'com.android.tools.build:gradle:3.1.2'                    //工程构建gradle
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'    //maven依赖
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'    //第三方gradle依赖
         classpath 'com.qihoo360.replugin:replugin-host-gradle:2.2.2'        //RePlugin 宿主插件框架
