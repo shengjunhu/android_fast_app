@@ -149,8 +149,8 @@ k-download:
 ### 关于作者：
 ```
 * Author：阿军
-* Date： 2017/1/9
-* E-Mail： mr.ajun@foxmail.com
+* Date： 2018/5/1
+* E-Mail： 542370555@qq.com
 * GitHub：[GitHub](https://github.com/hushengjun)
 ```
 
