@@ -18,12 +18,13 @@ package com.hsj.push;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import com.app.push.R;
 
 public class PushMainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.app.push.R.layout.activity_push_main);
+        setContentView(R.layout.activity_push_main);
     }
 }

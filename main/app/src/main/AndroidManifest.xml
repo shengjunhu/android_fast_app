@@ -24,7 +24,7 @@
                 <data
                     android:host="192.168.1.20"
                     android:pathPattern="/main"
-                    android:scheme="http"/>
+                    android:scheme="http" />
             </intent-filter>
         </activity>
 
@@ -80,6 +80,11 @@
             android:launchMode="singleTop"
             android:screenOrientation="behind"
             android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!--适配屏幕最大高宽比-->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
 
     </application>
 

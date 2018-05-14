@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.support.annotation.ColorInt;
 import android.support.annotation.IntRange;
+import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
@@ -14,7 +15,9 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+
 import com.hsj.ui.controller.R;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
@@ -32,25 +35,22 @@ public class UIStatusBarController {
      * 状态栏兼容适配
      * 1、如果非白色状态栏，推荐使用原生兼容方案
      * 2、如果是白色状态栏，推荐原生 + 部分国产ROM方案
+     *
      * @param activity
-     * @param color     判断颜色值与白色范围
+     * @param color    通过color值决定使用light 还是 drak
      */
-    public static void setStatusBar(Activity activity, @ColorInt int color){
+    public static void setStatusBar(Activity activity, @ColorInt int color) {
+        if (Build.VERSION_CODES>=Build.VERSION_CODES.M){
+            setStatusBarAndroid();
+        }else {
 
+        }
     }
 
     /**
      * Google Android（及其他国产ROM）
      */
-    public static void setStatusBarAndroid(){
-
-    }
-
-    /**
-     * 华为Android系统
-     * http://developer.huawei.com/consumer/cn/wiki/index.php?title=%E5%8D%8E%E4%B8%BA%E6%A1%8C%E9%9D%A2%E8%A7%92%E6%A0%87%E5%BC%80%E5%8F%91%E6%8C%87%E5%AF%BC%E4%B9%A6
-     */
-    public static void setStatusBarHuaWei(){
+    public static void setStatusBarAndroid() {
 
     }
 
@@ -58,30 +58,71 @@ public class UIStatusBarController {
      * 小米系统Android系统
      * https://dev.mi.com/console/doc/detail?pId=939
      */
-    public static void setStatusBarXiaoMi(){
-
-    }
-
-    /**
-     * 魅族Android系统
-     * http://open-wiki.flyme.cn/index.php?title=%E7%8A%B6%E6%80%81%E6%A0%8F%E5%8F%98%E8%89%B2
-     */
-    public static void setStatusBarMeiZu(){
-
+    public static void setStatusBarXiaoMi() {
+        Class<? extends Window> clazz = activity.getWindow().getClass();
+        try {
+            int darkModeFlag = 0;
+            Class<?> layoutParams = Class.forName("android.view.MiuiWindowManager$LayoutParams");
+            Field field = layoutParams.getField("EXTRA_FLAG_STATUS_BAR_DARK_MODE");
+            darkModeFlag = field.getInt(layoutParams);
+            Method extraFlagField = clazz.getMethod("setExtraFlags", int.class, int.class);
+            extraFlagField.invoke(activity.getWindow(), darkmode ? darkModeFlag : 0, darkModeFlag);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**
      * OPPOAndroid系统
      * https://open.oppomobile.com/wiki/index#id=73494
      */
-    public static void setStatusBarOppo(){
+    public static void setStatusBarOppo(@NonNull Context context, boolean lightMode) {
+        int SYSTEM_UI_FLAG_OP_STATUS_BAR_TINT = 0x00000010;
+        Window window = context.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.getDecorView().setSystemUiVisibility(SYSTEM_UI_FLAG_OP_STATUS_BAR_TINT);
 
+        int vis = window.getDecorView().getSystemUiVisibility();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (lightMode) {
+                vis |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+            } else {
+                vis &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+            }
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.L) {
+            if (lightMode) {
+                vis |= SYSTEM_UI_FLAG_OP_STATUS_BAR_TINT;
+            } else {
+                vis &= ~SYSTEM_UI_FLAG_OP_STATUS_BAR_TINT;
+            }
+        }
+        window.getDecorView().setSystemUiVisibility(vis);
     }
 
-    public  static final int DEFAULT_STATUS_BAR_ALPHA = 112;
-    private static final int FAKE_STATUS_BAR_VIEW_ID  = R.id.status_bar_fake_view;
+    /**
+     * 魅族Android系统
+     * http://open-wiki.flyme.cn/index.php?title=%E7%8A%B6%E6%80%81%E6%A0%8F%E5%8F%98%E8%89%B2
+     */
+    public static void setStatusBarMeiZu() {
+        Class<? extends Window> clazz = activity.getWindow().getClass();
+        try {
+            int darkModeFlag = 0;
+            Class<?> layoutParams = Class.forName("android.view.MiuiWindowManager$LayoutParams");
+            Field field = layoutParams.getField("EXTRA_FLAG_STATUS_BAR_DARK_MODE");
+            darkModeFlag = field.getInt(layoutParams);
+            Method extraFlagField = clazz.getMethod("setExtraFlags", int.class, int.class);
+            extraFlagField.invoke(activity.getWindow(), darkmode ? darkModeFlag : 0, darkModeFlag);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public static final int DEFAULT_STATUS_BAR_ALPHA = 112;
+    private static final int FAKE_STATUS_BAR_VIEW_ID = R.id.status_bar_fake_view;
     private static final int FAKE_TRANSLUCENT_VIEW_ID = R.id.status_bar_translucent_view;
-    private static final int TAG_KEY_HAVE_SET_OFFSET  = -123;
+    private static final int TAG_KEY_HAVE_SET_OFFSET = -123;
 
     /**
      * 设置状态栏颜色
@@ -532,10 +573,12 @@ public class UIStatusBarController {
             activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
             activity.getWindow()
                     .getDecorView()
-                    .setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+                    .setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             activity.getWindow()
-                    .setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+                    .setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
+                            WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
     }
 
@@ -602,63 +645,6 @@ public class UIStatusBarController {
         green = (int) (green * a + 0.5);
         blue = (int) (blue * a + 0.5);
         return 0xff << 24 | red << 16 | green << 8 | blue;
-    }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-//                                     国产第三方ROM                                                //
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    /**
-     * 华为、vivio 、android原生系统 请参照Google原生开发
-     */
-
-    /**
-     * 小米低版本系统（处理白色状态栏黑色字体兼容问题）
-     * 详细问题请参照小米开放平台：https://dev.mi.com/console/doc/detail?pId=1159#_3
-     * @param darkMode
-     * @param activity
-     */
-    public void setMIUIStatusBar(boolean darkMode, Activity activity) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-            Class<? extends Window> clazz = activity.getWindow().getClass();
-            try {
-                int darkModeFlag = 0;
-                Class<?> layoutParams = Class.forName("android.view.MiuiWindowManager$LayoutParams");
-                Field field = layoutParams.getField("EXTRA_FLAG_STATUS_BAR_DARK_MODE");
-                darkModeFlag = field.getInt(layoutParams);
-                Method extraFlagField = clazz.getMethod("setExtraFlags", int.class, int.class);
-                extraFlagField.invoke(activity.getWindow(), darkMode ? darkModeFlag : 0, darkModeFlag);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    /**
-     * OPPO低版本系统（处理白色状态栏黑色字体兼容问题）
-     * 详细问题请参照OPPO开放平台：https://open.oppomobile.com/wiki/index#id=73494
-     * @param darkMode
-     * @param activity
-     */
-    public void setOPPOStatusBar(boolean darkMode,Activity activity) {
-        final int SYSTEM_UI_FLAG_OP_STATUS_BAR_TINT = 0x00000010;
-        Window window = activity.getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        int vis = window.getDecorView().getSystemUiVisibility();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (darkMode) {
-                vis &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
-            } else {
-                vis |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
-            }
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES. KITKAT) {
-            if (darkMode) {
-                vis &= ~SYSTEM_UI_FLAG_OP_STATUS_BAR_TINT;
-            } else {
-                vis |= SYSTEM_UI_FLAG_OP_STATUS_BAR_TINT;
-            }
-        }
-        window.getDecorView().setSystemUiVisibility(vis);
     }
 
 }

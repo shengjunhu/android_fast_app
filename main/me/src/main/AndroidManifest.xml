@@ -16,6 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--适配屏幕最大高宽比-->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+
     </application>
 
 </manifest>

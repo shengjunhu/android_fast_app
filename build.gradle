@@ -4,10 +4,10 @@ buildscript {
     
     repositories {
         google()
-        jcenter()
+        jcenter { url "http://jcenter.bintray.com" }                        //华为推送
         mavenCentral()
         maven { url 'https://dl.bintray.com/thelasterstar/maven/' }         //新浪微博
-        maven { url 'http://developer.huawei.com/repo/' }                   //华为推送
+        maven { url 'http://developer.huawei.com/repo/' }
     }
 
     dependencies {
@@ -22,10 +22,10 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
+        jcenter { url "http://jcenter.bintray.com" }                        //华为推送
         mavenCentral()
         maven { url "https://dl.bintray.com/thelasterstar/maven/" }         //新浪微博
-        maven { url 'http://developer.huawei.com/repo/' }                   //华为推送
+        maven { url 'http://developer.huawei.com/repo/' }
     }
 }
 
