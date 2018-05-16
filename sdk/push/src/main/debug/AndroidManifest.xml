@@ -2,11 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hsj.push">
 
-    <!--小米-->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <!--华为-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--小米-->
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <permission
@@ -15,7 +19,6 @@
     <uses-permission android:name="${applicationId}.permission.MIPUSH_RECEIVE" />
 
     <!--魅族 -->
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="${applicationId}.push.permission.MESSAGE" />
     <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE" />
     <permission
@@ -71,7 +74,6 @@
             <action android:name="com.huawei.intent.action.PUSH_STATE" />
         </intent-filter>
     </receiver>
-
     <receiver android:name="com.huawei.hms.support.api.push.PushEventReceiver">
         <intent-filter>
             <!-- 接收通道发来的通知栏消息 -->

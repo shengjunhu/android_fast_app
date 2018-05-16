@@ -1,13 +1,13 @@
 apply from: "config.gradle"
 
 buildscript {
-    
+
     repositories {
         google()
-        jcenter { url "http://jcenter.bintray.com" }                        //华为推送
+        jcenter()
         mavenCentral()
         maven { url 'https://dl.bintray.com/thelasterstar/maven/' }         //新浪微博
-        maven { url 'http://developer.huawei.com/repo/' }
+        maven { url 'http://developer.huawei.com/repo/' }                   //华为推送
     }
 
     dependencies {
@@ -22,10 +22,10 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter { url "http://jcenter.bintray.com" }                        //华为推送
+        jcenter()
         mavenCentral()
         maven { url "https://dl.bintray.com/thelasterstar/maven/" }         //新浪微博
-        maven { url 'http://developer.huawei.com/repo/' }
+        maven { url 'http://developer.huawei.com/repo/' }                   //华为推送
     }
 }
 
