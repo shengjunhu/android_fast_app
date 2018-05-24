@@ -67,6 +67,10 @@ ext {
             testRunner               : 'com.android.support.test:runner:1.0.1',
             testEspresso             : 'com.android.support.test.espresso:espresso-core:3.0.1',
 
+            //网络请求框架
+            kalle                    : 'com.yanzhenjie:kalle:0.1.3',
+            okalle                   : 'com.yanzhenjie:okalle:0.1.3',
+
             //retrofit
             retrofit                 : 'com.squareup.retrofit2:retrofit:2.4.0',
             retrofit_converters      : 'com.squareup.retrofit2:retrofit-converters:2.4.0',
