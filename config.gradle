@@ -43,7 +43,7 @@ ext {
     dependencies = [
 
             //support
-            multidex                 : 'com.android.support:multidex:1.0.2',
+            multidex                 : 'com.android.support:multidex:1.0.3',
             constraint_layout        : 'com.android.support.constraint:constraint-layout:1.1.0',
             annotations              : 'com.android.support:support-annotations:27.1.1',
             design                   : 'com.android.support:design:27.1.1',

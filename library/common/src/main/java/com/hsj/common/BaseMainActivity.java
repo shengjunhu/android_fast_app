@@ -16,13 +16,9 @@
 
 package com.hsj.common;
 
-import android.os.Handler;
-import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
-import com.hsj.common.thread.ThreadManager;
 
 /**
  * @Author:HSJ
@@ -53,22 +49,6 @@ public class BaseMainActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void initData() {
-
-        //执行网络线程
-        ThreadManager.executeOnNetWorkThread(new Runnable() {
-            @Override
-            public void run() {
-
-            }
-        });
-
-        //执行文件读写线程
-        ThreadManager.executeOnSubThread(new Runnable() {
-            @Override
-            public void run() {
-
-            }
-        });
 
     }
 

@@ -15,9 +15,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
-
 import com.hsj.ui.controller.R;
-
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
@@ -40,7 +38,7 @@ public class UIStatusBarController {
      * @param color    通过color值决定使用light 还是 drak
      */
     public static void setStatusBar(Activity activity, @ColorInt int color) {
-        if (Build.VERSION_CODES>=Build.VERSION_CODES.M){
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.M){
             setStatusBarAndroid();
         }else {
 
@@ -58,7 +56,7 @@ public class UIStatusBarController {
      * 小米系统Android系统
      * https://dev.mi.com/console/doc/detail?pId=939
      */
-    public static void setStatusBarXiaoMi() {
+    public static void setStatusBarXiaoMi(Activity activity,boolean darkmode) {
         Class<? extends Window> clazz = activity.getWindow().getClass();
         try {
             int darkModeFlag = 0;
@@ -76,9 +74,9 @@ public class UIStatusBarController {
      * OPPOAndroid系统
      * https://open.oppomobile.com/wiki/index#id=73494
      */
-    public static void setStatusBarOppo(@NonNull Context context, boolean lightMode) {
+    public static void setStatusBarOppo(@NonNull Activity activity, boolean lightMode) {
         int SYSTEM_UI_FLAG_OP_STATUS_BAR_TINT = 0x00000010;
-        Window window = context.getWindow();
+        Window window = activity.getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.getDecorView().setSystemUiVisibility(SYSTEM_UI_FLAG_OP_STATUS_BAR_TINT);
 
@@ -89,7 +87,7 @@ public class UIStatusBarController {
             } else {
                 vis &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
             }
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.L) {
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             if (lightMode) {
                 vis |= SYSTEM_UI_FLAG_OP_STATUS_BAR_TINT;
             } else {
@@ -103,7 +101,7 @@ public class UIStatusBarController {
      * 魅族Android系统
      * http://open-wiki.flyme.cn/index.php?title=%E7%8A%B6%E6%80%81%E6%A0%8F%E5%8F%98%E8%89%B2
      */
-    public static void setStatusBarMeiZu() {
+    public static void setStatusBarMeiZu(Activity activity,boolean darkmode) {
         Class<? extends Window> clazz = activity.getWindow().getClass();
         try {
             int darkModeFlag = 0;
