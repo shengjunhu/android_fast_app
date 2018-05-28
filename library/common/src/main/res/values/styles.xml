@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- 全局基类主题 -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppThemeCommon" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimaryDark">@color/colorBlueTheme</item>
         <item name="colorPrimary">@color/colorBlueTheme</item>
         <item name="colorAccent">@color/colorBlueTheme</item>
@@ -14,7 +14,7 @@
     </style>
 
     <!-- Activity 全屏主题 -->
-    <style name="AppFullScreenTheme" parent="AppTheme">
+    <style name="AppFullScreenTheme" parent="AppThemeCommon">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowNoTitle">true</item>
@@ -23,7 +23,7 @@
     </style>
 
     <!-- Activity 透明主题 -->
-    <style name="AppTransparentTheme" parent="AppTheme">
+    <style name="AppTransparentTheme" parent="AppThemeCommon">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowNoTitle">true</item>
