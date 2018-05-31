@@ -5,10 +5,11 @@
         <item name="colorPrimaryDark">@color/colorBlueTheme</item>
         <item name="colorPrimary">@color/colorBlueTheme</item>
         <item name="colorAccent">@color/colorBlueTheme</item>
+        <item name="android:textColorPrimary">@color/colorWhiteTheme</item>
+        <item name="android:textColorSecondary">@color/colorWhiteTheme</item>
         <item name="colorControlNormal">@color/colorWhiteTheme</item>
         <item name="colorButtonNormal">@color/colorBlueTheme</item>
         <item name="android:textAllCaps">false</item>
-        <item name="android:textColorPrimary">@color/colorWhiteTheme</item>
         <item name="android:windowBackground">@color/colorWhiteTheme</item>
         <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorBlueTheme</item>
     </style>
