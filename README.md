@@ -12,7 +12,7 @@
   * [home           :应用首页插件](/main/home/Home_README.md)
   * [shop           :应用商城插件](/main/shop/Shop_README.md)
   * [chat           :应用聊天插件](/main/chat/Chat_README.md)
-  * [discover       :应用发现模块](/main/discover/Discover_README.md)
+  * [discover       :应用发现插件](/main/discover/Discover_README.md)
   * [me             :应用我的插件](/main/me/Me_README.md)
  
 ### 常用功能库library:
