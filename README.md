@@ -8,7 +8,7 @@
 
 ## 结构组成：
 ### 主工程main：
-  * [app            :应用宿主程序](/main/pp/App_README.md)
+  * [app            :应用宿主程序](/main/app/App_README.md)
   * [home           :应用首页插件](/main/home/Home_README.md)
   * [shop           :应用商城插件](/main/shop/Shop_README.md)
   * [chat           :应用聊天插件](/main/chat/Chat_README.md)
@@ -149,8 +149,8 @@ k-download:
 ### 关于作者：
 ```
 * Author：阿军
-* Date： 2018/5/1
-* E-Mail： 542370555@qq.com
+* Date： 2018/7/1
+* E-Mail： shengjunhu@foxmail.com
 * GitHub：[GitHub](https://github.com/hushengjun)
 ```
 
