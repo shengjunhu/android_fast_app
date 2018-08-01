@@ -45,24 +45,23 @@ android {
             }
         }
     }
-
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation rootProject.ext.dependencies.appcompat_v7
-    implementation rootProject.ext.dependencies.constraint_layout
     testImplementation rootProject.ext.dependencies.testJunit
     androidTestImplementation rootProject.ext.dependencies.testRunner
     androidTestImplementation rootProject.ext.dependencies.testEspresso
+    implementation rootProject.ext.dependencies.appcompat_v7
+    implementation rootProject.ext.dependencies.constraint_layout
 
     //Retrofit2
     implementation rootProject.ext.dependencies.retrofit
     //Retrofit2和RxJava2适配器
-    implementation rootProject.ext.dependencies.retrofit_adapters
+    implementation rootProject.ext.dependencies.retrofit_rxjava2
     //转换器：采用自定义FastJson转换器
-    implementation rootProject.ext.dependencies.retrofit_converters
+    implementation rootProject.ext.dependencies.retrofit_gson
     //拦截器
     implementation rootProject.ext.dependencies.interceptor
 
@@ -71,6 +70,5 @@ dependencies {
     implementation rootProject.ext.dependencies.rxandroid
 
     //Json解析：采用FastJson解析
-    //implementation rootProject.ext.dependencies.gson
-    implementation rootProject.ext.dependencies.fastjson
+    implementation rootProject.ext.dependencies.gson
 }

@@ -73,10 +73,10 @@ ext {
 
             //retrofit
             retrofit                 : 'com.squareup.retrofit2:retrofit:2.4.0',
-            retrofit_converters      : 'com.squareup.retrofit2:retrofit-converters:2.4.0',
-            retrofit_adapters        : 'com.squareup.retrofit2:retrofit-adapters:2.4.0',
-            okhttp3                  : 'com.squareup.okhttp3:okhttp:3.10.0',
-            interceptor              : 'com.squareup.okhttp3:logging-interceptor:3.10.0',
+            retrofit_gson            : 'com.squareup.retrofit2:converter-gson:2.4.0',
+            retrofit_rxjava2         : 'com.squareup.retrofit2:adapter-rxjava2:2.4.0',
+            okhttp3                  : 'com.squareup.okhttp3:okhttp:3.11.0',
+            interceptor              : 'com.squareup.okhttp3:logging-interceptor:3.11.0',
 
             //json解析
             gson                     : 'com.google.code.gson:gson:2.8.5',
