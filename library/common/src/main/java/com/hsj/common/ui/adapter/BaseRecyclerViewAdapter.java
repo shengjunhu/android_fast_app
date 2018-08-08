@@ -1,12 +1,11 @@
 package com.hsj.common.ui.adapter;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+
 import java.util.List;
 
 /**
@@ -20,12 +19,12 @@ import java.util.List;
  */
 public abstract class BaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<BaseRecyclerViewAdapter.ViewHolder> {
 
-    private Context context;
+    public final String TAG = this.getClass().getName();
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        context = parent.getContext();
-        return new ViewHolder(LayoutInflater.from(context).inflate(setItemView(), parent, false));
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(setItemView(), parent, false);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -39,15 +38,6 @@ public abstract class BaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<Ba
             super(itemView);
             bindItemView(itemView);
         }
-    }
-
-    /**
-     * 土司
-     *
-     * @param msg
-     */
-    public void showToast(@NonNull String msg) {
-        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
     }
 
     /**
