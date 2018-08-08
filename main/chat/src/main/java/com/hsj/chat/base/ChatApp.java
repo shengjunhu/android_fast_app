@@ -20,7 +20,7 @@ import com.hsj.common.core.BaseApp;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/10/27/10:13
  * @Class:AppChat
  * @Description:

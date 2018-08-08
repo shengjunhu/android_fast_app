@@ -22,7 +22,7 @@ import com.hsj.common.ui.activity.BaseActivity;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/14/14:24
  * @Class:VideoSelectActivity
  * @Description:选择视屏界面

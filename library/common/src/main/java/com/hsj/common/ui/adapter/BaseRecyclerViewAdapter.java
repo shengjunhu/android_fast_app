@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * @Company:南京荣之誉信息科技有限公司
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/12/8/10:33
  * @Version:XBS V2.0
  * @Class:BaseRecyclerViewAdapter

@@ -22,7 +22,7 @@ import java.lang.reflect.Method;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/5/27 16:39
  * @Class:Logger
  * @Description:日志工具类(调试、错误日志收集、删除)

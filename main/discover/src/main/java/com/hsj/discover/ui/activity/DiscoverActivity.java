@@ -24,7 +24,7 @@ import com.app.discover.ui.fragment.DiscoverFragment;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/14/09:46
  * @Class:DiscoverActivity
  * @Description:

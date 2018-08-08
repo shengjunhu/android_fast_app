@@ -2,7 +2,7 @@ package com.hsj.http.callback;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/1 09:45
  * @Class:CallBack
  * @Description: 网络回调过程

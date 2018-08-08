@@ -20,7 +20,7 @@ package com.hsj.ui.kit.indexbar;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/7/18 13:35
  * @Class:ListIndexBar
  * @Description:列表索引bar(联系人)

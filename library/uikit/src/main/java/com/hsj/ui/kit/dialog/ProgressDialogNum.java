@@ -20,7 +20,7 @@ package com.hsj.ui.kit.dialog;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/8/17 10:20
  * @Class:ProgressDialogNum
  * @Description:上传下载进度条

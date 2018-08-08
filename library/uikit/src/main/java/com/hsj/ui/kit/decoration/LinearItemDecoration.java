@@ -18,7 +18,7 @@ package com.hsj.ui.kit.decoration;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2018/4/3/13:46
  * @Version:V1.0
  * @Class:LinearItemDecoration

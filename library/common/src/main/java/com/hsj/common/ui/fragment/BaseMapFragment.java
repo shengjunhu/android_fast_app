@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/08/06 22:24
  * @Class:BaseMapFragment
  * @Description:地图Fragment

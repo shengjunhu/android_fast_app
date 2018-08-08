@@ -36,7 +36,7 @@ import com.tencent.smtt.sdk.WebViewClient;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2018/3/21/13:32
  * @Version:V1.0
  * @Class:X5WebView

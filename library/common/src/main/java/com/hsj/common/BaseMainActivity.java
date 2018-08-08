@@ -22,7 +22,7 @@ import android.view.View;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017-06-15 23:50
  * @Class:BaseMainActivity
  * @Description:common测试类

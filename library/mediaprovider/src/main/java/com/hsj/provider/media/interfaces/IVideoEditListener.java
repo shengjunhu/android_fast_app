@@ -17,7 +17,7 @@ package com.hsj.provider.media.interfaces;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/14/17:07
  * @Class:IVideoEditListener
  * @Description:video编辑监听

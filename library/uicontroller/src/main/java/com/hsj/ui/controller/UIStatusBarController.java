@@ -21,7 +21,7 @@ import java.lang.reflect.Method;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/5/27 15:17
  * @Class:UIStatusBarController
  * @Description:状态栏控制者

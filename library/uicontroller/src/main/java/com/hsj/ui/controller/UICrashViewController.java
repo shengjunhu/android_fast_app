@@ -7,7 +7,7 @@ import android.view.View;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/7/3 09:32
  * @Class:UICrashViewController
  * @Description:应用崩溃提示视图

@@ -7,7 +7,7 @@ import com.hsj.common.ui.fragment.BaseFragment;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/13 17:15
  * @Class:PhotoAddSkinFragment
  * @Description:添加磨皮美肤

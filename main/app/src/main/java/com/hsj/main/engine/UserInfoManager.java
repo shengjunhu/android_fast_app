@@ -18,7 +18,7 @@ package com.hsj.main.engine;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/7/21/15:31
  * @Class:UserInfoManager
  * @Description:用户管理者

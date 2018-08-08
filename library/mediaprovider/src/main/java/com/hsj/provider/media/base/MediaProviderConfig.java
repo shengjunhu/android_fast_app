@@ -17,7 +17,7 @@ package com.hsj.provider.media.base;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/14/15:06
  * @Class:MediaProviderConfig
  * @Description:媒体文件提供者配置

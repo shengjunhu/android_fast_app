@@ -20,7 +20,7 @@ package com.hsj.manager.task;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/8/16 09:56
  * @Class:DownLoadManager
  * @Description:使用系统自带下载用于更新apk

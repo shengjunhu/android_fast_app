@@ -4,7 +4,7 @@ import com.hsj.http.BuildConfig;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/12 12:51
  * @Class:HttpConstant
  * @Description:

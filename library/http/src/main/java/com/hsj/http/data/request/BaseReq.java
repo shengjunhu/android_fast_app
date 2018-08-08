@@ -20,7 +20,7 @@ package com.hsj.http.data.request;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/8/17 11:02
  * @Class:BaseReq
  * @Description:单个字符串请求体

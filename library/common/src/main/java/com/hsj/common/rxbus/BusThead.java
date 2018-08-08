@@ -25,7 +25,7 @@ import java.lang.annotation.Target;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2018/2/25/14:18
  * @Version:V1.0
  * @Class:BusThead

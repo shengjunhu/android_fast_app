@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/23 12:49
  * @Class:XRecycleViewAdapter
  * @Description:

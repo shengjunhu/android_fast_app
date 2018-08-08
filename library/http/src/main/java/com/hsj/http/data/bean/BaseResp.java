@@ -2,7 +2,7 @@ package com.hsj.http.data.bean;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/18/12:48
  * @Class:BaseResp
  * @Description:网络响应体

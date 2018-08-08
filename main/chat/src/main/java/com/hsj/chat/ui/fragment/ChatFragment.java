@@ -23,7 +23,7 @@ import com.app.chat.R;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/10/26/15:42
  * @Class:ChatFragment
  * @Description:

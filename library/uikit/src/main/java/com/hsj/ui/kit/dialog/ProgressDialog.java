@@ -20,7 +20,7 @@ package com.hsj.ui.kit.dialog;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/8/16 11:15
  * @Class:ProgressDialog
  * @Description:等待提示

@@ -23,7 +23,7 @@ import com.hsj.common.ui.activity.BaseActivity;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/7/24/10:09
  * @Class:AdvertActivity
  * @Description:广告页

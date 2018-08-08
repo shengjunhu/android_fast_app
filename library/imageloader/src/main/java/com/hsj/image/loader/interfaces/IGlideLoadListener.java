@@ -2,7 +2,7 @@ package com.hsj.image.loader.interfaces;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/14/11:16
  * @Class:IGlideLoadListener
  * @Description:Glide加载图片监听

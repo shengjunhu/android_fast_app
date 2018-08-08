@@ -20,7 +20,7 @@ package com.hsj.manager.task;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/7/31 13:32
  * @Description:后台上传任务管理器
  */

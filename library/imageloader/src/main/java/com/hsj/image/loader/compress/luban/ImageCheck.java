@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/18/20:17
  * @Class:ImageCheck
  * @Description:图片检测

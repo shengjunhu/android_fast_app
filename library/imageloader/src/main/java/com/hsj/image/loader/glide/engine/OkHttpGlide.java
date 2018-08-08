@@ -20,7 +20,7 @@ import java.io.InputStream;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/15 10:21
  * @Class:OkHttpGlide
  * @Description:图片加载者

@@ -36,7 +36,7 @@ import java.util.List;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/5/27 14:52
  * @Class:AppBaseActivity
  * @Description:Activity基类：初始化UI、初始化数据、强制刷新数据、生命周期控制

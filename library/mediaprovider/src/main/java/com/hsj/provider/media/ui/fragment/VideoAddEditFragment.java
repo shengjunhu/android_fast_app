@@ -22,7 +22,7 @@ import com.hsj.common.ui.fragment.BaseFragment;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/13 16:55
  * @Class:VideoAddEditFragment
  * @Description:Video编辑：压缩分辨率、帧率画质

@@ -20,7 +20,7 @@ import android.support.v7.app.AppCompatActivity;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2018/2/4/16:41
  * @Version:V1.0
  * @Class:NotificationActivity

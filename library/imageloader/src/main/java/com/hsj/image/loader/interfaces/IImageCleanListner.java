@@ -2,7 +2,7 @@ package com.hsj.image.loader.interfaces;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/13 15:43
  * @Class:IImageCleanListner
  * @Description:图片清理接口

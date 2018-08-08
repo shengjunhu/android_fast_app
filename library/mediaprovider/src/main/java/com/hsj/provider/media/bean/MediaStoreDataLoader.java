@@ -29,7 +29,7 @@ import java.util.List;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/14/13:54
  * @Class:MediaStoreDataLoader
  * @Description:媒体数据加载

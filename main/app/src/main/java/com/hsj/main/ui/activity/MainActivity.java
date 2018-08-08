@@ -31,7 +31,7 @@ import java.util.List;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/14/09:46
  * @Class:AppMainActivity
  * @Description:应用主页

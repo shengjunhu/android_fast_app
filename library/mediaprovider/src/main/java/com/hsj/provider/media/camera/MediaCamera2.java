@@ -17,7 +17,7 @@ package com.hsj.provider.media.camera;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/14/17:33
  * @Class:MediaCamera2
  * @Description:SDK>=21使用Camera2

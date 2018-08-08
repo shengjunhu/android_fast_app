@@ -4,7 +4,7 @@ import com.hsj.common.annotations.NetType;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/06/30/00:34
  * @Class:NetworkStateListener
  * @Description:网络状态监听

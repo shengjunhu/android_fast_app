@@ -22,7 +22,7 @@ import com.hsj.common.ui.activity.BaseActivity;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/14/14:26
  * @Class:VideoEditActivity
  * @Description:视屏编辑

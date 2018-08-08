@@ -20,7 +20,7 @@ package com.hsj.http.data.response;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/8/17 10:57
  * @Class:LoginResp
  * @Description:

@@ -2,7 +2,7 @@ package com.hsj.socket;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/8 10:33
  * @Class:SocketListener
  * @Description:Socket监听

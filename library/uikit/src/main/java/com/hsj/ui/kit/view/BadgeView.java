@@ -2,7 +2,7 @@ package com.hsj.ui.kit.view;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2018/1/10/12:55
  * @Version:V1.0
  * @Class:BadgeView

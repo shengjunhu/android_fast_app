@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/15 10:21
  * @Class:XImageLoader
  * @Description:图片加载工具类

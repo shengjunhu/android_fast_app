@@ -10,7 +10,7 @@ import java.security.MessageDigest;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/14 11:10
  * @Class:GlideCircleTransform
  * @Description:Glide加载圆形图

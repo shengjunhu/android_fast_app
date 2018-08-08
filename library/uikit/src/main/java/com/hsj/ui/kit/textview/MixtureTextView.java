@@ -18,7 +18,7 @@ package com.hsj.ui.kit.textview;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2018/4/4/10:18
  * @Version:V1.0
  * @Class:MixtureTextView

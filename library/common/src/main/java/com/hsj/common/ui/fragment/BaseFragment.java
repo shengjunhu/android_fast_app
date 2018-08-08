@@ -21,7 +21,7 @@ import java.util.List;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/5/27 14:52
  * @Class:AppBaseFragment
  * @Description:普通Fragment、数据本地初始化
@@ -34,7 +34,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (rootView == null) {
 
             rootView = inflater.inflate(getLayoutId(), container, false);

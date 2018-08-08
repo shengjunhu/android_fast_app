@@ -7,7 +7,7 @@ import com.hsj.common.ui.activity.BaseActivity;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/9 09:24
  * @Class:ImagePreviewActivity
  * @Description:图片预览

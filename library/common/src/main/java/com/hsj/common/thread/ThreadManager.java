@@ -28,7 +28,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017-06-15 23:50
  * @Class:ThreadManager
  * @Description:异步任务管理
@@ -120,7 +120,7 @@ public final class ThreadManager {
     public static Handler getFileThreadHandler() {
         if (FILE_THREAD_HANDLER == null) {
             synchronized (ThreadManager.class) {
-                FILE_THREAD = new HandlerThread("APP_FILE_RW");
+                FILE_THREAD = new HandlerThread("APP_FILE");
                 FILE_THREAD.start();
                 FILE_THREAD_HANDLER = new Handler(FILE_THREAD.getLooper());
             }

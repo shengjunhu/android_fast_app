@@ -6,7 +6,7 @@ import okhttp3.Response;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/08/08 00:05
  * @Class:CacheInterceptor
  * @Description:缓存拦截器

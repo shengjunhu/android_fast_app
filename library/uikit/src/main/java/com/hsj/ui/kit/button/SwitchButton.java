@@ -21,7 +21,7 @@ import com.hsj.ui.kit.R;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/2 17:16
  * @Class:SwitchButton
  * @Description:选择按钮

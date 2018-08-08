@@ -12,7 +12,7 @@ import java.io.IOException;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/18/20:17
  * @Class:IImageCompressListener
  * @Description:负责启动压缩和管理活动资源和缓存资源。

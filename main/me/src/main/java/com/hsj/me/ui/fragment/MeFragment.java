@@ -24,7 +24,7 @@ import com.app.me.R;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/14/09:45
  * @Class:MeFragment
  * @Description:

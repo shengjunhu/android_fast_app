@@ -7,7 +7,7 @@ import android.widget.BaseAdapter;
 /**
  * @Company:南京荣之誉信息科技有限公司
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/23 12:53
  * @Version:XBS V2.0
  * @Class:XGridViewAdapter

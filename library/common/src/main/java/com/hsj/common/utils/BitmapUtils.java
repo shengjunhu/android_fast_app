@@ -63,7 +63,7 @@ import java.io.OutputStream;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2018/2/4/18:16
  * @Version:V1.0
  * @Class:BitmapUtils

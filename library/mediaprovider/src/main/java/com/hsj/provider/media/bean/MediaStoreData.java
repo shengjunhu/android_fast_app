@@ -21,7 +21,7 @@ import android.os.Parcelable;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/14/13:52
  * @Class:MediaStoreData
  * @Description:媒体数据类型

@@ -10,7 +10,7 @@ import retrofit2.Converter;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/18/13:39
  * @Class:FastJsonResponseBodyConverter
  * @Description:FastJson响应体解析起

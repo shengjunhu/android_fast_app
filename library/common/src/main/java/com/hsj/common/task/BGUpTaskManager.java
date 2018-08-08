@@ -20,7 +20,7 @@ package com.hsj.common.task;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/7/31 13:32
  * @Version:XBS V2.0
  * @Description:后台上传任务管理器

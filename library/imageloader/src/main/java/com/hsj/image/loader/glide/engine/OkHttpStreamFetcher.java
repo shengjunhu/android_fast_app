@@ -23,7 +23,7 @@ import okhttp3.ResponseBody;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/18/15:39
  * @Class:OkHttpStreamFetcher
  * @Description:OkHttp请求图片访问流

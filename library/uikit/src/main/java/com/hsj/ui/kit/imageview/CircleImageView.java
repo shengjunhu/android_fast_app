@@ -48,7 +48,7 @@ import com.hsj.ui.kit.R;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/8/16 11:27
  * @Class:CircleImageView
  * @Description:圆形图片

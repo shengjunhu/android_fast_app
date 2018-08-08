@@ -2,7 +2,7 @@ package com.hsj.ui.kit.dialog;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/2 17:05
  * @Class:TimeSelectorDialog
  * @Description:界面底部弹出时间选择器

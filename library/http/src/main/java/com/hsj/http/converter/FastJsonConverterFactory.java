@@ -14,7 +14,7 @@ import retrofit2.Retrofit;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/18/13:37
  * @Class:FastJsonConverterFactory
  * @Description:FastJson转换器

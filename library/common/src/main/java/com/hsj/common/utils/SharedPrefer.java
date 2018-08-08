@@ -24,7 +24,7 @@ import java.util.Set;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/5/27 16:43
  * @Class:SharedPrefer
  * @Description:SharedPreferences管理者

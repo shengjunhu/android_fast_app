@@ -18,7 +18,7 @@ package com.hsj.ui.kit.refresh;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2018/2/8/15:46
  * @Version:V1.0
  * @Class:RefreshContent

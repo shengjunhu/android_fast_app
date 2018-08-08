@@ -7,7 +7,7 @@ import android.support.annotation.Nullable;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/06/30 00:35
  * @Class:LocationService
  * @Description:

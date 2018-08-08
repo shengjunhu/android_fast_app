@@ -2,7 +2,7 @@ package com.hsj.ui.kit.dialog;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/2 17:09
  * @Class:SweetDialog
  * @Description:温馨提示对话框

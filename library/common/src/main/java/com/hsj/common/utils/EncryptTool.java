@@ -31,7 +31,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/5/27 16:42
  * @Class:EncryptTool
  * @Description:加密、解密工具类

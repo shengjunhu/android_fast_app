@@ -21,7 +21,7 @@ import java.util.List;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/14/15:26
  * @Class:MediaCallback
  * @Description:媒体文件回调

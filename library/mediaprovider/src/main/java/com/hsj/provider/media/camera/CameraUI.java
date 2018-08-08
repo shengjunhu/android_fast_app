@@ -2,7 +2,7 @@ package com.hsj.provider.media.camera;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/13 16:25
  * @Class:CameraUI
  * @Description:Camera界面效果

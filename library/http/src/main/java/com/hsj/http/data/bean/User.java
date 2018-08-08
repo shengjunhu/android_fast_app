@@ -20,7 +20,7 @@ package com.hsj.http.data.bean;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/8/17 11:02
  * @Class:User
  * @Description:

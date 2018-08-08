@@ -11,7 +11,7 @@ import retrofit2.http.Path;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/1 09:39
  * @Class:APIService
  * @Description:网络请求接口，接口文档支持动态配置

@@ -13,7 +13,7 @@ import okhttp3.OkHttpClient;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/18/15:36
  * @Class:OkHttpUrlLoader
  * @Description:使用OkHttp3加载网络图片

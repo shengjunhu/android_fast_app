@@ -7,7 +7,7 @@ import android.widget.ListView;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/10/9/16:08
  * @Class:RecyclerToListViewScrollListener
  * @Description:RecyclerView滑动监听

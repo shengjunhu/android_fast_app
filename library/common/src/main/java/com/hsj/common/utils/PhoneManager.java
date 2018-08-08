@@ -28,7 +28,7 @@ import com.hsj.common.annotations.NetType;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/5/27 16:41
  * @Class:PhoneManager
  * @Description:手机相关工具类

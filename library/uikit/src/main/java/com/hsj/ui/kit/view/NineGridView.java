@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/13 17:04
  * @Class:NineGridView
  * @Description:图片显示九宫格

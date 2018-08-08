@@ -23,7 +23,7 @@ import com.hsj.common.ui.activity.BaseActivity;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/5/27/15:30
  * @Class:AppRegisterActivity
  * @Description:应用注册和找回密码界面

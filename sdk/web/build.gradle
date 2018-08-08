@@ -18,7 +18,7 @@ android {
 
         testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
 
-        ndk { abiFilters "armeabi","armeabi-v7a", "x86" }
+        ndk { abiFilters "armeabi"}
     }
 
     buildTypes {
@@ -48,6 +48,6 @@ dependencies {
     implementation rootProject.ext.dependencies.appcompat_v7
     implementation rootProject.ext.dependencies.constraint_layout
 
-    implementation files('libs/tbs_v3.6.0_20180211.jar')
+    implementation files('libs/tbs_sdk_20180718.jar')
     implementation project(':library:common')
 }

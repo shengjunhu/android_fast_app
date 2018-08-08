@@ -20,7 +20,7 @@ package com.hsj.xmpp;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/8/11 19:20
  * @Class:XmmppConnection
  * @Description:

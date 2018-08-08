@@ -12,7 +12,7 @@ import java.io.InputStream;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/18/15:40
  * @Class:OkHttpLibraryGlideModule
  * @Description:

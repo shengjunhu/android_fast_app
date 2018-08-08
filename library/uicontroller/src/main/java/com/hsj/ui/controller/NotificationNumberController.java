@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/12/8/13:08
  * @Class:NotificationNumberController
  * @Description:桌面图标读消息数量提示

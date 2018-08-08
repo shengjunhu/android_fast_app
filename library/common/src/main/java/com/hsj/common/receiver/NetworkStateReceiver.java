@@ -6,7 +6,7 @@ import android.content.Intent;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/10/30/14:21
  * @Class:NetworkStateReceiver
  * @Description:

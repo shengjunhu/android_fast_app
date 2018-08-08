@@ -2,7 +2,7 @@ package com.hsj.ui.kit.dialog;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/12/6/18:52
  * @Class:AddressSelectorDialog
  * @Description:界面底部地址选择器

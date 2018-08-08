@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/2 17:26
  * @Class:CustomImageView
  * @Description:自定义图片圆角、方角

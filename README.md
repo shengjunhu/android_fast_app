@@ -1,7 +1,7 @@
 # FastAndroid
 工作中Android开发用的项目框架：模块化、组件化开发，可快速集成
 
-## 开发框架：
+### 开发框架：
 * 1、MVC框架 ： 使用简单（结合DataBinding更好用）
 * 2、MVP框架 ： 高解耦、提高维护效率、类文件多（View、Data、IPresenter、IContract）
 * 3、MVVM框架： 使用简单（结合DataBinding更好用）
@@ -23,34 +23,27 @@
   * [uikit          :自定义控件库](/library/uikit/UIKit_README.md)
   * [http           :网络请求库](/library/http/Http_README.md)
   * [imageloader    :图片加载库](/library/imageloader/ImageLoader_README.md)
-  * [percentlayout  :百分比布局库](/library/percentlayout/PercentLayout_README.md)
   * [audioprovider  :音频提供者](/library/audioprovider/AudioProvider_README.md)
   * [qrprovider     :二维码提供者](/library/qrprovider/QRProvider_README.md)
   * [ocr            :图片识别库](/library/ocr/OCR_README.md)
-  * [photoprovider  :图片提供者](/library/photoprovider/PhotoProvider_README.md)
   * [mediaprovider  :视屏图片音频提供者](/library/mediaprovider/MediaProvider_README.md)
   * [fileprovider   :文件提供者](/library/fileprovider/FileProvider_README.md)
   * [videoplayer    :视屏播放器](/library/videoplayer/VideoPlayer_README.md)
   * [keyboard       :自定义键盘](/library/keyboard/Keyboard_README.md)
   * [gps            :GPS定位](/library/gps/GPS_README.md)
   * [bluetooth      :蓝牙模块](/library/bluetooth/BlueTooth_README.md)
-  * [router         :数据路由者](/library/router/Router_README.md)
-  * [ndklib         :Ndk编译模块](/library/ndklib/NdkLib_README.md)
   * [xmpp           :Xmpp模块](/library/xmpp/XMPP_README.md)
   * [socket         :socket模块](/library/socket/Socket_README.md)
   * [ar             :Ar录制与播放](/library/ar/AR_README.md)
   * [u3d            :Unity3d模块](/library/u3d/U3D_README.md)
   
 ### 第三方SDK库:
+  * [map            :地图](/sdk/map/Map_README.md)
+  * [oss            :七牛云存储](/sdk/oss/OSS_README.md)
   * [auth           :第三方登陆、分享模块（qq、微信、微博）](/sdk/auth/Auth_README.md)
   * [pay            :支付宝、微信](/sdk/pay/Pay_README.md)
   * [push           :极光、小米、华为、魅族推送](/sdk/push/Push_README.md)
-  * [mapbaidu       :百度地图](/sdk/mapbaidu/MapBaidu_README.md)
-  * [cloudbaidu     :百度云存储](/sdk/cloudbaidu/CloudBaidu_README.md)
-  * [mapa           :高德地图](/sdk/mapa/AMap_README.md)
-  * [cloudqiniu     :七牛云存储](/sdk/cloudqiniu/CloudQiNiu_README.md)
   * [web            :TBS X5 web模块](/sdk/web/Web_README.md)
-  * [bugly          :热修复](/sdk/bugly/Bugly_README.md)
   * [im             :及时通讯](/sdk/im/IM_README.md)
 
 ### 关于缓存：

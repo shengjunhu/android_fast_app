@@ -19,7 +19,7 @@ import android.widget.ScrollView;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/11/14/10:00
  * @Class:RefreshLayout
  * @Description:刷新布局

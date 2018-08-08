@@ -23,7 +23,7 @@ import com.hsj.common.ui.activity.BaseActivity;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/8/14/10:15
  * @Class:WXPayActivity
  * @Description:支付回调界面

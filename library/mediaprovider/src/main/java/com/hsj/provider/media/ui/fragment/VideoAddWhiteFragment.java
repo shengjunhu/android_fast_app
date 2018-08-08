@@ -22,7 +22,7 @@ import com.hsj.common.ui.fragment.BaseFragment;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/13 17:01
  * @Class:VideoAddWhiteFragment
  * @Description:Video图片美白

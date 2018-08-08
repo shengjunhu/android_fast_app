@@ -26,7 +26,7 @@ import java.util.List;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/19/15:23
  * @Class:FileManager
  * @Description:文件管理者

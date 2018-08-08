@@ -2,7 +2,7 @@ package com.hsj.provider.media.bean;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/13 14:28
  * @Class:MediaInfo
  * @Description:媒体文件实体

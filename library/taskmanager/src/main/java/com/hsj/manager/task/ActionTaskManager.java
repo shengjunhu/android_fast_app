@@ -20,7 +20,7 @@ package com.hsj.manager.task;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/8/11 19:22
  * @Class:ActionTaskManager
  * @Description:

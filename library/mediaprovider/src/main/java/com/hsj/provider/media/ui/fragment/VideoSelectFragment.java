@@ -22,7 +22,7 @@ import com.hsj.common.ui.fragment.BaseFragment;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/14/14:25
  * @Class:VideoSelectFragment
  * @Description:选择视屏Fragment

@@ -25,7 +25,7 @@ import com.app.me.ui.fragment.MeFragment;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/14/09:46
  * @Class:MeActivity
  * @Description:

@@ -12,7 +12,7 @@ import com.bumptech.glide.RequestManager;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/10/9/16:07
  * @Class:RecyclerViewPreloader
  * @Description:glide在RecyclerView中预加载

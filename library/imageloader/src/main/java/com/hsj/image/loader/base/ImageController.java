@@ -2,7 +2,7 @@ package com.hsj.image.loader.base;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/13 15:33
  * @Class:ImageController
  * @Description:图片操作类

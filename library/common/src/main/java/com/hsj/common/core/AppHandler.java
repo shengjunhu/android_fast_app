@@ -4,7 +4,7 @@ import android.os.Handler;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/28 10:27
  * @Class:HandlerController
  * @Description:全局Handler--防止handler泄漏

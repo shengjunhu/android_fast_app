@@ -31,7 +31,7 @@ import android.widget.Toast;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/7/25 12:50
  * @Class:BaseWebFragment
  * @Description:web加载基类

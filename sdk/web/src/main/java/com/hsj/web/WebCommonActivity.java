@@ -22,7 +22,7 @@ import android.support.v7.app.AppCompatActivity;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2018/4/2/09:52
  * @Version:V1.0
  * @Class:WebCommonActivity

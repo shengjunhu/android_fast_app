@@ -18,7 +18,7 @@ package com.hsj.discover.base;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/12/5/11:17
  * @Class:DiscoverConstant
  * @Description:

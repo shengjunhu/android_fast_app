@@ -7,7 +7,7 @@ import okhttp3.Response;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/08/07 23:31
  * @Class:LogInterceptor
  * @Description:拦截网络日志

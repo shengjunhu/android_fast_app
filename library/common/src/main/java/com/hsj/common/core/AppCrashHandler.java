@@ -4,7 +4,7 @@ import android.content.Context;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/12/25/13:00
  * @Class:AppCrashHandler
  * @Description:全局异常抓捕类

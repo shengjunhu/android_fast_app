@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/2 14:08
  * @Class:BaseApp
  * @Description:基本Application

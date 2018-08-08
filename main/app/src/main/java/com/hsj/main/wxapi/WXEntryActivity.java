@@ -23,7 +23,7 @@ import com.hsj.common.ui.activity.BaseActivity;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/23/10:20
  * @Class:WXEntryActivity
  * @Description:登陆、分享回调界面

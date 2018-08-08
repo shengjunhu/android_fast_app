@@ -22,7 +22,7 @@ import com.hsj.common.ui.fragment.BaseFragment;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/9/14/14:27
  * @Class:VideoCutFragment
  * @Description:Video剪切时间段

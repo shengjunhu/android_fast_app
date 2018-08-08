@@ -2,7 +2,7 @@ package com.hsj.common.core;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/5/27 15:17
  * @Class:BaseConstant
  * @Description:常量

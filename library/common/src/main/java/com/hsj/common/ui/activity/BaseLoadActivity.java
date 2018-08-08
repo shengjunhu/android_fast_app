@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/5/27 14:52
  * @Class:AppBaseActivity
  * @Description:界面数据全部来源网络，继承此activity

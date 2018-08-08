@@ -6,7 +6,7 @@ import com.hsj.common.ui.activity.BaseActivity;
 
 /**
  * @Author:HSJ
- * @E-mail:mr.ajun@foxmail.com
+ * @E-mail:shengjunhu@foxmail.com
  * @Date:2017/6/9 09:27
  * @Class:ImageEidtActivity
  * @Description:编辑图片
