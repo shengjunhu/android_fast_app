@@ -1,21 +1,109 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- 全局基类主题 -->
-    <style name="AppThemeCommon" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimaryDark">@color/colorBlueTheme</item>
-        <item name="colorPrimary">@color/colorBlueTheme</item>
-        <item name="colorAccent">@color/colorBlueTheme</item>
-        <item name="android:textColorPrimary">@color/colorWhiteTheme</item>
-        <item name="android:textColorSecondary">@color/colorWhiteTheme</item>
-        <item name="colorControlNormal">@color/colorWhiteTheme</item>
-        <item name="colorButtonNormal">@color/colorBlueTheme</item>
+    <!--Activity白色主题-->
+    <style name="AppThemeWhite" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--状态栏颜色-->
+        <item name="colorPrimaryDark">@color/colorThemeWhite</item>
+        <!--顶部导航栏颜色-->
+        <item name="colorPrimary">@color/colorThemeWhite</item>
+        <!--控件选中颜色-->
+        <item name="colorAccent">@color/colorThemeBlack</item>
+        <!--Toolbar title上的颜色-->
+        <item name="android:textColorPrimary">@color/colorText3</item>
+        <!--Toolbar 三个点菜单颜色-->
+        <item name="android:textColorSecondary">@color/colorText3</item>
+        <!--控件的默认颜色-->
+        <item name="colorControlNormal">@color/colorText3</item>
+        <!--按钮的默认颜色-->
+        <item name="colorButtonNormal">@color/colorThemeWhite</item>
+        <!--不才用大写英文-->
         <item name="android:textAllCaps">false</item>
-        <item name="android:windowBackground">@color/colorWhiteTheme</item>
-        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorBlueTheme</item>
+        <!--高亮使用黑色文字-->
+        <item name="android:windowLightStatusBar" tools:targetApi="M">true</item>
+        <!--屏幕底部虚拟键颜色-->
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorThemeWhite</item>
     </style>
 
-    <!-- Activity 全屏主题 -->
-    <style name="AppFullScreenTheme" parent="AppThemeCommon">
+    <!--Activity黑色主题-->
+    <style name="AppThemeBlack" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorThemeBlack</item>
+        <item name="colorPrimary">@color/colorThemeBlack</item>
+        <item name="colorAccent">@color/colorThemeBlack</item>
+        <item name="android:textColorPrimary">@color/colorTextWhite</item>
+        <item name="android:textColorSecondary">@color/colorTextWhite</item>
+        <item name="colorControlNormal">@color/colorText3</item>
+        <item name="colorButtonNormal">@color/colorText3</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorThemeBlack</item>
+    </style>
+
+    <!--Activity粉色主题-->
+    <style name="AppThemePink" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorThemePink</item>
+        <item name="colorPrimary">@color/colorThemePink</item>
+        <item name="colorAccent">@color/colorThemePink</item>
+        <item name="android:textColorPrimary">@color/colorThemeWhite</item>
+        <item name="android:textColorSecondary">@color/colorThemeWhite</item>
+        <item name="colorControlNormal">@color/colorThemePink</item>
+        <item name="colorButtonNormal">@color/colorThemePink</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorThemePink</item>
+    </style>
+
+    <!--Activity橙色色主题-->
+    <style name="AppThemeOrange" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorThemeOrange</item>
+        <item name="colorPrimary">@color/colorThemeOrange</item>
+        <item name="colorAccent">@color/colorThemeOrange</item>
+        <item name="android:textColorPrimary">@color/colorThemeOrange</item>
+        <item name="android:textColorSecondary">@color/colorThemeOrange</item>
+        <item name="colorControlNormal">@color/colorThemeOrange</item>
+        <item name="colorButtonNormal">@color/colorThemeOrange</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorThemeOrange</item>
+    </style>
+
+    <!--Activity蓝色主题-->
+    <style name="AppThemeBlue" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorThemeBlue</item>
+        <item name="colorPrimary">@color/colorThemeBlue</item>
+        <item name="colorAccent">@color/colorThemeBlue</item>
+        <item name="android:textColorPrimary">@color/colorThemeWhite</item>
+        <item name="android:textColorSecondary">@color/colorThemeWhite</item>
+        <item name="colorControlNormal">@color/colorThemeBlue</item>
+        <item name="colorButtonNormal">@color/colorThemeBlue</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorThemeBlue</item>
+    </style>
+
+    <!--Activity绿色主题-->
+    <style name="AppThemeGreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorThemeGreen</item>
+        <item name="colorPrimary">@color/colorThemeGreen</item>
+        <item name="colorAccent">@color/colorThemeGreen</item>
+        <item name="android:textColorPrimary">@color/colorThemeWhite</item>
+        <item name="android:textColorSecondary">@color/colorThemeWhite</item>
+        <item name="colorControlNormal">@color/colorThemeGreen</item>
+        <item name="colorButtonNormal">@color/colorThemeGreen</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorThemeGreen</item>
+    </style>
+
+    <!--Activity蓝色主题-->
+    <style name="AppThemePurple" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorThemePurple</item>
+        <item name="colorPrimary">@color/colorThemePurple</item>
+        <item name="colorAccent">@color/colorThemePurple</item>
+        <item name="android:textColorPrimary">@color/colorThemeWhite</item>
+        <item name="android:textColorSecondary">@color/colorThemeWhite</item>
+        <item name="colorControlNormal">@color/colorThemePurple</item>
+        <item name="colorButtonNormal">@color/colorThemePurple</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorThemePurple</item>
+    </style>
+
+    <!--Activity全屏主题-->
+    <style name="AppThemeFullScreen" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowNoTitle">true</item>
@@ -23,8 +111,8 @@
         <item name="android:backgroundDimEnabled">true</item>
     </style>
 
-    <!-- Activity 透明主题 -->
-    <style name="AppTransparentTheme" parent="AppThemeCommon">
+    <!--Activity透明主题-->
+    <style name="AppThemeTransparent" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowNoTitle">true</item>
@@ -33,25 +121,23 @@
         <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
     </style>
 
-    <!--全局AppToolBar主题-->
+    <!--AppToolBar主题-->
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="android:textColorPrimary">@color/colorBlueTheme</item>
-        <item name="actionMenuTextColor">@color/colorBlueTheme</item>
-        <item name="android:textColor">@color/colorWhiteTheme</item>
+        <item name="android:textColorPrimary">@color/colorTextWhite</item>
+        <item name="actionMenuTextColor">@color/colorTextWhite</item>
+        <item name="android:textColor">@color/colorTextWhite</item>
     </style>
 
-    <!--全局 AppBarLayout 主题-->
-
-    <!--全局 Menu 主题-->
-    <style name="AppTheme.PopupOverlay" parent="@style/Widget.AppCompat.Light.PopupMenu.Overflow">
+    <!--全局AppBarLayout主题-->
+    <style name="ToolbarMenuTheme" parent="@style/Widget.AppCompat.Light.PopupMenu.Overflow">
         <item name="overlapAnchor">false</item>
         <item name="android:dropDownWidth">wrap_content</item>
         <item name="android:paddingRight">5dp</item>
         <item name="android:popupBackground">?attr/colorPrimary</item>
         <!-- 弹出层垂直方向上的偏移，即在竖直方向上距离Toolbar的距离，值为负则会盖住Toolbar -->
-        <item name="android:dropDownVerticalOffset">5dip</item>
+        <item name="android:dropDownVerticalOffset">10dp</item>
         <!-- 弹出层水平方向上的偏移，即距离屏幕左边的距离，负值会导致右边出现空隙 -->
-        <item name="android:dropDownHorizontalOffset">0dip</item>
+        <item name="android:dropDownHorizontalOffset">0dp</item>
     </style>
 
 </resources>

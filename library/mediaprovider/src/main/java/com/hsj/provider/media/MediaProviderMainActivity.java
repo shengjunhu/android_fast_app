@@ -1,13 +1,32 @@
 package com.hsj.provider.media;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
-public class MediaProviderMainActivity extends AppCompatActivity {
+import com.hsj.common.ui.activity.BaseActivity;
+import com.hsj.provider.media.ui.activity.MediaSelectActivity;
+
+public class MediaProviderMainActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_media_provider_main);
+    protected int getLayoutId() {
+        return R.layout.activity_media_provider_main;
+    }
+
+    @Override
+    protected void initUI(Bundle savedInstanceState) {
+        findViewById(R.id.btn).setOnClickListener(
+                v->startActivity(new Intent(this, MediaSelectActivity.class)));
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

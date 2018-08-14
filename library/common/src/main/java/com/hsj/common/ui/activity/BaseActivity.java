@@ -30,6 +30,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hsj.common.R;
+import com.hsj.common.core.AppManager;
+import com.hsj.common.core.BaseConstants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,10 +43,8 @@ import java.util.List;
  * @Class:AppBaseActivity
  * @Description:Activity基类：初始化UI、初始化数据、强制刷新数据、生命周期控制
  */
-public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
+public abstract class BaseActivity extends CommonActivity implements View.OnClickListener {
 
-    public String TAG = this.getClass().getSimpleName();
-    private boolean isShowTitle = true;
     private TextView tv_left, tv_center, tv_right;
 
     @Override
@@ -52,15 +52,14 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_base_main);
 
-        if (isShowTitle) {
-            Toolbar toolbar = super.findViewById(R.id.toolbar);
-            setSupportActionBar(toolbar);
-            tv_left = super.findViewById(R.id.tv_left);
-            tv_center = super.findViewById(R.id.tv_center);
-            tv_right = super.findViewById(R.id.tv_right);
-        } else {
-            super.findViewById(R.id.toolbar).setVisibility(View.GONE);
-        }
+        Toolbar toolbar = super.findViewById(R.id.toolbar);
+        setAppTheme(toolbar);
+        setSupportActionBar(toolbar);
+        tv_left = super.findViewById(R.id.tv_left);
+        tv_center = super.findViewById(R.id.tv_center);
+        tv_right = super.findViewById(R.id.tv_right);
+        tv_left.setOnClickListener(this);
+        tv_right.setOnClickListener(this);
 
         FrameLayout mContentView = super.findViewById(R.id.fl_base);
         View view = LayoutInflater.from(this).inflate(getLayoutId(), null);
@@ -78,12 +77,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     protected abstract void initData();
 
-    public void setShowTitle(boolean showTitle) {
-        isShowTitle = showTitle;
-    }
-
     public TextView getTitleLeft() {
-        tv_left.setOnClickListener(this);
         return tv_left;
     }
 
@@ -92,8 +86,45 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     }
 
     public TextView getTitleRight() {
-        tv_right.setOnClickListener(this);
         return tv_right;
+    }
+
+    /**
+     * 设置App主题
+     */
+    public void setAppTheme(Toolbar toolbar) {
+        switch (BaseConstants.appTheme) {
+            case 0:
+                setTheme(R.style.AppThemeWhite);
+                toolbar.setBackgroundColor(getResources().getColor(R.color.colorThemeWhite));
+                break;
+            case 1:
+                setTheme(R.style.AppThemeBlack);
+                toolbar.setBackgroundColor(getResources().getColor(R.color.colorThemeBlack));
+                break;
+            case 2:
+                setTheme(R.style.AppThemePink);
+                toolbar.setBackgroundColor(getResources().getColor(R.color.colorThemePink));
+                break;
+            case 3:
+                setTheme(R.style.AppThemeOrange);
+                toolbar.setBackgroundColor(getResources().getColor(R.color.colorThemeOrange));
+                break;
+            case 4:
+                setTheme(R.style.AppThemeBlue);
+                toolbar.setBackgroundColor(getResources().getColor(R.color.colorThemeBlue));
+                break;
+            case 5:
+                setTheme(R.style.AppThemeGreen);
+                toolbar.setBackgroundColor(getResources().getColor(R.color.colorThemeGreen));
+                break;
+            case 6:
+                setTheme(R.style.AppThemePurple);
+                toolbar.setBackgroundColor(getResources().getColor(R.color.colorThemePurple));
+                break;
+            default:
+                break;
+        }
     }
 
     /**
@@ -154,40 +185,10 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     }
 
     /**
-     * 检测内存泄露
-     */
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-    }
-
-    /**
-     * 查找View
-     *
-     * @param id  控件的id
-     * @param <V> View类型
-     * @return
-     */
-    protected <V extends View> V findView(@IdRes int id) {
-        return (V) findViewById(id);
-    }
-
-    /**
      * 刷新数据
-     *
-     * @param isRefresh
      */
-    protected void refreshData(boolean isRefresh) {
-        if (isRefresh) initData();
-    }
-
-    /**
-     * 弹出Toast
-     *
-     * @param message
-     */
-    public void showToast(@NonNull String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    public void refresh() {
+        initData();
     }
 
     /**
@@ -230,48 +231,6 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
      */
     protected void stopProgressDialog() {
 
-    }
-
-    /**
-     * 按键
-     */
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            //return false;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
-
-    /**
-     * 文本不随系统字体增大儿增大
-     *
-     * @return
-     */
-    @Override
-    public Resources getResources() {
-        Resources res = super.getResources();
-        Configuration config = new Configuration();
-        config.setToDefaults();
-        res.updateConfiguration(config, res.getDisplayMetrics());
-        return res;
-    }
-
-    /**
-     * 失去焦点，软键盘自动收起
-     *
-     * @param event
-     * @return
-     */
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        if (null != this.getCurrentFocus() && event.getAction() == MotionEvent.ACTION_UP) {
-            InputMethodManager mInputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-            if (null != mInputMethodManager) {
-                return mInputMethodManager.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), 0);
-            }
-        }
-        return super.onTouchEvent(event);
     }
 
 }

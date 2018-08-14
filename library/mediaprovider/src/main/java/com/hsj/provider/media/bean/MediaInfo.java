@@ -1,5 +1,7 @@
 package com.hsj.provider.media.bean;
 
+import android.text.TextUtils;
+
 /**
  * @Author:HSJ
  * @E-mail:shengjunhu@foxmail.com
@@ -33,9 +35,9 @@ public class MediaInfo {
     /**
      * 本地原图片路径
      */
-    private String path;
+    private String oldPath;
     /**
-     * 处于状态：currentAction
+     * 处于状态：action
      * 1--原文件状态（选中）
      * 2--压缩文件后（确定选中后）
      * 3--添加剪切文件后（完成剪切后）
@@ -45,10 +47,77 @@ public class MediaInfo {
      * 7--添加磨皮文件后（完成磨皮后）
      * 8--添加美白文件后（完成美白后）
      */
-    private int currentAction;
+    private int action;
     /**
      * 当前路径（对应上操作后的文件当前路径）
      */
-    private String currentPath;
+    private String newPath;
 
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public int getMediaType() {
+        return mediaType;
+    }
+
+    public void setMediaType(int mediaType) {
+        this.mediaType = mediaType;
+    }
+
+    public boolean isEdit() {
+        return isEdit;
+    }
+
+    public void setEdit(boolean edit) {
+        isEdit = edit;
+    }
+
+    public boolean isEdited() {
+        return isEdited;
+    }
+
+    public void setEdited(boolean edited) {
+        isEdited = edited;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getOldPath() {
+        return oldPath;
+    }
+
+    public void setOldPath(String oldPath) {
+        this.oldPath = oldPath;
+    }
+
+    public int getAction() {
+        return action;
+    }
+
+    public void setAction(int action) {
+        this.action = action;
+    }
+
+    public String getNewPath() {
+        if (TextUtils.isEmpty(newPath)){
+            return oldPath;
+        }
+        return newPath;
+    }
+
+    public void setNewPath(String newPath) {
+        this.newPath = newPath;
+    }
 }

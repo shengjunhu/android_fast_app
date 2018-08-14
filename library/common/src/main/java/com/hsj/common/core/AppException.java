@@ -7,21 +7,21 @@ package com.hsj.common.core;
  * @Class:BaseException
  * @Description:基类异常
  */
-public class BaseException extends RuntimeException {
+public class AppException extends RuntimeException {
 
     /**
      * 自定义网络异常码
      */
     private static final int ERROR_CODE_9999 = 9999;//自定义异常：存储空间不够
 
-    private BaseException() {
+    private AppException() {
     }
 
-    public BaseException(String message) {
+    public AppException(String message) {
         super(message);
     }
 
-    public BaseException(int code) {
+    public AppException(int code) {
         super(parseException(code));
     }
 

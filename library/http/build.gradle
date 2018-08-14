@@ -23,14 +23,12 @@ android {
 
     buildTypes {
         release {
-            buildConfigField "String", "HOST",  "\"http://www.hsj.com\""
-            buildConfigField "boolean", "isDebug", "false"
+            buildConfigField "String", "HOST", rootProject.ext.android.HOST
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            buildConfigField "String", "HOST", "\"http://192.168.1.152\""
-            buildConfigField "boolean", "isDebug", "true"
+            buildConfigField "String", "HOST", rootProject.ext.android.HOST
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -45,6 +43,12 @@ android {
             }
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
 dependencies {

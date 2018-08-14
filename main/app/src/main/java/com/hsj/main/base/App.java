@@ -19,6 +19,11 @@ package com.hsj.main.base;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+
+import com.hsj.common.annotations.SPFile;
+import com.hsj.common.core.BaseConstant;
+import com.hsj.common.core.BaseConstants;
+import com.hsj.common.utils.SharedPrefer;
 import com.qihoo360.mobilesafe.core.BuildConfig;
 import com.qihoo360.replugin.RePlugin;
 import com.qihoo360.replugin.RePluginApplication;
@@ -34,6 +39,31 @@ import com.qihoo360.replugin.RePluginEventCallbacks;
  * @Description:Application类
  */
 public class App extends RePluginApplication {
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        initAppConfig();
+
+        initUserInfo();
+    }
+
+    /**
+     * 初始化APP配置
+     */
+    private void initAppConfig() {
+        SharedPrefer sp = new SharedPrefer(SPFile.APP_INFO);
+        BaseConstants.appTheme = sp.getInt(this, BaseConstant.APP_THEME);
+        BaseConstants.appFont = sp.getInt(this, BaseConstant.APP_FONT);
+    }
+
+    /**
+     * 初始化用户信息
+     */
+    private void initUserInfo() {
+
+    }
 
     @Override
     protected void attachBaseContext(Context base) {

@@ -26,9 +26,7 @@ import java.util.List;
  * @Class:AppBaseFragment
  * @Description:普通Fragment、数据本地初始化
  */
-public abstract class BaseFragment extends Fragment implements View.OnClickListener {
-
-    public String TAG = this.getClass().getSimpleName();
+public abstract class BaseFragment extends CommonFragment implements View.OnClickListener {
 
     private View rootView;
 
@@ -51,6 +49,17 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     protected abstract void initUI(Bundle savedInstanceState);
 
     protected abstract void initData();
+
+    /**
+     * 查找View
+     *
+     * @param id  控件的id
+     * @param <V> View类型
+     * @return
+     */
+    protected <V extends View> V findView(@IdRes int id) {
+        return  rootView.findViewById(id);
+    }
 
     /**
      * 权限
@@ -109,29 +118,6 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
 
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-    }
-
-    /**
-     * 检测内存泄露
-     */
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-    }
-
     /**
      * 刷新数据
      *
@@ -139,68 +125,6 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
      */
     protected void refreshData(boolean isRefresh) {
         if (isRefresh) initData();
-    }
-
-    /**
-     * 查找View
-     *
-     * @param id  控件的id
-     * @param <V> View类型
-     * @return
-     */
-    protected <V extends View> V findView(@IdRes int id) {
-        return (V) rootView.findViewById(id);
-    }
-
-    /**
-     * 判断字符串不为 null和 ""
-     *
-     * @param str
-     * @return
-     */
-    protected boolean notNull(String str) {
-        if (TextUtils.isEmpty(str)) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    /**
-     * TextView、EditText设置文本
-     *
-     * @param str
-     * @return
-     */
-    protected String checkStr(String str) {
-        if (notNull(str)) {
-            return str;
-        } else {
-            return "";
-        }
-    }
-
-    /**
-     * TextView、EditText设置文本
-     *
-     * @param num
-     * @return
-     */
-    protected String checkStr(Number num) {
-        if (num == null) {
-            return "";
-        } else {
-            return String.valueOf(num);
-        }
-    }
-
-    /**
-     * 弹出Toast
-     *
-     * @param message
-     */
-    public void showToast(@NonNull String message) {
-        Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
     }
 
     /**

@@ -18,7 +18,7 @@ package com.hsj.main.ui.activity;
 
 import android.os.Bundle;
 import android.view.View;
-import com.app.R;
+import com.hsj.main.R;
 import com.hsj.common.ui.activity.BaseActivity;
 
 /**

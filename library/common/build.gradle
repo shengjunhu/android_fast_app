@@ -44,6 +44,11 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
 dependencies {
@@ -62,6 +67,7 @@ dependencies {
     compileOnly rootProject.ext.dependencies.design
 
     debugImplementation rootProject.ext.dependencies.leakcanary_debug
+    debugImplementation rootProject.ext.dependencies.leakcanary_debug_fragment
     releaseImplementation rootProject.ext.dependencies.leakcanary_release
 
     compileOnly rootProject.ext.dependencies.eventBus

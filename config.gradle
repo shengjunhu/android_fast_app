@@ -33,6 +33,8 @@ ext {
             versionCode              : 1807010,
             versionName              : "0.0.0",
 
+            HOST                     : "\"http://192.168.1.20\"",//服务器主机
+
             isAppDebug               : true,//应用模块是否调试
             isLibDebug               : true,//Library是否调式
             isSDKDebug               : true,//SDK是否调试
@@ -103,8 +105,9 @@ ext {
             stethoOkHttp3            : 'com.facebook.stetho:stetho-okhttp3:1.5.0',
 
             //leakCanary
-            leakcanary_debug         : 'com.squareup.leakcanary:leakcanary-android:1.5.4',
-            leakcanary_release       : 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4',
+            leakcanary_debug         : 'com.squareup.leakcanary:leakcanary-android:1.6.1',
+            leakcanary_debug_fragment: 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.1',
+            leakcanary_release       : 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1',
 
             //QQ、微信、微博：登录、支付、分享
             qq                       : "/sdk/auth/libs/open_sdk_r5990_lite.jar",

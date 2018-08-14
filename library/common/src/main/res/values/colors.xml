@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--默认主题颜色-->
+    <!--主题颜色-->
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#FFFFFF</color>
     <color name="colorAccent">#34B6FF</color>
     <color name="textColorPrimary">#34B6FF</color>
-    <color name="windowBackground">#FFFFFF</color>
-    <color name="navigationBarColor">#34B6FF</color>
+    <color name="navigationBarColor">#FFFFFF</color>
+    <color name="windowBackgroundWhite">#FFFFFF</color>
 
     <!--五种主题颜色-->
-    <color name="colorWhiteTheme">#FFFFFF</color>
-    <color name="colorBlackTheme">#333333</color>
-    <color name="colorBlueTheme">#34B6FF</color>
-    <color name="colorPinkTheme">#FF66FF</color>
-    <color name="colorOrangeTheme">#FF9900</color>
+    <color name="colorThemeWhite">#FFFFFF</color>
+    <color name="colorThemeBlack">#303030</color>
+    <color name="colorThemePink">#FF1493</color>
+    <color name="colorThemeOrange">#FF9900</color>
+    <color name="colorThemeBlue">#2294FF</color>
+    <color name="colorThemeGreen">#1AD49B</color>
+    <color name="colorThemePurple">#8A2BE2</color>
 
     <!--文中常用颜色-->
-    <color name="color3">#333333</color>
-    <color name="color6">#666666</color>
-    <color name="color9">#999999</color>
-    <color name="colorC">#CCCCCC</color>
-    <color name="colorE">#EEEEEE</color>
+    <color name="colorTextBlack">#000000</color>
+    <color name="colorText3">#333333</color>
+    <color name="colorText6">#666666</color>
+    <color name="colorText9">#999999</color>
+    <color name="colorTextC">#CCCCCC</color>
+    <color name="colorTextE">#EEEEEE</color>
+    <color name="colorTextWhite">#FFFFFF</color>
 
 </resources>

@@ -2,17 +2,16 @@ package com.hsj.provider.media.ui.activity;
 
 import android.os.Bundle;
 import android.view.View;
-
 import com.hsj.common.ui.activity.BaseActivity;
 
 /**
  * @Author:HSJ
  * @E-mail:shengjunhu@foxmail.com
- * @Date:2017/6/9 09:24
- * @Class:ImagePreviewActivity
- * @Description:图片预览
+ * @Date:2017/6/9 09:27
+ * @Class:ImageEidtActivity
+ * @Description:编辑图片
  */
-public class PhotoPreviewActivity extends BaseActivity{
+public class MediaEditActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
