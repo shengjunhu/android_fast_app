@@ -13,7 +13,7 @@ ext {
 
     mavenUrl = [
             sina                     : "https://dl.bintray.com/thelasterstar/maven/",//新浪微博
-            huaweiPush               : "http://developer.huawei.com/repo/" ,         //华为推送
+            huaweiPush               : "http://developer.huawei.com/repo/",          //华为推送
     ]
 
     gradleDependencies = [

@@ -1,4 +1,4 @@
-package com.hsj.push;
+package com.hsj.push.mz;
 
 import android.content.Context;
 import com.meizu.cloud.pushsdk.MzPushMessageReceiver;

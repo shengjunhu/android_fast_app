@@ -1,4 +1,4 @@
-package com.hsj.push;
+package com.hsj.push.mi;
 
 import android.content.Context;
 import android.text.TextUtils;

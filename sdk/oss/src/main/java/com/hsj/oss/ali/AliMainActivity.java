@@ -1,11 +1,11 @@
-package com.hsj.oss.qiniu;
+package com.hsj.oss.ali;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.hsj.oss.R;
 
-public class OSSMainActivity extends AppCompatActivity {
+public class AliMainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -18,10 +18,11 @@
             <TextView
                 android:id="@+id/tv_left"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_centerVertical="true"
+                android:drawableStart="@drawable/ic_arrow_back_black"
                 android:gravity="center_vertical"
-                android:paddingEnd="@dimen/dp10"
+                android:paddingEnd="@dimen/dp12"
                 android:paddingStart="@dimen/dp12"
                 android:textAllCaps="false"
                 android:textSize="@dimen/sp16" />

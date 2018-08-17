@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:supportsRtl="true">
-        <activity android:name=".qiniu.OSSMainActivity">
+        <activity android:name=".qiniu.QiNiuMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

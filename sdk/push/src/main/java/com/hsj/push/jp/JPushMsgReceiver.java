@@ -1,4 +1,4 @@
-package com.hsj.push;
+package com.hsj.push.jp;
 
 import android.content.Context;
 import android.content.Intent;

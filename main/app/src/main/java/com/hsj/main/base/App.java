@@ -55,6 +55,7 @@ public class App extends RePluginApplication {
     private void initAppConfig() {
         SharedPrefer sp = new SharedPrefer(SPFile.APP_INFO);
         BaseConstants.appTheme = sp.getInt(this, BaseConstant.APP_THEME);
+        BaseConstants.appTheme = 2;
         BaseConstants.appFont = sp.getInt(this, BaseConstant.APP_FONT);
     }
 

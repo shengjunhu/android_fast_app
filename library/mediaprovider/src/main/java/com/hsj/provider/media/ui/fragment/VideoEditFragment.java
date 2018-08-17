@@ -23,11 +23,11 @@ import com.hsj.common.ui.fragment.BaseFragment;
 /**
  * @Author:HSJ
  * @E-mail:shengjunhu@foxmail.com
- * @Date:2017/9/13 16:58
- * @Class:VideoAddIconFragment
- * @Description:Video添加贴图
+ * @Date:2017/9/13 16:55
+ * @Class:VideoEditFragment
+ * @Description:Video编辑
  */
-public class VideoAddIconFragment extends BaseFragment {
+public class VideoEditFragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {

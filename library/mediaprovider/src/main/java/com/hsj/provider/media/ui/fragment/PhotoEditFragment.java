@@ -8,11 +8,11 @@ import com.hsj.common.ui.fragment.BaseFragment;
 /**
  * @Author:HSJ
  * @E-mail:shengjunhu@foxmail.com
- * @Date:2017/9/13 17:01
- * @Class:PhotoAddWhiteFragment
- * @Description:图片美白
+ * @Date:2017/9/13 16:59
+ * @Class:PhotoEditFragment
+ * @Description:相片编辑
  */
-public class PhotoAddWhiteFragment extends BaseFragment {
+public class PhotoEditFragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {
