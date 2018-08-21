@@ -125,3 +125,23 @@
 1、style主题：AppCompact
 
 ```
+
+* 关于StrictMode严苛模式
+```
+ //线程策略检测
+ StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+                .detectDiskReads()
+                .detectDiskWrites()
+                .detectNetwork()
+                .penaltyLog()
+                .build());
+                
+ //虚拟机策略检测
+ StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
+         .detectLeakedSqlLiteObjects()
+         .penaltyLog()
+         .penaltyDeath()
+         .build());
+
+ //两种策略用来提检测代码安全性、健壮性、流畅性，发现违规写法
+```
