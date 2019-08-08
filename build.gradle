@@ -24,6 +24,9 @@ allprojects {
         google()
         jcenter()
         mavenCentral()
+        mavenLocal() //本地文件，位于~/.m2/repository/
+        maven { url 'http://jcenter.bintray.com'}
+        maven { url 'https://maven.google.com' }
         maven { url "https://dl.bintray.com/thelasterstar/maven/" }         //新浪微博
         maven { url 'http://developer.huawei.com/repo/' }                   //华为推送
     }
