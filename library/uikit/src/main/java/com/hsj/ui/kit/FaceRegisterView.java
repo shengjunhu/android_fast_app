@@ -1,3 +1,5 @@
+package com.hsj.ui.kit;
+
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -15,7 +17,7 @@ import android.util.AttributeSet;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import com.angs.arcface.R;
+import com.hsj.ui.kit;.R;
 import com.angs.arcface.core.WorkStatus;
 import com.angs.common.thread.ThreadManager;
 
@@ -409,96 +411,4 @@ public final class FaceRegisterView extends SurfaceView implements SurfaceHolder
         canvas.save();
         //先画提示语
         drawHintText(canvas);
-        //绘制人脸识别部分
-        drawFaceCircle(canvas);
-        //画外边进度条
-        drawRoundProgress(canvas);
-        //绘制
-        canvas.restore();
-    }
-
-    /**
-     * 绘制人脸识别提示
-     *
-     * @param canvas canvas
-     */
-    private void drawHintText(Canvas canvas) {
-        //圆视图宽度 （屏幕减去两边距离）
-        int cameraWidth = mViewWidth - 2 * margin;
-        //x轴起点（文字背景起点）
-        int x = margin;
-        //y轴起点
-        int y = mCenterPoint.y - mRadius;
-        //提示框背景高度
-        int height = cameraWidth / 4;
-        Rect rect = new Rect(x, y, x + cameraWidth, y + height);
-        canvas.drawRect(rect, mPaint);
-
-        //计算baseline
-        Paint.FontMetrics fontMetrics = mTextPaint.getFontMetrics();
-        float distance = (fontMetrics.bottom - fontMetrics.top) / 4;
-        float baseline = rect.centerY() + distance;
-        canvas.drawText(mTipText, rect.centerX(), baseline, mTextPaint);
-    }
-
-    /**
-     * 画Camera内容透明圆
-     *
-     * @param canvas
-     */
-    private void drawFaceCircle(Canvas canvas) {
-        // 圆形，放大效果
-        currentRadius += 20;
-        if (currentRadius > mRadius) {
-            currentRadius = mRadius;
-        }
-        //设置画板样式
-        Path path = new Path();
-        //以（400,200）为圆心，半径为100绘制圆 指创建顺时针方向的矩形路径
-        path.addCircle(mCenterPoint.x, mCenterPoint.y, currentRadius, Path.Direction.CW);
-        // 是A形状中不同于B的部分显示出来
-        canvas.clipPath(path, Region.Op.DIFFERENCE);
-        // 半透明背景效果
-        canvas.clipRect(0, 0, mViewWidth, mViewHeight);
-        //绘制背景颜色
-        canvas.drawColor(bgWhiteColor);
-    }
-
-    /**
-     * 绘制正脸状态：背景刻度环+完成进度的刻度环
-     *
-     * @param canvas canvas
-     */
-    private void drawRoundProgress(Canvas canvas) {
-        // 正值顺时针，负值逆时针(从270度开始选择)
-        canvas.rotate(-45, mCenterPoint.x, mCenterPoint.y);
-        for (int i = 0; i < mDottedLineCount; i++) {
-            float degrees = i * unit;
-            float startX = mCenterPoint.x + (float) Math.sin(degrees) * mInsideDottedLineRadius;
-            float startY = mCenterPoint.y - (float) Math.cos(degrees) * mInsideDottedLineRadius;
-            float stopX = mCenterPoint.x + (float) Math.sin(degrees) * mExternalDottedLineRadius;
-            float stopY = mCenterPoint.y - (float) Math.cos(degrees) * mExternalDottedLineRadius;
-            //画背景刻度环(一次画完)
-            canvas.drawLine(startX, startY, stopX, stopY, mBgArcPaint);
-        }
-
-        if (currentStatus >= WorkStatus.FACE_ANGLE_UP && currentStatus <= WorkStatus.FACE_ANGLE_LEFT) {//更新刻度
-            //画当前进度刻度环(120个刻度，每90度30个刻度，每刻度/3°)
-            currentAngle += 3;
-            if (currentAngle >= (currentStatus % 10) * 30) {
-                currentAngle = (currentStatus % 10) * 30;
-            }
-            for (int i = 0; i < currentAngle; i++) {
-                float degrees = i * unit;
-                //起点坐标(环内起点)
-                float startX = mCenterPoint.x + (float) Math.sin(degrees) * mInsideDottedLineRadius;
-                float startY = mCenterPoint.y - (float) Math.cos(degrees) * mInsideDottedLineRadius;
-                //终点坐标(环外起点)
-                float stopX = mCenterPoint.x + (float) Math.sin(degrees) * mExternalDottedLineRadius2;
-                float stopY = mCenterPoint.y - (float) Math.cos(degrees) * mExternalDottedLineRadius2;
-                canvas.drawLine(startX, startY, stopX, stopY, mArcPaint);
-            }
-        }
-    }
-
-}
+        //绘制人脸识
