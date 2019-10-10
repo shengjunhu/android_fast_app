@@ -1,3 +1,5 @@
+package com.hsj.ui.kit;
+
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -13,7 +15,7 @@ import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import com.angs.arcface.R;
+import com.hsj.ui.kit.R;
 import com.angs.common.thread.ThreadManager;
 import com.angs.common.utils.ScreenUtils;
 
