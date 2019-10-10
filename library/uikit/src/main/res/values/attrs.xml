@@ -33,5 +33,15 @@
         <attr name="sb_background" format="reference|color"/>
         <attr name="sb_enable_effect" format="reference|boolean"/>
     </declare-styleable>
+    
+    <!--人脸识别界面-->
+    <declare-styleable name="FaceRegisterView">
+        <!--文本-->
+        <attr name="tip_text" format="string"/>
+        <!--颜色-->
+        <attr name="tip_text_color" format="color"/>
+        <!--文字大小-->
+        <attr name="tip_text_size" format="dimension"/>
+    </declare-styleable>
 
 </resources>
