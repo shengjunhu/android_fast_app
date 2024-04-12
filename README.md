@@ -1,4 +1,4 @@
-# FastAndroid
+# android_app_fast
 工作中Android开发用的项目框架：模块化、组件化开发，可快速集成
 
 ### 开发框架：
